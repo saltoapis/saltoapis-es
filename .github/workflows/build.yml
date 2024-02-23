@@ -1,0 +1,38 @@
+name: "SALTO APIs build"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v1
+      - name: init
+        run: |
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.SALTOSYSTEMS_BOT_GITHUB_TOKEN }}" >> .npmrc
+          echo "@saltoapis:registry=https://npm.pkg.github.com/saltoapis" >> .npmrc
+          docker build -f Dockerfile.build -t saltoapis-es .
+          docker run --rm -i -d --name saltoapis-es saltoapis-es
+      - name: prepare
+        run: docker exec -i saltoapis-es make prepare
+      - name: sanity-check
+        run: docker exec -i saltoapis-es make sanity-check
+      - name: build
+        run: docker exec -i saltoapis-es make build
+      - name: test
+        run: docker exec -i saltoapis-es make test
+      - name: release
+        if: github.ref == 'refs/heads/main'
+        run: docker exec -i saltoapis-es make release
+      - name: clean
+        run: |
+          docker exec -i saltoapis-es make clean
+          docker stop saltoapis-es

@@ -1,0 +1,4 @@
+#ignore bazel folders
+bazel-*
+dist/
+node_modules/
