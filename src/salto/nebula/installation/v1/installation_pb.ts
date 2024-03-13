@@ -80,6 +80,13 @@ export class Installation extends Message<Installation> {
   transferOwnershipState?: Installation_TransferOwnershipState;
 
   /**
+   * The time when the installation was soft deleted.
+   *
+   * @generated from field: google.protobuf.Timestamp delete_time = 12;
+   */
+  deleteTime?: Timestamp;
+
+  /**
    * The information of the partner who created the installation.
    *
    * @generated from field: optional salto.nebula.installation.v1.Installation.PartnerInfo partner_info = 9;
@@ -120,6 +127,7 @@ export class Installation extends Message<Installation> {
     { no: 6, name: "time_zone", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 7, name: "digital_key_art", kind: "message", T: Installation_DigitalKeyArt },
     { no: 8, name: "transfer_ownership_state", kind: "message", T: Installation_TransferOwnershipState },
+    { no: 12, name: "delete_time", kind: "message", T: Timestamp },
     { no: 9, name: "partner_info", kind: "message", T: Installation_PartnerInfo, opt: true },
     { no: 11, name: "block_time", kind: "message", T: Timestamp, opt: true },
     { no: 10, name: "key_renewal_duration", kind: "message", T: Duration },
