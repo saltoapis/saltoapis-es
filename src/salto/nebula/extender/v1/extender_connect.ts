@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindExtenderRequest, BindExtenderResponse, CreateExtenderRequest, DeleteExtenderRequest, Extender, GetExtenderRequest, ListExtendersRequest, ListExtendersResponse, UnbindExtenderRequest, UnbindExtenderResponse, UpdateExtenderFirmwareRequest, UpdateExtenderRequest } from "./extender_pb";
+import { BindExtenderRequest, BindExtenderResponse, CreateExtenderRequest, DeleteExtenderRequest, Extender, GetExtenderRequest, ListExtendersRequest, ListExtendersResponse, ResetExtenderRequest, UnbindExtenderRequest, UnbindExtenderResponse, UpdateExtenderFirmwareRequest, UpdateExtenderRequest } from "./extender_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -121,6 +121,21 @@ export const ExtenderService = {
     updateExtenderFirmware: {
       name: "UpdateExtenderFirmware",
       I: UpdateExtenderFirmwareRequest,
+      O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Reset an extender
+     *
+     * Resetting a device such as an extender means returning it to its
+     * factory settings. Resetting is the process of removing the identity as
+     * well as all the associated information of an already configured device.
+     *
+     * @generated from rpc salto.nebula.extender.v1.ExtenderService.ResetExtender
+     */
+    resetExtender: {
+      name: "ResetExtender",
+      I: ResetExtenderRequest,
       O: Operation,
       kind: MethodKind.Unary,
     },

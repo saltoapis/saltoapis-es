@@ -689,3 +689,111 @@ export class UpdateExtenderFirmwareMetadata extends Message<UpdateExtenderFirmwa
   }
 }
 
+/**
+ * The request message for [`ResetExtender`][salto.nebula.extender.v1.ExtenderService.ResetExtender]
+ *
+ * @generated from message salto.nebula.extender.v1.ResetExtenderRequest
+ */
+export class ResetExtenderRequest extends Message<ResetExtenderRequest> {
+  /**
+   * The resource name of the extender to be reset. For example:
+   * `installations/surelock-homes-hq/extenders/baker-street-entrance`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<ResetExtenderRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.extender.v1.ResetExtenderRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ResetExtenderRequest {
+    return new ResetExtenderRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ResetExtenderRequest {
+    return new ResetExtenderRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResetExtenderRequest {
+    return new ResetExtenderRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ResetExtenderRequest | PlainMessage<ResetExtenderRequest> | undefined, b: ResetExtenderRequest | PlainMessage<ResetExtenderRequest> | undefined): boolean {
+    return proto3.util.equals(ResetExtenderRequest, a, b);
+  }
+}
+
+/**
+ * The empty response message for [`ResetExtender`][salto.nebula.extender.v1.ExtenderService.ResetExtender]
+ *
+ * @generated from message salto.nebula.extender.v1.ResetExtenderResponse
+ */
+export class ResetExtenderResponse extends Message<ResetExtenderResponse> {
+  constructor(data?: PartialMessage<ResetExtenderResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.extender.v1.ResetExtenderResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ResetExtenderResponse {
+    return new ResetExtenderResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ResetExtenderResponse {
+    return new ResetExtenderResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResetExtenderResponse {
+    return new ResetExtenderResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ResetExtenderResponse | PlainMessage<ResetExtenderResponse> | undefined, b: ResetExtenderResponse | PlainMessage<ResetExtenderResponse> | undefined): boolean {
+    return proto3.util.equals(ResetExtenderResponse, a, b);
+  }
+}
+
+/**
+ * The metadata message for [`ResetExtender`][salto.nebula.extender.v1.ExtenderService.ResetExtender]
+ *
+ * @generated from message salto.nebula.extender.v1.ResetExtenderMetadata
+ */
+export class ResetExtenderMetadata extends Message<ResetExtenderMetadata> {
+  constructor(data?: PartialMessage<ResetExtenderMetadata>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.extender.v1.ResetExtenderMetadata";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ResetExtenderMetadata {
+    return new ResetExtenderMetadata().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ResetExtenderMetadata {
+    return new ResetExtenderMetadata().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ResetExtenderMetadata {
+    return new ResetExtenderMetadata().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ResetExtenderMetadata | PlainMessage<ResetExtenderMetadata> | undefined, b: ResetExtenderMetadata | PlainMessage<ResetExtenderMetadata> | undefined): boolean {
+    return proto3.util.equals(ResetExtenderMetadata, a, b);
+  }
+}
+
