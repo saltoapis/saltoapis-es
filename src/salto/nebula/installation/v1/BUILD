@@ -10,6 +10,6 @@ load_rules(
     ],
     extra_info = {
         'generator': 'es',
-        'services': 'InstallationService',
+        'services': 'EncryptedPayloadService,InstallationService',
     },
 )
