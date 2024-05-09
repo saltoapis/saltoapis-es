@@ -8,6 +8,7 @@ import { Message, proto3 } from "@bufbuild/protobuf";
 import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { AppKey, CardKey, User, WalletKey } from "@saltoapis/nebula-user-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
+import { Unit } from "@saltoapis/nebula-unit-v1";
 
 /**
  * Event representing the creation of an access point.
@@ -1143,6 +1144,88 @@ export class WalletKeyCanceled extends Message<WalletKeyCanceled> {
 
   static equals(a: WalletKeyCanceled | PlainMessage<WalletKeyCanceled> | undefined, b: WalletKeyCanceled | PlainMessage<WalletKeyCanceled> | undefined): boolean {
     return proto3.util.equals(WalletKeyCanceled, a, b);
+  }
+}
+
+/**
+ * Event representing the move in of a unit.
+ *
+ * @generated from message salto.nebula.event.v1.UnitMovedIn
+ */
+export class UnitMovedIn extends Message<UnitMovedIn> {
+  /**
+   * Unit moved in.
+   *
+   * @generated from field: salto.nebula.unit.v1.Unit unit = 1;
+   */
+  unit?: Unit;
+
+  constructor(data?: PartialMessage<UnitMovedIn>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.UnitMovedIn";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "unit", kind: "message", T: Unit },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitMovedIn {
+    return new UnitMovedIn().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnitMovedIn {
+    return new UnitMovedIn().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnitMovedIn {
+    return new UnitMovedIn().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnitMovedIn | PlainMessage<UnitMovedIn> | undefined, b: UnitMovedIn | PlainMessage<UnitMovedIn> | undefined): boolean {
+    return proto3.util.equals(UnitMovedIn, a, b);
+  }
+}
+
+/**
+ * Event representing the move out of a unit.
+ *
+ * @generated from message salto.nebula.event.v1.UnitMovedOut
+ */
+export class UnitMovedOut extends Message<UnitMovedOut> {
+  /**
+   * Unit moved out.
+   *
+   * @generated from field: salto.nebula.unit.v1.Unit unit = 1;
+   */
+  unit?: Unit;
+
+  constructor(data?: PartialMessage<UnitMovedOut>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.UnitMovedOut";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "unit", kind: "message", T: Unit },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitMovedOut {
+    return new UnitMovedOut().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnitMovedOut {
+    return new UnitMovedOut().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnitMovedOut {
+    return new UnitMovedOut().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnitMovedOut | PlainMessage<UnitMovedOut> | undefined, b: UnitMovedOut | PlainMessage<UnitMovedOut> | undefined): boolean {
+    return proto3.util.equals(UnitMovedOut, a, b);
   }
 }
 
