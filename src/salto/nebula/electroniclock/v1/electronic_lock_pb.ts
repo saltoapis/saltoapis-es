@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
+import { Duration, FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
 
 /**
  * The electronic lock object
@@ -139,6 +139,14 @@ export class ElectronicLock extends Message<ElectronicLock> {
    */
   forceRotateCarriageEnd?: boolean;
 
+  /**
+   * If applicable, the duration the motorized lock's hold-back latch remains
+   * engaged before the latch closes.
+   *
+   * @generated from field: optional google.protobuf.Duration hold_back_latch_duration = 14;
+   */
+  holdBackLatchDuration?: Duration;
+
   constructor(data?: PartialMessage<ElectronicLock>) {
     super();
     proto3.util.initPartial(data, this);
@@ -160,6 +168,7 @@ export class ElectronicLock extends Message<ElectronicLock> {
     { no: 11, name: "last_event_time", kind: "message", T: Timestamp },
     { no: 12, name: "calibration_settings", kind: "scalar", T: 12 /* ScalarType.BYTES */, opt: true },
     { no: 13, name: "force_rotate_carriage_end", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
+    { no: 14, name: "hold_back_latch_duration", kind: "message", T: Duration, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicLock {
