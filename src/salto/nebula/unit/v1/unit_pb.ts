@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { FieldMask, Message, proto3 } from "@bufbuild/protobuf";
+import { FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
 
 /**
  * Representation of a unit resource inside the API
@@ -28,6 +28,20 @@ export class Unit extends Message<Unit> {
    */
   displayName = "";
 
+  /**
+   * Time the unit was moved in.
+   *
+   * @generated from field: google.protobuf.Timestamp move_in_time = 3;
+   */
+  moveInTime?: Timestamp;
+
+  /**
+   * Time the unit was moved out.
+   *
+   * @generated from field: google.protobuf.Timestamp move_out_time = 4;
+   */
+  moveOutTime?: Timestamp;
+
   constructor(data?: PartialMessage<Unit>) {
     super();
     proto3.util.initPartial(data, this);
@@ -38,6 +52,8 @@ export class Unit extends Message<Unit> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "move_in_time", kind: "message", T: Timestamp },
+    { no: 4, name: "move_out_time", kind: "message", T: Timestamp },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Unit {
