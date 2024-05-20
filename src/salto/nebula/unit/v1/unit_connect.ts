@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CleanOutUnitRequest, CleanOutUnitResponse, CreatePolicyRequest, CreateUnitRequest, DeletePolicyRequest, DeleteUnitRequest, GetPolicyRequest, GetUnitRequest, ListPoliciesRequest, ListPoliciesResponse, ListUnitsRequest, ListUnitsResponse, Policy, TestPermissionsRequest, TestPermissionsResponse, Unit, UpdatePolicyRequest, UpdateUnitRequest } from "./unit_pb";
+import { CleanOutUnitRequest, CleanOutUnitResponse, CreatePolicyRequest, CreateUnitRequest, DeletePolicyRequest, DeleteUnitRequest, GetPolicyRequest, GetUnitRequest, ListPoliciesRequest, ListPoliciesResponse, ListUnitsRequest, ListUnitsResponse, MoveInUnitRequest, MoveInUnitResponse, MoveOutUnitRequest, MoveOutUnitResponse, Policy, TestPermissionsRequest, TestPermissionsResponse, Unit, UpdatePolicyRequest, UpdateUnitRequest } from "./unit_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -96,6 +96,41 @@ export const UnitService = {
       name: "CleanOutUnit",
       I: CleanOutUnitRequest,
       O: CleanOutUnitResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Move in a unit
+     *
+     * Moves in a unit by creating new occupants and associating them with the unit.
+     * (-- api-linter: core::0136::http-uri-suffix=disabled
+     *     aip.dev/not-precedent: We need to do this because "move in" is a phrasal
+     *     verb and the api-linter doesn't support using them. --)
+     *
+     * @generated from rpc salto.nebula.unit.v1.UnitService.MoveInUnit
+     */
+    moveInUnit: {
+      name: "MoveInUnit",
+      I: MoveInUnitRequest,
+      O: MoveInUnitResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Move out a unit
+     *
+     * Moves out a unit by deleting all the occupants belonging to it. This process
+     * implicitly entails the blocking of the keys that were active within the
+     * unit. Moving out a unit will not delete the access rights and the
+     * associated access points that belong to the unit.
+     * (-- api-linter: core::0136::http-uri-suffix=disabled
+     *     aip.dev/not-precedent: We need to do this because "move out" is a phrasal
+     *     verb and the api-linter doesn't support using them. --)
+     *
+     * @generated from rpc salto.nebula.unit.v1.UnitService.MoveOutUnit
+     */
+    moveOutUnit: {
+      name: "MoveOutUnit",
+      I: MoveOutUnitRequest,
+      O: MoveOutUnitResponse,
       kind: MethodKind.Unary,
     },
     /**
