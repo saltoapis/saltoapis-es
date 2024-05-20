@@ -527,6 +527,247 @@ export class CleanOutUnitResponse extends Message<CleanOutUnitResponse> {
 }
 
 /**
+ * The request message for [`MoveInUnit`][salto.nebula.unit.v1.UnitService.MoveInUnit]
+ *
+ * @generated from message salto.nebula.unit.v1.MoveInUnitRequest
+ */
+export class MoveInUnitRequest extends Message<MoveInUnitRequest> {
+  /**
+   * Resource name of the parent resource where to move in the unit. For
+   * example: `installations/surelock-homes-hq/units/101`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  /**
+   * The occupants to be created inside the unit.
+   *
+   * @generated from field: repeated salto.nebula.unit.v1.MoveInUnitRequest.Occupant occupants = 2;
+   */
+  occupants: MoveInUnitRequest_Occupant[] = [];
+
+  constructor(data?: PartialMessage<MoveInUnitRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.unit.v1.MoveInUnitRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "occupants", kind: "message", T: MoveInUnitRequest_Occupant, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MoveInUnitRequest {
+    return new MoveInUnitRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MoveInUnitRequest {
+    return new MoveInUnitRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MoveInUnitRequest {
+    return new MoveInUnitRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: MoveInUnitRequest | PlainMessage<MoveInUnitRequest> | undefined, b: MoveInUnitRequest | PlainMessage<MoveInUnitRequest> | undefined): boolean {
+    return proto3.util.equals(MoveInUnitRequest, a, b);
+  }
+}
+
+/**
+ * Representation of a unit occupant resource inside the API.
+ * They can have roles to manage the unit.
+ *
+ * @generated from message salto.nebula.unit.v1.MoveInUnitRequest.Occupant
+ */
+export class MoveInUnitRequest_Occupant extends Message<MoveInUnitRequest_Occupant> {
+  /**
+   * The personal name, forename or given name ("first name"). It could
+   * also contain a middle name. First name is not used because the given
+   * name is not placed first in some cultures.
+   *
+   * @generated from field: string given_name = 1;
+   */
+  givenName = "";
+
+  /**
+   * The surname or family name ("last name"). It could also contain more than
+   * one surname so that both matrilineal and patrilineal surnames can be
+   * included in one place. Last name is not used because the family name is
+   * not placed last in some cultures.
+   *
+   * @generated from field: optional string family_name = 2;
+   */
+  familyName?: string;
+
+  /**
+   * The email address of the occupant. It must be unique within the
+   * unit.
+   *
+   * @generated from field: optional string email = 3;
+   */
+  email?: string;
+
+  /**
+   * The access rights resource names to bind as an association to the
+   * occupant. For example:
+   * `installations/surelock-homes-hq/units/101/access-rights/baskerville`.
+   *
+   * @generated from field: repeated string access_rights = 4;
+   */
+  accessRights: string[] = [];
+
+  /**
+   * The IAM roles to bind as an association to the occupant. For example:
+   * `iam-roles/unit.admin`.
+   *
+   * @generated from field: repeated string iam_roles = 5;
+   */
+  iamRoles: string[] = [];
+
+  constructor(data?: PartialMessage<MoveInUnitRequest_Occupant>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.unit.v1.MoveInUnitRequest.Occupant";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "given_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "family_name", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 3, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 4, name: "access_rights", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 5, name: "iam_roles", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MoveInUnitRequest_Occupant {
+    return new MoveInUnitRequest_Occupant().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MoveInUnitRequest_Occupant {
+    return new MoveInUnitRequest_Occupant().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MoveInUnitRequest_Occupant {
+    return new MoveInUnitRequest_Occupant().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: MoveInUnitRequest_Occupant | PlainMessage<MoveInUnitRequest_Occupant> | undefined, b: MoveInUnitRequest_Occupant | PlainMessage<MoveInUnitRequest_Occupant> | undefined): boolean {
+    return proto3.util.equals(MoveInUnitRequest_Occupant, a, b);
+  }
+}
+
+/**
+ * The response message for [`MoveInUnit`][salto.nebula.unit.v1.UnitService.MoveInUnit]
+ *
+ * @generated from message salto.nebula.unit.v1.MoveInUnitResponse
+ */
+export class MoveInUnitResponse extends Message<MoveInUnitResponse> {
+  constructor(data?: PartialMessage<MoveInUnitResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.unit.v1.MoveInUnitResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MoveInUnitResponse {
+    return new MoveInUnitResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MoveInUnitResponse {
+    return new MoveInUnitResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MoveInUnitResponse {
+    return new MoveInUnitResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: MoveInUnitResponse | PlainMessage<MoveInUnitResponse> | undefined, b: MoveInUnitResponse | PlainMessage<MoveInUnitResponse> | undefined): boolean {
+    return proto3.util.equals(MoveInUnitResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`MoveOutUnit`][salto.nebula.unit.v1.UnitService.MoveOutUnit]
+ *
+ * @generated from message salto.nebula.unit.v1.MoveOutUnitRequest
+ */
+export class MoveOutUnitRequest extends Message<MoveOutUnitRequest> {
+  /**
+   * The resource name of the unit to be moved out. For example:
+   * `installations/salto-hq/units/101`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<MoveOutUnitRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.unit.v1.MoveOutUnitRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MoveOutUnitRequest {
+    return new MoveOutUnitRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MoveOutUnitRequest {
+    return new MoveOutUnitRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MoveOutUnitRequest {
+    return new MoveOutUnitRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: MoveOutUnitRequest | PlainMessage<MoveOutUnitRequest> | undefined, b: MoveOutUnitRequest | PlainMessage<MoveOutUnitRequest> | undefined): boolean {
+    return proto3.util.equals(MoveOutUnitRequest, a, b);
+  }
+}
+
+/**
+ * The empty response message for [`MoveOutUnit`][salto.nebula.unit.v1.UnitService.MoveOutUnit]
+ *
+ * @generated from message salto.nebula.unit.v1.MoveOutUnitResponse
+ */
+export class MoveOutUnitResponse extends Message<MoveOutUnitResponse> {
+  constructor(data?: PartialMessage<MoveOutUnitResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.unit.v1.MoveOutUnitResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): MoveOutUnitResponse {
+    return new MoveOutUnitResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): MoveOutUnitResponse {
+    return new MoveOutUnitResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): MoveOutUnitResponse {
+    return new MoveOutUnitResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: MoveOutUnitResponse | PlainMessage<MoveOutUnitResponse> | undefined, b: MoveOutUnitResponse | PlainMessage<MoveOutUnitResponse> | undefined): boolean {
+    return proto3.util.equals(MoveOutUnitResponse, a, b);
+  }
+}
+
+/**
  * The request message for [`CreatePolicy`][salto.nebula.unit.v1.UnitService.CreatePolicy]
  *
  * @generated from message salto.nebula.unit.v1.CreatePolicyRequest
