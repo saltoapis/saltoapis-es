@@ -104,7 +104,7 @@ export class AccessPoint extends Message<AccessPoint> {
 export class CreateAccessPointRequest extends Message<CreateAccessPointRequest> {
   /**
    * Resource name of the parent resource under which the access point is created.
-   * For example, `installations/surelock-homes-hq`.
+   * For example: `installations/surelock-homes-hq`.
    *
    * @generated from field: string parent = 1;
    */
@@ -205,7 +205,7 @@ export class GetAccessPointRequest extends Message<GetAccessPointRequest> {
  */
 export class ListAccessPointsRequest extends Message<ListAccessPointsRequest> {
   /**
-   * The parent resource name. For example, `installations/surelock-homes-hq`.
+   * The parent resource name. For example: `installations/surelock-homes-hq`.
    *
    * @generated from field: string parent = 1;
    */
