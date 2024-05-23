@@ -31,19 +31,11 @@ export enum OpeningMode {
    * @generated from enum value: TOGGLE = 2;
    */
   TOGGLE = 2,
-
-  /**
-   * Automatic opening for ICAD.
-   *
-   * @generated from enum value: RING_AND_OPEN = 13;
-   */
-  RING_AND_OPEN = 13,
 }
 // Retrieve enum metadata with: proto3.getEnumType(OpeningMode)
 proto3.util.setEnumType(OpeningMode, "salto.nebula.type.OpeningMode", [
   { no: 0, name: "OPENING_MODE_UNSPECIFIED" },
   { no: 1, name: "OFFICE" },
   { no: 2, name: "TOGGLE" },
-  { no: 13, name: "RING_AND_OPEN" },
 ]);
 
