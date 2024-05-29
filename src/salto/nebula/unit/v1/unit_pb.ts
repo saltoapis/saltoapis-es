@@ -241,7 +241,7 @@ export class GetUnitRequest extends Message<GetUnitRequest> {
  */
 export class ListUnitsRequest extends Message<ListUnitsRequest> {
   /**
-   * The parent resource name, for example, `installations/surelock-homes-hq`.
+   * The parent resource name, for example: `installations/surelock-homes-hq`.
    *
    * @generated from field: string parent = 1;
    */
