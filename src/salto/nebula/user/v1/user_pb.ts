@@ -272,6 +272,7 @@ export class CardKey extends Message<CardKey> {
   /**
    * Unique identifier of the physical card. Length dependent of technology.
    * Max length for ISO14443-3 is 10 bytes.
+   * (-- api-linter: salto::9001::internal-annotation=disabled --)
    *
    * @generated from field: string uid = 2;
    */
@@ -1501,6 +1502,7 @@ export class AssignCardKeyRequest extends Message<AssignCardKeyRequest> {
   /**
    * Unique identifier of the physical card. Length dependent of technology.
    * Max length for ISO14443-3 is 10 bytes.
+   * (-- api-linter: salto::9001::internal-annotation=disabled --)
    *
    * @generated from field: string uid = 2;
    */
