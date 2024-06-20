@@ -64,6 +64,17 @@ export class AccessPoint extends Message<AccessPoint> {
    */
   calendar?: string;
 
+  /**
+   * Enables or disables card key updates. This parameter doesn't have any
+   * effect on access points where its associated device is offline.
+   * This field is optional to maintain backward compatibility. The server
+   * checks for its presence to determine if clients are not updated and
+   * assigns a default value if it's missing.
+   *
+   * @generated from field: optional bool card_key_updater = 6;
+   */
+  cardKeyUpdater?: boolean;
+
   constructor(data?: PartialMessage<AccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -77,6 +88,7 @@ export class AccessPoint extends Message<AccessPoint> {
     { no: 3, name: "fixed", kind: "enum", T: proto3.getEnumType(OpeningMode), oneof: "opening_mode" },
     { no: 4, name: "schedule", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "opening_mode" },
     { no: 5, name: "calendar", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 6, name: "card_key_updater", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPoint {
