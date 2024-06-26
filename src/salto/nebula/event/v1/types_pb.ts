@@ -1229,3 +1229,126 @@ export class UnitMovedOut extends Message<UnitMovedOut> {
   }
 }
 
+/**
+ * Event representing the creation of a unit.
+ *
+ * @generated from message salto.nebula.event.v1.UnitCreated
+ */
+export class UnitCreated extends Message<UnitCreated> {
+  /**
+   * Unit created.
+   *
+   * @generated from field: salto.nebula.unit.v1.Unit unit = 1;
+   */
+  unit?: Unit;
+
+  constructor(data?: PartialMessage<UnitCreated>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.UnitCreated";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "unit", kind: "message", T: Unit },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitCreated {
+    return new UnitCreated().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnitCreated {
+    return new UnitCreated().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnitCreated {
+    return new UnitCreated().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnitCreated | PlainMessage<UnitCreated> | undefined, b: UnitCreated | PlainMessage<UnitCreated> | undefined): boolean {
+    return proto3.util.equals(UnitCreated, a, b);
+  }
+}
+
+/**
+ * Event representing the update of a unit.
+ *
+ * @generated from message salto.nebula.event.v1.UnitUpdated
+ */
+export class UnitUpdated extends Message<UnitUpdated> {
+  /**
+   * Unit updated.
+   *
+   * @generated from field: salto.nebula.unit.v1.Unit unit = 1;
+   */
+  unit?: Unit;
+
+  constructor(data?: PartialMessage<UnitUpdated>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.UnitUpdated";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "unit", kind: "message", T: Unit },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitUpdated {
+    return new UnitUpdated().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnitUpdated {
+    return new UnitUpdated().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnitUpdated {
+    return new UnitUpdated().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnitUpdated | PlainMessage<UnitUpdated> | undefined, b: UnitUpdated | PlainMessage<UnitUpdated> | undefined): boolean {
+    return proto3.util.equals(UnitUpdated, a, b);
+  }
+}
+
+/**
+ * Event representing the deletion of a unit.
+ *
+ * @generated from message salto.nebula.event.v1.UnitDeleted
+ */
+export class UnitDeleted extends Message<UnitDeleted> {
+  /**
+   * Unit deleted.
+   *
+   * @generated from field: salto.nebula.unit.v1.Unit unit = 1;
+   */
+  unit?: Unit;
+
+  constructor(data?: PartialMessage<UnitDeleted>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.UnitDeleted";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "unit", kind: "message", T: Unit },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitDeleted {
+    return new UnitDeleted().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnitDeleted {
+    return new UnitDeleted().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnitDeleted {
+    return new UnitDeleted().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnitDeleted | PlainMessage<UnitDeleted> | undefined, b: UnitDeleted | PlainMessage<UnitDeleted> | undefined): boolean {
+    return proto3.util.equals(UnitDeleted, a, b);
+  }
+}
+
