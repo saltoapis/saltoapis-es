@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { FieldMask, Message, proto3 } from "@bufbuild/protobuf";
+import { Duration, FieldMask, Message, proto3 } from "@bufbuild/protobuf";
 import { OpeningMode } from "@saltoapis/nebula-type";
 
 /**
@@ -75,6 +75,14 @@ export class AccessPoint extends Message<AccessPoint> {
    */
   cardKeyUpdater?: boolean;
 
+  /**
+   * The duration the access point remains unlocked. This field is optional
+   * for the server to check for its presence and assign a default value if it's missing.
+   *
+   * @generated from field: optional google.protobuf.Duration unlock_duration = 7;
+   */
+  unlockDuration?: Duration;
+
   constructor(data?: PartialMessage<AccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -89,6 +97,7 @@ export class AccessPoint extends Message<AccessPoint> {
     { no: 4, name: "schedule", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "opening_mode" },
     { no: 5, name: "calendar", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 6, name: "card_key_updater", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
+    { no: 7, name: "unlock_duration", kind: "message", T: Duration, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPoint {
