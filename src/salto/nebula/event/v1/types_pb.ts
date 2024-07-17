@@ -232,6 +232,91 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
 }
 
 /**
+ * Event representing a forced open of an access point.
+ *
+ * @generated from message salto.nebula.event.v1.AccessPointForcedOpen
+ */
+export class AccessPointForcedOpen extends Message<AccessPointForcedOpen> {
+  /**
+   * The access point that's been forced open.
+   *
+   * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
+   */
+  accessPoint?: AccessPoint;
+
+  constructor(data?: PartialMessage<AccessPointForcedOpen>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.AccessPointForcedOpen";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "access_point", kind: "message", T: AccessPoint },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointForcedOpen {
+    return new AccessPointForcedOpen().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AccessPointForcedOpen {
+    return new AccessPointForcedOpen().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AccessPointForcedOpen {
+    return new AccessPointForcedOpen().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AccessPointForcedOpen | PlainMessage<AccessPointForcedOpen> | undefined, b: AccessPointForcedOpen | PlainMessage<AccessPointForcedOpen> | undefined): boolean {
+    return proto3.util.equals(AccessPointForcedOpen, a, b);
+  }
+}
+
+/**
+ * Event representing the closing of an access point.
+ * This event might not be triggered with all access point closures, but only
+ * with those that happen after events such as access point left open or forced
+ * open.
+ *
+ * @generated from message salto.nebula.event.v1.AccessPointClosed
+ */
+export class AccessPointClosed extends Message<AccessPointClosed> {
+  /**
+   * The access point that's been closed.
+   *
+   * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
+   */
+  accessPoint?: AccessPoint;
+
+  constructor(data?: PartialMessage<AccessPointClosed>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.AccessPointClosed";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "access_point", kind: "message", T: AccessPoint },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointClosed {
+    return new AccessPointClosed().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AccessPointClosed {
+    return new AccessPointClosed().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AccessPointClosed {
+    return new AccessPointClosed().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AccessPointClosed | PlainMessage<AccessPointClosed> | undefined, b: AccessPointClosed | PlainMessage<AccessPointClosed> | undefined): boolean {
+    return proto3.util.equals(AccessPointClosed, a, b);
+  }
+}
+
+/**
  * Event representing a denied access to a user by an access point.
  *
  * @generated from message salto.nebula.event.v1.AccessDenied
@@ -277,6 +362,47 @@ export class AccessDenied extends Message<AccessDenied> {
 
   static equals(a: AccessDenied | PlainMessage<AccessDenied> | undefined, b: AccessDenied | PlainMessage<AccessDenied> | undefined): boolean {
     return proto3.util.equals(AccessDenied, a, b);
+  }
+}
+
+/**
+ * Event representing the detection of an access point that's been left open.
+ *
+ * @generated from message salto.nebula.event.v1.AccessPointLeftOpen
+ */
+export class AccessPointLeftOpen extends Message<AccessPointLeftOpen> {
+  /**
+   * The access point that's been left open.
+   *
+   * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
+   */
+  accessPoint?: AccessPoint;
+
+  constructor(data?: PartialMessage<AccessPointLeftOpen>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.AccessPointLeftOpen";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "access_point", kind: "message", T: AccessPoint },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointLeftOpen {
+    return new AccessPointLeftOpen().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AccessPointLeftOpen {
+    return new AccessPointLeftOpen().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AccessPointLeftOpen {
+    return new AccessPointLeftOpen().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AccessPointLeftOpen | PlainMessage<AccessPointLeftOpen> | undefined, b: AccessPointLeftOpen | PlainMessage<AccessPointLeftOpen> | undefined): boolean {
+    return proto3.util.equals(AccessPointLeftOpen, a, b);
   }
 }
 
