@@ -83,6 +83,13 @@ export class AccessPoint extends Message<AccessPoint> {
    */
   unlockDuration?: Duration;
 
+  /**
+   * Indicates whether the access point was left open.
+   *
+   * @generated from field: bool left_open = 8;
+   */
+  leftOpen = false;
+
   constructor(data?: PartialMessage<AccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -98,6 +105,7 @@ export class AccessPoint extends Message<AccessPoint> {
     { no: 5, name: "calendar", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 6, name: "card_key_updater", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
     { no: 7, name: "unlock_duration", kind: "message", T: Duration, opt: true },
+    { no: 8, name: "left_open", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPoint {
