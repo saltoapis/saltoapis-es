@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { Message, proto3 } from "@bufbuild/protobuf";
+import { Message, proto3, Timestamp } from "@bufbuild/protobuf";
 import { Color } from "@saltoapis/type";
 
 /**
@@ -208,6 +208,16 @@ export class DigitalKey_AppKey extends Message<DigitalKey_AppKey> {
    */
   unitId?: string;
 
+  /**
+   * Access points change time.
+   *
+   * This data is populated with the user access points sync time.
+   * Indicates the last time the digital key's access points changed.
+   *
+   * @generated from field: google.protobuf.Timestamp access_points_change_time = 7;
+   */
+  accessPointsChangeTime?: Timestamp;
+
   constructor(data?: PartialMessage<DigitalKey_AppKey>) {
     super();
     proto3.util.initPartial(data, this);
@@ -222,6 +232,7 @@ export class DigitalKey_AppKey extends Message<DigitalKey_AppKey> {
     { no: 6, name: "unit", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 3, name: "installation_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "unit_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 7, name: "access_points_change_time", kind: "message", T: Timestamp },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DigitalKey_AppKey {
