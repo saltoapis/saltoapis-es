@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindElectronicLockRequest, BindElectronicLockResponse, ConfigureElectronicLockRequest, CreateElectronicLockRequest, DeleteElectronicLockRequest, ElectronicLock, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GetElectronicLockRequest, InitializeElectronicLockRequest, ListElectronicLocksRequest, ListElectronicLocksResponse, ResetElectronicLockRequest, UnbindElectronicLockRequest, UnbindElectronicLockResponse, UpdateElectronicLockFirmwareRequest, UpdateElectronicLockRequest } from "./electronic_lock_pb";
+import { BindElectronicLockRequest, BindElectronicLockResponse, ConfigureElectronicLockRequest, CreateElectronicLockRequest, DeleteElectronicLockRequest, ElectronicLock, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GenerateFirmwareDownloadUriRequest, GetElectronicLockRequest, InitializeElectronicLockRequest, ListElectronicLocksRequest, ListElectronicLocksResponse, ResetElectronicLockRequest, UnbindElectronicLockRequest, UnbindElectronicLockResponse, UpdateElectronicLockFirmwareRequest, UpdateElectronicLockRequest } from "./electronic_lock_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -194,6 +194,21 @@ export const ElectronicLockService = {
       name: "GenerateAuthorizationToken",
       I: GenerateAuthorizationTokenRequest,
       O: GenerateAuthorizationTokenResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generate electronic lock firmware download URI
+     *
+     * Provides the download URI for the latest firmware bundle for the
+     * electronic lock. The returned URI can be used to bring the electronic
+     * lock firmwares up to latest.
+     *
+     * @generated from rpc salto.nebula.electroniclock.v1.ElectronicLockService.GenerateFirmwareDownloadUri
+     */
+    generateFirmwareDownloadUri: {
+      name: "GenerateFirmwareDownloadUri",
+      I: GenerateFirmwareDownloadUriRequest,
+      O: Operation,
       kind: MethodKind.Unary,
     },
   }
