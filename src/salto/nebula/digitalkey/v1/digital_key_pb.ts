@@ -679,6 +679,7 @@ export class ListDigitalKeyAccessPointsRequest extends Message<ListDigitalKeyAcc
   /**
    * The `next_page_token` value returned from a previous `List` request, if
    * any.
+   * Note: this field is not being used in the current implementation. It is being ignored.
    *
    * @generated from field: string page_token = 4;
    */
@@ -733,6 +734,7 @@ export class ListDigitalKeyAccessPointsResponse extends Message<ListDigitalKeyAc
   /**
    * Token to retrieve the next page of results, or empty if there are no more
    * results in the list.
+   * Note: this field is not being used in the current implementation. It always returns an empty string.
    *
    * @generated from field: string next_page_token = 2;
    */
