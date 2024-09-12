@@ -1769,6 +1769,13 @@ export class AcceptInstallationOwnershipRequest extends Message<AcceptInstallati
    */
   installation = "";
 
+  /**
+   * The billing info resource for the subscription billing.
+   *
+   * @generated from field: optional salto.nebula.installation.v1.BillingInfo billing_info = 2;
+   */
+  billingInfo?: BillingInfo;
+
   constructor(data?: PartialMessage<AcceptInstallationOwnershipRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1778,6 +1785,7 @@ export class AcceptInstallationOwnershipRequest extends Message<AcceptInstallati
   static readonly typeName = "salto.nebula.installation.v1.AcceptInstallationOwnershipRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "installation", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "billing_info", kind: "message", T: BillingInfo, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AcceptInstallationOwnershipRequest {
