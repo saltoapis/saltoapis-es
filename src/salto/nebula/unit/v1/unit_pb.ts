@@ -42,6 +42,15 @@ export class Unit extends Message<Unit> {
    */
   moveOutTime?: Timestamp;
 
+  /**
+   * The privacy settings of the unit. Can either be enabled or disabled.
+   * If enabled, owners and installation managers can see neither events
+   * nor users that belong to the unit.
+   *
+   * @generated from field: salto.nebula.unit.v1.Unit.PrivacySettings privacy_settings = 5;
+   */
+  privacySettings?: Unit_PrivacySettings;
+
   constructor(data?: PartialMessage<Unit>) {
     super();
     proto3.util.initPartial(data, this);
@@ -54,6 +63,7 @@ export class Unit extends Message<Unit> {
     { no: 2, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "move_in_time", kind: "message", T: Timestamp },
     { no: 4, name: "move_out_time", kind: "message", T: Timestamp },
+    { no: 5, name: "privacy_settings", kind: "message", T: Unit_PrivacySettings },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Unit {
@@ -70,6 +80,47 @@ export class Unit extends Message<Unit> {
 
   static equals(a: Unit | PlainMessage<Unit> | undefined, b: Unit | PlainMessage<Unit> | undefined): boolean {
     return proto3.util.equals(Unit, a, b);
+  }
+}
+
+/**
+ * The privacy settings object.
+ *
+ * @generated from message salto.nebula.unit.v1.Unit.PrivacySettings
+ */
+export class Unit_PrivacySettings extends Message<Unit_PrivacySettings> {
+  /**
+   * The privacy status of the unit.
+   *
+   * @generated from field: bool enabled = 1;
+   */
+  enabled = false;
+
+  constructor(data?: PartialMessage<Unit_PrivacySettings>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.unit.v1.Unit.PrivacySettings";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "enabled", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Unit_PrivacySettings {
+    return new Unit_PrivacySettings().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Unit_PrivacySettings {
+    return new Unit_PrivacySettings().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Unit_PrivacySettings {
+    return new Unit_PrivacySettings().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: Unit_PrivacySettings | PlainMessage<Unit_PrivacySettings> | undefined, b: Unit_PrivacySettings | PlainMessage<Unit_PrivacySettings> | undefined): boolean {
+    return proto3.util.equals(Unit_PrivacySettings, a, b);
   }
 }
 
