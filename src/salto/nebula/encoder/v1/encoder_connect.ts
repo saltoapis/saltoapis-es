@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindEncoderRequest, BindEncoderResponse, ConfigureEncoderRequest, CreateEncoderRequest, DeleteEncoderRequest, Encoder, GetEncoderRequest, InitializeEncoderRequest, ListEncodersRequest, ListEncodersResponse, ReadKeyRequest, ResetEncoderRequest, UnbindEncoderRequest, UnbindEncoderResponse, UpdateEncoderFirmwareRequest, UpdateEncoderRequest } from "./encoder_pb";
+import { BindEncoderRequest, BindEncoderResponse, ConfigureEncoderRequest, CreateEncoderRequest, DeleteEncoderRequest, Encoder, GenerateFirmwareDownloadUriRequest, GetEncoderRequest, InitializeEncoderRequest, ListEncodersRequest, ListEncodersResponse, ReadKeyRequest, ResetEncoderRequest, UnbindEncoderRequest, UnbindEncoderResponse, UpdateEncoderFirmwareRequest, UpdateEncoderRequest } from "./encoder_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -185,6 +185,21 @@ export const EncoderService = {
     readKey: {
       name: "ReadKey",
       I: ReadKeyRequest,
+      O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generate encoder firmware download URI
+     *
+     * Provides the download URI for the latest firmware bundle for the
+     * encoder. The returned URI can be used to bring the encoder
+     * firmwares up to latest.
+     *
+     * @generated from rpc salto.nebula.encoder.v1.EncoderService.GenerateFirmwareDownloadUri
+     */
+    generateFirmwareDownloadUri: {
+      name: "GenerateFirmwareDownloadUri",
+      I: GenerateFirmwareDownloadUriRequest,
       O: Operation,
       kind: MethodKind.Unary,
     },

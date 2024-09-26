@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindGatewayRequest, BindGatewayResponse, ConfigureGatewayRequest, CreateGatewayRequest, DeleteGatewayRequest, Gateway, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GetGatewayRequest, InitializeGatewayRequest, ListGatewaysRequest, ListGatewaysResponse, ResetGatewayRequest, UnbindGatewayRequest, UnbindGatewayResponse, UpdateGatewayFirmwareRequest, UpdateGatewayRequest } from "./gateway_pb";
+import { BindGatewayRequest, BindGatewayResponse, ConfigureGatewayRequest, CreateGatewayRequest, DeleteGatewayRequest, Gateway, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GenerateFirmwareDownloadUriRequest, GetGatewayRequest, InitializeGatewayRequest, ListGatewaysRequest, ListGatewaysResponse, ResetGatewayRequest, UnbindGatewayRequest, UnbindGatewayResponse, UpdateGatewayFirmwareRequest, UpdateGatewayRequest } from "./gateway_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -186,6 +186,21 @@ export const GatewayService = {
       name: "GenerateAuthorizationToken",
       I: GenerateAuthorizationTokenRequest,
       O: GenerateAuthorizationTokenResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generate gateway firmware download URI
+     *
+     * Provides the download URI for the latest firmware bundle for the
+     * gateway. The returned URI can be used to bring the gateway
+     * firmwares up to latest.
+     *
+     * @generated from rpc salto.nebula.gateway.v1.GatewayService.GenerateFirmwareDownloadUri
+     */
+    generateFirmwareDownloadUri: {
+      name: "GenerateFirmwareDownloadUri",
+      I: GenerateFirmwareDownloadUriRequest,
+      O: Operation,
       kind: MethodKind.Unary,
     },
   }
