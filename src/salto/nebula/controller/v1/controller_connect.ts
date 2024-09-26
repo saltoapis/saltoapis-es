@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindControllerRequest, BindControllerResponse, ConfigureControllerRequest, Controller, CreateControllerRequest, DeleteControllerRequest, GetControllerRequest, InitializeControllerRequest, ListControllersRequest, ListControllersResponse, ResetControllerRequest, UnbindControllerRequest, UnbindControllerResponse, UpdateControllerFirmwareRequest, UpdateControllerRequest } from "./controller_pb";
+import { BindControllerRequest, BindControllerResponse, ConfigureControllerRequest, Controller, CreateControllerRequest, DeleteControllerRequest, GenerateFirmwareDownloadUriRequest, GetControllerRequest, InitializeControllerRequest, ListControllersRequest, ListControllersResponse, ResetControllerRequest, UnbindControllerRequest, UnbindControllerResponse, UpdateControllerFirmwareRequest, UpdateControllerRequest } from "./controller_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -175,6 +175,21 @@ export const ControllerService = {
     updateControllerFirmware: {
       name: "UpdateControllerFirmware",
       I: UpdateControllerFirmwareRequest,
+      O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generate controller firmware download URI
+     *
+     * Provides the download URI for the latest firmware bundle for the
+     * controller. The returned URI can be used to bring the controller
+     * firmwares up to latest.
+     *
+     * @generated from rpc salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri
+     */
+    generateFirmwareDownloadUri: {
+      name: "GenerateFirmwareDownloadUri",
+      I: GenerateFirmwareDownloadUriRequest,
       O: Operation,
       kind: MethodKind.Unary,
     },

@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindIntercomAdaptorRequest, BindIntercomAdaptorResponse, ConfigureIntercomAdaptorRequest, CreateIntercomAdaptorRequest, DeleteIntercomAdaptorRequest, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GetIntercomAdaptorRequest, InitializeIntercomAdaptorRequest, IntercomAdaptor, ListIntercomAdaptorsRequest, ListIntercomAdaptorsResponse, ResetIntercomAdaptorRequest, UnbindIntercomAdaptorRequest, UnbindIntercomAdaptorResponse, UpdateIntercomAdaptorFirmwareRequest, UpdateIntercomAdaptorRequest } from "./intercom_adaptor_pb";
+import { BindIntercomAdaptorRequest, BindIntercomAdaptorResponse, ConfigureIntercomAdaptorRequest, CreateIntercomAdaptorRequest, DeleteIntercomAdaptorRequest, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GenerateFirmwareDownloadUriRequest, GetIntercomAdaptorRequest, InitializeIntercomAdaptorRequest, IntercomAdaptor, ListIntercomAdaptorsRequest, ListIntercomAdaptorsResponse, ResetIntercomAdaptorRequest, UnbindIntercomAdaptorRequest, UnbindIntercomAdaptorResponse, UpdateIntercomAdaptorFirmwareRequest, UpdateIntercomAdaptorRequest } from "./intercom_adaptor_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -188,6 +188,21 @@ export const IntercomAdaptorService = {
       name: "GenerateAuthorizationToken",
       I: GenerateAuthorizationTokenRequest,
       O: GenerateAuthorizationTokenResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generate intercom adaptor firmware download URI
+     *
+     * Provides the download URI for the latest firmware bundle for the
+     * intercom adaptor. The returned URI can be used to bring the intercom
+     * adaptor firmwares up to latest.
+     *
+     * @generated from rpc salto.nebula.intercomadaptor.v1.IntercomAdaptorService.GenerateFirmwareDownloadUri
+     */
+    generateFirmwareDownloadUri: {
+      name: "GenerateFirmwareDownloadUri",
+      I: GenerateFirmwareDownloadUriRequest,
+      O: Operation,
       kind: MethodKind.Unary,
     },
   }

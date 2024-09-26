@@ -1089,3 +1089,131 @@ export class UpdateControllerFirmwareMetadata extends Message<UpdateControllerFi
   }
 }
 
+/**
+ * The request message for [`GenerateFirmwareDownloadUri`][salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri]
+ *
+ * @generated from message salto.nebula.controller.v1.GenerateFirmwareDownloadUriRequest
+ */
+export class GenerateFirmwareDownloadUriRequest extends Message<GenerateFirmwareDownloadUriRequest> {
+  /**
+   * The resource name of the controller to get the firmware download URI.
+   * For example: `installations/surelock-homes-hq/controllers/main-controller`.
+   *
+   * @generated from field: string controller = 1;
+   */
+  controller = "";
+
+  constructor(data?: PartialMessage<GenerateFirmwareDownloadUriRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.GenerateFirmwareDownloadUriRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "controller", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GenerateFirmwareDownloadUriRequest {
+    return new GenerateFirmwareDownloadUriRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GenerateFirmwareDownloadUriRequest {
+    return new GenerateFirmwareDownloadUriRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GenerateFirmwareDownloadUriRequest {
+    return new GenerateFirmwareDownloadUriRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GenerateFirmwareDownloadUriRequest | PlainMessage<GenerateFirmwareDownloadUriRequest> | undefined, b: GenerateFirmwareDownloadUriRequest | PlainMessage<GenerateFirmwareDownloadUriRequest> | undefined): boolean {
+    return proto3.util.equals(GenerateFirmwareDownloadUriRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`GenerateFirmwareDownloadUri`][salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri]
+ *
+ * @generated from message salto.nebula.controller.v1.GenerateFirmwareDownloadUriResponse
+ */
+export class GenerateFirmwareDownloadUriResponse extends Message<GenerateFirmwareDownloadUriResponse> {
+  /**
+   * The URI to download the firmware bundle. The URI will be valid for 15
+   * minutes.
+   *
+   * @generated from field: string download_uri = 1;
+   */
+  downloadUri = "";
+
+  /**
+   * Digest of the file to be download. This can be used to cache the file and
+   * avoid downloading it multiple times.
+   * The digest has the following format: `<algorithm>:<digest>`.
+   * For example: `sha256:8ff2483f2fbaa6c8dfd4e3556dbde298eb5e342b5e46f84eabdccc8e1cbe2d5a`.
+   *
+   * @generated from field: string digest = 2;
+   */
+  digest = "";
+
+  constructor(data?: PartialMessage<GenerateFirmwareDownloadUriResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.GenerateFirmwareDownloadUriResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "download_uri", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "digest", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GenerateFirmwareDownloadUriResponse {
+    return new GenerateFirmwareDownloadUriResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GenerateFirmwareDownloadUriResponse {
+    return new GenerateFirmwareDownloadUriResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GenerateFirmwareDownloadUriResponse {
+    return new GenerateFirmwareDownloadUriResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GenerateFirmwareDownloadUriResponse | PlainMessage<GenerateFirmwareDownloadUriResponse> | undefined, b: GenerateFirmwareDownloadUriResponse | PlainMessage<GenerateFirmwareDownloadUriResponse> | undefined): boolean {
+    return proto3.util.equals(GenerateFirmwareDownloadUriResponse, a, b);
+  }
+}
+
+/**
+ * The metadata message for [`GenerateFirmwareDownloadUri`][salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri]
+ *
+ * @generated from message salto.nebula.controller.v1.GenerateFirmwareDownloadUriMetadata
+ */
+export class GenerateFirmwareDownloadUriMetadata extends Message<GenerateFirmwareDownloadUriMetadata> {
+  constructor(data?: PartialMessage<GenerateFirmwareDownloadUriMetadata>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.GenerateFirmwareDownloadUriMetadata";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GenerateFirmwareDownloadUriMetadata {
+    return new GenerateFirmwareDownloadUriMetadata().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GenerateFirmwareDownloadUriMetadata {
+    return new GenerateFirmwareDownloadUriMetadata().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GenerateFirmwareDownloadUriMetadata {
+    return new GenerateFirmwareDownloadUriMetadata().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GenerateFirmwareDownloadUriMetadata | PlainMessage<GenerateFirmwareDownloadUriMetadata> | undefined, b: GenerateFirmwareDownloadUriMetadata | PlainMessage<GenerateFirmwareDownloadUriMetadata> | undefined): boolean {
+    return proto3.util.equals(GenerateFirmwareDownloadUriMetadata, a, b);
+  }
+}
+

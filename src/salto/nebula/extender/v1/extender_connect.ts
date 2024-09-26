@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindExtenderRequest, BindExtenderResponse, CreateExtenderRequest, DeleteExtenderRequest, Extender, GetExtenderRequest, ListExtendersRequest, ListExtendersResponse, ResetExtenderRequest, UnbindExtenderRequest, UnbindExtenderResponse, UpdateExtenderFirmwareRequest, UpdateExtenderRequest } from "./extender_pb";
+import { BindExtenderRequest, BindExtenderResponse, CreateExtenderRequest, DeleteExtenderRequest, Extender, GenerateFirmwareDownloadUriRequest, GetExtenderRequest, ListExtendersRequest, ListExtendersResponse, ResetExtenderRequest, UnbindExtenderRequest, UnbindExtenderResponse, UpdateExtenderFirmwareRequest, UpdateExtenderRequest } from "./extender_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -136,6 +136,21 @@ export const ExtenderService = {
     resetExtender: {
       name: "ResetExtender",
       I: ResetExtenderRequest,
+      O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generate extender firmware download URI
+     *
+     * Provides the download URI for the latest firmware bundle for the
+     * extender. The returned URI can be used to bring the extender firmwares up
+     * to latest.
+     *
+     * @generated from rpc salto.nebula.extender.v1.ExtenderService.GenerateFirmwareDownloadUri
+     */
+    generateFirmwareDownloadUri: {
+      name: "GenerateFirmwareDownloadUri",
+      I: GenerateFirmwareDownloadUriRequest,
       O: Operation,
       kind: MethodKind.Unary,
     },
