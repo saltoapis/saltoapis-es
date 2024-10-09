@@ -578,6 +578,99 @@ export class CreateAccessRightAccessPointRequest extends Message<CreateAccessRig
 }
 
 /**
+ * The request message for [`BatchCreateAccessRightAccessPointsRequest`][salto.nebula.user.v1.AccessRightService.BatchCreateAccessRightAccessPoint]
+ *
+ * @generated from message salto.nebula.accessright.v1.BatchCreateAccessRightAccessPointsRequest
+ */
+export class BatchCreateAccessRightAccessPointsRequest extends Message<BatchCreateAccessRightAccessPointsRequest> {
+  /**
+   * Resource name of the parent resource where the access right's access points
+   * associations are to be created. For example:
+   * `installations/surelock-homes-hq/access-rights/baskerville`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to create.
+   * A maximum of 100 access right access points can be created in a batch.
+   *
+   * @generated from field: repeated salto.nebula.accessright.v1.CreateAccessRightAccessPointRequest requests = 2;
+   */
+  requests: CreateAccessRightAccessPointRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateAccessRightAccessPointsRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.BatchCreateAccessRightAccessPointsRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: CreateAccessRightAccessPointRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateAccessRightAccessPointsRequest {
+    return new BatchCreateAccessRightAccessPointsRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateAccessRightAccessPointsRequest {
+    return new BatchCreateAccessRightAccessPointsRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateAccessRightAccessPointsRequest {
+    return new BatchCreateAccessRightAccessPointsRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateAccessRightAccessPointsRequest | PlainMessage<BatchCreateAccessRightAccessPointsRequest> | undefined, b: BatchCreateAccessRightAccessPointsRequest | PlainMessage<BatchCreateAccessRightAccessPointsRequest> | undefined): boolean {
+    return proto3.util.equals(BatchCreateAccessRightAccessPointsRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchCreateAccessRightAccessPoints`][salto.nebula.user.v1.AccessRightService.BatchCreateAccessRightAccessPoints]
+ *
+ * @generated from message salto.nebula.accessright.v1.BatchCreateAccessRightAccessPointsResponse
+ */
+export class BatchCreateAccessRightAccessPointsResponse extends Message<BatchCreateAccessRightAccessPointsResponse> {
+  /**
+   * Access right access points created.
+   *
+   * @generated from field: repeated salto.nebula.accessright.v1.AccessRightAccessPoint access_right_access_points = 1;
+   */
+  accessRightAccessPoints: AccessRightAccessPoint[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateAccessRightAccessPointsResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.BatchCreateAccessRightAccessPointsResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "access_right_access_points", kind: "message", T: AccessRightAccessPoint, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateAccessRightAccessPointsResponse {
+    return new BatchCreateAccessRightAccessPointsResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateAccessRightAccessPointsResponse {
+    return new BatchCreateAccessRightAccessPointsResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateAccessRightAccessPointsResponse {
+    return new BatchCreateAccessRightAccessPointsResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateAccessRightAccessPointsResponse | PlainMessage<BatchCreateAccessRightAccessPointsResponse> | undefined, b: BatchCreateAccessRightAccessPointsResponse | PlainMessage<BatchCreateAccessRightAccessPointsResponse> | undefined): boolean {
+    return proto3.util.equals(BatchCreateAccessRightAccessPointsResponse, a, b);
+  }
+}
+
+/**
  * The request message for [`GetAccessRightAccessPoint`][salto.nebula.accessright.v1.AccessRightService.GetAccessRightAccessPoint]
  *
  * @generated from message salto.nebula.accessright.v1.GetAccessRightAccessPointRequest
@@ -1154,6 +1247,90 @@ export class DeleteAccessRightAccessPointGroupRequest extends Message<DeleteAcce
 
   static equals(a: DeleteAccessRightAccessPointGroupRequest | PlainMessage<DeleteAccessRightAccessPointGroupRequest> | undefined, b: DeleteAccessRightAccessPointGroupRequest | PlainMessage<DeleteAccessRightAccessPointGroupRequest> | undefined): boolean {
     return proto3.util.equals(DeleteAccessRightAccessPointGroupRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [`BatchDeleteAccessRightAccessPoints`][salto.nebula.accessright.v1.AccessRightService.BatchDeleteAccessRightAccessPoints]
+ *
+ * @generated from message salto.nebula.accessright.v1.BatchDeleteAccessRightAccessPointsRequest
+ */
+export class BatchDeleteAccessRightAccessPointsRequest extends Message<BatchDeleteAccessRightAccessPointsRequest> {
+  /**
+   * Resource name of the access point's access right relation to be deleted.
+   * For example: `installations/surelock-homes-hq/access-rights/baskerville`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to delete.
+   * A maximum of 100 access point's access rights associations can be deleted in a batch.
+   *
+   * @generated from field: repeated salto.nebula.accessright.v1.DeleteAccessRightAccessPointRequest requests = 2;
+   */
+  requests: DeleteAccessRightAccessPointRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchDeleteAccessRightAccessPointsRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.BatchDeleteAccessRightAccessPointsRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: DeleteAccessRightAccessPointRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchDeleteAccessRightAccessPointsRequest {
+    return new BatchDeleteAccessRightAccessPointsRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchDeleteAccessRightAccessPointsRequest {
+    return new BatchDeleteAccessRightAccessPointsRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchDeleteAccessRightAccessPointsRequest {
+    return new BatchDeleteAccessRightAccessPointsRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchDeleteAccessRightAccessPointsRequest | PlainMessage<BatchDeleteAccessRightAccessPointsRequest> | undefined, b: BatchDeleteAccessRightAccessPointsRequest | PlainMessage<BatchDeleteAccessRightAccessPointsRequest> | undefined): boolean {
+    return proto3.util.equals(BatchDeleteAccessRightAccessPointsRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchDeleteAccessRightAccessPoints`][salto.nebula.accessright.v1.AccessRightService.BatchDeleteAccessRightAccessPoints]
+ *
+ * @generated from message salto.nebula.accessright.v1.BatchDeleteAccessRightAccessPointsResponse
+ */
+export class BatchDeleteAccessRightAccessPointsResponse extends Message<BatchDeleteAccessRightAccessPointsResponse> {
+  constructor(data?: PartialMessage<BatchDeleteAccessRightAccessPointsResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.BatchDeleteAccessRightAccessPointsResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchDeleteAccessRightAccessPointsResponse {
+    return new BatchDeleteAccessRightAccessPointsResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchDeleteAccessRightAccessPointsResponse {
+    return new BatchDeleteAccessRightAccessPointsResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchDeleteAccessRightAccessPointsResponse {
+    return new BatchDeleteAccessRightAccessPointsResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchDeleteAccessRightAccessPointsResponse | PlainMessage<BatchDeleteAccessRightAccessPointsResponse> | undefined, b: BatchDeleteAccessRightAccessPointsResponse | PlainMessage<BatchDeleteAccessRightAccessPointsResponse> | undefined): boolean {
+    return proto3.util.equals(BatchDeleteAccessRightAccessPointsResponse, a, b);
   }
 }
 
