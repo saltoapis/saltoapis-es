@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BindControllerRequest, BindControllerResponse, ConfigureControllerRequest, Controller, CreateControllerRequest, DeleteControllerRequest, GenerateFirmwareDownloadUriRequest, GetControllerRequest, InitializeControllerRequest, ListControllersRequest, ListControllersResponse, ResetControllerRequest, UnbindControllerRequest, UnbindControllerResponse, UpdateControllerFirmwareRequest, UpdateControllerRequest } from "./controller_pb";
+import { BindControllerRequest, BindControllerResponse, ConfigureControllerRequest, Controller, CreateControllerRequest, DeleteControllerRequest, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GenerateFirmwareDownloadUriRequest, GetControllerRequest, InitializeControllerRequest, ListControllersRequest, ListControllersResponse, ResetControllerRequest, UnbindControllerRequest, UnbindControllerResponse, UpdateControllerFirmwareRequest, UpdateControllerRequest } from "./controller_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -176,6 +176,20 @@ export const ControllerService = {
       name: "UpdateControllerFirmware",
       I: UpdateControllerFirmwareRequest,
       O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generates an authorization token for a controller
+     *
+     * Generates an authorization token that allows to connect, authenticate and
+     * authorize against a controller.
+     *
+     * @generated from rpc salto.nebula.controller.v1.ControllerService.GenerateAuthorizationToken
+     */
+    generateAuthorizationToken: {
+      name: "GenerateAuthorizationToken",
+      I: GenerateAuthorizationTokenRequest,
+      O: GenerateAuthorizationTokenResponse,
       kind: MethodKind.Unary,
     },
     /**
