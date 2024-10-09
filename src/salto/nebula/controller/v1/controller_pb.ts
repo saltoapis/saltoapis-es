@@ -1090,6 +1090,90 @@ export class UpdateControllerFirmwareMetadata extends Message<UpdateControllerFi
 }
 
 /**
+ * The request message for [`GenerateAuthorizationToken`][salto.nebula.controller.v1.ControllerService.GenerateAuthorizationToken]
+ *
+ * @generated from message salto.nebula.controller.v1.GenerateAuthorizationTokenRequest
+ */
+export class GenerateAuthorizationTokenRequest extends Message<GenerateAuthorizationTokenRequest> {
+  /**
+   * The resource name of the controller that the authorization token is
+   * generated for. For example:
+   * `installations/surelock-homes-hq/controllers/baker-street-entrance`.
+   *
+   * @generated from field: string controller = 1;
+   */
+  controller = "";
+
+  constructor(data?: PartialMessage<GenerateAuthorizationTokenRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.GenerateAuthorizationTokenRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "controller", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GenerateAuthorizationTokenRequest {
+    return new GenerateAuthorizationTokenRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GenerateAuthorizationTokenRequest {
+    return new GenerateAuthorizationTokenRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GenerateAuthorizationTokenRequest {
+    return new GenerateAuthorizationTokenRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GenerateAuthorizationTokenRequest | PlainMessage<GenerateAuthorizationTokenRequest> | undefined, b: GenerateAuthorizationTokenRequest | PlainMessage<GenerateAuthorizationTokenRequest> | undefined): boolean {
+    return proto3.util.equals(GenerateAuthorizationTokenRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`GenerateAuthorizationToken`][salto.nebula.controller.v1.ControllerService.GenerateAuthorizationToken]
+ *
+ * @generated from message salto.nebula.controller.v1.GenerateAuthorizationTokenResponse
+ */
+export class GenerateAuthorizationTokenResponse extends Message<GenerateAuthorizationTokenResponse> {
+  /**
+   * Authorization token to be used for connecting against a controller.
+   *
+   * @generated from field: bytes authorization_token = 1;
+   */
+  authorizationToken = new Uint8Array(0);
+
+  constructor(data?: PartialMessage<GenerateAuthorizationTokenResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.GenerateAuthorizationTokenResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "authorization_token", kind: "scalar", T: 12 /* ScalarType.BYTES */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GenerateAuthorizationTokenResponse {
+    return new GenerateAuthorizationTokenResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GenerateAuthorizationTokenResponse {
+    return new GenerateAuthorizationTokenResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GenerateAuthorizationTokenResponse {
+    return new GenerateAuthorizationTokenResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GenerateAuthorizationTokenResponse | PlainMessage<GenerateAuthorizationTokenResponse> | undefined, b: GenerateAuthorizationTokenResponse | PlainMessage<GenerateAuthorizationTokenResponse> | undefined): boolean {
+    return proto3.util.equals(GenerateAuthorizationTokenResponse, a, b);
+  }
+}
+
+/**
  * The request message for [`GenerateFirmwareDownloadUri`][salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri]
  *
  * @generated from message salto.nebula.controller.v1.GenerateFirmwareDownloadUriRequest
