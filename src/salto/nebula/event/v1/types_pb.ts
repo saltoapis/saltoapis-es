@@ -679,9 +679,9 @@ export class AccessRightAccessPointDeleted extends Message<AccessRightAccessPoin
 /**
  * Event representing the deletion of multiple access right's access point association.
  *
- * @generated from message salto.nebula.event.v1.AccessRightAccessPointBatchDeleted
+ * @generated from message salto.nebula.event.v1.AccessRightAccessPointsBatchDeleted
  */
-export class AccessRightAccessPointBatchDeleted extends Message<AccessRightAccessPointBatchDeleted> {
+export class AccessRightAccessPointsBatchDeleted extends Message<AccessRightAccessPointsBatchDeleted> {
   /**
    * The access right to which the access points have been removed.
    *
@@ -696,32 +696,32 @@ export class AccessRightAccessPointBatchDeleted extends Message<AccessRightAcces
    */
   accessPoints: AccessPoint[] = [];
 
-  constructor(data?: PartialMessage<AccessRightAccessPointBatchDeleted>) {
+  constructor(data?: PartialMessage<AccessRightAccessPointsBatchDeleted>) {
     super();
     proto3.util.initPartial(data, this);
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "salto.nebula.event.v1.AccessRightAccessPointBatchDeleted";
+  static readonly typeName = "salto.nebula.event.v1.AccessRightAccessPointsBatchDeleted";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_right", kind: "message", T: AccessRight },
     { no: 2, name: "access_points", kind: "message", T: AccessPoint, repeated: true },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightAccessPointBatchDeleted {
-    return new AccessRightAccessPointBatchDeleted().fromBinary(bytes, options);
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightAccessPointsBatchDeleted {
+    return new AccessRightAccessPointsBatchDeleted().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AccessRightAccessPointBatchDeleted {
-    return new AccessRightAccessPointBatchDeleted().fromJson(jsonValue, options);
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AccessRightAccessPointsBatchDeleted {
+    return new AccessRightAccessPointsBatchDeleted().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AccessRightAccessPointBatchDeleted {
-    return new AccessRightAccessPointBatchDeleted().fromJsonString(jsonString, options);
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AccessRightAccessPointsBatchDeleted {
+    return new AccessRightAccessPointsBatchDeleted().fromJsonString(jsonString, options);
   }
 
-  static equals(a: AccessRightAccessPointBatchDeleted | PlainMessage<AccessRightAccessPointBatchDeleted> | undefined, b: AccessRightAccessPointBatchDeleted | PlainMessage<AccessRightAccessPointBatchDeleted> | undefined): boolean {
-    return proto3.util.equals(AccessRightAccessPointBatchDeleted, a, b);
+  static equals(a: AccessRightAccessPointsBatchDeleted | PlainMessage<AccessRightAccessPointsBatchDeleted> | undefined, b: AccessRightAccessPointsBatchDeleted | PlainMessage<AccessRightAccessPointsBatchDeleted> | undefined): boolean {
+    return proto3.util.equals(AccessRightAccessPointsBatchDeleted, a, b);
   }
 }
 
