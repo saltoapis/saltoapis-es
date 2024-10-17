@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AccessRight, AccessRightAccessPoint, AccessRightAccessPointGroup, BatchCreateAccessRightAccessPointsRequest, BatchCreateAccessRightAccessPointsResponse, BatchDeleteAccessRightAccessPointsRequest, BatchDeleteAccessRightAccessPointsResponse, CreateAccessRightAccessPointGroupRequest, CreateAccessRightAccessPointRequest, CreateAccessRightRequest, DeleteAccessRightAccessPointGroupRequest, DeleteAccessRightAccessPointRequest, DeleteAccessRightRequest, GetAccessRightAccessPointGroupRequest, GetAccessRightAccessPointRequest, GetAccessRightRequest, ListAccessRightAccessPointGroupsRequest, ListAccessRightAccessPointGroupsResponse, ListAccessRightAccessPointsRequest, ListAccessRightAccessPointsResponse, ListAccessRightsRequest, ListAccessRightsResponse, UpdateAccessRightAccessPointGroupRequest, UpdateAccessRightAccessPointRequest, UpdateAccessRightRequest } from "./access_right_pb";
+import { AccessRight, AccessRightAccessPoint, AccessRightAccessPointGroup, BatchCreateAccessRightAccessPointGroupsRequest, BatchCreateAccessRightAccessPointGroupsResponse, BatchCreateAccessRightAccessPointsRequest, BatchCreateAccessRightAccessPointsResponse, BatchDeleteAccessRightAccessPointGroupsRequest, BatchDeleteAccessRightAccessPointGroupsResponse, BatchDeleteAccessRightAccessPointsRequest, BatchDeleteAccessRightAccessPointsResponse, CreateAccessRightAccessPointGroupRequest, CreateAccessRightAccessPointRequest, CreateAccessRightRequest, DeleteAccessRightAccessPointGroupRequest, DeleteAccessRightAccessPointRequest, DeleteAccessRightRequest, GetAccessRightAccessPointGroupRequest, GetAccessRightAccessPointRequest, GetAccessRightRequest, ListAccessRightAccessPointGroupsRequest, ListAccessRightAccessPointGroupsResponse, ListAccessRightAccessPointsRequest, ListAccessRightAccessPointsResponse, ListAccessRightsRequest, ListAccessRightsResponse, UpdateAccessRightAccessPointGroupRequest, UpdateAccessRightAccessPointRequest, UpdateAccessRightRequest } from "./access_right_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -192,6 +192,20 @@ export const AccessRightService = {
       kind: MethodKind.Unary,
     },
     /**
+     * Create a batch of access right's access point groups
+     *
+     * Creates a batch of access right's access point groups associations.
+     * This method allows the creation of multiple access right's access point groups in a single operation.
+     *
+     * @generated from rpc salto.nebula.accessright.v1.AccessRightService.BatchCreateAccessRightAccessPointGroups
+     */
+    batchCreateAccessRightAccessPointGroups: {
+      name: "BatchCreateAccessRightAccessPointGroups",
+      I: BatchCreateAccessRightAccessPointGroupsRequest,
+      O: BatchCreateAccessRightAccessPointGroupsResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
      * Get an access point group
      *
      * Retrieves an existing access right's access point group association.
@@ -241,6 +255,19 @@ export const AccessRightService = {
       name: "DeleteAccessRightAccessPointGroup",
       I: DeleteAccessRightAccessPointGroupRequest,
       O: Empty,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Delete a batch of access point groups
+     *
+     * Permanently deletes a batch access right's access point group associations. This cannot be undone.
+     *
+     * @generated from rpc salto.nebula.accessright.v1.AccessRightService.BatchDeleteAccessRightAccessPointGroups
+     */
+    batchDeleteAccessRightAccessPointGroups: {
+      name: "BatchDeleteAccessRightAccessPointGroups",
+      I: BatchDeleteAccessRightAccessPointGroupsRequest,
+      O: BatchDeleteAccessRightAccessPointGroupsResponse,
       kind: MethodKind.Unary,
     },
   }
