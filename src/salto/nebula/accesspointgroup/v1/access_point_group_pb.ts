@@ -499,6 +499,99 @@ export class CreateAccessPointGroupAccessPointRequest extends Message<CreateAcce
 }
 
 /**
+ * The request message for [`BatchCreateAccessPointGroupAccessPoints`][salto.nebula.accesspointgroup.v1.AccessPointGroupService.BatchCreateAccessPointGroupAccessPoints]
+ *
+ * @generated from message salto.nebula.accesspointgroup.v1.BatchCreateAccessPointGroupAccessPointsRequest
+ */
+export class BatchCreateAccessPointGroupAccessPointsRequest extends Message<BatchCreateAccessPointGroupAccessPointsRequest> {
+  /**
+   * Resource name of the parent resource where the access point group's
+   * access point associations are to be created. For example:
+   * `installations/surelock-homes-hq/access-point-groups/common-accesses`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to create.
+   * A maximum of 100 access point group access points can be created in a batch.
+   *
+   * @generated from field: repeated salto.nebula.accesspointgroup.v1.CreateAccessPointGroupAccessPointRequest requests = 2;
+   */
+  requests: CreateAccessPointGroupAccessPointRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateAccessPointGroupAccessPointsRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accesspointgroup.v1.BatchCreateAccessPointGroupAccessPointsRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: CreateAccessPointGroupAccessPointRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateAccessPointGroupAccessPointsRequest {
+    return new BatchCreateAccessPointGroupAccessPointsRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateAccessPointGroupAccessPointsRequest {
+    return new BatchCreateAccessPointGroupAccessPointsRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateAccessPointGroupAccessPointsRequest {
+    return new BatchCreateAccessPointGroupAccessPointsRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateAccessPointGroupAccessPointsRequest | PlainMessage<BatchCreateAccessPointGroupAccessPointsRequest> | undefined, b: BatchCreateAccessPointGroupAccessPointsRequest | PlainMessage<BatchCreateAccessPointGroupAccessPointsRequest> | undefined): boolean {
+    return proto3.util.equals(BatchCreateAccessPointGroupAccessPointsRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchCreateAccessPointGroupAccessPoints`][salto.nebula.user.v1.AccessPointGroupService.BatchCreateAccessPointGroupAccessPoints]
+ *
+ * @generated from message salto.nebula.accesspointgroup.v1.BatchCreateAccessPointGroupAccessPointsResponse
+ */
+export class BatchCreateAccessPointGroupAccessPointsResponse extends Message<BatchCreateAccessPointGroupAccessPointsResponse> {
+  /**
+   * Access point group access points created.
+   *
+   * @generated from field: repeated salto.nebula.accesspointgroup.v1.AccessPointGroupAccessPoint access_point_group_access_points = 1;
+   */
+  accessPointGroupAccessPoints: AccessPointGroupAccessPoint[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateAccessPointGroupAccessPointsResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accesspointgroup.v1.BatchCreateAccessPointGroupAccessPointsResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "access_point_group_access_points", kind: "message", T: AccessPointGroupAccessPoint, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateAccessPointGroupAccessPointsResponse {
+    return new BatchCreateAccessPointGroupAccessPointsResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateAccessPointGroupAccessPointsResponse {
+    return new BatchCreateAccessPointGroupAccessPointsResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateAccessPointGroupAccessPointsResponse {
+    return new BatchCreateAccessPointGroupAccessPointsResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateAccessPointGroupAccessPointsResponse | PlainMessage<BatchCreateAccessPointGroupAccessPointsResponse> | undefined, b: BatchCreateAccessPointGroupAccessPointsResponse | PlainMessage<BatchCreateAccessPointGroupAccessPointsResponse> | undefined): boolean {
+    return proto3.util.equals(BatchCreateAccessPointGroupAccessPointsResponse, a, b);
+  }
+}
+
+/**
  * The request message for [`GetAccessPointGroupAccessPoint`][salto.nebula.accesspointgroup.v1.AccessPointGroupService.GetAccessPointGroupAccessPoint]
  *
  * @generated from message salto.nebula.accesspointgroup.v1.GetAccessPointGroupAccessPointRequest
@@ -759,6 +852,91 @@ export class DeleteAccessPointGroupAccessPointRequest extends Message<DeleteAcce
 
   static equals(a: DeleteAccessPointGroupAccessPointRequest | PlainMessage<DeleteAccessPointGroupAccessPointRequest> | undefined, b: DeleteAccessPointGroupAccessPointRequest | PlainMessage<DeleteAccessPointGroupAccessPointRequest> | undefined): boolean {
     return proto3.util.equals(DeleteAccessPointGroupAccessPointRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [`BatchDeleteAccessPointGroupAccessPoints`][salto.nebula.accesspointgroup.v1.AccessPointGroupService.BatchDeleteAccessPointGroupAccessPoints]
+ *
+ * @generated from message salto.nebula.accesspointgroup.v1.BatchDeleteAccessPointGroupAccessPointsRequest
+ */
+export class BatchDeleteAccessPointGroupAccessPointsRequest extends Message<BatchDeleteAccessPointGroupAccessPointsRequest> {
+  /**
+   * The resource name of the access point group's access point associations to be deleted.
+   * For example:
+   * `installations/surelock-homes-hq/access-point-groups/common-accesses`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to delete.
+   * A maximum of 100 access point group access points can be deleted in a batch.
+   *
+   * @generated from field: repeated salto.nebula.accesspointgroup.v1.DeleteAccessPointGroupAccessPointRequest requests = 2;
+   */
+  requests: DeleteAccessPointGroupAccessPointRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchDeleteAccessPointGroupAccessPointsRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accesspointgroup.v1.BatchDeleteAccessPointGroupAccessPointsRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: DeleteAccessPointGroupAccessPointRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchDeleteAccessPointGroupAccessPointsRequest {
+    return new BatchDeleteAccessPointGroupAccessPointsRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchDeleteAccessPointGroupAccessPointsRequest {
+    return new BatchDeleteAccessPointGroupAccessPointsRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchDeleteAccessPointGroupAccessPointsRequest {
+    return new BatchDeleteAccessPointGroupAccessPointsRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchDeleteAccessPointGroupAccessPointsRequest | PlainMessage<BatchDeleteAccessPointGroupAccessPointsRequest> | undefined, b: BatchDeleteAccessPointGroupAccessPointsRequest | PlainMessage<BatchDeleteAccessPointGroupAccessPointsRequest> | undefined): boolean {
+    return proto3.util.equals(BatchDeleteAccessPointGroupAccessPointsRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchDeleteAccessPointGroupAccessPoints`][salto.nebula.accesspointgroup.v1.AccessPointGroupService.BatchDeleteAccessPointGroupAccessPoints]
+ *
+ * @generated from message salto.nebula.accesspointgroup.v1.BatchDeleteAccessPointGroupAccessPointsResponse
+ */
+export class BatchDeleteAccessPointGroupAccessPointsResponse extends Message<BatchDeleteAccessPointGroupAccessPointsResponse> {
+  constructor(data?: PartialMessage<BatchDeleteAccessPointGroupAccessPointsResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accesspointgroup.v1.BatchDeleteAccessPointGroupAccessPointsResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchDeleteAccessPointGroupAccessPointsResponse {
+    return new BatchDeleteAccessPointGroupAccessPointsResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchDeleteAccessPointGroupAccessPointsResponse {
+    return new BatchDeleteAccessPointGroupAccessPointsResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchDeleteAccessPointGroupAccessPointsResponse {
+    return new BatchDeleteAccessPointGroupAccessPointsResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchDeleteAccessPointGroupAccessPointsResponse | PlainMessage<BatchDeleteAccessPointGroupAccessPointsResponse> | undefined, b: BatchDeleteAccessPointGroupAccessPointsResponse | PlainMessage<BatchDeleteAccessPointGroupAccessPointsResponse> | undefined): boolean {
+    return proto3.util.equals(BatchDeleteAccessPointGroupAccessPointsResponse, a, b);
   }
 }
 

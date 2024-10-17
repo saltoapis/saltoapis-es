@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AccessPointGroup, AccessPointGroupAccessPoint, CreateAccessPointGroupAccessPointRequest, CreateAccessPointGroupRequest, DeleteAccessPointGroupAccessPointRequest, DeleteAccessPointGroupRequest, GetAccessPointGroupAccessPointRequest, GetAccessPointGroupRequest, ListAccessPointGroupAccessPointsRequest, ListAccessPointGroupAccessPointsResponse, ListAccessPointGroupsRequest, ListAccessPointGroupsResponse, UpdateAccessPointGroupAccessPointRequest, UpdateAccessPointGroupRequest } from "./access_point_group_pb";
+import { AccessPointGroup, AccessPointGroupAccessPoint, BatchCreateAccessPointGroupAccessPointsRequest, BatchCreateAccessPointGroupAccessPointsResponse, BatchDeleteAccessPointGroupAccessPointsRequest, BatchDeleteAccessPointGroupAccessPointsResponse, CreateAccessPointGroupAccessPointRequest, CreateAccessPointGroupRequest, DeleteAccessPointGroupAccessPointRequest, DeleteAccessPointGroupRequest, GetAccessPointGroupAccessPointRequest, GetAccessPointGroupRequest, ListAccessPointGroupAccessPointsRequest, ListAccessPointGroupAccessPointsResponse, ListAccessPointGroupsRequest, ListAccessPointGroupsResponse, UpdateAccessPointGroupAccessPointRequest, UpdateAccessPointGroupRequest } from "./access_point_group_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -98,6 +98,20 @@ export const AccessPointGroupService = {
       kind: MethodKind.Unary,
     },
     /**
+     * Create an batch of access point group access points
+     *
+     * Creates a batch of access point group's access points association.
+     * This method allows the creation of multiple access point group's access points in a single operation.
+     *
+     * @generated from rpc salto.nebula.accesspointgroup.v1.AccessPointGroupService.BatchCreateAccessPointGroupAccessPoints
+     */
+    batchCreateAccessPointGroupAccessPoints: {
+      name: "BatchCreateAccessPointGroupAccessPoints",
+      I: BatchCreateAccessPointGroupAccessPointsRequest,
+      O: BatchCreateAccessPointGroupAccessPointsResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
      * Get an access point
      *
      * Retrieves an existing access point group's access point association.
@@ -147,6 +161,20 @@ export const AccessPointGroupService = {
       name: "DeleteAccessPointGroupAccessPoint",
       I: DeleteAccessPointGroupAccessPointRequest,
       O: Empty,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Delete a batch of access point group access point associations
+     *
+     * Deletes a batch of access point group access point associations. This method allows the
+     * deletion of multiple access point group access points in a single operation. This cannot be undone.
+     *
+     * @generated from rpc salto.nebula.accesspointgroup.v1.AccessPointGroupService.BatchDeleteAccessPointGroupAccessPoints
+     */
+    batchDeleteAccessPointGroupAccessPoints: {
+      name: "BatchDeleteAccessPointGroupAccessPoints",
+      I: BatchDeleteAccessPointGroupAccessPointsRequest,
+      O: BatchDeleteAccessPointGroupAccessPointsResponse,
       kind: MethodKind.Unary,
     },
   }
