@@ -222,6 +222,32 @@ export class UserAccessRight extends Message<UserAccessRight> {
    */
   effectiveSchedules: Schedule[] = [];
 
+  /**
+   * Activation time independent of any time zone or calendar.
+   * User access right's association activation time rules:
+   * 1. Activation time must be specified in multiples of 10 minutes.
+   *    Valid examples: 07:40, 12:30, 18:10. Invalid examples: 12:32, 10:15.
+   * 2. If no activation time is provided, the current time is used, truncated to the nearest earlier multiple of 10 minutes.
+   *    For example, if the current time is 14:46, the system will use 14:40.
+   *
+   * @generated from field: optional google.protobuf.Timestamp activate_time = 6;
+   */
+  activateTime?: Timestamp;
+
+  /**
+   * Expiration time independent of any time zone or calendar.
+   * User access right's association expiration time rules:
+   * 1. Expiration time must be specified in multiples of 10 minutes.
+   *    Valid examples: 07:40, 12:30, 18:10. Invalid examples: 12:32, 10:15.
+   * 2. When specifying expiration time, it must:
+   *    - Be at least 10 minutes after activation time.
+   *    - Always be a multiple of 10 minutes. The system does not round or adjust expiration time for you.
+   *      For example, if you attempt to set 10:15, the system will reject it.
+   *
+   * @generated from field: optional google.protobuf.Timestamp expire_time = 7;
+   */
+  expireTime?: Timestamp;
+
   constructor(data?: PartialMessage<UserAccessRight>) {
     super();
     proto3.util.initPartial(data, this);
@@ -235,6 +261,8 @@ export class UserAccessRight extends Message<UserAccessRight> {
     { no: 3, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "schedules", kind: "message", T: Schedule, repeated: true },
     { no: 5, name: "effective_schedules", kind: "message", T: Schedule, repeated: true },
+    { no: 6, name: "activate_time", kind: "message", T: Timestamp, opt: true },
+    { no: 7, name: "expire_time", kind: "message", T: Timestamp, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserAccessRight {
