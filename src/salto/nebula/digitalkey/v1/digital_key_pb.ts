@@ -209,14 +209,21 @@ export class DigitalKey_AppKey extends Message<DigitalKey_AppKey> {
   unitId?: string;
 
   /**
-   * Access points change time.
+   * Access points synchronization time.
    *
-   * This data is populated with the user access points sync time.
-   * Indicates the last time the digital key's access points changed.
+   * This data is populated with the user's access points sync time.
+   * Indicates the last time the digital key's access points were synced.
    *
-   * @generated from field: google.protobuf.Timestamp access_points_change_time = 7;
+   * @generated from field: google.protobuf.Timestamp access_points_sync_time = 7;
    */
-  accessPointsChangeTime?: Timestamp;
+  accessPointsSyncTime?: Timestamp;
+
+  /**
+   * The sync state of the digital key's access points.
+   *
+   * @generated from field: salto.nebula.digitalkey.v1.DigitalKey.AppKey.AccessPointsSyncState access_points_sync_state = 8;
+   */
+  accessPointsSyncState = DigitalKey_AppKey_AccessPointsSyncState.ACCESS_POINTS_SYNC_STATE_UNSPECIFIED;
 
   constructor(data?: PartialMessage<DigitalKey_AppKey>) {
     super();
@@ -232,7 +239,8 @@ export class DigitalKey_AppKey extends Message<DigitalKey_AppKey> {
     { no: 6, name: "unit", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 3, name: "installation_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "unit_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
-    { no: 7, name: "access_points_change_time", kind: "message", T: Timestamp },
+    { no: 7, name: "access_points_sync_time", kind: "message", T: Timestamp },
+    { no: 8, name: "access_points_sync_state", kind: "enum", T: proto3.getEnumType(DigitalKey_AppKey_AccessPointsSyncState) },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DigitalKey_AppKey {
@@ -251,6 +259,57 @@ export class DigitalKey_AppKey extends Message<DigitalKey_AppKey> {
     return proto3.util.equals(DigitalKey_AppKey, a, b);
   }
 }
+
+/**
+ * Sync state of the digital key's access points.
+ *
+ * @generated from enum salto.nebula.digitalkey.v1.DigitalKey.AppKey.AccessPointsSyncState
+ */
+export enum DigitalKey_AppKey_AccessPointsSyncState {
+  /**
+   * Sentinel value used to indicate that the state is unknown, omitted,
+   * or is not applicable.
+   *
+   * @generated from enum value: ACCESS_POINTS_SYNC_STATE_UNSPECIFIED = 0;
+   */
+  ACCESS_POINTS_SYNC_STATE_UNSPECIFIED = 0,
+
+  /**
+   * The digital key's access points are invalidated.
+   *
+   * @generated from enum value: INVALIDATED = 3;
+   */
+  INVALIDATED = 3,
+
+  /**
+   * The digital key's access points are being synced.
+   *
+   * @generated from enum value: SYNCING = 1;
+   */
+  SYNCING = 1,
+
+  /**
+   * The digital key's access points are synced.
+   *
+   * @generated from enum value: SYNCED = 2;
+   */
+  SYNCED = 2,
+
+  /**
+   * The digital key's access points are not supported on the digital key's installation.
+   *
+   * @generated from enum value: NOT_SUPPORTED = 4;
+   */
+  NOT_SUPPORTED = 4,
+}
+// Retrieve enum metadata with: proto3.getEnumType(DigitalKey_AppKey_AccessPointsSyncState)
+proto3.util.setEnumType(DigitalKey_AppKey_AccessPointsSyncState, "salto.nebula.digitalkey.v1.DigitalKey.AppKey.AccessPointsSyncState", [
+  { no: 0, name: "ACCESS_POINTS_SYNC_STATE_UNSPECIFIED" },
+  { no: 3, name: "INVALIDATED" },
+  { no: 1, name: "SYNCING" },
+  { no: 2, name: "SYNCED" },
+  { no: 4, name: "NOT_SUPPORTED" },
+]);
 
 /**
  * Wallet key.
