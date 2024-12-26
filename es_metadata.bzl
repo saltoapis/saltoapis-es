@@ -58,6 +58,7 @@ es_projects = [
     '//src/salto/nebula/calendar/v1',
     '//src/salto/nebula/controller/v1',
     '//src/salto/nebula/device/v1',
+    '//src/salto/nebula/electronickey/v1',
     '//src/salto/nebula/electroniclock/v1',
     '//src/salto/nebula/encoder/v1',
     '//src/salto/nebula/extender/v1',
