@@ -61,9 +61,11 @@ export enum DeviceType {
   INTERCOM_ADAPTOR = 6,
 
   /**
-   * @generated from enum value: UNNAMED_1 = 7;
+   * Electronic key
+   *
+   * @generated from enum value: ELECTRONIC_KEY = 7;
    */
-  UNNAMED_1 = 7,
+  ELECTRONIC_KEY = 7,
 }
 // Retrieve enum metadata with: proto3.getEnumType(DeviceType)
 proto3.util.setEnumType(DeviceType, "salto.nebula.type.DeviceType", [
@@ -74,6 +76,6 @@ proto3.util.setEnumType(DeviceType, "salto.nebula.type.DeviceType", [
   { no: 4, name: "ENCODER" },
   { no: 5, name: "CONTROLLER" },
   { no: 6, name: "INTERCOM_ADAPTOR" },
-  { no: 7, name: "UNNAMED_1" },
+  { no: 7, name: "ELECTRONIC_KEY" },
 ]);
 
