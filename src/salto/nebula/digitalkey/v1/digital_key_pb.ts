@@ -828,3 +828,111 @@ export class ListDigitalKeyAccessPointsResponse extends Message<ListDigitalKeyAc
   }
 }
 
+/**
+ * The request message for [`SyncDigitalKeyAccessPoints`][salto.nebula.digitalkey.v1.DigitalKeyService.SyncDigitalKeyAccessPointsRequest]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.SyncDigitalKeyAccessPointsRequest
+ */
+export class SyncDigitalKeyAccessPointsRequest extends Message<SyncDigitalKeyAccessPointsRequest> {
+  /**
+   * The name of the requested digital key resource to compute its access points. For example:
+   * `digital-keys/baker-street-entrance`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<SyncDigitalKeyAccessPointsRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.SyncDigitalKeyAccessPointsRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SyncDigitalKeyAccessPointsRequest {
+    return new SyncDigitalKeyAccessPointsRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SyncDigitalKeyAccessPointsRequest {
+    return new SyncDigitalKeyAccessPointsRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SyncDigitalKeyAccessPointsRequest {
+    return new SyncDigitalKeyAccessPointsRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: SyncDigitalKeyAccessPointsRequest | PlainMessage<SyncDigitalKeyAccessPointsRequest> | undefined, b: SyncDigitalKeyAccessPointsRequest | PlainMessage<SyncDigitalKeyAccessPointsRequest> | undefined): boolean {
+    return proto3.util.equals(SyncDigitalKeyAccessPointsRequest, a, b);
+  }
+}
+
+/**
+ * The empty response message for [`SyncDigitalKeyAccessPoints`][salto.nebula.digitalkey.v1.DigitalKeyService.SyncDigitalKeyAccessPoints]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.SyncDigitalKeyAccessPointsResponse
+ */
+export class SyncDigitalKeyAccessPointsResponse extends Message<SyncDigitalKeyAccessPointsResponse> {
+  constructor(data?: PartialMessage<SyncDigitalKeyAccessPointsResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.SyncDigitalKeyAccessPointsResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SyncDigitalKeyAccessPointsResponse {
+    return new SyncDigitalKeyAccessPointsResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SyncDigitalKeyAccessPointsResponse {
+    return new SyncDigitalKeyAccessPointsResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SyncDigitalKeyAccessPointsResponse {
+    return new SyncDigitalKeyAccessPointsResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: SyncDigitalKeyAccessPointsResponse | PlainMessage<SyncDigitalKeyAccessPointsResponse> | undefined, b: SyncDigitalKeyAccessPointsResponse | PlainMessage<SyncDigitalKeyAccessPointsResponse> | undefined): boolean {
+    return proto3.util.equals(SyncDigitalKeyAccessPointsResponse, a, b);
+  }
+}
+
+/**
+ * The empty metadata message for [`SyncDigitalKeyAccessPoints`][salto.nebula.digitalkey.v1.DigitalKeyService.SyncDigitalKeyAccessPoints]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.SyncDigitalKeyAccessPointsMetadata
+ */
+export class SyncDigitalKeyAccessPointsMetadata extends Message<SyncDigitalKeyAccessPointsMetadata> {
+  constructor(data?: PartialMessage<SyncDigitalKeyAccessPointsMetadata>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.SyncDigitalKeyAccessPointsMetadata";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): SyncDigitalKeyAccessPointsMetadata {
+    return new SyncDigitalKeyAccessPointsMetadata().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): SyncDigitalKeyAccessPointsMetadata {
+    return new SyncDigitalKeyAccessPointsMetadata().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): SyncDigitalKeyAccessPointsMetadata {
+    return new SyncDigitalKeyAccessPointsMetadata().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: SyncDigitalKeyAccessPointsMetadata | PlainMessage<SyncDigitalKeyAccessPointsMetadata> | undefined, b: SyncDigitalKeyAccessPointsMetadata | PlainMessage<SyncDigitalKeyAccessPointsMetadata> | undefined): boolean {
+    return proto3.util.equals(SyncDigitalKeyAccessPointsMetadata, a, b);
+  }
+}
+

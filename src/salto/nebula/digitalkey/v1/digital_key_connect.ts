@@ -3,8 +3,9 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { DigitalKey, DigitalKeyAccessPoint, GetDigitalKeyAccessPointRequest, GetDigitalKeyRequest, ListDigitalKeyAccessPointsRequest, ListDigitalKeyAccessPointsResponse, ListDigitalKeysRequest, ListDigitalKeysResponse } from "./digital_key_pb";
+import { DigitalKey, DigitalKeyAccessPoint, GetDigitalKeyAccessPointRequest, GetDigitalKeyRequest, ListDigitalKeyAccessPointsRequest, ListDigitalKeyAccessPointsResponse, ListDigitalKeysRequest, ListDigitalKeysResponse, SyncDigitalKeyAccessPointsRequest } from "./digital_key_pb";
 import { MethodKind } from "@bufbuild/protobuf";
+import { Operation } from "@saltoapis/longrunning-v1";
 
 /**
  * DigitalKeyService is the service responsible for managing digital key
@@ -66,6 +67,22 @@ export const DigitalKeyService = {
       name: "ListDigitalKeyAccessPoints",
       I: ListDigitalKeyAccessPointsRequest,
       O: ListDigitalKeyAccessPointsResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Synchronize access points
+     *
+     * Synchronize the digital key's access point associations.
+     * This methods asks the cloud to synchronize the access points for the given digital key.
+     * The cloud will trigger the synchronization of the digital key's access points if needed.
+     * (-- api-linter: core::0136::http-name-variable=disabled --)
+     *
+     * @generated from rpc salto.nebula.digitalkey.v1.DigitalKeyService.SyncDigitalKeyAccessPoints
+     */
+    syncDigitalKeyAccessPoints: {
+      name: "SyncDigitalKeyAccessPoints",
+      I: SyncDigitalKeyAccessPointsRequest,
+      O: Operation,
       kind: MethodKind.Unary,
     },
   }
