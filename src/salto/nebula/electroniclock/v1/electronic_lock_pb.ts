@@ -5,6 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Duration, FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
+import { DeviceMetadata } from "@saltoapis/nebula-type";
 
 /**
  * The electronic lock object
@@ -82,6 +83,13 @@ export class ElectronicLock extends Message<ElectronicLock> {
    * @generated from field: bool initialized = 7;
    */
   initialized = false;
+
+  /**
+   * Device metadata contains information about a device hardware and firmware.
+   *
+   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 15;
+   */
+  deviceMetadata?: DeviceMetadata;
 
   /**
    * Indicates whether this electronic lock has pending updates or not. This
@@ -162,6 +170,7 @@ export class ElectronicLock extends Message<ElectronicLock> {
     { no: 5, name: "extender", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "parent_device" },
     { no: 6, name: "access_point", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 7, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 15, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 8, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 9, name: "connected", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
     { no: 10, name: "low_battery", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
