@@ -233,7 +233,8 @@ export const InstallationService = {
     /**
      * Update subscription payment method's card
      *
-     * Updates subscription payment method's card.
+     * Updates subscription payment method's card. If there is a payment method
+     * associated with the subscription, it will be deleted.
      *
      * @generated from rpc salto.nebula.installation.v1.InstallationService.UpdateCard
      */
