@@ -514,6 +514,14 @@ export class PaymentMethod extends Message<PaymentMethod> {
      */
     value: PaymentMethod_Card;
     case: "card";
+  } | {
+    /**
+     * Direct debit details.
+     *
+     * @generated from field: salto.nebula.installation.v1.PaymentMethod.DirectDebit direct_debit = 3;
+     */
+    value: PaymentMethod_DirectDebit;
+    case: "directDebit";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<PaymentMethod>) {
@@ -526,6 +534,7 @@ export class PaymentMethod extends Message<PaymentMethod> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "card", kind: "message", T: PaymentMethod_Card, oneof: "method" },
+    { no: 3, name: "direct_debit", kind: "message", T: PaymentMethod_DirectDebit, oneof: "method" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PaymentMethod {
@@ -599,6 +608,113 @@ export class PaymentMethod_Card extends Message<PaymentMethod_Card> {
 
   static equals(a: PaymentMethod_Card | PlainMessage<PaymentMethod_Card> | undefined, b: PaymentMethod_Card | PlainMessage<PaymentMethod_Card> | undefined): boolean {
     return proto3.util.equals(PaymentMethod_Card, a, b);
+  }
+}
+
+/**
+ * Direct debit object
+ *
+ * @generated from message salto.nebula.installation.v1.PaymentMethod.DirectDebit
+ */
+export class PaymentMethod_DirectDebit extends Message<PaymentMethod_DirectDebit> {
+  /**
+   * The direct debit scheme.
+   *
+   * @generated from oneof salto.nebula.installation.v1.PaymentMethod.DirectDebit.scheme
+   */
+  scheme: {
+    /**
+     * SEPA details.
+     *
+     * @generated from field: salto.nebula.installation.v1.PaymentMethod.DirectDebit.SEPA sepa = 1;
+     */
+    value: PaymentMethod_DirectDebit_SEPA;
+    case: "sepa";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
+  constructor(data?: PartialMessage<PaymentMethod_DirectDebit>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.installation.v1.PaymentMethod.DirectDebit";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "sepa", kind: "message", T: PaymentMethod_DirectDebit_SEPA, oneof: "scheme" },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PaymentMethod_DirectDebit {
+    return new PaymentMethod_DirectDebit().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PaymentMethod_DirectDebit {
+    return new PaymentMethod_DirectDebit().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PaymentMethod_DirectDebit {
+    return new PaymentMethod_DirectDebit().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: PaymentMethod_DirectDebit | PlainMessage<PaymentMethod_DirectDebit> | undefined, b: PaymentMethod_DirectDebit | PlainMessage<PaymentMethod_DirectDebit> | undefined): boolean {
+    return proto3.util.equals(PaymentMethod_DirectDebit, a, b);
+  }
+}
+
+/**
+ * The SEPA object
+ *
+ * @generated from message salto.nebula.installation.v1.PaymentMethod.DirectDebit.SEPA
+ */
+export class PaymentMethod_DirectDebit_SEPA extends Message<PaymentMethod_DirectDebit_SEPA> {
+  /**
+   * The last four digits of the bank account number used for direct
+   * debit.
+   *
+   * @generated from field: string last_four = 1;
+   */
+  lastFour = "";
+
+  /**
+   * The name of the person or business that owns the bank account.
+   *
+   * @generated from field: string account_holder = 2;
+   */
+  accountHolder = "";
+
+  /**
+   * The IBAN (International Bank Account Number) of the bank account.
+   *
+   * @generated from field: string iban = 3;
+   */
+  iban = "";
+
+  constructor(data?: PartialMessage<PaymentMethod_DirectDebit_SEPA>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.installation.v1.PaymentMethod.DirectDebit.SEPA";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "last_four", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "account_holder", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "iban", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PaymentMethod_DirectDebit_SEPA {
+    return new PaymentMethod_DirectDebit_SEPA().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PaymentMethod_DirectDebit_SEPA {
+    return new PaymentMethod_DirectDebit_SEPA().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PaymentMethod_DirectDebit_SEPA {
+    return new PaymentMethod_DirectDebit_SEPA().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: PaymentMethod_DirectDebit_SEPA | PlainMessage<PaymentMethod_DirectDebit_SEPA> | undefined, b: PaymentMethod_DirectDebit_SEPA | PlainMessage<PaymentMethod_DirectDebit_SEPA> | undefined): boolean {
+    return proto3.util.equals(PaymentMethod_DirectDebit_SEPA, a, b);
   }
 }
 
@@ -1920,6 +2036,49 @@ export class UpdateBillingInfoRequest extends Message<UpdateBillingInfoRequest> 
 
   static equals(a: UpdateBillingInfoRequest | PlainMessage<UpdateBillingInfoRequest> | undefined, b: UpdateBillingInfoRequest | PlainMessage<UpdateBillingInfoRequest> | undefined): boolean {
     return proto3.util.equals(UpdateBillingInfoRequest, a, b);
+  }
+}
+
+/**
+ * (-- api-linter: core::0134::request-mask-required=disabled
+ *     aip.dev/not-precedent: We need to do this to simplify the update operation. --)
+ * The request message for [`UpdatePaymentMethod`][salto.nebula.installation.v1.InstallationService.UpdatePaymentMethod]
+ *
+ * @generated from message salto.nebula.installation.v1.UpdatePaymentMethodRequest
+ */
+export class UpdatePaymentMethodRequest extends Message<UpdatePaymentMethodRequest> {
+  /**
+   * The payment method resource which replaces the resource on the server.
+   *
+   * @generated from field: salto.nebula.installation.v1.PaymentMethod payment_method = 1;
+   */
+  paymentMethod?: PaymentMethod;
+
+  constructor(data?: PartialMessage<UpdatePaymentMethodRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.installation.v1.UpdatePaymentMethodRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "payment_method", kind: "message", T: PaymentMethod },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdatePaymentMethodRequest {
+    return new UpdatePaymentMethodRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdatePaymentMethodRequest {
+    return new UpdatePaymentMethodRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdatePaymentMethodRequest {
+    return new UpdatePaymentMethodRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UpdatePaymentMethodRequest | PlainMessage<UpdatePaymentMethodRequest> | undefined, b: UpdatePaymentMethodRequest | PlainMessage<UpdatePaymentMethodRequest> | undefined): boolean {
+    return proto3.util.equals(UpdatePaymentMethodRequest, a, b);
   }
 }
 
