@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AcceptInstallationOwnershipRequest, AcceptInstallationOwnershipResponse, ApplyCouponRequest, ApplyCouponResponse, BillingInfo, CreateInstallationRequest, CreatePolicyRequest, DeleteInstallationRequest, DeletePolicyRequest, GetInstallationRequest, GetPolicyRequest, GetSubscriptionRequest, Installation, ListInstallationsRequest, ListInstallationsResponse, ListInvoicesRequest, ListInvoicesResponse, ListPoliciesRequest, ListPoliciesResponse, Policy, Subscription, TestPermissionsRequest, TestPermissionsResponse, TransferInstallationOwnershipRequest, TransferInstallationOwnershipResponse, UnapplyCouponRequest, UnapplyCouponResponse, UndeleteInstallationRequest, UpdateBillingInfoRequest, UpdateCardRequest, UpdateCardResponse, UpdateInstallationRequest, UpdatePolicyRequest } from "./installation_pb";
+import { AcceptInstallationOwnershipRequest, AcceptInstallationOwnershipResponse, ApplyCouponRequest, ApplyCouponResponse, BillingInfo, CreateInstallationRequest, CreatePolicyRequest, DeleteInstallationRequest, DeletePolicyRequest, GetInstallationRequest, GetPolicyRequest, GetSubscriptionRequest, Installation, ListInstallationsRequest, ListInstallationsResponse, ListInvoicesRequest, ListInvoicesResponse, ListPoliciesRequest, ListPoliciesResponse, PaymentMethod, Policy, Subscription, TestPermissionsRequest, TestPermissionsResponse, TransferInstallationOwnershipRequest, TransferInstallationOwnershipResponse, UnapplyCouponRequest, UnapplyCouponResponse, UndeleteInstallationRequest, UpdateBillingInfoRequest, UpdateCardRequest, UpdateCardResponse, UpdateInstallationRequest, UpdatePaymentMethodRequest, UpdatePolicyRequest } from "./installation_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -228,6 +228,22 @@ export const InstallationService = {
       name: "UpdateBillingInfo",
       I: UpdateBillingInfoRequest,
       O: BillingInfo,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Update subscription payment method
+     *
+     * Updates an existing subscription payment method. If there is a payment
+     * method associated with the subscription, it will be deleted.
+     * (-- api-linter: core::0134::method-signature=disabled
+     *     aip.dev/not-precedent: We need to do this to simplify the update operation. --)
+     *
+     * @generated from rpc salto.nebula.installation.v1.InstallationService.UpdatePaymentMethod
+     */
+    updatePaymentMethod: {
+      name: "UpdatePaymentMethod",
+      I: UpdatePaymentMethodRequest,
+      O: PaymentMethod,
       kind: MethodKind.Unary,
     },
     /**
