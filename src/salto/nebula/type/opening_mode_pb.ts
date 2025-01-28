@@ -31,11 +31,19 @@ export enum OpeningMode {
    * @generated from enum value: TOGGLE = 2;
    */
   TOGGLE = 2,
+
+  /**
+   * Autolock.
+   *
+   * @generated from enum value: AUTOLOCK = 3;
+   */
+  AUTOLOCK = 3,
 }
 // Retrieve enum metadata with: proto3.getEnumType(OpeningMode)
 proto3.util.setEnumType(OpeningMode, "salto.nebula.type.OpeningMode", [
   { no: 0, name: "OPENING_MODE_UNSPECIFIED" },
   { no: 1, name: "OFFICE" },
   { no: 2, name: "TOGGLE" },
+  { no: 3, name: "AUTOLOCK" },
 ]);
 
