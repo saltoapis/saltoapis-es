@@ -936,3 +936,111 @@ export class SyncDigitalKeyAccessPointsMetadata extends Message<SyncDigitalKeyAc
   }
 }
 
+/**
+ * The request message for [`UnlockDigitalKeyAccessPoint`][salto.nebula.digitalkey.v1.DigitalKeyService.UnlockDigitalKeyAccessPoint]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.UnlockDigitalKeyAccessPointRequest
+ */
+export class UnlockDigitalKeyAccessPointRequest extends Message<UnlockDigitalKeyAccessPointRequest> {
+  /**
+   * The resource name of the access point to be unlocked. For example:
+   * `digital-keys/baker-street-key/access-points/baker-street-entrance`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<UnlockDigitalKeyAccessPointRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.UnlockDigitalKeyAccessPointRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnlockDigitalKeyAccessPointRequest {
+    return new UnlockDigitalKeyAccessPointRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnlockDigitalKeyAccessPointRequest {
+    return new UnlockDigitalKeyAccessPointRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnlockDigitalKeyAccessPointRequest {
+    return new UnlockDigitalKeyAccessPointRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnlockDigitalKeyAccessPointRequest | PlainMessage<UnlockDigitalKeyAccessPointRequest> | undefined, b: UnlockDigitalKeyAccessPointRequest | PlainMessage<UnlockDigitalKeyAccessPointRequest> | undefined): boolean {
+    return proto3.util.equals(UnlockDigitalKeyAccessPointRequest, a, b);
+  }
+}
+
+/**
+ * The empty response message for [`UnlockAccessPoint`][salto.nebula.digitalkey.v1.DigitalKeyService.UnlockDigitalKeyAccessPoint]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.UnlockDigitalKeyAccessPointResponse
+ */
+export class UnlockDigitalKeyAccessPointResponse extends Message<UnlockDigitalKeyAccessPointResponse> {
+  constructor(data?: PartialMessage<UnlockDigitalKeyAccessPointResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.UnlockDigitalKeyAccessPointResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnlockDigitalKeyAccessPointResponse {
+    return new UnlockDigitalKeyAccessPointResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnlockDigitalKeyAccessPointResponse {
+    return new UnlockDigitalKeyAccessPointResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnlockDigitalKeyAccessPointResponse {
+    return new UnlockDigitalKeyAccessPointResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnlockDigitalKeyAccessPointResponse | PlainMessage<UnlockDigitalKeyAccessPointResponse> | undefined, b: UnlockDigitalKeyAccessPointResponse | PlainMessage<UnlockDigitalKeyAccessPointResponse> | undefined): boolean {
+    return proto3.util.equals(UnlockDigitalKeyAccessPointResponse, a, b);
+  }
+}
+
+/**
+ * The metadata message for [`UnlockAccessPoint`][salto.nebula.digitalkey.v1.DigitalKeyService.UnlockDigitalKeyAccessPoint]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.UnlockDigitalKeyAccessPointMetadata
+ */
+export class UnlockDigitalKeyAccessPointMetadata extends Message<UnlockDigitalKeyAccessPointMetadata> {
+  constructor(data?: PartialMessage<UnlockDigitalKeyAccessPointMetadata>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.UnlockDigitalKeyAccessPointMetadata";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnlockDigitalKeyAccessPointMetadata {
+    return new UnlockDigitalKeyAccessPointMetadata().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UnlockDigitalKeyAccessPointMetadata {
+    return new UnlockDigitalKeyAccessPointMetadata().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UnlockDigitalKeyAccessPointMetadata {
+    return new UnlockDigitalKeyAccessPointMetadata().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UnlockDigitalKeyAccessPointMetadata | PlainMessage<UnlockDigitalKeyAccessPointMetadata> | undefined, b: UnlockDigitalKeyAccessPointMetadata | PlainMessage<UnlockDigitalKeyAccessPointMetadata> | undefined): boolean {
+    return proto3.util.equals(UnlockDigitalKeyAccessPointMetadata, a, b);
+  }
+}
+
