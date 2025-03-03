@@ -301,6 +301,15 @@ export enum DigitalKey_AppKey_AccessPointsSyncState {
    * @generated from enum value: NOT_SUPPORTED = 4;
    */
   NOT_SUPPORTED = 4,
+
+  /**
+   * The digital key's access points synchronization is skipped because the
+   * number of access points associated with this digital key
+   * exceeds the system's maximum allowed limit.
+   *
+   * @generated from enum value: LIMIT_EXCEEDED = 5;
+   */
+  LIMIT_EXCEEDED = 5,
 }
 // Retrieve enum metadata with: proto3.getEnumType(DigitalKey_AppKey_AccessPointsSyncState)
 proto3.util.setEnumType(DigitalKey_AppKey_AccessPointsSyncState, "salto.nebula.digitalkey.v1.DigitalKey.AppKey.AccessPointsSyncState", [
@@ -309,6 +318,7 @@ proto3.util.setEnumType(DigitalKey_AppKey_AccessPointsSyncState, "salto.nebula.d
   { no: 1, name: "SYNCING" },
   { no: 2, name: "SYNCED" },
   { no: 4, name: "NOT_SUPPORTED" },
+  { no: 5, name: "LIMIT_EXCEEDED" },
 ]);
 
 /**
