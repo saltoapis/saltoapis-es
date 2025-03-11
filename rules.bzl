@@ -1,4 +1,3 @@
-load("//:es_metadata.bzl", "PROTOC_ES_VERSION", "PROTOC_CONNECT_ES_VERSION")
 load("//scripts:prepare.bzl", "project_name", "generate_project_files")
 
 def load_rules(lib_name, internal_dependencies, extra_info):
@@ -10,7 +9,8 @@ def load_rules(lib_name, internal_dependencies, extra_info):
         extra_info: additional information required by the following rules (Service(s) name(s))
     """
 
-    project_files = generate_project_files(lib_name, internal_dependencies, extra_info)
+    connect_version = "2.0.2" # must match the package.json
+    project_files = generate_project_files(connect_version, lib_name, internal_dependencies, extra_info)
 
     native.genrule(
         name = "build",
