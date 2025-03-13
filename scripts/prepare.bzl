@@ -1,15 +1,15 @@
-load("//:es_metadata.bzl", "PROTOC_ES_VERSION")
+load("//:es_metadata.bzl", "PROTOC_CONNECT_ES_VERSION", "PROTOC_ES_VERSION")
 load("@bazel_skylib//rules:write_file.bzl", "write_file")
 load("@bazel_skylib//rules:copy_file.bzl", "copy_file")
 
 # Generates all files required to build a project with ng-builder
-def generate_project_files(connect_version, lib_name, internal_dependencies, extra_info):
+def generate_project_files(lib_name, internal_dependencies, extra_info):
     generated_files = []
     generated_files += _copy_sources_to_src()
     generated_files += _copy_tsconfig()
     generated_files += _create_index_ts()
     generated_files += _create_public_api_ts(lib_name)
-    generated_files += _create_package_json(connect_version, lib_name, internal_dependencies)
+    generated_files += _create_package_json(lib_name, internal_dependencies)
 
     return generated_files
 
@@ -57,7 +57,7 @@ def _create_public_api_ts(lib_name):
     )
     return [":generated_public_api_file"]
 
-def _create_package_json(connect_version, lib_name, internal_dependencies):
+def _create_package_json(lib_name, internal_dependencies):
     packagedeps = ""
     for i, dep in enumerate(internal_dependencies):
         name = "@saltoapis/%s" % project_name(dep)
@@ -79,7 +79,7 @@ def _create_package_json(connect_version, lib_name, internal_dependencies):
         '''.format(
             package_name = lib_name,
             bufbuild_protobuf_version = PROTOC_ES_VERSION,
-            connect_version = connect_version,
+            connect_version = PROTOC_CONNECT_ES_VERSION,
             package_deps = packagedeps,
             protobuf_version = "3.21.2",
         ),
