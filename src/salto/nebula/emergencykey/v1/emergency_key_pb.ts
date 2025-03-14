@@ -193,6 +193,13 @@ export class ListEmergencyKeysRequest extends Message<ListEmergencyKeysRequest> 
    */
   filter = "";
 
+  /**
+   * How the results should be sorted.
+   *
+   * @generated from field: string order_by = 5;
+   */
+  orderBy = "";
+
   constructor(data?: PartialMessage<ListEmergencyKeysRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -205,6 +212,7 @@ export class ListEmergencyKeysRequest extends Message<ListEmergencyKeysRequest> 
     { no: 2, name: "page_size", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
     { no: 3, name: "page_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "filter", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "order_by", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListEmergencyKeysRequest {
