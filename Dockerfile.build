@@ -1,4 +1,4 @@
-FROM node:19.9.0-bullseye
+FROM node:22.14.0-bookworm
 
 # Install bazelisk & dev dependencies
 RUN apt-get update && \
