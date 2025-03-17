@@ -1,0 +1,6 @@
+{
+    "devDependencies": {
+        "@bufbuild/protobuf": "2.2.3",
+        "@connectrpc/connect-web": "2.0.2"
+    }
+}

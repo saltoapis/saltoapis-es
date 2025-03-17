@@ -31,4 +31,4 @@ release:
 .PHONY: clean
 clean:
 	bazel clean
-	rm -rf node_modules dist
+	rm -rf node_modules dist experimental/node_modules
