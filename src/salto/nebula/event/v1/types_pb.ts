@@ -9,6 +9,7 @@ import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { AppKey, CardKey, User, WalletKey } from "@saltoapis/nebula-user-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
+import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 
 /**
  * Event representing the creation of an access point.
@@ -1573,6 +1574,129 @@ export class UnitDeleted extends Message<UnitDeleted> {
 
   static equals(a: UnitDeleted | PlainMessage<UnitDeleted> | undefined, b: UnitDeleted | PlainMessage<UnitDeleted> | undefined): boolean {
     return proto3.util.equals(UnitDeleted, a, b);
+  }
+}
+
+/**
+ * Event representing the creation of an emergency key.
+ *
+ * @generated from message salto.nebula.event.v1.EmergencyKeyCreated
+ */
+export class EmergencyKeyCreated extends Message<EmergencyKeyCreated> {
+  /**
+   * Emergency key created.
+   *
+   * @generated from field: salto.nebula.emergencykey.v1.EmergencyKey emergency_key = 1;
+   */
+  emergencyKey?: EmergencyKey;
+
+  constructor(data?: PartialMessage<EmergencyKeyCreated>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.EmergencyKeyCreated";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "emergency_key", kind: "message", T: EmergencyKey },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmergencyKeyCreated {
+    return new EmergencyKeyCreated().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EmergencyKeyCreated {
+    return new EmergencyKeyCreated().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmergencyKeyCreated {
+    return new EmergencyKeyCreated().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EmergencyKeyCreated | PlainMessage<EmergencyKeyCreated> | undefined, b: EmergencyKeyCreated | PlainMessage<EmergencyKeyCreated> | undefined): boolean {
+    return proto3.util.equals(EmergencyKeyCreated, a, b);
+  }
+}
+
+/**
+ * Event representing the update of an emergency key.
+ *
+ * @generated from message salto.nebula.event.v1.EmergencyKeyUpdated
+ */
+export class EmergencyKeyUpdated extends Message<EmergencyKeyUpdated> {
+  /**
+   * Emergency key updated.
+   *
+   * @generated from field: salto.nebula.emergencykey.v1.EmergencyKey emergency_key = 1;
+   */
+  emergencyKey?: EmergencyKey;
+
+  constructor(data?: PartialMessage<EmergencyKeyUpdated>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.EmergencyKeyUpdated";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "emergency_key", kind: "message", T: EmergencyKey },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmergencyKeyUpdated {
+    return new EmergencyKeyUpdated().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EmergencyKeyUpdated {
+    return new EmergencyKeyUpdated().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmergencyKeyUpdated {
+    return new EmergencyKeyUpdated().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EmergencyKeyUpdated | PlainMessage<EmergencyKeyUpdated> | undefined, b: EmergencyKeyUpdated | PlainMessage<EmergencyKeyUpdated> | undefined): boolean {
+    return proto3.util.equals(EmergencyKeyUpdated, a, b);
+  }
+}
+
+/**
+ * Event representing the deletion of an emergency key.
+ *
+ * @generated from message salto.nebula.event.v1.EmergencyKeyDeleted
+ */
+export class EmergencyKeyDeleted extends Message<EmergencyKeyDeleted> {
+  /**
+   * Emergency key deleted.
+   *
+   * @generated from field: salto.nebula.emergencykey.v1.EmergencyKey emergency_key = 1;
+   */
+  emergencyKey?: EmergencyKey;
+
+  constructor(data?: PartialMessage<EmergencyKeyDeleted>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.EmergencyKeyDeleted";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "emergency_key", kind: "message", T: EmergencyKey },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmergencyKeyDeleted {
+    return new EmergencyKeyDeleted().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EmergencyKeyDeleted {
+    return new EmergencyKeyDeleted().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EmergencyKeyDeleted {
+    return new EmergencyKeyDeleted().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EmergencyKeyDeleted | PlainMessage<EmergencyKeyDeleted> | undefined, b: EmergencyKeyDeleted | PlainMessage<EmergencyKeyDeleted> | undefined): boolean {
+    return proto3.util.equals(EmergencyKeyDeleted, a, b);
   }
 }
 
