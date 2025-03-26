@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AccessPoint, CreateAccessPointRequest, DeleteAccessPointRequest, GetAccessPointRequest, ListAccessPointsRequest, ListAccessPointsResponse, UnlockAccessPointRequest, UpdateAccessPointRequest } from "./access_point_pb";
+import { AccessPoint, CreateAccessPointRequest, DeleteAccessPointRequest, GetAccessPointRequest, ListAccessPointsRequest, ListAccessPointsResponse, LockAccessPointRequest, UnlockAccessPointRequest, UpdateAccessPointRequest } from "./access_point_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -93,6 +93,20 @@ export const AccessPointService = {
     unlockAccessPoint: {
       name: "UnlockAccessPoint",
       I: UnlockAccessPointRequest,
+      O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Lock an access point
+     *
+     * Remotely locks an access point. This can be run against those access
+     * points where their associated devices are online and connected.
+     *
+     * @generated from rpc salto.nebula.accesspoint.v1.AccessPointService.LockAccessPoint
+     */
+    lockAccessPoint: {
+      name: "LockAccessPoint",
+      I: LockAccessPointRequest,
       O: Operation,
       kind: MethodKind.Unary,
     },

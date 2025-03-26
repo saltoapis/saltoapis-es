@@ -562,3 +562,111 @@ export class UnlockAccessPointMetadata extends Message<UnlockAccessPointMetadata
   }
 }
 
+/**
+ * The request message for [`LockAccessPoint`][salto.nebula.accesspoint.v1.AccessPointService.LockAccessPoint]
+ *
+ * @generated from message salto.nebula.accesspoint.v1.LockAccessPointRequest
+ */
+export class LockAccessPointRequest extends Message<LockAccessPointRequest> {
+  /**
+   * The resource name of the access point to be locked. For example:
+   * `installations/surelock-homes-hq/access-points/baker-street-entrance`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<LockAccessPointRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accesspoint.v1.LockAccessPointRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LockAccessPointRequest {
+    return new LockAccessPointRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LockAccessPointRequest {
+    return new LockAccessPointRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LockAccessPointRequest {
+    return new LockAccessPointRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: LockAccessPointRequest | PlainMessage<LockAccessPointRequest> | undefined, b: LockAccessPointRequest | PlainMessage<LockAccessPointRequest> | undefined): boolean {
+    return proto3.util.equals(LockAccessPointRequest, a, b);
+  }
+}
+
+/**
+ * The empty response message for [`LockAccessPoint`][salto.nebula.accesspoint.v1.AccessPointService.LockAccessPoint]
+ *
+ * @generated from message salto.nebula.accesspoint.v1.LockAccessPointResponse
+ */
+export class LockAccessPointResponse extends Message<LockAccessPointResponse> {
+  constructor(data?: PartialMessage<LockAccessPointResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accesspoint.v1.LockAccessPointResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LockAccessPointResponse {
+    return new LockAccessPointResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LockAccessPointResponse {
+    return new LockAccessPointResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LockAccessPointResponse {
+    return new LockAccessPointResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: LockAccessPointResponse | PlainMessage<LockAccessPointResponse> | undefined, b: LockAccessPointResponse | PlainMessage<LockAccessPointResponse> | undefined): boolean {
+    return proto3.util.equals(LockAccessPointResponse, a, b);
+  }
+}
+
+/**
+ * The metadata message for [`LockAccessPoint`][salto.nebula.accesspoint.v1.AccessPointService.LockAccessPoint]
+ *
+ * @generated from message salto.nebula.accesspoint.v1.LockAccessPointMetadata
+ */
+export class LockAccessPointMetadata extends Message<LockAccessPointMetadata> {
+  constructor(data?: PartialMessage<LockAccessPointMetadata>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accesspoint.v1.LockAccessPointMetadata";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LockAccessPointMetadata {
+    return new LockAccessPointMetadata().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LockAccessPointMetadata {
+    return new LockAccessPointMetadata().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LockAccessPointMetadata {
+    return new LockAccessPointMetadata().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: LockAccessPointMetadata | PlainMessage<LockAccessPointMetadata> | undefined, b: LockAccessPointMetadata | PlainMessage<LockAccessPointMetadata> | undefined): boolean {
+    return proto3.util.equals(LockAccessPointMetadata, a, b);
+  }
+}
+
