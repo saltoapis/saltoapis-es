@@ -213,11 +213,26 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
   accessPoint?: AccessPoint;
 
   /**
-   * The user who locked the access point.
+   * The user who locked the access point, if any.
    *
    * @generated from field: salto.nebula.user.v1.User user = 2;
    */
   user?: User;
+
+  /**
+   * The credential type used to lock the access point.
+   *
+   * @generated from oneof salto.nebula.event.v1.AccessPointLocked.credential
+   */
+  credential: {
+    /**
+     * The emergency key used to lock the access point.
+     *
+     * @generated from field: salto.nebula.emergencykey.v1.EmergencyKey emergency_key = 3;
+     */
+    value: EmergencyKey;
+    case: "emergencyKey";
+  } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessPointLocked>) {
     super();
@@ -229,6 +244,7 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
+    { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointLocked {
