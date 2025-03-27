@@ -7,9 +7,9 @@ import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialM
 import { Message, proto3 } from "@bufbuild/protobuf";
 import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { AppKey, CardKey, User, WalletKey } from "@saltoapis/nebula-user-v1";
+import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
-import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 
 /**
  * Event representing the creation of an access point.
@@ -148,11 +148,26 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
   accessPoint?: AccessPoint;
 
   /**
-   * The user who unlocked the access point.
+   * The user who unlocked the access point, if any.
    *
    * @generated from field: salto.nebula.user.v1.User user = 2;
    */
   user?: User;
+
+  /**
+   * The credential type used to unlock the access point.
+   *
+   * @generated from oneof salto.nebula.event.v1.AccessPointUnlocked.credential
+   */
+  credential: {
+    /**
+     * The emergency key used to unlock the access point.
+     *
+     * @generated from field: salto.nebula.emergencykey.v1.EmergencyKey emergency_key = 3;
+     */
+    value: EmergencyKey;
+    case: "emergencyKey";
+  } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessPointUnlocked>) {
     super();
@@ -164,6 +179,7 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
+    { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointUnlocked {
