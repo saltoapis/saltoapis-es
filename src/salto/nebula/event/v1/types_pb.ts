@@ -167,6 +167,14 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
      */
     value: EmergencyKey;
     case: "emergencyKey";
+  } | {
+    /**
+     * The card key used to unlock the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.CardKey card_key = 4;
+     */
+    value: CardKey;
+    case: "cardKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessPointUnlocked>) {
@@ -180,6 +188,7 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
     { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
+    { no: 4, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointUnlocked {
@@ -232,6 +241,14 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
      */
     value: EmergencyKey;
     case: "emergencyKey";
+  } | {
+    /**
+     * The card key used to lock the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.CardKey card_key = 4;
+     */
+    value: CardKey;
+    case: "cardKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessPointLocked>) {
@@ -245,6 +262,7 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
     { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
+    { no: 4, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointLocked {
