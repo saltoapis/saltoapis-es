@@ -183,6 +183,14 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
      */
     value: AppKey;
     case: "appKey";
+  } | {
+    /**
+     * The wallet key used to unlock the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.WalletKey wallet_key = 6;
+     */
+    value: WalletKey;
+    case: "walletKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessPointUnlocked>) {
@@ -198,6 +206,7 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
     { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
     { no: 4, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
+    { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointUnlocked {
@@ -266,6 +275,14 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
      */
     value: AppKey;
     case: "appKey";
+  } | {
+    /**
+     * The wallet key used to lock the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.WalletKey wallet_key = 6;
+     */
+    value: WalletKey;
+    case: "walletKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessPointLocked>) {
@@ -281,6 +298,7 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
     { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
     { no: 4, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
+    { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointLocked {
