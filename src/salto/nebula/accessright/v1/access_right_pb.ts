@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
+import { FieldMask, Message, proto3 } from "@bufbuild/protobuf";
 import { Schedule } from "@saltoapis/nebula-type";
 
 /**
@@ -30,20 +30,6 @@ export class AccessRight extends Message<AccessRight> {
   displayName = "";
 
   /**
-   * Activation time independent of any time zone or calendar.
-   *
-   * @generated from field: google.protobuf.Timestamp activate_time = 3;
-   */
-  activateTime?: Timestamp;
-
-  /**
-   * Expiration time independent of any time zone or calendar.
-   *
-   * @generated from field: google.protobuf.Timestamp expire_time = 4;
-   */
-  expireTime?: Timestamp;
-
-  /**
    * Schedules in which this access right is applied.
    *
    * @generated from field: repeated salto.nebula.type.Schedule schedules = 5;
@@ -60,8 +46,6 @@ export class AccessRight extends Message<AccessRight> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "activate_time", kind: "message", T: Timestamp },
-    { no: 4, name: "expire_time", kind: "message", T: Timestamp },
     { no: 5, name: "schedules", kind: "message", T: Schedule, repeated: true },
   ]);
 
