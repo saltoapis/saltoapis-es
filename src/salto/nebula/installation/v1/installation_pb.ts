@@ -1299,6 +1299,7 @@ export class DeleteInstallationRequest extends Message<DeleteInstallationRequest
 
   /**
    * The number of hours to wait before permanently deleting the installation.
+   * If unset, the default is 720 (30 days).
    *
    * @generated from field: optional int32 delay_hours = 3;
    */
