@@ -5,6 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { FieldMask, Message, proto3 } from "@bufbuild/protobuf";
+import { DeviceMetadata } from "@saltoapis/nebula-type";
 
 /**
  * The electronic key object
@@ -60,6 +61,13 @@ export class ElectronicKey extends Message<ElectronicKey> {
   outdated = false;
 
   /**
+   * Device metadata contains information about a device hardware and firmware.
+   *
+   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 8;
+   */
+  deviceMetadata?: DeviceMetadata;
+
+  /**
    * Indicates whether the battery of this electronic key is low, and needs
    * replacing, or is normal and doesn't need replacing.
    *
@@ -80,6 +88,7 @@ export class ElectronicKey extends Message<ElectronicKey> {
     { no: 3, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 4, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 5, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 8, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 7, name: "low_battery", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 

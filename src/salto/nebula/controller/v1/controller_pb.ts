@@ -5,6 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
+import { DeviceMetadata } from "@saltoapis/nebula-type";
 
 /**
  * The controller object
@@ -84,6 +85,13 @@ export class Controller extends Message<Controller> {
   initialized = false;
 
   /**
+   * Device metadata contains information about a device hardware and firmware.
+   *
+   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 11;
+   */
+  deviceMetadata?: DeviceMetadata;
+
+  /**
    * Indicates whether this controller has pending updates or not. This
    * could be because there was a pending configuration or a firmware update
    * and is conditionally set based on the current installation settings.
@@ -124,6 +132,7 @@ export class Controller extends Message<Controller> {
     { no: 5, name: "extender", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "parent_device" },
     { no: 6, name: "access_points", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
     { no: 7, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 11, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 8, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 9, name: "connected", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
     { no: 10, name: "last_event_time", kind: "message", T: Timestamp },
@@ -143,6 +152,148 @@ export class Controller extends Message<Controller> {
 
   static equals(a: Controller | PlainMessage<Controller> | undefined, b: Controller | PlainMessage<Controller> | undefined): boolean {
     return proto3.util.equals(Controller, a, b);
+  }
+}
+
+/**
+ * Relay represents a configurable output from a controller that can be used to control
+ * external devices such as doors or other electrical systems. Relays can be
+ * located on the main controller board or on extension boards, with addressing
+ * determined by dipswitch settings.
+ *
+ * @generated from message salto.nebula.controller.v1.ControllerRelay
+ */
+export class ControllerRelay extends Message<ControllerRelay> {
+  /**
+   * Output only. Resource name of the controller relay. It must have the format of
+   * `installations/*\/controllers/*\/relays/*`. For example:
+   * `installations/surelock-homes-hq/controller/dancing-men/relays/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  /**
+   * Extension board address. Values range from 0-15, allowing for up to 16 boards in the system.
+   * This field is not applicable for master boards or wall reader extension boards.
+   *
+   * @generated from field: optional int32 dipswitch = 2;
+   */
+  dipswitch?: number;
+
+  /**
+   * Identifies the specific controller relay on the board (1-4). Board type determines
+   * which controller relay IDs are actually available for configuration and use.
+   *
+   * @generated from field: int32 relay_id = 3;
+   */
+  relayId = 0;
+
+  /**
+   * Defines the controller relay type, allowing for different controller relay configurations.
+   *
+   * @generated from oneof salto.nebula.controller.v1.ControllerRelay.type
+   */
+  type: {
+    /**
+     * Destination output configuration for this controller relay.
+     *
+     * @generated from field: salto.nebula.controller.v1.DestinationOutput destination_output = 4;
+     */
+    value: DestinationOutput;
+    case: "destinationOutput";
+  } | {
+    /**
+     * Access point configuration for this controller relay.
+     *
+     * @generated from field: string access_point = 5;
+     */
+    value: string;
+    case: "accessPoint";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
+  constructor(data?: PartialMessage<ControllerRelay>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.ControllerRelay";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "dipswitch", kind: "scalar", T: 5 /* ScalarType.INT32 */, opt: true },
+    { no: 3, name: "relay_id", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 4, name: "destination_output", kind: "message", T: DestinationOutput, oneof: "type" },
+    { no: 5, name: "access_point", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "type" },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ControllerRelay {
+    return new ControllerRelay().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ControllerRelay {
+    return new ControllerRelay().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ControllerRelay {
+    return new ControllerRelay().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ControllerRelay | PlainMessage<ControllerRelay> | undefined, b: ControllerRelay | PlainMessage<ControllerRelay> | undefined): boolean {
+    return proto3.util.equals(ControllerRelay, a, b);
+  }
+}
+
+/**
+ * DestinationOutput contains configuration information that identifies a specific
+ * destination resource and a specific output.
+ *
+ * This message maps a controller relay to a logical destination (like an elevator floor)
+ * and specifies which output activation value on the credential will trigger this controller relay.
+ * When used within a Relay's "type" oneof field, it configures the controller relay to activate
+ * when a credential with matching output permissions is presented at a reader connected
+ * to the controller.
+ *
+ * For example, in an elevator control scenario, each controller relay might control a different
+ * floor button, with the "output" field (0-255) corresponding to a specific permission
+ * bit in the credential's access rights.
+ *
+ * @generated from message salto.nebula.controller.v1.DestinationOutput
+ */
+export class DestinationOutput extends Message<DestinationOutput> {
+  /**
+   * Resource name of the destination the controller relay points to.
+   * For example: installations/surelock-homes-hq/destinations/elevator-floor-5.
+   *
+   * @generated from field: string destination = 1;
+   */
+  destination = "";
+
+  constructor(data?: PartialMessage<DestinationOutput>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.DestinationOutput";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "destination", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DestinationOutput {
+    return new DestinationOutput().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DestinationOutput {
+    return new DestinationOutput().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DestinationOutput {
+    return new DestinationOutput().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: DestinationOutput | PlainMessage<DestinationOutput> | undefined, b: DestinationOutput | PlainMessage<DestinationOutput> | undefined): boolean {
+    return proto3.util.equals(DestinationOutput, a, b);
   }
 }
 
@@ -1298,6 +1449,612 @@ export class GenerateFirmwareDownloadUriMetadata extends Message<GenerateFirmwar
 
   static equals(a: GenerateFirmwareDownloadUriMetadata | PlainMessage<GenerateFirmwareDownloadUriMetadata> | undefined, b: GenerateFirmwareDownloadUriMetadata | PlainMessage<GenerateFirmwareDownloadUriMetadata> | undefined): boolean {
     return proto3.util.equals(GenerateFirmwareDownloadUriMetadata, a, b);
+  }
+}
+
+/**
+ * The request message for [`CreateControllerRelay`][salto.nebula.controller.v1.ControllerService.CreateControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.CreateControllerRelayRequest
+ */
+export class CreateControllerRelayRequest extends Message<CreateControllerRelayRequest> {
+  /**
+   * Resource name of the parent resource where the controller relay is to be created. For
+   * example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The controller relay ID to use for this controller relay. In case it's empty the
+   * server will autogenerate a unique identifier.
+   *
+   * @generated from field: optional string controller_relay_id = 2;
+   */
+  controllerRelayId?: string;
+
+  /**
+   * The controller relay resource to be created. Client must not set the
+   * `ControllerRelay.name` field.
+   *
+   * @generated from field: salto.nebula.controller.v1.ControllerRelay controller_relay = 3;
+   */
+  controllerRelay?: ControllerRelay;
+
+  constructor(data?: PartialMessage<CreateControllerRelayRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.CreateControllerRelayRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "controller_relay_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 3, name: "controller_relay", kind: "message", T: ControllerRelay },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateControllerRelayRequest {
+    return new CreateControllerRelayRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateControllerRelayRequest {
+    return new CreateControllerRelayRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateControllerRelayRequest {
+    return new CreateControllerRelayRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: CreateControllerRelayRequest | PlainMessage<CreateControllerRelayRequest> | undefined, b: CreateControllerRelayRequest | PlainMessage<CreateControllerRelayRequest> | undefined): boolean {
+    return proto3.util.equals(CreateControllerRelayRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [GetControllerRelay][salto.nebula.controller.v1.ControllerService.GetControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.GetControllerRelayRequest
+ */
+export class GetControllerRelayRequest extends Message<GetControllerRelayRequest> {
+  /**
+   * The name of the requested controller relay resource. For example:
+   * `installations/surelock-homes-hq/controllers/dancing-men/relay/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<GetControllerRelayRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.GetControllerRelayRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetControllerRelayRequest {
+    return new GetControllerRelayRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetControllerRelayRequest {
+    return new GetControllerRelayRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetControllerRelayRequest {
+    return new GetControllerRelayRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GetControllerRelayRequest | PlainMessage<GetControllerRelayRequest> | undefined, b: GetControllerRelayRequest | PlainMessage<GetControllerRelayRequest> | undefined): boolean {
+    return proto3.util.equals(GetControllerRelayRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [ListControllerRelays][salto.nebula.controller.v1.ControllerService.ListControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.ListControllerRelaysRequest
+ */
+export class ListControllerRelaysRequest extends Message<ListControllerRelaysRequest> {
+  /**
+   * The parent resource name. For example, `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The maximum number of items to return.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize = 0;
+
+  /**
+   * The `next_page_token` value returned from a previous `List` request, if
+   * any.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken = "";
+
+  /**
+   * A filter that chooses which controller relays to return.
+   *
+   * @generated from field: string filter = 4;
+   */
+  filter = "";
+
+  /**
+   * How the results should be sorted.
+   *
+   * @generated from field: string order_by = 5;
+   */
+  orderBy = "";
+
+  /**
+   * If true, the response will return an accurate total number of controller relays
+   * that match the filter.
+   *
+   * @generated from field: bool accurate_total_size = 6;
+   */
+  accurateTotalSize = false;
+
+  constructor(data?: PartialMessage<ListControllerRelaysRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.ListControllerRelaysRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "page_size", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "page_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "filter", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "order_by", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 6, name: "accurate_total_size", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListControllerRelaysRequest {
+    return new ListControllerRelaysRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListControllerRelaysRequest {
+    return new ListControllerRelaysRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListControllerRelaysRequest {
+    return new ListControllerRelaysRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ListControllerRelaysRequest | PlainMessage<ListControllerRelaysRequest> | undefined, b: ListControllerRelaysRequest | PlainMessage<ListControllerRelaysRequest> | undefined): boolean {
+    return proto3.util.equals(ListControllerRelaysRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [ListControllerRelays][salto.nebula.controllers.v1.ControllerService.ListControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.ListControllerRelaysResponse
+ */
+export class ListControllerRelaysResponse extends Message<ListControllerRelaysResponse> {
+  /**
+   * The field name should match the noun `relays` in the method name. There
+   * will be a maximum number of items returned based on the `page_size` field
+   * in the request.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[] = [];
+
+  /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken = "";
+
+  /**
+   * The accurate total number of controller relays in all pages, irrespective of
+   * any pagination. This is a number based on the requested filter, and it
+   * may change in subsequent pages.
+   *
+   * @generated from field: int32 accurate_total_size = 3;
+   */
+  accurateTotalSize = 0;
+
+  constructor(data?: PartialMessage<ListControllerRelaysResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.ListControllerRelaysResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "controller_relays", kind: "message", T: ControllerRelay, repeated: true },
+    { no: 2, name: "next_page_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "accurate_total_size", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListControllerRelaysResponse {
+    return new ListControllerRelaysResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListControllerRelaysResponse {
+    return new ListControllerRelaysResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListControllerRelaysResponse {
+    return new ListControllerRelaysResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ListControllerRelaysResponse | PlainMessage<ListControllerRelaysResponse> | undefined, b: ListControllerRelaysResponse | PlainMessage<ListControllerRelaysResponse> | undefined): boolean {
+    return proto3.util.equals(ListControllerRelaysResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [UpdateControllerRelay][salto.nebula.controller.v1.ControllerService.UpdateControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.UpdateControllerRelayRequest
+ */
+export class UpdateControllerRelayRequest extends Message<UpdateControllerRelayRequest> {
+  /**
+   * The controller relay resource which replaces the resource on the server.
+   *
+   * @generated from field: salto.nebula.controller.v1.ControllerRelay controller_relay = 1;
+   */
+  controllerRelay?: ControllerRelay;
+
+  /**
+   * The update mask applied to the resource.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMask;
+
+  constructor(data?: PartialMessage<UpdateControllerRelayRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.UpdateControllerRelayRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "controller_relay", kind: "message", T: ControllerRelay },
+    { no: 2, name: "update_mask", kind: "message", T: FieldMask },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateControllerRelayRequest {
+    return new UpdateControllerRelayRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateControllerRelayRequest {
+    return new UpdateControllerRelayRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateControllerRelayRequest {
+    return new UpdateControllerRelayRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UpdateControllerRelayRequest | PlainMessage<UpdateControllerRelayRequest> | undefined, b: UpdateControllerRelayRequest | PlainMessage<UpdateControllerRelayRequest> | undefined): boolean {
+    return proto3.util.equals(UpdateControllerRelayRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [DeleteControllerRelay][salto.nebula.controller.v1.ControllerService.DeleteControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.DeleteControllerRelayRequest
+ */
+export class DeleteControllerRelayRequest extends Message<DeleteControllerRelayRequest> {
+  /**
+   * The resource name of the controller relay to be deleted. For example:
+   * `installations/surelock-homes-hq/controllers/dancing-men/relays/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<DeleteControllerRelayRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.DeleteControllerRelayRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DeleteControllerRelayRequest {
+    return new DeleteControllerRelayRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DeleteControllerRelayRequest {
+    return new DeleteControllerRelayRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DeleteControllerRelayRequest {
+    return new DeleteControllerRelayRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: DeleteControllerRelayRequest | PlainMessage<DeleteControllerRelayRequest> | undefined, b: DeleteControllerRelayRequest | PlainMessage<DeleteControllerRelayRequest> | undefined): boolean {
+    return proto3.util.equals(DeleteControllerRelayRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [`BatchDeleteControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest
+ */
+export class BatchDeleteControllerRelaysRequest extends Message<BatchDeleteControllerRelaysRequest> {
+  /**
+   * Resource name of the controller relays to be deleted.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to delete.
+   * A maximum of 100 controller relays can be deleted in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.DeleteControllerRelayRequest requests = 2;
+   */
+  requests: DeleteControllerRelayRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchDeleteControllerRelaysRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: DeleteControllerRelayRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchDeleteControllerRelaysRequest {
+    return new BatchDeleteControllerRelaysRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchDeleteControllerRelaysRequest {
+    return new BatchDeleteControllerRelaysRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchDeleteControllerRelaysRequest {
+    return new BatchDeleteControllerRelaysRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchDeleteControllerRelaysRequest | PlainMessage<BatchDeleteControllerRelaysRequest> | undefined, b: BatchDeleteControllerRelaysRequest | PlainMessage<BatchDeleteControllerRelaysRequest> | undefined): boolean {
+    return proto3.util.equals(BatchDeleteControllerRelaysRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchDeleteControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse
+ */
+export class BatchDeleteControllerRelaysResponse extends Message<BatchDeleteControllerRelaysResponse> {
+  constructor(data?: PartialMessage<BatchDeleteControllerRelaysResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchDeleteControllerRelaysResponse {
+    return new BatchDeleteControllerRelaysResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchDeleteControllerRelaysResponse {
+    return new BatchDeleteControllerRelaysResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchDeleteControllerRelaysResponse {
+    return new BatchDeleteControllerRelaysResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchDeleteControllerRelaysResponse | PlainMessage<BatchDeleteControllerRelaysResponse> | undefined, b: BatchDeleteControllerRelaysResponse | PlainMessage<BatchDeleteControllerRelaysResponse> | undefined): boolean {
+    return proto3.util.equals(BatchDeleteControllerRelaysResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`BatchCreateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchCreateControllerRelaysRequest
+ */
+export class BatchCreateControllerRelaysRequest extends Message<BatchCreateControllerRelaysRequest> {
+  /**
+   * Resource name of the parent resource where the controller relays are to be created.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to create.
+   * A maximum of 100 controller relays can be created in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.CreateControllerRelayRequest requests = 2;
+   */
+  requests: CreateControllerRelayRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateControllerRelaysRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.BatchCreateControllerRelaysRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: CreateControllerRelayRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateControllerRelaysRequest {
+    return new BatchCreateControllerRelaysRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateControllerRelaysRequest {
+    return new BatchCreateControllerRelaysRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateControllerRelaysRequest {
+    return new BatchCreateControllerRelaysRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateControllerRelaysRequest | PlainMessage<BatchCreateControllerRelaysRequest> | undefined, b: BatchCreateControllerRelaysRequest | PlainMessage<BatchCreateControllerRelaysRequest> | undefined): boolean {
+    return proto3.util.equals(BatchCreateControllerRelaysRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchCreateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchCreateControllerRelaysResponse
+ */
+export class BatchCreateControllerRelaysResponse extends Message<BatchCreateControllerRelaysResponse> {
+  /**
+   * The controller relay resources created.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateControllerRelaysResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.BatchCreateControllerRelaysResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "controller_relays", kind: "message", T: ControllerRelay, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateControllerRelaysResponse {
+    return new BatchCreateControllerRelaysResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateControllerRelaysResponse {
+    return new BatchCreateControllerRelaysResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateControllerRelaysResponse {
+    return new BatchCreateControllerRelaysResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateControllerRelaysResponse | PlainMessage<BatchCreateControllerRelaysResponse> | undefined, b: BatchCreateControllerRelaysResponse | PlainMessage<BatchCreateControllerRelaysResponse> | undefined): boolean {
+    return proto3.util.equals(BatchCreateControllerRelaysResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`BatchUpdateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest
+ */
+export class BatchUpdateControllerRelaysRequest extends Message<BatchUpdateControllerRelaysRequest> {
+  /**
+   * Resource name of the controller relays to be updated.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to update.
+   * A maximum of 100 controller relays can be updated in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.UpdateControllerRelayRequest requests = 2;
+   */
+  requests: UpdateControllerRelayRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchUpdateControllerRelaysRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: UpdateControllerRelayRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchUpdateControllerRelaysRequest {
+    return new BatchUpdateControllerRelaysRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchUpdateControllerRelaysRequest {
+    return new BatchUpdateControllerRelaysRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchUpdateControllerRelaysRequest {
+    return new BatchUpdateControllerRelaysRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchUpdateControllerRelaysRequest | PlainMessage<BatchUpdateControllerRelaysRequest> | undefined, b: BatchUpdateControllerRelaysRequest | PlainMessage<BatchUpdateControllerRelaysRequest> | undefined): boolean {
+    return proto3.util.equals(BatchUpdateControllerRelaysRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchUpdateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse
+ */
+export class BatchUpdateControllerRelaysResponse extends Message<BatchUpdateControllerRelaysResponse> {
+  /**
+   * The controller relay resources updated.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[] = [];
+
+  constructor(data?: PartialMessage<BatchUpdateControllerRelaysResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "controller_relays", kind: "message", T: ControllerRelay, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchUpdateControllerRelaysResponse {
+    return new BatchUpdateControllerRelaysResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchUpdateControllerRelaysResponse {
+    return new BatchUpdateControllerRelaysResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchUpdateControllerRelaysResponse {
+    return new BatchUpdateControllerRelaysResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchUpdateControllerRelaysResponse | PlainMessage<BatchUpdateControllerRelaysResponse> | undefined, b: BatchUpdateControllerRelaysResponse | PlainMessage<BatchUpdateControllerRelaysResponse> | undefined): boolean {
+    return proto3.util.equals(BatchUpdateControllerRelaysResponse, a, b);
   }
 }
 
