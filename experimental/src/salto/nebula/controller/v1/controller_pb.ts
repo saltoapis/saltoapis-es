@@ -16,7 +16,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file salto/nebula/controller/v1/controller.proto.
  */
 export const file_salto_nebula_controller_v1_controller: GenFile = /*@__PURE__*/
-  fileDesc("CitzYWx0by9uZWJ1bGEvY29udHJvbGxlci92MS9jb250cm9sbGVyLnByb3RvEhpzYWx0by5uZWJ1bGEuY29udHJvbGxlci52MSLjAgoKQ29udHJvbGxlchIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIWCglkZXZpY2VfaWQYAyABKAlIAYgBARIRCgdnYXRld2F5GAQgASgJSAASEgoIZXh0ZW5kZXIYBSABKAlIABIVCg1hY2Nlc3NfcG9pbnRzGAYgAygJEhMKC2luaXRpYWxpemVkGAcgASgIEjoKD2RldmljZV9tZXRhZGF0YRgLIAEoCzIhLnNhbHRvLm5lYnVsYS50eXBlLkRldmljZU1ldGFkYXRhEhAKCG91dGRhdGVkGAggASgIEhYKCWNvbm5lY3RlZBgJIAEoCEgCiAEBEjMKD2xhc3RfZXZlbnRfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDwoNcGFyZW50X2RldmljZUIMCgpfZGV2aWNlX2lkQgwKCl9jb25uZWN0ZWQikwEKF0NyZWF0ZUNvbnRyb2xsZXJSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIaCg1jb250cm9sbGVyX2lkGAIgASgJSACIAQESOgoKY29udHJvbGxlchgDIAEoCzImLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXJCEAoOX2NvbnRyb2xsZXJfaWQiJAoUR2V0Q29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSJxChZMaXN0Q29udHJvbGxlcnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkibwoXTGlzdENvbnRyb2xsZXJzUmVzcG9uc2USOwoLY29udHJvbGxlcnMYASADKAsyJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKGAQoXVXBkYXRlQ29udHJvbGxlclJlcXVlc3QSOgoKY29udHJvbGxlchgBIAEoCzImLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIicKF0RlbGV0ZUNvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiOAoVQmluZENvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkSEQoJZGV2aWNlX2lkGAIgASgJIhgKFkJpbmRDb250cm9sbGVyUmVzcG9uc2UiNgoXVW5iaW5kQ29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCRINCgVmb3JjZRgCIAEoCCIaChhVbmJpbmRDb250cm9sbGVyUmVzcG9uc2UiKwobSW5pdGlhbGl6ZUNvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiHgocSW5pdGlhbGl6ZUNvbnRyb2xsZXJSZXNwb25zZSI4ChxJbml0aWFsaXplQ29udHJvbGxlck1ldGFkYXRhEhgKEHByb2dyZXNzX3BlcmNlbnQYASABKAUiKgoaQ29uZmlndXJlQ29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSIdChtDb25maWd1cmVDb250cm9sbGVyUmVzcG9uc2UiNwobQ29uZmlndXJlQ29udHJvbGxlck1ldGFkYXRhEhgKEHByb2dyZXNzX3BlcmNlbnQYASABKAUiJgoWUmVzZXRDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJIhkKF1Jlc2V0Q29udHJvbGxlclJlc3BvbnNlIhkKF1Jlc2V0Q29udHJvbGxlck1ldGFkYXRhIjUKH1VwZGF0ZUNvbnRyb2xsZXJGaXJtd2FyZVJlcXVlc3QSEgoKY29udHJvbGxlchgBIAEoCSIiCiBVcGRhdGVDb250cm9sbGVyRmlybXdhcmVSZXNwb25zZSI8CiBVcGRhdGVDb250cm9sbGVyRmlybXdhcmVNZXRhZGF0YRIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFIjcKIUdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVxdWVzdBISCgpjb250cm9sbGVyGAEgASgJIkEKIkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVzcG9uc2USGwoTYXV0aG9yaXphdGlvbl90b2tlbhgBIAEoDCI4CiJHZW5lcmF0ZUZpcm13YXJlRG93bmxvYWRVcmlSZXF1ZXN0EhIKCmNvbnRyb2xsZXIYASABKAkiSwojR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpUmVzcG9uc2USFAoMZG93bmxvYWRfdXJpGAEgASgJEg4KBmRpZ2VzdBgCIAEoCSIlCiNHZW5lcmF0ZUZpcm13YXJlRG93bmxvYWRVcmlNZXRhZGF0YTKXDAoRQ29udHJvbGxlclNlcnZpY2USbwoQQ3JlYXRlQ29udHJvbGxlchIzLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNyZWF0ZUNvbnRyb2xsZXJSZXF1ZXN0GiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchJpCg1HZXRDb250cm9sbGVyEjAuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2V0Q29udHJvbGxlclJlcXVlc3QaJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyEnoKD0xpc3RDb250cm9sbGVycxIyLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkxpc3RDb250cm9sbGVyc1JlcXVlc3QaMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlcnNSZXNwb25zZRJvChBVcGRhdGVDb250cm9sbGVyEjMuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuVXBkYXRlQ29udHJvbGxlclJlcXVlc3QaJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyEl8KEERlbGV0ZUNvbnRyb2xsZXISMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5EZWxldGVDb250cm9sbGVyUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJ3Cg5CaW5kQ29udHJvbGxlchIxLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkJpbmRDb250cm9sbGVyUmVxdWVzdBoyLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkJpbmRDb250cm9sbGVyUmVzcG9uc2USfQoQVW5iaW5kQ29udHJvbGxlchIzLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVuYmluZENvbnRyb2xsZXJSZXF1ZXN0GjQuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuVW5iaW5kQ29udHJvbGxlclJlc3BvbnNlEnAKFEluaXRpYWxpemVDb250cm9sbGVyEjcuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuSW5pdGlhbGl6ZUNvbnRyb2xsZXJSZXF1ZXN0Gh8uc2FsdG8ubG9uZ3J1bm5pbmcudjEuT3BlcmF0aW9uEm4KE0NvbmZpZ3VyZUNvbnRyb2xsZXISNi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db25maWd1cmVDb250cm9sbGVyUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJmCg9SZXNldENvbnRyb2xsZXISMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5SZXNldENvbnRyb2xsZXJSZXF1ZXN0Gh8uc2FsdG8ubG9uZ3J1bm5pbmcudjEuT3BlcmF0aW9uEngKGFVwZGF0ZUNvbnRyb2xsZXJGaXJtd2FyZRI7LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJGaXJtd2FyZVJlcXVlc3QaHy5zYWx0by5sb25ncnVubmluZy52MS5PcGVyYXRpb24SmwEKGkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuEj0uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2VuZXJhdGVBdXRob3JpemF0aW9uVG9rZW5SZXF1ZXN0Gj4uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2VuZXJhdGVBdXRob3JpemF0aW9uVG9rZW5SZXNwb25zZRJ+ChtHZW5lcmF0ZUZpcm13YXJlRG93bmxvYWRVcmkSPi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5HZW5lcmF0ZUZpcm13YXJlRG93bmxvYWRVcmlSZXF1ZXN0Gh8uc2FsdG8ubG9uZ3J1bm5pbmcudjEuT3BlcmF0aW9uQvIBCiJjb20uc2FsdG9hcGlzLm5lYnVsYS5jb250cm9sbGVyLnYxQg9Db250cm9sbGVyUHJvdG9QAVpKZ2l0aHViLmNvbS9zYWx0b2FwaXMtaW50ZXJuYWwvc2FsdG9hcGlzLWdvL25lYnVsYS9jb250cm9sbGVyL3YxO2NvbnRyb2xsZXKqAh5TYWx0b2FwaXMuTmVidWxhLkNvbnRyb2xsZXIuVjHKAh5TYWx0b2FwaXNcTmVidWxhXENvbnRyb2xsZXJcVjHiAipHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXENvbnRyb2xsZXJcVjFiBnByb3RvMw", [file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_longrunning_v1_operation, file_salto_nebula_type_device_metadata]);
+  fileDesc("CitzYWx0by9uZWJ1bGEvY29udHJvbGxlci92MS9jb250cm9sbGVyLnByb3RvEhpzYWx0by5uZWJ1bGEuY29udHJvbGxlci52MSLjAgoKQ29udHJvbGxlchIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIWCglkZXZpY2VfaWQYAyABKAlIAYgBARIRCgdnYXRld2F5GAQgASgJSAASEgoIZXh0ZW5kZXIYBSABKAlIABIVCg1hY2Nlc3NfcG9pbnRzGAYgAygJEhMKC2luaXRpYWxpemVkGAcgASgIEjoKD2RldmljZV9tZXRhZGF0YRgLIAEoCzIhLnNhbHRvLm5lYnVsYS50eXBlLkRldmljZU1ldGFkYXRhEhAKCG91dGRhdGVkGAggASgIEhYKCWNvbm5lY3RlZBgJIAEoCEgCiAEBEjMKD2xhc3RfZXZlbnRfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDwoNcGFyZW50X2RldmljZUIMCgpfZGV2aWNlX2lkQgwKCl9jb25uZWN0ZWQixAEKD0NvbnRyb2xsZXJSZWxheRIMCgRuYW1lGAEgASgJEhYKCWRpcHN3aXRjaBgCIAEoBUgBiAEBEhAKCHJlbGF5X2lkGAMgASgFEksKEmRlc3RpbmF0aW9uX291dHB1dBgEIAEoCzItLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkRlc3RpbmF0aW9uT3V0cHV0SAASFgoMYWNjZXNzX3BvaW50GAUgASgJSABCBgoEdHlwZUIMCgpfZGlwc3dpdGNoIigKEURlc3RpbmF0aW9uT3V0cHV0EhMKC2Rlc3RpbmF0aW9uGAEgASgJIpMBChdDcmVhdGVDb250cm9sbGVyUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSGgoNY29udHJvbGxlcl9pZBgCIAEoCUgAiAEBEjoKCmNvbnRyb2xsZXIYAyABKAsyJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyQhAKDl9jb250cm9sbGVyX2lkIiQKFEdldENvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkicQoWTGlzdENvbnRyb2xsZXJzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJIm8KF0xpc3RDb250cm9sbGVyc1Jlc3BvbnNlEjsKC2NvbnRyb2xsZXJzGAEgAygLMiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkihgEKF1VwZGF0ZUNvbnRyb2xsZXJSZXF1ZXN0EjoKCmNvbnRyb2xsZXIYASABKAsyJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayInChdEZWxldGVDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJIjgKFUJpbmRDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJEhEKCWRldmljZV9pZBgCIAEoCSIYChZCaW5kQ29udHJvbGxlclJlc3BvbnNlIjYKF1VuYmluZENvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFZm9yY2UYAiABKAgiGgoYVW5iaW5kQ29udHJvbGxlclJlc3BvbnNlIisKG0luaXRpYWxpemVDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJIh4KHEluaXRpYWxpemVDb250cm9sbGVyUmVzcG9uc2UiOAocSW5pdGlhbGl6ZUNvbnRyb2xsZXJNZXRhZGF0YRIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFIioKGkNvbmZpZ3VyZUNvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiHQobQ29uZmlndXJlQ29udHJvbGxlclJlc3BvbnNlIjcKG0NvbmZpZ3VyZUNvbnRyb2xsZXJNZXRhZGF0YRIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFIiYKFlJlc2V0Q29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSIZChdSZXNldENvbnRyb2xsZXJSZXNwb25zZSIZChdSZXNldENvbnRyb2xsZXJNZXRhZGF0YSI1Ch9VcGRhdGVDb250cm9sbGVyRmlybXdhcmVSZXF1ZXN0EhIKCmNvbnRyb2xsZXIYASABKAkiIgogVXBkYXRlQ29udHJvbGxlckZpcm13YXJlUmVzcG9uc2UiPAogVXBkYXRlQ29udHJvbGxlckZpcm13YXJlTWV0YWRhdGESGAoQcHJvZ3Jlc3NfcGVyY2VudBgBIAEoBSI3CiFHZW5lcmF0ZUF1dGhvcml6YXRpb25Ub2tlblJlcXVlc3QSEgoKY29udHJvbGxlchgBIAEoCSJBCiJHZW5lcmF0ZUF1dGhvcml6YXRpb25Ub2tlblJlc3BvbnNlEhsKE2F1dGhvcml6YXRpb25fdG9rZW4YASABKAwiOAoiR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpUmVxdWVzdBISCgpjb250cm9sbGVyGAEgASgJIksKI0dlbmVyYXRlRmlybXdhcmVEb3dubG9hZFVyaVJlc3BvbnNlEhQKDGRvd25sb2FkX3VyaRgBIAEoCRIOCgZkaWdlc3QYAiABKAkiJQojR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpTWV0YWRhdGEirwEKHENyZWF0ZUNvbnRyb2xsZXJSZWxheVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEiAKE2NvbnRyb2xsZXJfcmVsYXlfaWQYAiABKAlIAIgBARJFChBjb250cm9sbGVyX3JlbGF5GAMgASgLMisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5QhYKFF9jb250cm9sbGVyX3JlbGF5X2lkIikKGUdldENvbnRyb2xsZXJSZWxheVJlcXVlc3QSDAoEbmFtZRgBIAEoCSKTAQobTGlzdENvbnRyb2xsZXJSZWxheXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkSGwoTYWNjdXJhdGVfdG90YWxfc2l6ZRgGIAEoCCKcAQocTGlzdENvbnRyb2xsZXJSZWxheXNSZXNwb25zZRJGChFjb250cm9sbGVyX3JlbGF5cxgBIAMoCzIrLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXJSZWxheRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSGwoTYWNjdXJhdGVfdG90YWxfc2l6ZRgDIAEoBSKWAQocVXBkYXRlQ29udHJvbGxlclJlbGF5UmVxdWVzdBJFChBjb250cm9sbGVyX3JlbGF5GAEgASgLMisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIsChxEZWxldGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0EgwKBG5hbWUYASABKAkigAEKIkJhdGNoRGVsZXRlQ29udHJvbGxlclJlbGF5c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEkoKCHJlcXVlc3RzGAIgAygLMjguc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuRGVsZXRlQ29udHJvbGxlclJlbGF5UmVxdWVzdCIlCiNCYXRjaERlbGV0ZUNvbnRyb2xsZXJSZWxheXNSZXNwb25zZSKAAQoiQmF0Y2hDcmVhdGVDb250cm9sbGVyUmVsYXlzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSSgoIcmVxdWVzdHMYAiADKAsyOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0Im0KI0JhdGNoQ3JlYXRlQ29udHJvbGxlclJlbGF5c1Jlc3BvbnNlEkYKEWNvbnRyb2xsZXJfcmVsYXlzGAEgAygLMisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5IoABCiJCYXRjaFVwZGF0ZUNvbnRyb2xsZXJSZWxheXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRJKCghyZXF1ZXN0cxgCIAMoCzI4LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJSZWxheVJlcXVlc3QibQojQmF0Y2hVcGRhdGVDb250cm9sbGVyUmVsYXlzUmVzcG9uc2USRgoRY29udHJvbGxlcl9yZWxheXMYASADKAsyKy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyUmVsYXky6xQKEUNvbnRyb2xsZXJTZXJ2aWNlEm8KEENyZWF0ZUNvbnRyb2xsZXISMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVxdWVzdBomLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXISaQoNR2V0Q29udHJvbGxlchIwLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdldENvbnRyb2xsZXJSZXF1ZXN0GiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchJ6Cg9MaXN0Q29udHJvbGxlcnMSMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlcnNSZXF1ZXN0GjMuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuTGlzdENvbnRyb2xsZXJzUmVzcG9uc2USbwoQVXBkYXRlQ29udHJvbGxlchIzLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJSZXF1ZXN0GiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchJfChBEZWxldGVDb250cm9sbGVyEjMuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuRGVsZXRlQ29udHJvbGxlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSdwoOQmluZENvbnRyb2xsZXISMS5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CaW5kQ29udHJvbGxlclJlcXVlc3QaMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CaW5kQ29udHJvbGxlclJlc3BvbnNlEn0KEFVuYmluZENvbnRyb2xsZXISMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5VbmJpbmRDb250cm9sbGVyUmVxdWVzdBo0LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVuYmluZENvbnRyb2xsZXJSZXNwb25zZRJwChRJbml0aWFsaXplQ29udHJvbGxlchI3LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkluaXRpYWxpemVDb250cm9sbGVyUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJuChNDb25maWd1cmVDb250cm9sbGVyEjYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29uZmlndXJlQ29udHJvbGxlclJlcXVlc3QaHy5zYWx0by5sb25ncnVubmluZy52MS5PcGVyYXRpb24SZgoPUmVzZXRDb250cm9sbGVyEjIuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuUmVzZXRDb250cm9sbGVyUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJ4ChhVcGRhdGVDb250cm9sbGVyRmlybXdhcmUSOy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5VcGRhdGVDb250cm9sbGVyRmlybXdhcmVSZXF1ZXN0Gh8uc2FsdG8ubG9uZ3J1bm5pbmcudjEuT3BlcmF0aW9uEpsBChpHZW5lcmF0ZUF1dGhvcml6YXRpb25Ub2tlbhI9LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVxdWVzdBo+LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVzcG9uc2USfgobR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpEj4uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJ+ChVDcmVhdGVDb250cm9sbGVyUmVsYXkSOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0Gisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5Ep4BChtCYXRjaENyZWF0ZUNvbnRyb2xsZXJSZWxheXMSPi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CYXRjaENyZWF0ZUNvbnRyb2xsZXJSZWxheXNSZXF1ZXN0Gj8uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQmF0Y2hDcmVhdGVDb250cm9sbGVyUmVsYXlzUmVzcG9uc2USeAoSR2V0Q29udHJvbGxlclJlbGF5EjUuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2V0Q29udHJvbGxlclJlbGF5UmVxdWVzdBorLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXJSZWxheRKJAQoUTGlzdENvbnRyb2xsZXJSZWxheXMSNy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlclJlbGF5c1JlcXVlc3QaOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlclJlbGF5c1Jlc3BvbnNlEn4KFVVwZGF0ZUNvbnRyb2xsZXJSZWxheRI4LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJSZWxheVJlcXVlc3QaKy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyUmVsYXkSngEKG0JhdGNoVXBkYXRlQ29udHJvbGxlclJlbGF5cxI+LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkJhdGNoVXBkYXRlQ29udHJvbGxlclJlbGF5c1JlcXVlc3QaPy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CYXRjaFVwZGF0ZUNvbnRyb2xsZXJSZWxheXNSZXNwb25zZRJpChVEZWxldGVDb250cm9sbGVyUmVsYXkSOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5EZWxldGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ep4BChtCYXRjaERlbGV0ZUNvbnRyb2xsZXJSZWxheXMSPi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CYXRjaERlbGV0ZUNvbnRyb2xsZXJSZWxheXNSZXF1ZXN0Gj8uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQmF0Y2hEZWxldGVDb250cm9sbGVyUmVsYXlzUmVzcG9uc2VC8gEKImNvbS5zYWx0b2FwaXMubmVidWxhLmNvbnRyb2xsZXIudjFCD0NvbnRyb2xsZXJQcm90b1ABWkpnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL2NvbnRyb2xsZXIvdjE7Y29udHJvbGxlcqoCHlNhbHRvYXBpcy5OZWJ1bGEuQ29udHJvbGxlci5WMcoCHlNhbHRvYXBpc1xOZWJ1bGFcQ29udHJvbGxlclxWMeICKkdQQk1ldGFkYXRhXFNhbHRvYXBpc1xOZWJ1bGFcQ29udHJvbGxlclxWMWIGcHJvdG8z", [file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_longrunning_v1_operation, file_salto_nebula_type_device_metadata]);
 
 /**
  * The controller object
@@ -137,6 +137,104 @@ export const ControllerSchema: GenMessage<Controller> = /*@__PURE__*/
   messageDesc(file_salto_nebula_controller_v1_controller, 0);
 
 /**
+ * Relay represents a configurable output from a controller that can be used to control
+ * external devices such as doors or other electrical systems. Relays can be
+ * located on the main controller board or on extension boards, with addressing
+ * determined by dipswitch settings.
+ *
+ * @generated from message salto.nebula.controller.v1.ControllerRelay
+ */
+export type ControllerRelay = Message<"salto.nebula.controller.v1.ControllerRelay"> & {
+  /**
+   * Output only. Resource name of the controller relay. It must have the format of
+   * `installations/*\/controllers/*\/relays/*`. For example:
+   * `installations/surelock-homes-hq/controller/dancing-men/relays/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * Extension board address. Values range from 0-15, allowing for up to 16 boards in the system.
+   * This field is not applicable for master boards or wall reader extension boards.
+   *
+   * @generated from field: optional int32 dipswitch = 2;
+   */
+  dipswitch?: number;
+
+  /**
+   * Identifies the specific controller relay on the board (1-4). Board type determines
+   * which controller relay IDs are actually available for configuration and use.
+   *
+   * @generated from field: int32 relay_id = 3;
+   */
+  relayId: number;
+
+  /**
+   * Defines the controller relay type, allowing for different controller relay configurations.
+   *
+   * @generated from oneof salto.nebula.controller.v1.ControllerRelay.type
+   */
+  type: {
+    /**
+     * Destination output configuration for this controller relay.
+     *
+     * @generated from field: salto.nebula.controller.v1.DestinationOutput destination_output = 4;
+     */
+    value: DestinationOutput;
+    case: "destinationOutput";
+  } | {
+    /**
+     * Access point configuration for this controller relay.
+     *
+     * @generated from field: string access_point = 5;
+     */
+    value: string;
+    case: "accessPoint";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.ControllerRelay.
+ * Use `create(ControllerRelaySchema)` to create a new message.
+ */
+export const ControllerRelaySchema: GenMessage<ControllerRelay> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 1);
+
+/**
+ * DestinationOutput contains configuration information that identifies a specific
+ * destination resource and a specific output.
+ *
+ * This message maps a controller relay to a logical destination (like an elevator floor)
+ * and specifies which output activation value on the credential will trigger this controller relay.
+ * When used within a Relay's "type" oneof field, it configures the controller relay to activate
+ * when a credential with matching output permissions is presented at a reader connected
+ * to the controller.
+ *
+ * For example, in an elevator control scenario, each controller relay might control a different
+ * floor button, with the "output" field (0-255) corresponding to a specific permission
+ * bit in the credential's access rights.
+ *
+ * @generated from message salto.nebula.controller.v1.DestinationOutput
+ */
+export type DestinationOutput = Message<"salto.nebula.controller.v1.DestinationOutput"> & {
+  /**
+   * Resource name of the destination the controller relay points to.
+   * For example: installations/surelock-homes-hq/destinations/elevator-floor-5.
+   *
+   * @generated from field: string destination = 1;
+   */
+  destination: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.DestinationOutput.
+ * Use `create(DestinationOutputSchema)` to create a new message.
+ */
+export const DestinationOutputSchema: GenMessage<DestinationOutput> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 2);
+
+/**
  * The request message for [CreateController][salto.nebula.controller.v1.ControllerService.CreateController]
  *
  * @generated from message salto.nebula.controller.v1.CreateControllerRequest
@@ -172,7 +270,7 @@ export type CreateControllerRequest = Message<"salto.nebula.controller.v1.Create
  * Use `create(CreateControllerRequestSchema)` to create a new message.
  */
 export const CreateControllerRequestSchema: GenMessage<CreateControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 1);
+  messageDesc(file_salto_nebula_controller_v1_controller, 3);
 
 /**
  * The request message for [GetController][salto.nebula.controller.v1.ControllerService.GetController]
@@ -194,7 +292,7 @@ export type GetControllerRequest = Message<"salto.nebula.controller.v1.GetContro
  * Use `create(GetControllerRequestSchema)` to create a new message.
  */
 export const GetControllerRequestSchema: GenMessage<GetControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 2);
+  messageDesc(file_salto_nebula_controller_v1_controller, 4);
 
 /**
  * The request message for [ListControllers][salto.nebula.controller.v1.ControllerService.ListControllers]
@@ -244,7 +342,7 @@ export type ListControllersRequest = Message<"salto.nebula.controller.v1.ListCon
  * Use `create(ListControllersRequestSchema)` to create a new message.
  */
 export const ListControllersRequestSchema: GenMessage<ListControllersRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 3);
+  messageDesc(file_salto_nebula_controller_v1_controller, 5);
 
 /**
  * The response message for [ListControllers][salto.nebula.controllers.v1.ControllerService.ListControllers]
@@ -275,7 +373,7 @@ export type ListControllersResponse = Message<"salto.nebula.controller.v1.ListCo
  * Use `create(ListControllersResponseSchema)` to create a new message.
  */
 export const ListControllersResponseSchema: GenMessage<ListControllersResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 4);
+  messageDesc(file_salto_nebula_controller_v1_controller, 6);
 
 /**
  * The request message for [UpdateController][salto.nebula.controller.v1.ControllerService.UpdateController]
@@ -303,7 +401,7 @@ export type UpdateControllerRequest = Message<"salto.nebula.controller.v1.Update
  * Use `create(UpdateControllerRequestSchema)` to create a new message.
  */
 export const UpdateControllerRequestSchema: GenMessage<UpdateControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 5);
+  messageDesc(file_salto_nebula_controller_v1_controller, 7);
 
 /**
  * The request message for [DeleteController][salto.nebula.controller.v1.ControllerService.DeleteController]
@@ -325,7 +423,7 @@ export type DeleteControllerRequest = Message<"salto.nebula.controller.v1.Delete
  * Use `create(DeleteControllerRequestSchema)` to create a new message.
  */
 export const DeleteControllerRequestSchema: GenMessage<DeleteControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 6);
+  messageDesc(file_salto_nebula_controller_v1_controller, 8);
 
 /**
  * The request message for [`BindController`][salto.nebula.controller.v1.ControllerService.BindController]
@@ -355,7 +453,7 @@ export type BindControllerRequest = Message<"salto.nebula.controller.v1.BindCont
  * Use `create(BindControllerRequestSchema)` to create a new message.
  */
 export const BindControllerRequestSchema: GenMessage<BindControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 7);
+  messageDesc(file_salto_nebula_controller_v1_controller, 9);
 
 /**
  * The empty response message for [`BindController`][salto.nebula.controller.v1.ControllerService.BindController]
@@ -370,7 +468,7 @@ export type BindControllerResponse = Message<"salto.nebula.controller.v1.BindCon
  * Use `create(BindControllerResponseSchema)` to create a new message.
  */
 export const BindControllerResponseSchema: GenMessage<BindControllerResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 8);
+  messageDesc(file_salto_nebula_controller_v1_controller, 10);
 
 /**
  * The request message for [`UnbindController`][salto.nebula.controller.v1.ControllerService.UnbindController]
@@ -401,7 +499,7 @@ export type UnbindControllerRequest = Message<"salto.nebula.controller.v1.Unbind
  * Use `create(UnbindControllerRequestSchema)` to create a new message.
  */
 export const UnbindControllerRequestSchema: GenMessage<UnbindControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 9);
+  messageDesc(file_salto_nebula_controller_v1_controller, 11);
 
 /**
  * The empty response message for [`UnbindController`][salto.nebula.controller.v1.ControllerService.UnbindController]
@@ -416,7 +514,7 @@ export type UnbindControllerResponse = Message<"salto.nebula.controller.v1.Unbin
  * Use `create(UnbindControllerResponseSchema)` to create a new message.
  */
 export const UnbindControllerResponseSchema: GenMessage<UnbindControllerResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 10);
+  messageDesc(file_salto_nebula_controller_v1_controller, 12);
 
 /**
  * The request message for [`InitializeController`][salto.nebula.controller.v1.ControllerService.InitializeController]
@@ -438,7 +536,7 @@ export type InitializeControllerRequest = Message<"salto.nebula.controller.v1.In
  * Use `create(InitializeControllerRequestSchema)` to create a new message.
  */
 export const InitializeControllerRequestSchema: GenMessage<InitializeControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 11);
+  messageDesc(file_salto_nebula_controller_v1_controller, 13);
 
 /**
  * The empty response message for [`InitializeController`][salto.nebula.controller.v1.ControllerService.InitializeController]
@@ -453,7 +551,7 @@ export type InitializeControllerResponse = Message<"salto.nebula.controller.v1.I
  * Use `create(InitializeControllerResponseSchema)` to create a new message.
  */
 export const InitializeControllerResponseSchema: GenMessage<InitializeControllerResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 12);
+  messageDesc(file_salto_nebula_controller_v1_controller, 14);
 
 /**
  * @generated from message salto.nebula.controller.v1.InitializeControllerMetadata
@@ -472,7 +570,7 @@ export type InitializeControllerMetadata = Message<"salto.nebula.controller.v1.I
  * Use `create(InitializeControllerMetadataSchema)` to create a new message.
  */
 export const InitializeControllerMetadataSchema: GenMessage<InitializeControllerMetadata> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 13);
+  messageDesc(file_salto_nebula_controller_v1_controller, 15);
 
 /**
  * The request message for [`ConfigureController`][salto.nebula.controller.v1.ControllerService.ConfigureController]
@@ -494,7 +592,7 @@ export type ConfigureControllerRequest = Message<"salto.nebula.controller.v1.Con
  * Use `create(ConfigureControllerRequestSchema)` to create a new message.
  */
 export const ConfigureControllerRequestSchema: GenMessage<ConfigureControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 14);
+  messageDesc(file_salto_nebula_controller_v1_controller, 16);
 
 /**
  * The empty response message for [`ConfigureController`][salto.nebula.controller.v1.ControllerService.ConfigureController]
@@ -509,7 +607,7 @@ export type ConfigureControllerResponse = Message<"salto.nebula.controller.v1.Co
  * Use `create(ConfigureControllerResponseSchema)` to create a new message.
  */
 export const ConfigureControllerResponseSchema: GenMessage<ConfigureControllerResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 15);
+  messageDesc(file_salto_nebula_controller_v1_controller, 17);
 
 /**
  * The metadata message for [`ConfigureController`][salto.nebula.controller.v1.ControllerService.ConfigureController]
@@ -530,7 +628,7 @@ export type ConfigureControllerMetadata = Message<"salto.nebula.controller.v1.Co
  * Use `create(ConfigureControllerMetadataSchema)` to create a new message.
  */
 export const ConfigureControllerMetadataSchema: GenMessage<ConfigureControllerMetadata> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 16);
+  messageDesc(file_salto_nebula_controller_v1_controller, 18);
 
 /**
  * The request message for [`ResetController`][salto.nebula.controller.v1.ControllerService.ResetController]
@@ -552,7 +650,7 @@ export type ResetControllerRequest = Message<"salto.nebula.controller.v1.ResetCo
  * Use `create(ResetControllerRequestSchema)` to create a new message.
  */
 export const ResetControllerRequestSchema: GenMessage<ResetControllerRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 17);
+  messageDesc(file_salto_nebula_controller_v1_controller, 19);
 
 /**
  * The empty response message for [`ResetController`][salto.nebula.controller.v1.ControllerService.ResetController]
@@ -567,7 +665,7 @@ export type ResetControllerResponse = Message<"salto.nebula.controller.v1.ResetC
  * Use `create(ResetControllerResponseSchema)` to create a new message.
  */
 export const ResetControllerResponseSchema: GenMessage<ResetControllerResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 18);
+  messageDesc(file_salto_nebula_controller_v1_controller, 20);
 
 /**
  * The metadata message for [`ResetController`][salto.nebula.controller.v1.ControllerService.ResetController]
@@ -582,7 +680,7 @@ export type ResetControllerMetadata = Message<"salto.nebula.controller.v1.ResetC
  * Use `create(ResetControllerMetadataSchema)` to create a new message.
  */
 export const ResetControllerMetadataSchema: GenMessage<ResetControllerMetadata> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 19);
+  messageDesc(file_salto_nebula_controller_v1_controller, 21);
 
 /**
  * The request message for [`UpdateControllerFirmware`][salto.nebula.controller.v1.ControllerService.UpdateControllerFirmware]
@@ -605,7 +703,7 @@ export type UpdateControllerFirmwareRequest = Message<"salto.nebula.controller.v
  * Use `create(UpdateControllerFirmwareRequestSchema)` to create a new message.
  */
 export const UpdateControllerFirmwareRequestSchema: GenMessage<UpdateControllerFirmwareRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 20);
+  messageDesc(file_salto_nebula_controller_v1_controller, 22);
 
 /**
  * The response message for [`UpdateControllerFirmware`][salto.nebula.controller.v1.ControllerService.UpdateControllerFirmware]
@@ -620,7 +718,7 @@ export type UpdateControllerFirmwareResponse = Message<"salto.nebula.controller.
  * Use `create(UpdateControllerFirmwareResponseSchema)` to create a new message.
  */
 export const UpdateControllerFirmwareResponseSchema: GenMessage<UpdateControllerFirmwareResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 21);
+  messageDesc(file_salto_nebula_controller_v1_controller, 23);
 
 /**
  * The metadata message for [`UpdateControllerFirmware`][salto.nebula.controller.v1.ControllerService.UpdateControllerFirmware]
@@ -641,7 +739,7 @@ export type UpdateControllerFirmwareMetadata = Message<"salto.nebula.controller.
  * Use `create(UpdateControllerFirmwareMetadataSchema)` to create a new message.
  */
 export const UpdateControllerFirmwareMetadataSchema: GenMessage<UpdateControllerFirmwareMetadata> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 22);
+  messageDesc(file_salto_nebula_controller_v1_controller, 24);
 
 /**
  * The request message for [`GenerateAuthorizationToken`][salto.nebula.controller.v1.ControllerService.GenerateAuthorizationToken]
@@ -664,7 +762,7 @@ export type GenerateAuthorizationTokenRequest = Message<"salto.nebula.controller
  * Use `create(GenerateAuthorizationTokenRequestSchema)` to create a new message.
  */
 export const GenerateAuthorizationTokenRequestSchema: GenMessage<GenerateAuthorizationTokenRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 23);
+  messageDesc(file_salto_nebula_controller_v1_controller, 25);
 
 /**
  * The response message for [`GenerateAuthorizationToken`][salto.nebula.controller.v1.ControllerService.GenerateAuthorizationToken]
@@ -685,7 +783,7 @@ export type GenerateAuthorizationTokenResponse = Message<"salto.nebula.controlle
  * Use `create(GenerateAuthorizationTokenResponseSchema)` to create a new message.
  */
 export const GenerateAuthorizationTokenResponseSchema: GenMessage<GenerateAuthorizationTokenResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 24);
+  messageDesc(file_salto_nebula_controller_v1_controller, 26);
 
 /**
  * The request message for [`GenerateFirmwareDownloadUri`][salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri]
@@ -707,7 +805,7 @@ export type GenerateFirmwareDownloadUriRequest = Message<"salto.nebula.controlle
  * Use `create(GenerateFirmwareDownloadUriRequestSchema)` to create a new message.
  */
 export const GenerateFirmwareDownloadUriRequestSchema: GenMessage<GenerateFirmwareDownloadUriRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 25);
+  messageDesc(file_salto_nebula_controller_v1_controller, 27);
 
 /**
  * The response message for [`GenerateFirmwareDownloadUri`][salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri]
@@ -739,7 +837,7 @@ export type GenerateFirmwareDownloadUriResponse = Message<"salto.nebula.controll
  * Use `create(GenerateFirmwareDownloadUriResponseSchema)` to create a new message.
  */
 export const GenerateFirmwareDownloadUriResponseSchema: GenMessage<GenerateFirmwareDownloadUriResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 26);
+  messageDesc(file_salto_nebula_controller_v1_controller, 28);
 
 /**
  * The metadata message for [`GenerateFirmwareDownloadUri`][salto.nebula.controller.v1.ControllerService.GenerateFirmwareDownloadUri]
@@ -754,7 +852,362 @@ export type GenerateFirmwareDownloadUriMetadata = Message<"salto.nebula.controll
  * Use `create(GenerateFirmwareDownloadUriMetadataSchema)` to create a new message.
  */
 export const GenerateFirmwareDownloadUriMetadataSchema: GenMessage<GenerateFirmwareDownloadUriMetadata> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_controller_v1_controller, 27);
+  messageDesc(file_salto_nebula_controller_v1_controller, 29);
+
+/**
+ * The request message for [`CreateControllerRelay`][salto.nebula.controller.v1.ControllerService.CreateControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.CreateControllerRelayRequest
+ */
+export type CreateControllerRelayRequest = Message<"salto.nebula.controller.v1.CreateControllerRelayRequest"> & {
+  /**
+   * Resource name of the parent resource where the controller relay is to be created. For
+   * example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The controller relay ID to use for this controller relay. In case it's empty the
+   * server will autogenerate a unique identifier.
+   *
+   * @generated from field: optional string controller_relay_id = 2;
+   */
+  controllerRelayId?: string;
+
+  /**
+   * The controller relay resource to be created. Client must not set the
+   * `ControllerRelay.name` field.
+   *
+   * @generated from field: salto.nebula.controller.v1.ControllerRelay controller_relay = 3;
+   */
+  controllerRelay?: ControllerRelay;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.CreateControllerRelayRequest.
+ * Use `create(CreateControllerRelayRequestSchema)` to create a new message.
+ */
+export const CreateControllerRelayRequestSchema: GenMessage<CreateControllerRelayRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 30);
+
+/**
+ * The request message for [GetControllerRelay][salto.nebula.controller.v1.ControllerService.GetControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.GetControllerRelayRequest
+ */
+export type GetControllerRelayRequest = Message<"salto.nebula.controller.v1.GetControllerRelayRequest"> & {
+  /**
+   * The name of the requested controller relay resource. For example:
+   * `installations/surelock-homes-hq/controllers/dancing-men/relay/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.GetControllerRelayRequest.
+ * Use `create(GetControllerRelayRequestSchema)` to create a new message.
+ */
+export const GetControllerRelayRequestSchema: GenMessage<GetControllerRelayRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 31);
+
+/**
+ * The request message for [ListControllerRelays][salto.nebula.controller.v1.ControllerService.ListControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.ListControllerRelaysRequest
+ */
+export type ListControllerRelaysRequest = Message<"salto.nebula.controller.v1.ListControllerRelaysRequest"> & {
+  /**
+   * The parent resource name. For example, `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The maximum number of items to return.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * The `next_page_token` value returned from a previous `List` request, if
+   * any.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
+
+  /**
+   * A filter that chooses which controller relays to return.
+   *
+   * @generated from field: string filter = 4;
+   */
+  filter: string;
+
+  /**
+   * How the results should be sorted.
+   *
+   * @generated from field: string order_by = 5;
+   */
+  orderBy: string;
+
+  /**
+   * If true, the response will return an accurate total number of controller relays
+   * that match the filter.
+   *
+   * @generated from field: bool accurate_total_size = 6;
+   */
+  accurateTotalSize: boolean;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.ListControllerRelaysRequest.
+ * Use `create(ListControllerRelaysRequestSchema)` to create a new message.
+ */
+export const ListControllerRelaysRequestSchema: GenMessage<ListControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 32);
+
+/**
+ * The response message for [ListControllerRelays][salto.nebula.controllers.v1.ControllerService.ListControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.ListControllerRelaysResponse
+ */
+export type ListControllerRelaysResponse = Message<"salto.nebula.controller.v1.ListControllerRelaysResponse"> & {
+  /**
+   * The field name should match the noun `relays` in the method name. There
+   * will be a maximum number of items returned based on the `page_size` field
+   * in the request.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[];
+
+  /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+
+  /**
+   * The accurate total number of controller relays in all pages, irrespective of
+   * any pagination. This is a number based on the requested filter, and it
+   * may change in subsequent pages.
+   *
+   * @generated from field: int32 accurate_total_size = 3;
+   */
+  accurateTotalSize: number;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.ListControllerRelaysResponse.
+ * Use `create(ListControllerRelaysResponseSchema)` to create a new message.
+ */
+export const ListControllerRelaysResponseSchema: GenMessage<ListControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 33);
+
+/**
+ * The request message for [UpdateControllerRelay][salto.nebula.controller.v1.ControllerService.UpdateControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.UpdateControllerRelayRequest
+ */
+export type UpdateControllerRelayRequest = Message<"salto.nebula.controller.v1.UpdateControllerRelayRequest"> & {
+  /**
+   * The controller relay resource which replaces the resource on the server.
+   *
+   * @generated from field: salto.nebula.controller.v1.ControllerRelay controller_relay = 1;
+   */
+  controllerRelay?: ControllerRelay;
+
+  /**
+   * The update mask applied to the resource.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMask;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.UpdateControllerRelayRequest.
+ * Use `create(UpdateControllerRelayRequestSchema)` to create a new message.
+ */
+export const UpdateControllerRelayRequestSchema: GenMessage<UpdateControllerRelayRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 34);
+
+/**
+ * The request message for [DeleteControllerRelay][salto.nebula.controller.v1.ControllerService.DeleteControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.DeleteControllerRelayRequest
+ */
+export type DeleteControllerRelayRequest = Message<"salto.nebula.controller.v1.DeleteControllerRelayRequest"> & {
+  /**
+   * The resource name of the controller relay to be deleted. For example:
+   * `installations/surelock-homes-hq/controllers/dancing-men/relays/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.DeleteControllerRelayRequest.
+ * Use `create(DeleteControllerRelayRequestSchema)` to create a new message.
+ */
+export const DeleteControllerRelayRequestSchema: GenMessage<DeleteControllerRelayRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 35);
+
+/**
+ * The request message for [`BatchDeleteControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest
+ */
+export type BatchDeleteControllerRelaysRequest = Message<"salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest"> & {
+  /**
+   * Resource name of the controller relays to be deleted.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The request message specifying the resources to delete.
+   * A maximum of 100 controller relays can be deleted in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.DeleteControllerRelayRequest requests = 2;
+   */
+  requests: DeleteControllerRelayRequest[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest.
+ * Use `create(BatchDeleteControllerRelaysRequestSchema)` to create a new message.
+ */
+export const BatchDeleteControllerRelaysRequestSchema: GenMessage<BatchDeleteControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 36);
+
+/**
+ * The response message for [`BatchDeleteControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse
+ */
+export type BatchDeleteControllerRelaysResponse = Message<"salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse"> & {
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse.
+ * Use `create(BatchDeleteControllerRelaysResponseSchema)` to create a new message.
+ */
+export const BatchDeleteControllerRelaysResponseSchema: GenMessage<BatchDeleteControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 37);
+
+/**
+ * The request message for [`BatchCreateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchCreateControllerRelaysRequest
+ */
+export type BatchCreateControllerRelaysRequest = Message<"salto.nebula.controller.v1.BatchCreateControllerRelaysRequest"> & {
+  /**
+   * Resource name of the parent resource where the controller relays are to be created.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The request message specifying the resources to create.
+   * A maximum of 100 controller relays can be created in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.CreateControllerRelayRequest requests = 2;
+   */
+  requests: CreateControllerRelayRequest[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchCreateControllerRelaysRequest.
+ * Use `create(BatchCreateControllerRelaysRequestSchema)` to create a new message.
+ */
+export const BatchCreateControllerRelaysRequestSchema: GenMessage<BatchCreateControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 38);
+
+/**
+ * The response message for [`BatchCreateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchCreateControllerRelaysResponse
+ */
+export type BatchCreateControllerRelaysResponse = Message<"salto.nebula.controller.v1.BatchCreateControllerRelaysResponse"> & {
+  /**
+   * The controller relay resources created.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchCreateControllerRelaysResponse.
+ * Use `create(BatchCreateControllerRelaysResponseSchema)` to create a new message.
+ */
+export const BatchCreateControllerRelaysResponseSchema: GenMessage<BatchCreateControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 39);
+
+/**
+ * The request message for [`BatchUpdateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest
+ */
+export type BatchUpdateControllerRelaysRequest = Message<"salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest"> & {
+  /**
+   * Resource name of the controller relays to be updated.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The request message specifying the resources to update.
+   * A maximum of 100 controller relays can be updated in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.UpdateControllerRelayRequest requests = 2;
+   */
+  requests: UpdateControllerRelayRequest[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest.
+ * Use `create(BatchUpdateControllerRelaysRequestSchema)` to create a new message.
+ */
+export const BatchUpdateControllerRelaysRequestSchema: GenMessage<BatchUpdateControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 40);
+
+/**
+ * The response message for [`BatchUpdateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse
+ */
+export type BatchUpdateControllerRelaysResponse = Message<"salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse"> & {
+  /**
+   * The controller relay resources updated.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse.
+ * Use `create(BatchUpdateControllerRelaysResponseSchema)` to create a new message.
+ */
+export const BatchUpdateControllerRelaysResponseSchema: GenMessage<BatchUpdateControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 41);
 
 /**
  * Controllers are mains-wired hardware devices that can be used to control access where
@@ -940,6 +1393,103 @@ export const ControllerService: GenService<{
     methodKind: "unary";
     input: typeof GenerateFirmwareDownloadUriRequestSchema;
     output: typeof OperationSchema;
+  },
+  /**
+   * Create a controller relay
+   *
+   * Creates a new controller relay
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.CreateControllerRelay
+   */
+  createControllerRelay: {
+    methodKind: "unary";
+    input: typeof CreateControllerRelayRequestSchema;
+    output: typeof ControllerRelaySchema;
+  },
+  /**
+   * Create a batch of controller relays
+   *
+   * Creates a batch of controller relays. This method allows the creation of multiple
+   * controller relays in a single operation.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays
+   */
+  batchCreateControllerRelays: {
+    methodKind: "unary";
+    input: typeof BatchCreateControllerRelaysRequestSchema;
+    output: typeof BatchCreateControllerRelaysResponseSchema;
+  },
+  /**
+   * Get a controller relay
+   *
+   * Gets an existing controller relay.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.GetControllerRelay
+   */
+  getControllerRelay: {
+    methodKind: "unary";
+    input: typeof GetControllerRelayRequestSchema;
+    output: typeof ControllerRelaySchema;
+  },
+  /**
+   * List controller relays
+   *
+   * Returns a list of controller relays that have been previously created.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.ListControllerRelays
+   */
+  listControllerRelays: {
+    methodKind: "unary";
+    input: typeof ListControllerRelaysRequestSchema;
+    output: typeof ListControllerRelaysResponseSchema;
+  },
+  /**
+   * Update a controller relay
+   *
+   * Updates an existing controller relay.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.UpdateControllerRelay
+   */
+  updateControllerRelay: {
+    methodKind: "unary";
+    input: typeof UpdateControllerRelayRequestSchema;
+    output: typeof ControllerRelaySchema;
+  },
+  /**
+   * Update a batch of controller relays
+   *
+   * Updates a batch of controller relays. This method allows updating multiple controller relays in a single operation.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays
+   */
+  batchUpdateControllerRelays: {
+    methodKind: "unary";
+    input: typeof BatchUpdateControllerRelaysRequestSchema;
+    output: typeof BatchUpdateControllerRelaysResponseSchema;
+  },
+  /**
+   * Delete a controller relay
+   *
+   * Permanently deletes a controller relay. This cannot be undone.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.DeleteControllerRelay
+   */
+  deleteControllerRelay: {
+    methodKind: "unary";
+    input: typeof DeleteControllerRelayRequestSchema;
+    output: typeof EmptySchema;
+  },
+  /**
+   * Delete a batch of controller relays
+   *
+   * Permanently deletes a batch of controller relays. This cannot be undone.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays
+   */
+  batchDeleteControllerRelays: {
+    methodKind: "unary";
+    input: typeof BatchDeleteControllerRelaysRequestSchema;
+    output: typeof BatchDeleteControllerRelaysResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_salto_nebula_controller_v1_controller, 0);
