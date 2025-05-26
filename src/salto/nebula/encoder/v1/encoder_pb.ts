@@ -5,6 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
+import { DeviceMetadata } from "@saltoapis/nebula-type";
 
 /**
  * The encoder object
@@ -77,6 +78,13 @@ export class Encoder extends Message<Encoder> {
   initialized = false;
 
   /**
+   * Device metadata contains information about a device hardware and firmware.
+   *
+   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 11;
+   */
+  deviceMetadata?: DeviceMetadata;
+
+  /**
    * Indicates whether this encoder is connected or not. It's considered
    * connected if there has been at least one communication with it within the
    * last 10 minutes.
@@ -122,6 +130,7 @@ export class Encoder extends Message<Encoder> {
     { no: 4, name: "gateway", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "parent_device" },
     { no: 5, name: "extender", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "parent_device" },
     { no: 6, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 11, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 7, name: "connected", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 8, name: "last_event_time", kind: "message", T: Timestamp },
     { no: 9, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },

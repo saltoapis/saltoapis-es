@@ -5,6 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { FieldMask, Message, proto3 } from "@bufbuild/protobuf";
+import { DeviceMetadata } from "@saltoapis/nebula-type";
 
 /**
  * The gateway object
@@ -51,6 +52,13 @@ export class Gateway extends Message<Gateway> {
   initialized = false;
 
   /**
+   * Device metadata contains information about a device hardware and firmware.
+   *
+   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 8;
+   */
+  deviceMetadata?: DeviceMetadata;
+
+  /**
    * Indicates whether this gateway is connected or not. It's considered
    * connected if the gateway has successfully established communication
    * with the MQTT server.
@@ -85,6 +93,7 @@ export class Gateway extends Message<Gateway> {
     { no: 2, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 4, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 8, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 7, name: "connected", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 5, name: "ethernet_settings", kind: "message", T: EthernetSettings },
     { no: 6, name: "wifi_settings", kind: "message", T: WifiSettings },

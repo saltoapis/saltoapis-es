@@ -7,6 +7,7 @@ load_rules(
     lib_name = 'nebula-intercomadaptor-v1',
     internal_dependencies = [
         '//src/salto/longrunning/v1',
+        '//src/salto/nebula/type',
     ],
     extra_info = {
         'generator': 'es',

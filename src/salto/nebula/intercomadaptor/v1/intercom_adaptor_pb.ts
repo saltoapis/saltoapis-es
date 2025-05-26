@@ -5,6 +5,7 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
+import { DeviceMetadata } from "@saltoapis/nebula-type";
 
 /**
  * The intercom adaptor object
@@ -82,6 +83,13 @@ export class IntercomAdaptor extends Message<IntercomAdaptor> {
    * @generated from field: bool initialized = 7;
    */
   initialized = false;
+
+  /**
+   * Device metadata contains information about a device hardware and firmware.
+   *
+   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 16;
+   */
+  deviceMetadata?: DeviceMetadata;
 
   /**
    * Indicates whether this intercom adaptor has pending updates or not. This
@@ -166,6 +174,7 @@ export class IntercomAdaptor extends Message<IntercomAdaptor> {
     { no: 5, name: "extender", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "parent_device" },
     { no: 6, name: "access_points", kind: "message", T: IntercomAdaptorAccessPoint, repeated: true },
     { no: 7, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 16, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 8, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 9, name: "connected", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 10, name: "low_battery", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
