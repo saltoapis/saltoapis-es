@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { BatchCreateControllerRelaysRequest, BatchCreateControllerRelaysResponse, BatchDeleteControllerRelaysRequest, BatchDeleteControllerRelaysResponse, BatchUpdateControllerRelaysRequest, BatchUpdateControllerRelaysResponse, BindControllerRequest, BindControllerResponse, ConfigureControllerRequest, Controller, ControllerRelay, CreateControllerRelayRequest, CreateControllerRequest, DeleteControllerRelayRequest, DeleteControllerRequest, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GenerateFirmwareDownloadUriRequest, GetControllerRelayRequest, GetControllerRequest, InitializeControllerRequest, ListControllerRelaysRequest, ListControllerRelaysResponse, ListControllersRequest, ListControllersResponse, ResetControllerRequest, UnbindControllerRequest, UnbindControllerResponse, UpdateControllerFirmwareRequest, UpdateControllerRelayRequest, UpdateControllerRequest } from "./controller_pb";
+import { BindControllerRequest, BindControllerResponse, ConfigureControllerRequest, Controller, ControllerRelay, CreateControllerRelayRequest, CreateControllerRequest, DeleteControllerRequest, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GenerateFirmwareDownloadUriRequest, GetControllerRequest, InitializeControllerRequest, ListControllersRequest, ListControllersResponse, ResetControllerRequest, UnbindControllerRequest, UnbindControllerResponse, UpdateControllerFirmwareRequest, UpdateControllerRequest } from "./controller_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -218,98 +218,6 @@ export const ControllerService = {
       name: "CreateControllerRelay",
       I: CreateControllerRelayRequest,
       O: ControllerRelay,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * Create a batch of controller relays
-     *
-     * Creates a batch of controller relays. This method allows the creation of multiple
-     * controller relays in a single operation.
-     *
-     * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays
-     */
-    batchCreateControllerRelays: {
-      name: "BatchCreateControllerRelays",
-      I: BatchCreateControllerRelaysRequest,
-      O: BatchCreateControllerRelaysResponse,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * Get a controller relay
-     *
-     * Gets an existing controller relay.
-     *
-     * @generated from rpc salto.nebula.controller.v1.ControllerService.GetControllerRelay
-     */
-    getControllerRelay: {
-      name: "GetControllerRelay",
-      I: GetControllerRelayRequest,
-      O: ControllerRelay,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * List controller relays
-     *
-     * Returns a list of controller relays that have been previously created.
-     *
-     * @generated from rpc salto.nebula.controller.v1.ControllerService.ListControllerRelays
-     */
-    listControllerRelays: {
-      name: "ListControllerRelays",
-      I: ListControllerRelaysRequest,
-      O: ListControllerRelaysResponse,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * Update a controller relay
-     *
-     * Updates an existing controller relay.
-     *
-     * @generated from rpc salto.nebula.controller.v1.ControllerService.UpdateControllerRelay
-     */
-    updateControllerRelay: {
-      name: "UpdateControllerRelay",
-      I: UpdateControllerRelayRequest,
-      O: ControllerRelay,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * Update a batch of controller relays
-     *
-     * Updates a batch of controller relays. This method allows updating multiple controller relays in a single operation.
-     *
-     * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays
-     */
-    batchUpdateControllerRelays: {
-      name: "BatchUpdateControllerRelays",
-      I: BatchUpdateControllerRelaysRequest,
-      O: BatchUpdateControllerRelaysResponse,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * Delete a controller relay
-     *
-     * Permanently deletes a controller relay. This cannot be undone.
-     *
-     * @generated from rpc salto.nebula.controller.v1.ControllerService.DeleteControllerRelay
-     */
-    deleteControllerRelay: {
-      name: "DeleteControllerRelay",
-      I: DeleteControllerRelayRequest,
-      O: Empty,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * Delete a batch of controller relays
-     *
-     * Permanently deletes a batch of controller relays. This cannot be undone.
-     *
-     * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays
-     */
-    batchDeleteControllerRelays: {
-      name: "BatchDeleteControllerRelays",
-      I: BatchDeleteControllerRelaysRequest,
-      O: BatchDeleteControllerRelaysResponse,
       kind: MethodKind.Unary,
     },
   }
