@@ -216,14 +216,6 @@ export class AccessRightDestination extends Message<AccessRightDestination> {
   destination = "";
 
   /**
-   * The access right resource name of the parent access right. For example:
-   * `installations/surelock-homes-hq/access-rights/baskerville`.
-   *
-   * @generated from field: string access_right = 4;
-   */
-  accessRight = "";
-
-  /**
    * Display name of the associated entity. In this case a destination.
    *
    * @generated from field: string display_name = 3;
@@ -240,7 +232,6 @@ export class AccessRightDestination extends Message<AccessRightDestination> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "destination", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 4, name: "access_right", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
