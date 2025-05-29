@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AccessRight, AccessRightAccessPoint, AccessRightAccessPointGroup, BatchCreateAccessRightAccessPointGroupsRequest, BatchCreateAccessRightAccessPointGroupsResponse, BatchCreateAccessRightAccessPointsRequest, BatchCreateAccessRightAccessPointsResponse, BatchDeleteAccessRightAccessPointGroupsRequest, BatchDeleteAccessRightAccessPointGroupsResponse, BatchDeleteAccessRightAccessPointsRequest, BatchDeleteAccessRightAccessPointsResponse, CreateAccessRightAccessPointGroupRequest, CreateAccessRightAccessPointRequest, CreateAccessRightRequest, DeleteAccessRightAccessPointGroupRequest, DeleteAccessRightAccessPointRequest, DeleteAccessRightRequest, GetAccessRightAccessPointGroupRequest, GetAccessRightAccessPointRequest, GetAccessRightRequest, ListAccessRightAccessPointGroupsRequest, ListAccessRightAccessPointGroupsResponse, ListAccessRightAccessPointsRequest, ListAccessRightAccessPointsResponse, ListAccessRightsRequest, ListAccessRightsResponse, UpdateAccessRightAccessPointGroupRequest, UpdateAccessRightAccessPointRequest, UpdateAccessRightRequest } from "./access_right_pb";
+import { AccessRight, AccessRightAccessPoint, AccessRightAccessPointGroup, AccessRightDestination, BatchCreateAccessRightAccessPointGroupsRequest, BatchCreateAccessRightAccessPointGroupsResponse, BatchCreateAccessRightAccessPointsRequest, BatchCreateAccessRightAccessPointsResponse, BatchDeleteAccessRightAccessPointGroupsRequest, BatchDeleteAccessRightAccessPointGroupsResponse, BatchDeleteAccessRightAccessPointsRequest, BatchDeleteAccessRightAccessPointsResponse, CreateAccessRightAccessPointGroupRequest, CreateAccessRightAccessPointRequest, CreateAccessRightDestinationRequest, CreateAccessRightRequest, DeleteAccessRightAccessPointGroupRequest, DeleteAccessRightAccessPointRequest, DeleteAccessRightDestinationRequest, DeleteAccessRightRequest, GetAccessRightAccessPointGroupRequest, GetAccessRightAccessPointRequest, GetAccessRightDestinationRequest, GetAccessRightRequest, ListAccessRightAccessPointGroupsRequest, ListAccessRightAccessPointGroupsResponse, ListAccessRightAccessPointsRequest, ListAccessRightAccessPointsResponse, ListAccessRightDestinationsRequest, ListAccessRightDestinationsResponse, ListAccessRightsRequest, ListAccessRightsResponse, UpdateAccessRightAccessPointGroupRequest, UpdateAccessRightAccessPointRequest, UpdateAccessRightDestinationRequest, UpdateAccessRightRequest } from "./access_right_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -266,6 +266,71 @@ export const AccessRightService = {
       name: "BatchDeleteAccessRightAccessPointGroups",
       I: BatchDeleteAccessRightAccessPointGroupsRequest,
       O: BatchDeleteAccessRightAccessPointGroupsResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Create an access right destination
+     *
+     * Creates an access right's destination association.
+     *
+     * @generated from rpc salto.nebula.accessright.v1.AccessRightService.CreateAccessRightDestination
+     */
+    createAccessRightDestination: {
+      name: "CreateAccessRightDestination",
+      I: CreateAccessRightDestinationRequest,
+      O: AccessRightDestination,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Get an access right destination
+     *
+     * Retrieves an existing access right's destination association.
+     *
+     * @generated from rpc salto.nebula.accessright.v1.AccessRightService.GetAccessRightDestination
+     */
+    getAccessRightDestination: {
+      name: "GetAccessRightDestination",
+      I: GetAccessRightDestinationRequest,
+      O: AccessRightDestination,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * List access right destinations
+     *
+     * Lists an existing access right's destination associations.
+     *
+     * @generated from rpc salto.nebula.accessright.v1.AccessRightService.ListAccessRightDestinations
+     */
+    listAccessRightDestinations: {
+      name: "ListAccessRightDestinations",
+      I: ListAccessRightDestinationsRequest,
+      O: ListAccessRightDestinationsResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Update an access right destination
+     *
+     * Updates an existing access right's destination association.
+     *
+     * @generated from rpc salto.nebula.accessright.v1.AccessRightService.UpdateAccessRightDestination
+     */
+    updateAccessRightDestination: {
+      name: "UpdateAccessRightDestination",
+      I: UpdateAccessRightDestinationRequest,
+      O: AccessRightDestination,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Delete an access right destination
+     *
+     * Deletes an access right's destination association.
+     *
+     * @generated from rpc salto.nebula.accessright.v1.AccessRightService.DeleteAccessRightDestination
+     */
+    deleteAccessRightDestination: {
+      name: "DeleteAccessRightDestination",
+      I: DeleteAccessRightDestinationRequest,
+      O: Empty,
       kind: MethodKind.Unary,
     },
   }

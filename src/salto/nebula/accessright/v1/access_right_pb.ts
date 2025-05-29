@@ -191,6 +191,77 @@ export class AccessRightAccessPointGroup extends Message<AccessRightAccessPointG
 }
 
 /**
+ * The access right's destination association
+ *
+ * @generated from message salto.nebula.accessright.v1.AccessRightDestination
+ */
+export class AccessRightDestination extends Message<AccessRightDestination> {
+  /**
+   * Resource name of the access right's destination association. It must
+   * have the format of `installations/*\/access-rights/*\/destinations/*`.
+   * For example:
+   * `installations/surelock-homes-hq/access-rights/baskerville/destinations/elevator-floor-5`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  /**
+   * The destination resource name to bind as an association to the parent
+   * access right. For example:
+   * `installations/surelock-homes-hq/destinations/elevator-floor-5`.
+   *
+   * @generated from field: string destination = 2;
+   */
+  destination = "";
+
+  /**
+   * The access right resource name of the parent access right. For example:
+   * `installations/surelock-homes-hq/access-rights/baskerville`.
+   *
+   * @generated from field: string access_right = 4;
+   */
+  accessRight = "";
+
+  /**
+   * Display name of the associated entity. In this case a destination.
+   *
+   * @generated from field: string display_name = 3;
+   */
+  displayName = "";
+
+  constructor(data?: PartialMessage<AccessRightDestination>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.AccessRightDestination";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "destination", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "access_right", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightDestination {
+    return new AccessRightDestination().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AccessRightDestination {
+    return new AccessRightDestination().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AccessRightDestination {
+    return new AccessRightDestination().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AccessRightDestination | PlainMessage<AccessRightDestination> | undefined, b: AccessRightDestination | PlainMessage<AccessRightDestination> | undefined): boolean {
+    return proto3.util.equals(AccessRightDestination, a, b);
+  }
+}
+
+/**
  * The request message for [`CreateAccessRight`][salto.nebula.accessright.v1.AccessRightService.CreateAccessRight]
  *
  * @generated from message salto.nebula.accessright.v1.CreateAccessRightRequest
@@ -1492,6 +1563,322 @@ export class BatchDeleteAccessRightAccessPointsResponse extends Message<BatchDel
 
   static equals(a: BatchDeleteAccessRightAccessPointsResponse | PlainMessage<BatchDeleteAccessRightAccessPointsResponse> | undefined, b: BatchDeleteAccessRightAccessPointsResponse | PlainMessage<BatchDeleteAccessRightAccessPointsResponse> | undefined): boolean {
     return proto3.util.equals(BatchDeleteAccessRightAccessPointsResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`CreateAccessRightDestination`][salto.nebula.accessright.v1.AccessRightService.CreateAccessRightDestination]
+ *
+ * @generated from message salto.nebula.accessright.v1.CreateAccessRightDestinationRequest
+ */
+export class CreateAccessRightDestinationRequest extends Message<CreateAccessRightDestinationRequest> {
+  /**
+   * Resource name of the parent resource where the access right's destination
+   * association is to be created. For example:
+   * `installations/surelock-homes-hq/access-rights/baskerville`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The access right's destination association resource to be created.
+   * Client must not set the `AccessRightDestination.name` field.
+   *
+   * @generated from field: salto.nebula.accessright.v1.AccessRightDestination access_right_destination = 2;
+   */
+  accessRightDestination?: AccessRightDestination;
+
+  constructor(data?: PartialMessage<CreateAccessRightDestinationRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.CreateAccessRightDestinationRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "access_right_destination", kind: "message", T: AccessRightDestination },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreateAccessRightDestinationRequest {
+    return new CreateAccessRightDestinationRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreateAccessRightDestinationRequest {
+    return new CreateAccessRightDestinationRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreateAccessRightDestinationRequest {
+    return new CreateAccessRightDestinationRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: CreateAccessRightDestinationRequest | PlainMessage<CreateAccessRightDestinationRequest> | undefined, b: CreateAccessRightDestinationRequest | PlainMessage<CreateAccessRightDestinationRequest> | undefined): boolean {
+    return proto3.util.equals(CreateAccessRightDestinationRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [`GetAccessRightDestination`][salto.nebula.accessright.v1.AccessRightService.GetAccessRightDestination]
+ *
+ * @generated from message salto.nebula.accessright.v1.GetAccessRightDestinationRequest
+ */
+export class GetAccessRightDestinationRequest extends Message<GetAccessRightDestinationRequest> {
+  /**
+   * The name of the requested access right's destination association
+   * resource. For example:
+   * `installations/surelock-homes-hq/access-rights/baskerville/destinations/elevator-floor-5`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<GetAccessRightDestinationRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.GetAccessRightDestinationRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): GetAccessRightDestinationRequest {
+    return new GetAccessRightDestinationRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): GetAccessRightDestinationRequest {
+    return new GetAccessRightDestinationRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): GetAccessRightDestinationRequest {
+    return new GetAccessRightDestinationRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: GetAccessRightDestinationRequest | PlainMessage<GetAccessRightDestinationRequest> | undefined, b: GetAccessRightDestinationRequest | PlainMessage<GetAccessRightDestinationRequest> | undefined): boolean {
+    return proto3.util.equals(GetAccessRightDestinationRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [`ListAccessRightDestinations`][salto.nebula.accessright.v1.AccessRightService.ListAccessRightDestinations]
+ *
+ * @generated from message salto.nebula.accessright.v1.ListAccessRightDestinationsRequest
+ */
+export class ListAccessRightDestinationsRequest extends Message<ListAccessRightDestinationsRequest> {
+  /**
+   * The parent resource name. For example:
+   * `installations/surelock-homes-hq/access-rights/baskerville`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The maximum number of items to return.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize = 0;
+
+  /**
+   * The `next_page_token` value returned from a previous `List` request, if
+   * any.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken = "";
+
+  /**
+   * A filter that chooses which access right's destination
+   * associations to return.
+   *
+   * @generated from field: string filter = 4;
+   */
+  filter = "";
+
+  /**
+   * How the results should be sorted.
+   *
+   * @generated from field: string order_by = 5;
+   */
+  orderBy = "";
+
+  constructor(data?: PartialMessage<ListAccessRightDestinationsRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.ListAccessRightDestinationsRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "page_size", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
+    { no: 3, name: "page_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "filter", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 5, name: "order_by", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListAccessRightDestinationsRequest {
+    return new ListAccessRightDestinationsRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListAccessRightDestinationsRequest {
+    return new ListAccessRightDestinationsRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListAccessRightDestinationsRequest {
+    return new ListAccessRightDestinationsRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ListAccessRightDestinationsRequest | PlainMessage<ListAccessRightDestinationsRequest> | undefined, b: ListAccessRightDestinationsRequest | PlainMessage<ListAccessRightDestinationsRequest> | undefined): boolean {
+    return proto3.util.equals(ListAccessRightDestinationsRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [`ListAccessRightDestinations`][salto.nebula.accessright.v1.AccessRightService.ListAccessRightDestinations]
+ *
+ * @generated from message salto.nebula.accessright.v1.ListAccessRightDestinationsResponse
+ */
+export class ListAccessRightDestinationsResponse extends Message<ListAccessRightDestinationsResponse> {
+  /**
+   * The field name should match the noun `access_right_destinations` in the
+   * method name. There will be a maximum number of items returned based on
+   * the `page_size` field in the request.
+   *
+   * @generated from field: repeated salto.nebula.accessright.v1.AccessRightDestination access_right_destinations = 1;
+   */
+  accessRightDestinations: AccessRightDestination[] = [];
+
+  /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken = "";
+
+  constructor(data?: PartialMessage<ListAccessRightDestinationsResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.ListAccessRightDestinationsResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "access_right_destinations", kind: "message", T: AccessRightDestination, repeated: true },
+    { no: 2, name: "next_page_token", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ListAccessRightDestinationsResponse {
+    return new ListAccessRightDestinationsResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ListAccessRightDestinationsResponse {
+    return new ListAccessRightDestinationsResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ListAccessRightDestinationsResponse {
+    return new ListAccessRightDestinationsResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ListAccessRightDestinationsResponse | PlainMessage<ListAccessRightDestinationsResponse> | undefined, b: ListAccessRightDestinationsResponse | PlainMessage<ListAccessRightDestinationsResponse> | undefined): boolean {
+    return proto3.util.equals(ListAccessRightDestinationsResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`UpdateAccessRightDestination`][salto.nebula.accessright.v1.AccessRightService.UpdateAccessRightDestination]
+ *
+ * @generated from message salto.nebula.accessright.v1.UpdateAccessRightDestinationRequest
+ */
+export class UpdateAccessRightDestinationRequest extends Message<UpdateAccessRightDestinationRequest> {
+  /**
+   * The access right's destination resource which replaces the resource on
+   * the server.
+   *
+   * @generated from field: salto.nebula.accessright.v1.AccessRightDestination access_right_destination = 1;
+   */
+  accessRightDestination?: AccessRightDestination;
+
+  /**
+   * The update mask applied to the resource.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMask;
+
+  constructor(data?: PartialMessage<UpdateAccessRightDestinationRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.UpdateAccessRightDestinationRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "access_right_destination", kind: "message", T: AccessRightDestination },
+    { no: 2, name: "update_mask", kind: "message", T: FieldMask },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateAccessRightDestinationRequest {
+    return new UpdateAccessRightDestinationRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateAccessRightDestinationRequest {
+    return new UpdateAccessRightDestinationRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateAccessRightDestinationRequest {
+    return new UpdateAccessRightDestinationRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UpdateAccessRightDestinationRequest | PlainMessage<UpdateAccessRightDestinationRequest> | undefined, b: UpdateAccessRightDestinationRequest | PlainMessage<UpdateAccessRightDestinationRequest> | undefined): boolean {
+    return proto3.util.equals(UpdateAccessRightDestinationRequest, a, b);
+  }
+}
+
+/**
+ * The request message for [`DeleteAccessRightDestination`][salto.nebula.accessright.v1.AccessRightService.DeleteAccessRightDestination]
+ *
+ * @generated from message salto.nebula.accessright.v1.DeleteAccessRightDestinationRequest
+ */
+export class DeleteAccessRightDestinationRequest extends Message<DeleteAccessRightDestinationRequest> {
+  /**
+   * The resource name of the access right's destination association to be
+   * deleted. For example:
+   * `installations/surelock-homes-hq/access-rights/baskerville/destinations/elevator-floor-5`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<DeleteAccessRightDestinationRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.accessright.v1.DeleteAccessRightDestinationRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DeleteAccessRightDestinationRequest {
+    return new DeleteAccessRightDestinationRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DeleteAccessRightDestinationRequest {
+    return new DeleteAccessRightDestinationRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DeleteAccessRightDestinationRequest {
+    return new DeleteAccessRightDestinationRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: DeleteAccessRightDestinationRequest | PlainMessage<DeleteAccessRightDestinationRequest> | undefined, b: DeleteAccessRightDestinationRequest | PlainMessage<DeleteAccessRightDestinationRequest> | undefined): boolean {
+    return proto3.util.equals(DeleteAccessRightDestinationRequest, a, b);
   }
 }
 
