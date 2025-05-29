@@ -190,9 +190,9 @@ export class ControllerRelay extends Message<ControllerRelay> {
     /**
      * Destination output configuration for this controller relay.
      *
-     * @generated from field: salto.nebula.controller.v1.DestinationOutput destination_output = 4;
+     * @generated from field: salto.nebula.controller.v1.ControllerRelay.DestinationOutput destination_output = 4;
      */
-    value: DestinationOutput;
+    value: ControllerRelay_DestinationOutput;
     case: "destinationOutput";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
@@ -206,7 +206,7 @@ export class ControllerRelay extends Message<ControllerRelay> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "relay_id", kind: "scalar", T: 5 /* ScalarType.INT32 */ },
-    { no: 4, name: "destination_output", kind: "message", T: DestinationOutput, oneof: "type" },
+    { no: 4, name: "destination_output", kind: "message", T: ControllerRelay_DestinationOutput, oneof: "type" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ControllerRelay {
@@ -240,9 +240,9 @@ export class ControllerRelay extends Message<ControllerRelay> {
  * floor button, with the "output" field (0-255) corresponding to a specific permission
  * bit in the credential's access rights.
  *
- * @generated from message salto.nebula.controller.v1.DestinationOutput
+ * @generated from message salto.nebula.controller.v1.ControllerRelay.DestinationOutput
  */
-export class DestinationOutput extends Message<DestinationOutput> {
+export class ControllerRelay_DestinationOutput extends Message<ControllerRelay_DestinationOutput> {
   /**
    * Resource name of the destination the controller relay points to.
    * For example: installations/surelock-homes-hq/destinations/elevator-floor-5.
@@ -251,31 +251,31 @@ export class DestinationOutput extends Message<DestinationOutput> {
    */
   destination = "";
 
-  constructor(data?: PartialMessage<DestinationOutput>) {
+  constructor(data?: PartialMessage<ControllerRelay_DestinationOutput>) {
     super();
     proto3.util.initPartial(data, this);
   }
 
   static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "salto.nebula.controller.v1.DestinationOutput";
+  static readonly typeName = "salto.nebula.controller.v1.ControllerRelay.DestinationOutput";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "destination", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DestinationOutput {
-    return new DestinationOutput().fromBinary(bytes, options);
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ControllerRelay_DestinationOutput {
+    return new ControllerRelay_DestinationOutput().fromBinary(bytes, options);
   }
 
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): DestinationOutput {
-    return new DestinationOutput().fromJson(jsonValue, options);
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ControllerRelay_DestinationOutput {
+    return new ControllerRelay_DestinationOutput().fromJson(jsonValue, options);
   }
 
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): DestinationOutput {
-    return new DestinationOutput().fromJsonString(jsonString, options);
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ControllerRelay_DestinationOutput {
+    return new ControllerRelay_DestinationOutput().fromJsonString(jsonString, options);
   }
 
-  static equals(a: DestinationOutput | PlainMessage<DestinationOutput> | undefined, b: DestinationOutput | PlainMessage<DestinationOutput> | undefined): boolean {
-    return proto3.util.equals(DestinationOutput, a, b);
+  static equals(a: ControllerRelay_DestinationOutput | PlainMessage<ControllerRelay_DestinationOutput> | undefined, b: ControllerRelay_DestinationOutput | PlainMessage<ControllerRelay_DestinationOutput> | undefined): boolean {
+    return proto3.util.equals(ControllerRelay_DestinationOutput, a, b);
   }
 }
 
