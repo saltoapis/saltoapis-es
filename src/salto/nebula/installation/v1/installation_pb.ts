@@ -719,6 +719,49 @@ export class PaymentMethod_DirectDebit_SEPA extends Message<PaymentMethod_Direct
 }
 
 /**
+ * Payment authorization for the subscription.
+ *
+ * @generated from message salto.nebula.installation.v1.PaymentAuthorization
+ */
+export class PaymentAuthorization extends Message<PaymentAuthorization> {
+  /**
+   * Resource name of the payment authorization. It must have the format of
+   * `installations/*\/subscription/payment-authorizations/*`. For example:
+   * `installations/salto-hq/subscription/payment-authorizations/01HCD0YB`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<PaymentAuthorization>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.installation.v1.PaymentAuthorization";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PaymentAuthorization {
+    return new PaymentAuthorization().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PaymentAuthorization {
+    return new PaymentAuthorization().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PaymentAuthorization {
+    return new PaymentAuthorization().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: PaymentAuthorization | PlainMessage<PaymentAuthorization> | undefined, b: PaymentAuthorization | PlainMessage<PaymentAuthorization> | undefined): boolean {
+    return proto3.util.equals(PaymentAuthorization, a, b);
+  }
+}
+
+/**
  * The coupon object
  *
  * @generated from message salto.nebula.installation.v1.Coupon
@@ -2164,6 +2207,58 @@ export class UpdateCardResponse extends Message<UpdateCardResponse> {
 
   static equals(a: UpdateCardResponse | PlainMessage<UpdateCardResponse> | undefined, b: UpdateCardResponse | PlainMessage<UpdateCardResponse> | undefined): boolean {
     return proto3.util.equals(UpdateCardResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`CreatePaymentAuthorization`][salto.nebula.installation.v1.InstallationService.CreatePaymentAuthorization]
+ *
+ * @generated from message salto.nebula.installation.v1.CreatePaymentAuthorizationRequest
+ */
+export class CreatePaymentAuthorizationRequest extends Message<CreatePaymentAuthorizationRequest> {
+  /**
+   * The resource name of the subscription for which the payment authorization is being
+   * requested to be created. For example:
+   * `installations/surelock-homes-hq/subscription`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The payment authorization resource to be created. Client must not set the
+   * `PaymentAuthorization.name` field.
+   *
+   * @generated from field: salto.nebula.installation.v1.PaymentAuthorization payment_authorization = 2;
+   */
+  paymentAuthorization?: PaymentAuthorization;
+
+  constructor(data?: PartialMessage<CreatePaymentAuthorizationRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.installation.v1.CreatePaymentAuthorizationRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "payment_authorization", kind: "message", T: PaymentAuthorization },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CreatePaymentAuthorizationRequest {
+    return new CreatePaymentAuthorizationRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CreatePaymentAuthorizationRequest {
+    return new CreatePaymentAuthorizationRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CreatePaymentAuthorizationRequest {
+    return new CreatePaymentAuthorizationRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: CreatePaymentAuthorizationRequest | PlainMessage<CreatePaymentAuthorizationRequest> | undefined, b: CreatePaymentAuthorizationRequest | PlainMessage<CreatePaymentAuthorizationRequest> | undefined): boolean {
+    return proto3.util.equals(CreatePaymentAuthorizationRequest, a, b);
   }
 }
 
