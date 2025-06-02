@@ -16,7 +16,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file salto/nebula/installation/v1/installation.proto.
  */
 export const file_salto_nebula_installation_v1_installation: GenFile = /*@__PURE__*/
-  fileDesc("Ci9zYWx0by9uZWJ1bGEvaW5zdGFsbGF0aW9uL3YxL2luc3RhbGxhdGlvbi5wcm90bxIcc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MSKEBwoMSW5zdGFsbGF0aW9uEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEhIKBXBob3RvGAMgASgJSACIAQESEQoJcGhvdG9fdXJpGAQgASgJEg8KB2FkZHJlc3MYBSABKAkSEQoJdGltZV96b25lGAYgASgJElEKD2RpZ2l0YWxfa2V5X2FydBgHIAEoCzI4LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uLkRpZ2l0YWxLZXlBcnQSYwoYdHJhbnNmZXJfb3duZXJzaGlwX3N0YXRlGAggASgLMkEuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24uVHJhbnNmZXJPd25lcnNoaXBTdGF0ZRIvCgtkZWxldGVfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASUQoMcGFydG5lcl9pbmZvGAkgASgLMjYuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24uUGFydG5lckluZm9IAYgBARIzCgpibG9ja190aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgCiAEBEjcKFGtleV9yZW5ld2FsX2R1cmF0aW9uGAogASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGpwBCg1EaWdpdGFsS2V5QXJ0Eh0KEGJhY2tncm91bmRfaW1hZ2UYASABKAlIAIgBARIcChRiYWNrZ3JvdW5kX2ltYWdlX3VyaRgCIAEoCRIqCgp0ZXh0X2NvbG9yGAMgASgLMhEuc2FsdG8udHlwZS5Db2xvckgBiAEBQhMKEV9iYWNrZ3JvdW5kX2ltYWdlQg0KC190ZXh0X2NvbG9yGlgKFlRyYW5zZmVyT3duZXJzaGlwU3RhdGUSDQoFZW1haWwYASABKAkSLwoLZXhwaXJlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGjgKC1BhcnRuZXJJbmZvEhIKCnBhcnRuZXJfaWQYASABKAkSFQoNY3VycmVuY3lfY29kZRgCIAEoCUIICgZfcGhvdG9CDwoNX3BhcnRuZXJfaW5mb0INCgtfYmxvY2tfdGltZSKlAgoMU3Vic2NyaXB0aW9uEgwKBG5hbWUYASABKAkSNwoOdHJpYWxfZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSACIAQESPwoMYmlsbGluZ19pbmZvGAQgASgLMikuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5CaWxsaW5nSW5mbxJDCg5wYXltZW50X21ldGhvZBgFIAEoCzIrLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUGF5bWVudE1ldGhvZBI1Cgdjb3Vwb25zGAYgAygLMiQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5Db3Vwb25CEQoPX3RyaWFsX2VuZF90aW1lIr0BCgtCaWxsaW5nSW5mbxIMCgRuYW1lGAEgASgJEg8KB2NvbXBhbnkYAiABKAkSDwoHYWRkcmVzcxgDIAMoCRITCgtyZWdpb25fY29kZRgEIAEoCRIMCgRjaXR5GAUgASgJEhcKCnN0YXRlX2NvZGUYBiABKAlIAIgBARILCgN6aXAYByABKAkSFwoKdmF0X251bWJlchgIIAEoCUgBiAEBQg0KC19zdGF0ZV9jb2RlQg0KC192YXRfbnVtYmVyIrQDCg1QYXltZW50TWV0aG9kEgwKBG5hbWUYASABKAkSQAoEY2FyZBgCIAEoCzIwLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUGF5bWVudE1ldGhvZC5DYXJkSAASTwoMZGlyZWN0X2RlYml0GAMgASgLMjcuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5QYXltZW50TWV0aG9kLkRpcmVjdERlYml0SAAaTwoEQ2FyZBIlCgtleHBpcmVfZGF0ZRgBIAEoCzIQLnNhbHRvLnR5cGUuRGF0ZRIRCglsYXN0X2ZvdXIYAiABKAkSDQoFYnJhbmQYAyABKAkapgEKC0RpcmVjdERlYml0EkwKBHNlcGEYASABKAsyPC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBheW1lbnRNZXRob2QuRGlyZWN0RGViaXQuU0VQQUgAGj8KBFNFUEESEQoJbGFzdF9mb3VyGAEgASgJEhYKDmFjY291bnRfaG9sZGVyGAIgASgJEgwKBGliYW4YAyABKAlCCAoGc2NoZW1lQggKBm1ldGhvZCIWCgZDb3Vwb24SDAoEbmFtZRgBIAEoCSLzAgoHSW52b2ljZRIMCgRuYW1lGAEgASgJEi4KCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBJCCgpsaW5lX2l0ZW1zGAQgAygLMi4uc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnZvaWNlLkxpbmVJdGVtEg0KBXRvdGFsGAUgASgDEjoKBXN0YXRlGAYgASgOMisuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnZvaWNlLlN0YXRlGjcKCExpbmVJdGVtEgoKAmlkGAEgASgJEhAKCHF1YW50aXR5GAIgASgFEg0KBXByaWNlGAMgASgDIjQKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGVU5QQUlEEAESCAoEUEFJRBACIjUKBlBvbGljeRIMCgRuYW1lGAEgASgJEg4KBm1lbWJlchgCIAEoCRINCgVyb2xlcxgDIAMoCSK9AQoZQ3JlYXRlSW5zdGFsbGF0aW9uUmVxdWVzdBIcCg9pbnN0YWxsYXRpb25faWQYASABKAlIAIgBARJACgxpbnN0YWxsYXRpb24YAiABKAsyKi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkluc3RhbGxhdGlvbhIaCg12YWxpZGF0ZV9vbmx5GAUgASgISAGIAQFCEgoQX2luc3RhbGxhdGlvbl9pZEIQCg5fdmFsaWRhdGVfb25seSImChZHZXRJbnN0YWxsYXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkieQoYTGlzdEluc3RhbGxhdGlvbnNSZXF1ZXN0EhEKCXBhZ2Vfc2l6ZRgBIAEoBRISCgpwYWdlX3Rva2VuGAIgASgJEg4KBmZpbHRlchgDIAEoCRIQCghvcmRlcl9ieRgEIAEoCRIUCgxzaG93X2RlbGV0ZWQYBSABKAgidwoZTGlzdEluc3RhbGxhdGlvbnNSZXNwb25zZRJBCg1pbnN0YWxsYXRpb25zGAEgAygLMiouc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIo4BChlVcGRhdGVJbnN0YWxsYXRpb25SZXF1ZXN0EkAKDGluc3RhbGxhdGlvbhgBIAEoCzIqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayKBAQoZRGVsZXRlSW5zdGFsbGF0aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJEhoKDXZhbGlkYXRlX29ubHkYAiABKAhIAIgBARIYCgtkZWxheV9ob3VycxgDIAEoBUgBiAEBQhAKDl92YWxpZGF0ZV9vbmx5Qg4KDF9kZWxheV9ob3VycyIrChtVbmRlbGV0ZUluc3RhbGxhdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJuChNDcmVhdGVQb2xpY3lSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwb2xpY3lfaWQYAiABKAkSNAoGcG9saWN5GAMgASgLMiQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5Qb2xpY3kiIAoQR2V0UG9saWN5UmVxdWVzdBIMCgRuYW1lGAEgASgJIm4KE0xpc3RQb2xpY2llc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCRIQCghvcmRlcl9ieRgFIAEoCSJnChRMaXN0UG9saWNpZXNSZXNwb25zZRI2Cghwb2xpY2llcxgBIAMoCzIkLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUG9saWN5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJ8ChNVcGRhdGVQb2xpY3lSZXF1ZXN0EjQKBnBvbGljeRgBIAEoCzIkLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUG9saWN5Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIjChNEZWxldGVQb2xpY3lSZXF1ZXN0EgwKBG5hbWUYASABKAkiQwoWVGVzdFBlcm1pc3Npb25zUmVxdWVzdBIUCgxpbnN0YWxsYXRpb24YASABKAkSEwoLcGVybWlzc2lvbnMYAiADKAkiLgoXVGVzdFBlcm1pc3Npb25zUmVzcG9uc2USEwoLcGVybWlzc2lvbnMYASADKAkiSwokVHJhbnNmZXJJbnN0YWxsYXRpb25Pd25lcnNoaXBSZXF1ZXN0EhQKDGluc3RhbGxhdGlvbhgBIAEoCRINCgVlbWFpbBgCIAEoCSInCiVUcmFuc2Zlckluc3RhbGxhdGlvbk93bmVyc2hpcFJlc3BvbnNlIpEBCiJBY2NlcHRJbnN0YWxsYXRpb25Pd25lcnNoaXBSZXF1ZXN0EhQKDGluc3RhbGxhdGlvbhgBIAEoCRJECgxiaWxsaW5nX2luZm8YAiABKAsyKS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkJpbGxpbmdJbmZvSACIAQFCDwoNX2JpbGxpbmdfaW5mbyIlCiNBY2NlcHRJbnN0YWxsYXRpb25Pd25lcnNoaXBSZXNwb25zZSImChZHZXRTdWJzY3JpcHRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkiWwoYVXBkYXRlQmlsbGluZ0luZm9SZXF1ZXN0Ej8KDGJpbGxpbmdfaW5mbxgBIAEoCzIpLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQmlsbGluZ0luZm8iYQoaVXBkYXRlUGF5bWVudE1ldGhvZFJlcXVlc3QSQwoOcGF5bWVudF9tZXRob2QYASABKAsyKy5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBheW1lbnRNZXRob2QiOgoRVXBkYXRlQ2FyZFJlcXVlc3QSFgoOcGF5bWVudF9tZXRob2QYASABKAkSDQoFdG9rZW4YAiABKAkiFAoSVXBkYXRlQ2FyZFJlc3BvbnNlIiUKE0xpc3RJbnZvaWNlc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJIk8KFExpc3RJbnZvaWNlc1Jlc3BvbnNlEjcKCGludm9pY2VzGAEgAygLMiUuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnZvaWNlIjoKEkFwcGx5Q291cG9uUmVxdWVzdBIUCgxzdWJzY3JpcHRpb24YASABKAkSDgoGY291cG9uGAIgASgJIhUKE0FwcGx5Q291cG9uUmVzcG9uc2UiPAoUVW5hcHBseUNvdXBvblJlcXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJEg4KBmNvdXBvbhgCIAEoCSIXChVVbmFwcGx5Q291cG9uUmVzcG9uc2UymRQKE0luc3RhbGxhdGlvblNlcnZpY2USeQoSQ3JlYXRlSW5zdGFsbGF0aW9uEjcuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5DcmVhdGVJbnN0YWxsYXRpb25SZXF1ZXN0Giouc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24ScwoPR2V0SW5zdGFsbGF0aW9uEjQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5HZXRJbnN0YWxsYXRpb25SZXF1ZXN0Giouc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24ShAEKEUxpc3RJbnN0YWxsYXRpb25zEjYuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5MaXN0SW5zdGFsbGF0aW9uc1JlcXVlc3QaNy5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkxpc3RJbnN0YWxsYXRpb25zUmVzcG9uc2USeQoSVXBkYXRlSW5zdGFsbGF0aW9uEjcuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5VcGRhdGVJbnN0YWxsYXRpb25SZXF1ZXN0Giouc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24SeQoSRGVsZXRlSW5zdGFsbGF0aW9uEjcuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5EZWxldGVJbnN0YWxsYXRpb25SZXF1ZXN0Giouc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24SfQoUVW5kZWxldGVJbnN0YWxsYXRpb24SOS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlVuZGVsZXRlSW5zdGFsbGF0aW9uUmVxdWVzdBoqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uEmcKDENyZWF0ZVBvbGljeRIxLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQ3JlYXRlUG9saWN5UmVxdWVzdBokLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUG9saWN5EmEKCUdldFBvbGljeRIuLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuR2V0UG9saWN5UmVxdWVzdBokLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUG9saWN5EnUKDExpc3RQb2xpY2llcxIxLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuTGlzdFBvbGljaWVzUmVxdWVzdBoyLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuTGlzdFBvbGljaWVzUmVzcG9uc2USZwoMVXBkYXRlUG9saWN5EjEuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5VcGRhdGVQb2xpY3lSZXF1ZXN0GiQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5Qb2xpY3kSWQoMRGVsZXRlUG9saWN5EjEuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5EZWxldGVQb2xpY3lSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5En4KD1Rlc3RQZXJtaXNzaW9ucxI0LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVGVzdFBlcm1pc3Npb25zUmVxdWVzdBo1LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVGVzdFBlcm1pc3Npb25zUmVzcG9uc2USqAEKHVRyYW5zZmVySW5zdGFsbGF0aW9uT3duZXJzaGlwEkIuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5UcmFuc2Zlckluc3RhbGxhdGlvbk93bmVyc2hpcFJlcXVlc3QaQy5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlRyYW5zZmVySW5zdGFsbGF0aW9uT3duZXJzaGlwUmVzcG9uc2USogEKG0FjY2VwdEluc3RhbGxhdGlvbk93bmVyc2hpcBJALnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQWNjZXB0SW5zdGFsbGF0aW9uT3duZXJzaGlwUmVxdWVzdBpBLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQWNjZXB0SW5zdGFsbGF0aW9uT3duZXJzaGlwUmVzcG9uc2UScwoPR2V0U3Vic2NyaXB0aW9uEjQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5HZXRTdWJzY3JpcHRpb25SZXF1ZXN0Giouc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5TdWJzY3JpcHRpb24SdgoRVXBkYXRlQmlsbGluZ0luZm8SNi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlVwZGF0ZUJpbGxpbmdJbmZvUmVxdWVzdBopLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQmlsbGluZ0luZm8SfAoTVXBkYXRlUGF5bWVudE1ldGhvZBI4LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVXBkYXRlUGF5bWVudE1ldGhvZFJlcXVlc3QaKy5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBheW1lbnRNZXRob2QSbwoKVXBkYXRlQ2FyZBIvLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVXBkYXRlQ2FyZFJlcXVlc3QaMC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlVwZGF0ZUNhcmRSZXNwb25zZRJ1CgxMaXN0SW52b2ljZXMSMS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkxpc3RJbnZvaWNlc1JlcXVlc3QaMi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkxpc3RJbnZvaWNlc1Jlc3BvbnNlEnIKC0FwcGx5Q291cG9uEjAuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5BcHBseUNvdXBvblJlcXVlc3QaMS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkFwcGx5Q291cG9uUmVzcG9uc2USeAoNVW5hcHBseUNvdXBvbhIyLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVW5hcHBseUNvdXBvblJlcXVlc3QaMy5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlVuYXBwbHlDb3Vwb25SZXNwb25zZUKAAgokY29tLnNhbHRvYXBpcy5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxQhFJbnN0YWxsYXRpb25Qcm90b1ABWk5naXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL2luc3RhbGxhdGlvbi92MTtpbnN0YWxsYXRpb26qAiBTYWx0b2FwaXMuTmVidWxhLkluc3RhbGxhdGlvbi5WMcoCIFNhbHRvYXBpc1xOZWJ1bGFcSW5zdGFsbGF0aW9uXFYx4gIsR1BCTWV0YWRhdGFcU2FsdG9hcGlzXE5lYnVsYVxJbnN0YWxsYXRpb25cVjFiBnByb3RvMw", [file_google_protobuf_duration, file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_type_color, file_salto_type_date]);
+  fileDesc("Ci9zYWx0by9uZWJ1bGEvaW5zdGFsbGF0aW9uL3YxL2luc3RhbGxhdGlvbi5wcm90bxIcc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MSKEBwoMSW5zdGFsbGF0aW9uEgwKBG5hbWUYASABKAkSFAoMZGlzcGxheV9uYW1lGAIgASgJEhIKBXBob3RvGAMgASgJSACIAQESEQoJcGhvdG9fdXJpGAQgASgJEg8KB2FkZHJlc3MYBSABKAkSEQoJdGltZV96b25lGAYgASgJElEKD2RpZ2l0YWxfa2V5X2FydBgHIAEoCzI4LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uLkRpZ2l0YWxLZXlBcnQSYwoYdHJhbnNmZXJfb3duZXJzaGlwX3N0YXRlGAggASgLMkEuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24uVHJhbnNmZXJPd25lcnNoaXBTdGF0ZRIvCgtkZWxldGVfdGltZRgMIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASUQoMcGFydG5lcl9pbmZvGAkgASgLMjYuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24uUGFydG5lckluZm9IAYgBARIzCgpibG9ja190aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgCiAEBEjcKFGtleV9yZW5ld2FsX2R1cmF0aW9uGAogASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uGpwBCg1EaWdpdGFsS2V5QXJ0Eh0KEGJhY2tncm91bmRfaW1hZ2UYASABKAlIAIgBARIcChRiYWNrZ3JvdW5kX2ltYWdlX3VyaRgCIAEoCRIqCgp0ZXh0X2NvbG9yGAMgASgLMhEuc2FsdG8udHlwZS5Db2xvckgBiAEBQhMKEV9iYWNrZ3JvdW5kX2ltYWdlQg0KC190ZXh0X2NvbG9yGlgKFlRyYW5zZmVyT3duZXJzaGlwU3RhdGUSDQoFZW1haWwYASABKAkSLwoLZXhwaXJlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wGjgKC1BhcnRuZXJJbmZvEhIKCnBhcnRuZXJfaWQYASABKAkSFQoNY3VycmVuY3lfY29kZRgCIAEoCUIICgZfcGhvdG9CDwoNX3BhcnRuZXJfaW5mb0INCgtfYmxvY2tfdGltZSKlAgoMU3Vic2NyaXB0aW9uEgwKBG5hbWUYASABKAkSNwoOdHJpYWxfZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSACIAQESPwoMYmlsbGluZ19pbmZvGAQgASgLMikuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5CaWxsaW5nSW5mbxJDCg5wYXltZW50X21ldGhvZBgFIAEoCzIrLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUGF5bWVudE1ldGhvZBI1Cgdjb3Vwb25zGAYgAygLMiQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5Db3Vwb25CEQoPX3RyaWFsX2VuZF90aW1lIr0BCgtCaWxsaW5nSW5mbxIMCgRuYW1lGAEgASgJEg8KB2NvbXBhbnkYAiABKAkSDwoHYWRkcmVzcxgDIAMoCRITCgtyZWdpb25fY29kZRgEIAEoCRIMCgRjaXR5GAUgASgJEhcKCnN0YXRlX2NvZGUYBiABKAlIAIgBARILCgN6aXAYByABKAkSFwoKdmF0X251bWJlchgIIAEoCUgBiAEBQg0KC19zdGF0ZV9jb2RlQg0KC192YXRfbnVtYmVyIrQDCg1QYXltZW50TWV0aG9kEgwKBG5hbWUYASABKAkSQAoEY2FyZBgCIAEoCzIwLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUGF5bWVudE1ldGhvZC5DYXJkSAASTwoMZGlyZWN0X2RlYml0GAMgASgLMjcuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5QYXltZW50TWV0aG9kLkRpcmVjdERlYml0SAAaTwoEQ2FyZBIlCgtleHBpcmVfZGF0ZRgBIAEoCzIQLnNhbHRvLnR5cGUuRGF0ZRIRCglsYXN0X2ZvdXIYAiABKAkSDQoFYnJhbmQYAyABKAkapgEKC0RpcmVjdERlYml0EkwKBHNlcGEYASABKAsyPC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBheW1lbnRNZXRob2QuRGlyZWN0RGViaXQuU0VQQUgAGj8KBFNFUEESEQoJbGFzdF9mb3VyGAEgASgJEhYKDmFjY291bnRfaG9sZGVyGAIgASgJEgwKBGliYW4YAyABKAlCCAoGc2NoZW1lQggKBm1ldGhvZCIkChRQYXltZW50QXV0aG9yaXphdGlvbhIMCgRuYW1lGAEgASgJIhYKBkNvdXBvbhIMCgRuYW1lGAEgASgJIvMCCgdJbnZvaWNlEgwKBG5hbWUYASABKAkSLgoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEkIKCmxpbmVfaXRlbXMYBCADKAsyLi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkludm9pY2UuTGluZUl0ZW0SDQoFdG90YWwYBSABKAMSOgoFc3RhdGUYBiABKA4yKy5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkludm9pY2UuU3RhdGUaNwoITGluZUl0ZW0SCgoCaWQYASABKAkSEAoIcXVhbnRpdHkYAiABKAUSDQoFcHJpY2UYAyABKAMiNAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZVTlBBSUQQARIICgRQQUlEEAIiNQoGUG9saWN5EgwKBG5hbWUYASABKAkSDgoGbWVtYmVyGAIgASgJEg0KBXJvbGVzGAMgAygJIr0BChlDcmVhdGVJbnN0YWxsYXRpb25SZXF1ZXN0EhwKD2luc3RhbGxhdGlvbl9pZBgBIAEoCUgAiAEBEkAKDGluc3RhbGxhdGlvbhgCIAEoCzIqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uEhoKDXZhbGlkYXRlX29ubHkYBSABKAhIAYgBAUISChBfaW5zdGFsbGF0aW9uX2lkQhAKDl92YWxpZGF0ZV9vbmx5IiYKFkdldEluc3RhbGxhdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJ5ChhMaXN0SW5zdGFsbGF0aW9uc1JlcXVlc3QSEQoJcGFnZV9zaXplGAEgASgFEhIKCnBhZ2VfdG9rZW4YAiABKAkSDgoGZmlsdGVyGAMgASgJEhAKCG9yZGVyX2J5GAQgASgJEhQKDHNob3dfZGVsZXRlZBgFIAEoCCJ3ChlMaXN0SW5zdGFsbGF0aW9uc1Jlc3BvbnNlEkEKDWluc3RhbGxhdGlvbnMYASADKAsyKi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkluc3RhbGxhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkijgEKGVVwZGF0ZUluc3RhbGxhdGlvblJlcXVlc3QSQAoMaW5zdGFsbGF0aW9uGAEgASgLMiouc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5JbnN0YWxsYXRpb24SLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIoEBChlEZWxldGVJbnN0YWxsYXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAkSGgoNdmFsaWRhdGVfb25seRgCIAEoCEgAiAEBEhgKC2RlbGF5X2hvdXJzGAMgASgFSAGIAQFCEAoOX3ZhbGlkYXRlX29ubHlCDgoMX2RlbGF5X2hvdXJzIisKG1VuZGVsZXRlSW5zdGFsbGF0aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJIm4KE0NyZWF0ZVBvbGljeVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBvbGljeV9pZBgCIAEoCRI0CgZwb2xpY3kYAyABKAsyJC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBvbGljeSIgChBHZXRQb2xpY3lSZXF1ZXN0EgwKBG5hbWUYASABKAkibgoTTGlzdFBvbGljaWVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJImcKFExpc3RQb2xpY2llc1Jlc3BvbnNlEjYKCHBvbGljaWVzGAEgAygLMiQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5Qb2xpY3kSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJInwKE1VwZGF0ZVBvbGljeVJlcXVlc3QSNAoGcG9saWN5GAEgASgLMiQuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5Qb2xpY3kSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIiMKE0RlbGV0ZVBvbGljeVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJDChZUZXN0UGVybWlzc2lvbnNSZXF1ZXN0EhQKDGluc3RhbGxhdGlvbhgBIAEoCRITCgtwZXJtaXNzaW9ucxgCIAMoCSIuChdUZXN0UGVybWlzc2lvbnNSZXNwb25zZRITCgtwZXJtaXNzaW9ucxgBIAMoCSJLCiRUcmFuc2Zlckluc3RhbGxhdGlvbk93bmVyc2hpcFJlcXVlc3QSFAoMaW5zdGFsbGF0aW9uGAEgASgJEg0KBWVtYWlsGAIgASgJIicKJVRyYW5zZmVySW5zdGFsbGF0aW9uT3duZXJzaGlwUmVzcG9uc2UikQEKIkFjY2VwdEluc3RhbGxhdGlvbk93bmVyc2hpcFJlcXVlc3QSFAoMaW5zdGFsbGF0aW9uGAEgASgJEkQKDGJpbGxpbmdfaW5mbxgCIAEoCzIpLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQmlsbGluZ0luZm9IAIgBAUIPCg1fYmlsbGluZ19pbmZvIiUKI0FjY2VwdEluc3RhbGxhdGlvbk93bmVyc2hpcFJlc3BvbnNlIiYKFkdldFN1YnNjcmlwdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSJbChhVcGRhdGVCaWxsaW5nSW5mb1JlcXVlc3QSPwoMYmlsbGluZ19pbmZvGAEgASgLMikuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5CaWxsaW5nSW5mbyJhChpVcGRhdGVQYXltZW50TWV0aG9kUmVxdWVzdBJDCg5wYXltZW50X21ldGhvZBgBIAEoCzIrLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUGF5bWVudE1ldGhvZCI6ChFVcGRhdGVDYXJkUmVxdWVzdBIWCg5wYXltZW50X21ldGhvZBgBIAEoCRINCgV0b2tlbhgCIAEoCSIUChJVcGRhdGVDYXJkUmVzcG9uc2UihgEKIUNyZWF0ZVBheW1lbnRBdXRob3JpemF0aW9uUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSUQoVcGF5bWVudF9hdXRob3JpemF0aW9uGAIgASgLMjIuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5QYXltZW50QXV0aG9yaXphdGlvbiIlChNMaXN0SW52b2ljZXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCSJPChRMaXN0SW52b2ljZXNSZXNwb25zZRI3CghpbnZvaWNlcxgBIAMoCzIlLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW52b2ljZSI6ChJBcHBseUNvdXBvblJlcXVlc3QSFAoMc3Vic2NyaXB0aW9uGAEgASgJEg4KBmNvdXBvbhgCIAEoCSIVChNBcHBseUNvdXBvblJlc3BvbnNlIjwKFFVuYXBwbHlDb3Vwb25SZXF1ZXN0EhQKDHN1YnNjcmlwdGlvbhgBIAEoCRIOCgZjb3Vwb24YAiABKAkiFwoVVW5hcHBseUNvdXBvblJlc3BvbnNlMq0VChNJbnN0YWxsYXRpb25TZXJ2aWNlEnkKEkNyZWF0ZUluc3RhbGxhdGlvbhI3LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQ3JlYXRlSW5zdGFsbGF0aW9uUmVxdWVzdBoqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uEnMKD0dldEluc3RhbGxhdGlvbhI0LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuR2V0SW5zdGFsbGF0aW9uUmVxdWVzdBoqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uEoQBChFMaXN0SW5zdGFsbGF0aW9ucxI2LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuTGlzdEluc3RhbGxhdGlvbnNSZXF1ZXN0Gjcuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5MaXN0SW5zdGFsbGF0aW9uc1Jlc3BvbnNlEnkKElVwZGF0ZUluc3RhbGxhdGlvbhI3LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVXBkYXRlSW5zdGFsbGF0aW9uUmVxdWVzdBoqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uEnkKEkRlbGV0ZUluc3RhbGxhdGlvbhI3LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuRGVsZXRlSW5zdGFsbGF0aW9uUmVxdWVzdBoqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuSW5zdGFsbGF0aW9uEn0KFFVuZGVsZXRlSW5zdGFsbGF0aW9uEjkuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5VbmRlbGV0ZUluc3RhbGxhdGlvblJlcXVlc3QaKi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkluc3RhbGxhdGlvbhJnCgxDcmVhdGVQb2xpY3kSMS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkNyZWF0ZVBvbGljeVJlcXVlc3QaJC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBvbGljeRJhCglHZXRQb2xpY3kSLi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkdldFBvbGljeVJlcXVlc3QaJC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBvbGljeRJ1CgxMaXN0UG9saWNpZXMSMS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkxpc3RQb2xpY2llc1JlcXVlc3QaMi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkxpc3RQb2xpY2llc1Jlc3BvbnNlEmcKDFVwZGF0ZVBvbGljeRIxLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVXBkYXRlUG9saWN5UmVxdWVzdBokLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuUG9saWN5ElkKDERlbGV0ZVBvbGljeRIxLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuRGVsZXRlUG9saWN5UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJ+Cg9UZXN0UGVybWlzc2lvbnMSNC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlRlc3RQZXJtaXNzaW9uc1JlcXVlc3QaNS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlRlc3RQZXJtaXNzaW9uc1Jlc3BvbnNlEqgBCh1UcmFuc2Zlckluc3RhbGxhdGlvbk93bmVyc2hpcBJCLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVHJhbnNmZXJJbnN0YWxsYXRpb25Pd25lcnNoaXBSZXF1ZXN0GkMuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5UcmFuc2Zlckluc3RhbGxhdGlvbk93bmVyc2hpcFJlc3BvbnNlEqIBChtBY2NlcHRJbnN0YWxsYXRpb25Pd25lcnNoaXASQC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkFjY2VwdEluc3RhbGxhdGlvbk93bmVyc2hpcFJlcXVlc3QaQS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkFjY2VwdEluc3RhbGxhdGlvbk93bmVyc2hpcFJlc3BvbnNlEnMKD0dldFN1YnNjcmlwdGlvbhI0LnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuR2V0U3Vic2NyaXB0aW9uUmVxdWVzdBoqLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuU3Vic2NyaXB0aW9uEnYKEVVwZGF0ZUJpbGxpbmdJbmZvEjYuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5VcGRhdGVCaWxsaW5nSW5mb1JlcXVlc3QaKS5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkJpbGxpbmdJbmZvEnwKE1VwZGF0ZVBheW1lbnRNZXRob2QSOC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlVwZGF0ZVBheW1lbnRNZXRob2RSZXF1ZXN0Gisuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5QYXltZW50TWV0aG9kEm8KClVwZGF0ZUNhcmQSLy5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlVwZGF0ZUNhcmRSZXF1ZXN0GjAuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5VcGRhdGVDYXJkUmVzcG9uc2USkQEKGkNyZWF0ZVBheW1lbnRBdXRob3JpemF0aW9uEj8uc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5DcmVhdGVQYXltZW50QXV0aG9yaXphdGlvblJlcXVlc3QaMi5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLlBheW1lbnRBdXRob3JpemF0aW9uEnUKDExpc3RJbnZvaWNlcxIxLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuTGlzdEludm9pY2VzUmVxdWVzdBoyLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuTGlzdEludm9pY2VzUmVzcG9uc2UScgoLQXBwbHlDb3Vwb24SMC5zYWx0by5uZWJ1bGEuaW5zdGFsbGF0aW9uLnYxLkFwcGx5Q291cG9uUmVxdWVzdBoxLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuQXBwbHlDb3Vwb25SZXNwb25zZRJ4Cg1VbmFwcGx5Q291cG9uEjIuc2FsdG8ubmVidWxhLmluc3RhbGxhdGlvbi52MS5VbmFwcGx5Q291cG9uUmVxdWVzdBozLnNhbHRvLm5lYnVsYS5pbnN0YWxsYXRpb24udjEuVW5hcHBseUNvdXBvblJlc3BvbnNlQoACCiRjb20uc2FsdG9hcGlzLm5lYnVsYS5pbnN0YWxsYXRpb24udjFCEUluc3RhbGxhdGlvblByb3RvUAFaTmdpdGh1Yi5jb20vc2FsdG9hcGlzLWludGVybmFsL3NhbHRvYXBpcy1nby9uZWJ1bGEvaW5zdGFsbGF0aW9uL3YxO2luc3RhbGxhdGlvbqoCIFNhbHRvYXBpcy5OZWJ1bGEuSW5zdGFsbGF0aW9uLlYxygIgU2FsdG9hcGlzXE5lYnVsYVxJbnN0YWxsYXRpb25cVjHiAixHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXEluc3RhbGxhdGlvblxWMWIGcHJvdG8z", [file_google_protobuf_duration, file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_type_color, file_salto_type_date]);
 
 /**
  * The installation object
@@ -497,6 +497,29 @@ export const PaymentMethod_DirectDebit_SEPASchema: GenMessage<PaymentMethod_Dire
   messageDesc(file_salto_nebula_installation_v1_installation, 3, 1, 0);
 
 /**
+ * Payment authorization for the subscription.
+ *
+ * @generated from message salto.nebula.installation.v1.PaymentAuthorization
+ */
+export type PaymentAuthorization = Message<"salto.nebula.installation.v1.PaymentAuthorization"> & {
+  /**
+   * Resource name of the payment authorization. It must have the format of
+   * `installations/*\/subscription/payment-authorizations/*`. For example:
+   * `installations/salto-hq/subscription/payment-authorizations/01HCD0YB`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+};
+
+/**
+ * Describes the message salto.nebula.installation.v1.PaymentAuthorization.
+ * Use `create(PaymentAuthorizationSchema)` to create a new message.
+ */
+export const PaymentAuthorizationSchema: GenMessage<PaymentAuthorization> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_installation_v1_installation, 4);
+
+/**
  * The coupon object
  *
  * @generated from message salto.nebula.installation.v1.Coupon
@@ -517,7 +540,7 @@ export type Coupon = Message<"salto.nebula.installation.v1.Coupon"> & {
  * Use `create(CouponSchema)` to create a new message.
  */
 export const CouponSchema: GenMessage<Coupon> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 4);
+  messageDesc(file_salto_nebula_installation_v1_installation, 5);
 
 /**
  * The invoice object used for billing
@@ -577,7 +600,7 @@ export type Invoice = Message<"salto.nebula.installation.v1.Invoice"> & {
  * Use `create(InvoiceSchema)` to create a new message.
  */
 export const InvoiceSchema: GenMessage<Invoice> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 5);
+  messageDesc(file_salto_nebula_installation_v1_installation, 6);
 
 /**
  * The line item object.
@@ -615,7 +638,7 @@ export type Invoice_LineItem = Message<"salto.nebula.installation.v1.Invoice.Lin
  * Use `create(Invoice_LineItemSchema)` to create a new message.
  */
 export const Invoice_LineItemSchema: GenMessage<Invoice_LineItem> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 5, 0);
+  messageDesc(file_salto_nebula_installation_v1_installation, 6, 0);
 
 /**
  * State for a invoice.
@@ -650,7 +673,7 @@ export enum Invoice_State {
  * Describes the enum salto.nebula.installation.v1.Invoice.State.
  */
 export const Invoice_StateSchema: GenEnum<Invoice_State> = /*@__PURE__*/
-  enumDesc(file_salto_nebula_installation_v1_installation, 5, 0);
+  enumDesc(file_salto_nebula_installation_v1_installation, 6, 0);
 
 /**
  * The IAM policy object
@@ -687,7 +710,7 @@ export type Policy = Message<"salto.nebula.installation.v1.Policy"> & {
  * Use `create(PolicySchema)` to create a new message.
  */
 export const PolicySchema: GenMessage<Policy> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 6);
+  messageDesc(file_salto_nebula_installation_v1_installation, 7);
 
 /**
  * The request message for [`CreateInstallation`][salto.nebula.installation.v1.InstallationService.CreateInstallation]
@@ -724,7 +747,7 @@ export type CreateInstallationRequest = Message<"salto.nebula.installation.v1.Cr
  * Use `create(CreateInstallationRequestSchema)` to create a new message.
  */
 export const CreateInstallationRequestSchema: GenMessage<CreateInstallationRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 7);
+  messageDesc(file_salto_nebula_installation_v1_installation, 8);
 
 /**
  * The request message for [`GetInstallation`][salto.nebula.installation.v1.InstallationService.GetInstallation]
@@ -746,7 +769,7 @@ export type GetInstallationRequest = Message<"salto.nebula.installation.v1.GetIn
  * Use `create(GetInstallationRequestSchema)` to create a new message.
  */
 export const GetInstallationRequestSchema: GenMessage<GetInstallationRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 8);
+  messageDesc(file_salto_nebula_installation_v1_installation, 9);
 
 /**
  * The request message for [`ListInstallations`][salto.nebula.installation.v1.InstallationService.ListInstallations]
@@ -796,7 +819,7 @@ export type ListInstallationsRequest = Message<"salto.nebula.installation.v1.Lis
  * Use `create(ListInstallationsRequestSchema)` to create a new message.
  */
 export const ListInstallationsRequestSchema: GenMessage<ListInstallationsRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 9);
+  messageDesc(file_salto_nebula_installation_v1_installation, 10);
 
 /**
  * The response message for [`ListInstallations`][salto.nebula.installation.v1.InstallationService.ListInstallations]
@@ -827,7 +850,7 @@ export type ListInstallationsResponse = Message<"salto.nebula.installation.v1.Li
  * Use `create(ListInstallationsResponseSchema)` to create a new message.
  */
 export const ListInstallationsResponseSchema: GenMessage<ListInstallationsResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 10);
+  messageDesc(file_salto_nebula_installation_v1_installation, 11);
 
 /**
  * The request message for [`UpdateInstallation`][salto.nebula.installation.v1.InstallationService.UpdateInstallation]
@@ -855,7 +878,7 @@ export type UpdateInstallationRequest = Message<"salto.nebula.installation.v1.Up
  * Use `create(UpdateInstallationRequestSchema)` to create a new message.
  */
 export const UpdateInstallationRequestSchema: GenMessage<UpdateInstallationRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 11);
+  messageDesc(file_salto_nebula_installation_v1_installation, 12);
 
 /**
  * The request message for [`DeleteInstallation`][salto.nebula.installation.v1.InstallationService.DeleteInstallation]
@@ -892,7 +915,7 @@ export type DeleteInstallationRequest = Message<"salto.nebula.installation.v1.De
  * Use `create(DeleteInstallationRequestSchema)` to create a new message.
  */
 export const DeleteInstallationRequestSchema: GenMessage<DeleteInstallationRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 12);
+  messageDesc(file_salto_nebula_installation_v1_installation, 13);
 
 /**
  * The request message for [`UndeleteInstallation`][salto.nebula.installation.v1.InstallationService.UndeleteInstallation]
@@ -914,7 +937,7 @@ export type UndeleteInstallationRequest = Message<"salto.nebula.installation.v1.
  * Use `create(UndeleteInstallationRequestSchema)` to create a new message.
  */
 export const UndeleteInstallationRequestSchema: GenMessage<UndeleteInstallationRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 13);
+  messageDesc(file_salto_nebula_installation_v1_installation, 14);
 
 /**
  * The request message for [`CreatePolicy`][salto.nebula.installation.v1.InstallationService.CreatePolicy]
@@ -952,7 +975,7 @@ export type CreatePolicyRequest = Message<"salto.nebula.installation.v1.CreatePo
  * Use `create(CreatePolicyRequestSchema)` to create a new message.
  */
 export const CreatePolicyRequestSchema: GenMessage<CreatePolicyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 14);
+  messageDesc(file_salto_nebula_installation_v1_installation, 15);
 
 /**
  * The request message for [`GetPolicy`][salto.nebula.installation.v1.InstallationService.GetPolicy]
@@ -974,7 +997,7 @@ export type GetPolicyRequest = Message<"salto.nebula.installation.v1.GetPolicyRe
  * Use `create(GetPolicyRequestSchema)` to create a new message.
  */
 export const GetPolicyRequestSchema: GenMessage<GetPolicyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 15);
+  messageDesc(file_salto_nebula_installation_v1_installation, 16);
 
 /**
  * The request message for [`ListPolicies`][salto.nebula.installation.v1.InstallationService.ListPolicies]
@@ -1024,7 +1047,7 @@ export type ListPoliciesRequest = Message<"salto.nebula.installation.v1.ListPoli
  * Use `create(ListPoliciesRequestSchema)` to create a new message.
  */
 export const ListPoliciesRequestSchema: GenMessage<ListPoliciesRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 16);
+  messageDesc(file_salto_nebula_installation_v1_installation, 17);
 
 /**
  * The response message for [`ListPolicies`][salto.nebula.installation.v1.InstallationService.ListPolicies]
@@ -1055,7 +1078,7 @@ export type ListPoliciesResponse = Message<"salto.nebula.installation.v1.ListPol
  * Use `create(ListPoliciesResponseSchema)` to create a new message.
  */
 export const ListPoliciesResponseSchema: GenMessage<ListPoliciesResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 17);
+  messageDesc(file_salto_nebula_installation_v1_installation, 18);
 
 /**
  * The request message for [`UpdatePolicy`][salto.nebula.installation.v1.InstallationService.UpdatePolicy]
@@ -1083,7 +1106,7 @@ export type UpdatePolicyRequest = Message<"salto.nebula.installation.v1.UpdatePo
  * Use `create(UpdatePolicyRequestSchema)` to create a new message.
  */
 export const UpdatePolicyRequestSchema: GenMessage<UpdatePolicyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 18);
+  messageDesc(file_salto_nebula_installation_v1_installation, 19);
 
 /**
  * The request message for [`DeletePolicy`][salto.nebula.installation.v1.InstallationService.DeletePolicy]
@@ -1105,7 +1128,7 @@ export type DeletePolicyRequest = Message<"salto.nebula.installation.v1.DeletePo
  * Use `create(DeletePolicyRequestSchema)` to create a new message.
  */
 export const DeletePolicyRequestSchema: GenMessage<DeletePolicyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 19);
+  messageDesc(file_salto_nebula_installation_v1_installation, 20);
 
 /**
  * The request message for [`TestPermissions`][salto.nebula.installation.v1.InstallationService.TestPermissions]
@@ -1135,7 +1158,7 @@ export type TestPermissionsRequest = Message<"salto.nebula.installation.v1.TestP
  * Use `create(TestPermissionsRequestSchema)` to create a new message.
  */
 export const TestPermissionsRequestSchema: GenMessage<TestPermissionsRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 20);
+  messageDesc(file_salto_nebula_installation_v1_installation, 21);
 
 /**
  * The response message for [`TestPermissions`][salto.nebula.installation.v1.InstallationService.TestPermissions]
@@ -1157,7 +1180,7 @@ export type TestPermissionsResponse = Message<"salto.nebula.installation.v1.Test
  * Use `create(TestPermissionsResponseSchema)` to create a new message.
  */
 export const TestPermissionsResponseSchema: GenMessage<TestPermissionsResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 21);
+  messageDesc(file_salto_nebula_installation_v1_installation, 22);
 
 /**
  * The request message for [`TransferInstallationOwnership`][salto.nebula.installation.v1.InstallationService.TransferInstallationOwnership]
@@ -1186,7 +1209,7 @@ export type TransferInstallationOwnershipRequest = Message<"salto.nebula.install
  * Use `create(TransferInstallationOwnershipRequestSchema)` to create a new message.
  */
 export const TransferInstallationOwnershipRequestSchema: GenMessage<TransferInstallationOwnershipRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 22);
+  messageDesc(file_salto_nebula_installation_v1_installation, 23);
 
 /**
  * The response message for [`TransferInstallationOwnership`][salto.nebula.installation.v1.InstallationService.TransferInstallationOwnership]
@@ -1201,7 +1224,7 @@ export type TransferInstallationOwnershipResponse = Message<"salto.nebula.instal
  * Use `create(TransferInstallationOwnershipResponseSchema)` to create a new message.
  */
 export const TransferInstallationOwnershipResponseSchema: GenMessage<TransferInstallationOwnershipResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 23);
+  messageDesc(file_salto_nebula_installation_v1_installation, 24);
 
 /**
  * The request message for [`AcceptInstallationOwnership`][salto.nebula.installation.v1.InstallationService.AcceptInstallationOwnership]
@@ -1230,7 +1253,7 @@ export type AcceptInstallationOwnershipRequest = Message<"salto.nebula.installat
  * Use `create(AcceptInstallationOwnershipRequestSchema)` to create a new message.
  */
 export const AcceptInstallationOwnershipRequestSchema: GenMessage<AcceptInstallationOwnershipRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 24);
+  messageDesc(file_salto_nebula_installation_v1_installation, 25);
 
 /**
  * The response message for [`AcceptInstallationOwnership`][salto.nebula.installation.v1.InstallationService.AcceptInstallationOwnership]
@@ -1245,7 +1268,7 @@ export type AcceptInstallationOwnershipResponse = Message<"salto.nebula.installa
  * Use `create(AcceptInstallationOwnershipResponseSchema)` to create a new message.
  */
 export const AcceptInstallationOwnershipResponseSchema: GenMessage<AcceptInstallationOwnershipResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 25);
+  messageDesc(file_salto_nebula_installation_v1_installation, 26);
 
 /**
  * The request message for [`GetSubscription`][salto.nebula.installation.v1.InstallationService.GetSubscription]
@@ -1267,7 +1290,7 @@ export type GetSubscriptionRequest = Message<"salto.nebula.installation.v1.GetSu
  * Use `create(GetSubscriptionRequestSchema)` to create a new message.
  */
 export const GetSubscriptionRequestSchema: GenMessage<GetSubscriptionRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 26);
+  messageDesc(file_salto_nebula_installation_v1_installation, 27);
 
 /**
  * (-- api-linter: core::0134::request-mask-required=disabled
@@ -1290,7 +1313,7 @@ export type UpdateBillingInfoRequest = Message<"salto.nebula.installation.v1.Upd
  * Use `create(UpdateBillingInfoRequestSchema)` to create a new message.
  */
 export const UpdateBillingInfoRequestSchema: GenMessage<UpdateBillingInfoRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 27);
+  messageDesc(file_salto_nebula_installation_v1_installation, 28);
 
 /**
  * (-- api-linter: core::0134::request-mask-required=disabled
@@ -1313,7 +1336,7 @@ export type UpdatePaymentMethodRequest = Message<"salto.nebula.installation.v1.U
  * Use `create(UpdatePaymentMethodRequestSchema)` to create a new message.
  */
 export const UpdatePaymentMethodRequestSchema: GenMessage<UpdatePaymentMethodRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 28);
+  messageDesc(file_salto_nebula_installation_v1_installation, 29);
 
 /**
  * The request message for [`UpdateCard`][salto.nebula.installation.v1.InstallationService.UpdateCard]
@@ -1343,7 +1366,7 @@ export type UpdateCardRequest = Message<"salto.nebula.installation.v1.UpdateCard
  * Use `create(UpdateCardRequestSchema)` to create a new message.
  */
 export const UpdateCardRequestSchema: GenMessage<UpdateCardRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 29);
+  messageDesc(file_salto_nebula_installation_v1_installation, 30);
 
 /**
  * The response message for [`UpdateCard`][salto.nebula.installation.v1.InstallationService.UpdateCard]
@@ -1358,7 +1381,38 @@ export type UpdateCardResponse = Message<"salto.nebula.installation.v1.UpdateCar
  * Use `create(UpdateCardResponseSchema)` to create a new message.
  */
 export const UpdateCardResponseSchema: GenMessage<UpdateCardResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 30);
+  messageDesc(file_salto_nebula_installation_v1_installation, 31);
+
+/**
+ * The request message for [`CreatePaymentAuthorization`][salto.nebula.installation.v1.InstallationService.CreatePaymentAuthorization]
+ *
+ * @generated from message salto.nebula.installation.v1.CreatePaymentAuthorizationRequest
+ */
+export type CreatePaymentAuthorizationRequest = Message<"salto.nebula.installation.v1.CreatePaymentAuthorizationRequest"> & {
+  /**
+   * The resource name of the subscription for which the payment authorization is being
+   * requested to be created. For example:
+   * `installations/surelock-homes-hq/subscription`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The payment authorization resource to be created. Client must not set the
+   * `PaymentAuthorization.name` field.
+   *
+   * @generated from field: salto.nebula.installation.v1.PaymentAuthorization payment_authorization = 2;
+   */
+  paymentAuthorization?: PaymentAuthorization;
+};
+
+/**
+ * Describes the message salto.nebula.installation.v1.CreatePaymentAuthorizationRequest.
+ * Use `create(CreatePaymentAuthorizationRequestSchema)` to create a new message.
+ */
+export const CreatePaymentAuthorizationRequestSchema: GenMessage<CreatePaymentAuthorizationRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_installation_v1_installation, 32);
 
 /**
  * (-- api-linter: core::0158::request-page-size-field=disabled
@@ -1384,7 +1438,7 @@ export type ListInvoicesRequest = Message<"salto.nebula.installation.v1.ListInvo
  * Use `create(ListInvoicesRequestSchema)` to create a new message.
  */
 export const ListInvoicesRequestSchema: GenMessage<ListInvoicesRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 31);
+  messageDesc(file_salto_nebula_installation_v1_installation, 33);
 
 /**
  * (-- api-linter: core::0158::response-next-page-token-field=disabled
@@ -1407,7 +1461,7 @@ export type ListInvoicesResponse = Message<"salto.nebula.installation.v1.ListInv
  * Use `create(ListInvoicesResponseSchema)` to create a new message.
  */
 export const ListInvoicesResponseSchema: GenMessage<ListInvoicesResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 32);
+  messageDesc(file_salto_nebula_installation_v1_installation, 34);
 
 /**
  * The request message for [`ApplyCoupon`][salto.nebula.installation.v1.InstallationService.ApplyCoupon]
@@ -1438,7 +1492,7 @@ export type ApplyCouponRequest = Message<"salto.nebula.installation.v1.ApplyCoup
  * Use `create(ApplyCouponRequestSchema)` to create a new message.
  */
 export const ApplyCouponRequestSchema: GenMessage<ApplyCouponRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 33);
+  messageDesc(file_salto_nebula_installation_v1_installation, 35);
 
 /**
  * The response message for [`ApplyCoupon`][salto.nebula.installation.v1.InstallationService.ApplyCoupon]
@@ -1453,7 +1507,7 @@ export type ApplyCouponResponse = Message<"salto.nebula.installation.v1.ApplyCou
  * Use `create(ApplyCouponResponseSchema)` to create a new message.
  */
 export const ApplyCouponResponseSchema: GenMessage<ApplyCouponResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 34);
+  messageDesc(file_salto_nebula_installation_v1_installation, 36);
 
 /**
  * The request message for [`UnapplyCoupon`][salto.nebula.installation.v1.InstallationService.UnapplyCoupon]
@@ -1484,7 +1538,7 @@ export type UnapplyCouponRequest = Message<"salto.nebula.installation.v1.Unapply
  * Use `create(UnapplyCouponRequestSchema)` to create a new message.
  */
 export const UnapplyCouponRequestSchema: GenMessage<UnapplyCouponRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 35);
+  messageDesc(file_salto_nebula_installation_v1_installation, 37);
 
 /**
  * The response message for [`UnapplyCoupon`][salto.nebula.installation.v1.InstallationService.UnapplyCoupon]
@@ -1499,7 +1553,7 @@ export type UnapplyCouponResponse = Message<"salto.nebula.installation.v1.Unappl
  * Use `create(UnapplyCouponResponseSchema)` to create a new message.
  */
 export const UnapplyCouponResponseSchema: GenMessage<UnapplyCouponResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_installation_v1_installation, 36);
+  messageDesc(file_salto_nebula_installation_v1_installation, 38);
 
 /**
  * An installation represents any entity such as a company, office or building
@@ -1734,6 +1788,22 @@ export const InstallationService: GenService<{
     methodKind: "unary";
     input: typeof UpdateCardRequestSchema;
     output: typeof UpdateCardResponseSchema;
+  },
+  /**
+   * Create a payment authorization
+   *
+   * Creates a payment authorization for the subscription.
+   * The payment authorization is a process that allows the customer to
+   * authorize a payment card for future use. This is done by creating a payment
+   * authorization request. The result of the request is a payment authorization
+   * that must be authorized by the client in the client's UI.
+   *
+   * @generated from rpc salto.nebula.installation.v1.InstallationService.CreatePaymentAuthorization
+   */
+  createPaymentAuthorization: {
+    methodKind: "unary";
+    input: typeof CreatePaymentAuthorizationRequestSchema;
+    output: typeof PaymentAuthorizationSchema;
   },
   /**
    * List invoices
