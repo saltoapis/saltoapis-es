@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AcceptInstallationOwnershipRequest, AcceptInstallationOwnershipResponse, ApplyCouponRequest, ApplyCouponResponse, BillingInfo, CreateInstallationRequest, CreatePolicyRequest, DeleteInstallationRequest, DeletePolicyRequest, GetInstallationRequest, GetPolicyRequest, GetSubscriptionRequest, Installation, ListInstallationsRequest, ListInstallationsResponse, ListInvoicesRequest, ListInvoicesResponse, ListPoliciesRequest, ListPoliciesResponse, PaymentMethod, Policy, Subscription, TestPermissionsRequest, TestPermissionsResponse, TransferInstallationOwnershipRequest, TransferInstallationOwnershipResponse, UnapplyCouponRequest, UnapplyCouponResponse, UndeleteInstallationRequest, UpdateBillingInfoRequest, UpdateCardRequest, UpdateCardResponse, UpdateInstallationRequest, UpdatePaymentMethodRequest, UpdatePolicyRequest } from "./installation_pb";
+import { AcceptInstallationOwnershipRequest, AcceptInstallationOwnershipResponse, ApplyCouponRequest, ApplyCouponResponse, BillingInfo, CreateInstallationRequest, CreatePaymentAuthorizationRequest, CreatePolicyRequest, DeleteInstallationRequest, DeletePolicyRequest, GetInstallationRequest, GetPolicyRequest, GetSubscriptionRequest, Installation, ListInstallationsRequest, ListInstallationsResponse, ListInvoicesRequest, ListInvoicesResponse, ListPoliciesRequest, ListPoliciesResponse, PaymentAuthorization, PaymentMethod, Policy, Subscription, TestPermissionsRequest, TestPermissionsResponse, TransferInstallationOwnershipRequest, TransferInstallationOwnershipResponse, UnapplyCouponRequest, UnapplyCouponResponse, UndeleteInstallationRequest, UpdateBillingInfoRequest, UpdateCardRequest, UpdateCardResponse, UpdateInstallationRequest, UpdatePaymentMethodRequest, UpdatePolicyRequest } from "./installation_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -258,6 +258,23 @@ export const InstallationService = {
       name: "UpdateCard",
       I: UpdateCardRequest,
       O: UpdateCardResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Create a payment authorization
+     *
+     * Creates a payment authorization for the subscription.
+     * The payment authorization is a process that allows the customer to
+     * authorize a payment card for future use. This is done by creating a payment
+     * authorization request. The result of the request is a payment authorization
+     * that must be authorized by the client in the client's UI.
+     *
+     * @generated from rpc salto.nebula.installation.v1.InstallationService.CreatePaymentAuthorization
+     */
+    createPaymentAuthorization: {
+      name: "CreatePaymentAuthorization",
+      I: CreatePaymentAuthorizationRequest,
+      O: PaymentAuthorization,
       kind: MethodKind.Unary,
     },
     /**
