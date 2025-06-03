@@ -116,7 +116,7 @@ export const UserService = {
       kind: MethodKind.Unary,
     },
     /**
-     * Create an access right
+     * Create a user access right
      *
      * Creates a user's access right association.
      *
@@ -129,7 +129,7 @@ export const UserService = {
       kind: MethodKind.Unary,
     },
     /**
-     * Get an access right
+     * Get a user access right
      *
      * Gets an existing user's access right association.
      *
@@ -142,7 +142,7 @@ export const UserService = {
       kind: MethodKind.Unary,
     },
     /**
-     * List access rights
+     * List user access rights
      *
      * Lists an existing user's access right associations.
      *
@@ -155,7 +155,7 @@ export const UserService = {
       kind: MethodKind.Unary,
     },
     /**
-     * Update an access right
+     * Update a user access right
      *
      * Updates an existing user's access right associations.
      *
@@ -168,7 +168,7 @@ export const UserService = {
       kind: MethodKind.Unary,
     },
     /**
-     * Delete an access right
+     * Delete a user access right
      *
      * Deletes a user's access right association. This cannot be undone.
      *
