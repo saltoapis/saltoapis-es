@@ -1570,7 +1570,7 @@ export const UserService: GenService<{
     output: typeof UnblockUserResponseSchema;
   },
   /**
-   * Create an access right
+   * Create a user access right
    *
    * Creates a user's access right association.
    *
@@ -1582,7 +1582,7 @@ export const UserService: GenService<{
     output: typeof UserAccessRightSchema;
   },
   /**
-   * Get an access right
+   * Get a user access right
    *
    * Gets an existing user's access right association.
    *
@@ -1594,7 +1594,7 @@ export const UserService: GenService<{
     output: typeof UserAccessRightSchema;
   },
   /**
-   * List access rights
+   * List user access rights
    *
    * Lists an existing user's access right associations.
    *
@@ -1606,7 +1606,7 @@ export const UserService: GenService<{
     output: typeof ListUserAccessRightsResponseSchema;
   },
   /**
-   * Update an access right
+   * Update a user access right
    *
    * Updates an existing user's access right associations.
    *
@@ -1618,7 +1618,7 @@ export const UserService: GenService<{
     output: typeof UserAccessRightSchema;
   },
   /**
-   * Delete an access right
+   * Delete a user access right
    *
    * Deletes a user's access right association. This cannot be undone.
    *
