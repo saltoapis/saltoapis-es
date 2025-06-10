@@ -16,7 +16,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file salto/nebula/controller/v1/controller.proto.
  */
 export const file_salto_nebula_controller_v1_controller: GenFile = /*@__PURE__*/
-  fileDesc("CitzYWx0by9uZWJ1bGEvY29udHJvbGxlci92MS9jb250cm9sbGVyLnByb3RvEhpzYWx0by5uZWJ1bGEuY29udHJvbGxlci52MSLjAgoKQ29udHJvbGxlchIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIWCglkZXZpY2VfaWQYAyABKAlIAYgBARIRCgdnYXRld2F5GAQgASgJSAASEgoIZXh0ZW5kZXIYBSABKAlIABIVCg1hY2Nlc3NfcG9pbnRzGAYgAygJEhMKC2luaXRpYWxpemVkGAcgASgIEjoKD2RldmljZV9tZXRhZGF0YRgLIAEoCzIhLnNhbHRvLm5lYnVsYS50eXBlLkRldmljZU1ldGFkYXRhEhAKCG91dGRhdGVkGAggASgIEhYKCWNvbm5lY3RlZBgJIAEoCEgCiAEBEjMKD2xhc3RfZXZlbnRfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDwoNcGFyZW50X2RldmljZUIMCgpfZGV2aWNlX2lkQgwKCl9jb25uZWN0ZWQiwAEKD0NvbnRyb2xsZXJSZWxheRIMCgRuYW1lGAEgASgJEhAKCHJlbGF5X2lkGAMgASgFElsKEmRlc3RpbmF0aW9uX291dHB1dBgEIAEoCzI9LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXJSZWxheS5EZXN0aW5hdGlvbk91dHB1dEgAGigKEURlc3RpbmF0aW9uT3V0cHV0EhMKC2Rlc3RpbmF0aW9uGAEgASgJQgYKBHR5cGUikwEKF0NyZWF0ZUNvbnRyb2xsZXJSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIaCg1jb250cm9sbGVyX2lkGAIgASgJSACIAQESOgoKY29udHJvbGxlchgDIAEoCzImLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXJCEAoOX2NvbnRyb2xsZXJfaWQiJAoUR2V0Q29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSJxChZMaXN0Q29udHJvbGxlcnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkibwoXTGlzdENvbnRyb2xsZXJzUmVzcG9uc2USOwoLY29udHJvbGxlcnMYASADKAsyJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKGAQoXVXBkYXRlQ29udHJvbGxlclJlcXVlc3QSOgoKY29udHJvbGxlchgBIAEoCzImLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXISLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIicKF0RlbGV0ZUNvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiOAoVQmluZENvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkSEQoJZGV2aWNlX2lkGAIgASgJIhgKFkJpbmRDb250cm9sbGVyUmVzcG9uc2UiNgoXVW5iaW5kQ29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCRINCgVmb3JjZRgCIAEoCCIaChhVbmJpbmRDb250cm9sbGVyUmVzcG9uc2UiKwobSW5pdGlhbGl6ZUNvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiHgocSW5pdGlhbGl6ZUNvbnRyb2xsZXJSZXNwb25zZSI4ChxJbml0aWFsaXplQ29udHJvbGxlck1ldGFkYXRhEhgKEHByb2dyZXNzX3BlcmNlbnQYASABKAUiKgoaQ29uZmlndXJlQ29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSIdChtDb25maWd1cmVDb250cm9sbGVyUmVzcG9uc2UiNwobQ29uZmlndXJlQ29udHJvbGxlck1ldGFkYXRhEhgKEHByb2dyZXNzX3BlcmNlbnQYASABKAUiJgoWUmVzZXRDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJIhkKF1Jlc2V0Q29udHJvbGxlclJlc3BvbnNlIhkKF1Jlc2V0Q29udHJvbGxlck1ldGFkYXRhIjUKH1VwZGF0ZUNvbnRyb2xsZXJGaXJtd2FyZVJlcXVlc3QSEgoKY29udHJvbGxlchgBIAEoCSIiCiBVcGRhdGVDb250cm9sbGVyRmlybXdhcmVSZXNwb25zZSI8CiBVcGRhdGVDb250cm9sbGVyRmlybXdhcmVNZXRhZGF0YRIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFIjcKIUdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVxdWVzdBISCgpjb250cm9sbGVyGAEgASgJIkEKIkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVzcG9uc2USGwoTYXV0aG9yaXphdGlvbl90b2tlbhgBIAEoDCI4CiJHZW5lcmF0ZUZpcm13YXJlRG93bmxvYWRVcmlSZXF1ZXN0EhIKCmNvbnRyb2xsZXIYASABKAkiSwojR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpUmVzcG9uc2USFAoMZG93bmxvYWRfdXJpGAEgASgJEg4KBmRpZ2VzdBgCIAEoCSIlCiNHZW5lcmF0ZUZpcm13YXJlRG93bmxvYWRVcmlNZXRhZGF0YSKvAQocQ3JlYXRlQ29udHJvbGxlclJlbGF5UmVxdWVzdBIOCgZwYXJlbnQYASABKAkSIAoTY29udHJvbGxlcl9yZWxheV9pZBgCIAEoCUgAiAEBEkUKEGNvbnRyb2xsZXJfcmVsYXkYAyABKAsyKy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyUmVsYXlCFgoUX2NvbnRyb2xsZXJfcmVsYXlfaWQylw0KEUNvbnRyb2xsZXJTZXJ2aWNlEm8KEENyZWF0ZUNvbnRyb2xsZXISMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVxdWVzdBomLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXISaQoNR2V0Q29udHJvbGxlchIwLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdldENvbnRyb2xsZXJSZXF1ZXN0GiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchJ6Cg9MaXN0Q29udHJvbGxlcnMSMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlcnNSZXF1ZXN0GjMuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuTGlzdENvbnRyb2xsZXJzUmVzcG9uc2USbwoQVXBkYXRlQ29udHJvbGxlchIzLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJSZXF1ZXN0GiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchJfChBEZWxldGVDb250cm9sbGVyEjMuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuRGVsZXRlQ29udHJvbGxlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSdwoOQmluZENvbnRyb2xsZXISMS5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CaW5kQ29udHJvbGxlclJlcXVlc3QaMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CaW5kQ29udHJvbGxlclJlc3BvbnNlEn0KEFVuYmluZENvbnRyb2xsZXISMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5VbmJpbmRDb250cm9sbGVyUmVxdWVzdBo0LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVuYmluZENvbnRyb2xsZXJSZXNwb25zZRJwChRJbml0aWFsaXplQ29udHJvbGxlchI3LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkluaXRpYWxpemVDb250cm9sbGVyUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJuChNDb25maWd1cmVDb250cm9sbGVyEjYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29uZmlndXJlQ29udHJvbGxlclJlcXVlc3QaHy5zYWx0by5sb25ncnVubmluZy52MS5PcGVyYXRpb24SZgoPUmVzZXRDb250cm9sbGVyEjIuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuUmVzZXRDb250cm9sbGVyUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJ4ChhVcGRhdGVDb250cm9sbGVyRmlybXdhcmUSOy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5VcGRhdGVDb250cm9sbGVyRmlybXdhcmVSZXF1ZXN0Gh8uc2FsdG8ubG9uZ3J1bm5pbmcudjEuT3BlcmF0aW9uEpsBChpHZW5lcmF0ZUF1dGhvcml6YXRpb25Ub2tlbhI9LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVxdWVzdBo+LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVzcG9uc2USfgobR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpEj4uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJ+ChVDcmVhdGVDb250cm9sbGVyUmVsYXkSOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0Gisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5QvIBCiJjb20uc2FsdG9hcGlzLm5lYnVsYS5jb250cm9sbGVyLnYxQg9Db250cm9sbGVyUHJvdG9QAVpKZ2l0aHViLmNvbS9zYWx0b2FwaXMtaW50ZXJuYWwvc2FsdG9hcGlzLWdvL25lYnVsYS9jb250cm9sbGVyL3YxO2NvbnRyb2xsZXKqAh5TYWx0b2FwaXMuTmVidWxhLkNvbnRyb2xsZXIuVjHKAh5TYWx0b2FwaXNcTmVidWxhXENvbnRyb2xsZXJcVjHiAipHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXENvbnRyb2xsZXJcVjFiBnByb3RvMw", [file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_longrunning_v1_operation, file_salto_nebula_type_device_metadata]);
+  fileDesc("CitzYWx0by9uZWJ1bGEvY29udHJvbGxlci92MS9jb250cm9sbGVyLnByb3RvEhpzYWx0by5uZWJ1bGEuY29udHJvbGxlci52MSLjAgoKQ29udHJvbGxlchIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCRIWCglkZXZpY2VfaWQYAyABKAlIAYgBARIRCgdnYXRld2F5GAQgASgJSAASEgoIZXh0ZW5kZXIYBSABKAlIABIVCg1hY2Nlc3NfcG9pbnRzGAYgAygJEhMKC2luaXRpYWxpemVkGAcgASgIEjoKD2RldmljZV9tZXRhZGF0YRgLIAEoCzIhLnNhbHRvLm5lYnVsYS50eXBlLkRldmljZU1ldGFkYXRhEhAKCG91dGRhdGVkGAggASgIEhYKCWNvbm5lY3RlZBgJIAEoCEgCiAEBEjMKD2xhc3RfZXZlbnRfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCDwoNcGFyZW50X2RldmljZUIMCgpfZGV2aWNlX2lkQgwKCl9jb25uZWN0ZWQizgIKD0NvbnRyb2xsZXJSZWxheRIMCgRuYW1lGAEgASgJEhcKCmRpcF9zd2l0Y2gYAiABKAVIAYgBARIQCghyZWxheV9pZBgDIAEoBRJbChJkZXN0aW5hdGlvbl9vdXRwdXQYBCABKAsyPS5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyUmVsYXkuRGVzdGluYXRpb25PdXRwdXRIABJECgZzdHJpa2UYBSABKAsyMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyUmVsYXkuU3RyaWtlSAAaKAoRRGVzdGluYXRpb25PdXRwdXQSEwoLZGVzdGluYXRpb24YASABKAkaHgoGU3RyaWtlEhQKDGFjY2Vzc19wb2ludBgBIAEoCUIGCgR0eXBlQg0KC19kaXBfc3dpdGNoIpMBChdDcmVhdGVDb250cm9sbGVyUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSGgoNY29udHJvbGxlcl9pZBgCIAEoCUgAiAEBEjoKCmNvbnRyb2xsZXIYAyABKAsyJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyQhAKDl9jb250cm9sbGVyX2lkIiQKFEdldENvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkicQoWTGlzdENvbnRyb2xsZXJzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJIm8KF0xpc3RDb250cm9sbGVyc1Jlc3BvbnNlEjsKC2NvbnRyb2xsZXJzGAEgAygLMiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkihgEKF1VwZGF0ZUNvbnRyb2xsZXJSZXF1ZXN0EjoKCmNvbnRyb2xsZXIYASABKAsyJi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayInChdEZWxldGVDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJIjgKFUJpbmRDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJEhEKCWRldmljZV9pZBgCIAEoCSIYChZCaW5kQ29udHJvbGxlclJlc3BvbnNlIjYKF1VuYmluZENvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkSDQoFZm9yY2UYAiABKAgiGgoYVW5iaW5kQ29udHJvbGxlclJlc3BvbnNlIisKG0luaXRpYWxpemVDb250cm9sbGVyUmVxdWVzdBIMCgRuYW1lGAEgASgJIh4KHEluaXRpYWxpemVDb250cm9sbGVyUmVzcG9uc2UiOAocSW5pdGlhbGl6ZUNvbnRyb2xsZXJNZXRhZGF0YRIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFIioKGkNvbmZpZ3VyZUNvbnRyb2xsZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiHQobQ29uZmlndXJlQ29udHJvbGxlclJlc3BvbnNlIjcKG0NvbmZpZ3VyZUNvbnRyb2xsZXJNZXRhZGF0YRIYChBwcm9ncmVzc19wZXJjZW50GAEgASgFIiYKFlJlc2V0Q29udHJvbGxlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSIZChdSZXNldENvbnRyb2xsZXJSZXNwb25zZSIZChdSZXNldENvbnRyb2xsZXJNZXRhZGF0YSI1Ch9VcGRhdGVDb250cm9sbGVyRmlybXdhcmVSZXF1ZXN0EhIKCmNvbnRyb2xsZXIYASABKAkiIgogVXBkYXRlQ29udHJvbGxlckZpcm13YXJlUmVzcG9uc2UiPAogVXBkYXRlQ29udHJvbGxlckZpcm13YXJlTWV0YWRhdGESGAoQcHJvZ3Jlc3NfcGVyY2VudBgBIAEoBSI3CiFHZW5lcmF0ZUF1dGhvcml6YXRpb25Ub2tlblJlcXVlc3QSEgoKY29udHJvbGxlchgBIAEoCSJBCiJHZW5lcmF0ZUF1dGhvcml6YXRpb25Ub2tlblJlc3BvbnNlEhsKE2F1dGhvcml6YXRpb25fdG9rZW4YASABKAwiOAoiR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpUmVxdWVzdBISCgpjb250cm9sbGVyGAEgASgJIksKI0dlbmVyYXRlRmlybXdhcmVEb3dubG9hZFVyaVJlc3BvbnNlEhQKDGRvd25sb2FkX3VyaRgBIAEoCRIOCgZkaWdlc3QYAiABKAkiJQojR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpTWV0YWRhdGEirwEKHENyZWF0ZUNvbnRyb2xsZXJSZWxheVJlcXVlc3QSDgoGcGFyZW50GAEgASgJEiAKE2NvbnRyb2xsZXJfcmVsYXlfaWQYAiABKAlIAIgBARJFChBjb250cm9sbGVyX3JlbGF5GAMgASgLMisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5QhYKFF9jb250cm9sbGVyX3JlbGF5X2lkIikKGUdldENvbnRyb2xsZXJSZWxheVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJ2ChtMaXN0Q29udHJvbGxlclJlbGF5c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCRIQCghvcmRlcl9ieRgFIAEoCSJ/ChxMaXN0Q29udHJvbGxlclJlbGF5c1Jlc3BvbnNlEkYKEWNvbnRyb2xsZXJfcmVsYXlzGAEgAygLMisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKWAQocVXBkYXRlQ29udHJvbGxlclJlbGF5UmVxdWVzdBJFChBjb250cm9sbGVyX3JlbGF5GAEgASgLMisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIsChxEZWxldGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0EgwKBG5hbWUYASABKAkigAEKIkJhdGNoRGVsZXRlQ29udHJvbGxlclJlbGF5c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEkoKCHJlcXVlc3RzGAIgAygLMjguc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuRGVsZXRlQ29udHJvbGxlclJlbGF5UmVxdWVzdCIlCiNCYXRjaERlbGV0ZUNvbnRyb2xsZXJSZWxheXNSZXNwb25zZSKAAQoiQmF0Y2hDcmVhdGVDb250cm9sbGVyUmVsYXlzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSSgoIcmVxdWVzdHMYAiADKAsyOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0Im0KI0JhdGNoQ3JlYXRlQ29udHJvbGxlclJlbGF5c1Jlc3BvbnNlEkYKEWNvbnRyb2xsZXJfcmVsYXlzGAEgAygLMisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5IoABCiJCYXRjaFVwZGF0ZUNvbnRyb2xsZXJSZWxheXNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRJKCghyZXF1ZXN0cxgCIAMoCzI4LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJSZWxheVJlcXVlc3QibQojQmF0Y2hVcGRhdGVDb250cm9sbGVyUmVsYXlzUmVzcG9uc2USRgoRY29udHJvbGxlcl9yZWxheXMYASADKAsyKy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyUmVsYXky6xQKEUNvbnRyb2xsZXJTZXJ2aWNlEm8KEENyZWF0ZUNvbnRyb2xsZXISMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVxdWVzdBomLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXISaQoNR2V0Q29udHJvbGxlchIwLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdldENvbnRyb2xsZXJSZXF1ZXN0GiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchJ6Cg9MaXN0Q29udHJvbGxlcnMSMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlcnNSZXF1ZXN0GjMuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuTGlzdENvbnRyb2xsZXJzUmVzcG9uc2USbwoQVXBkYXRlQ29udHJvbGxlchIzLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJSZXF1ZXN0GiYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlchJfChBEZWxldGVDb250cm9sbGVyEjMuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuRGVsZXRlQ29udHJvbGxlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSdwoOQmluZENvbnRyb2xsZXISMS5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CaW5kQ29udHJvbGxlclJlcXVlc3QaMi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CaW5kQ29udHJvbGxlclJlc3BvbnNlEn0KEFVuYmluZENvbnRyb2xsZXISMy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5VbmJpbmRDb250cm9sbGVyUmVxdWVzdBo0LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVuYmluZENvbnRyb2xsZXJSZXNwb25zZRJwChRJbml0aWFsaXplQ29udHJvbGxlchI3LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkluaXRpYWxpemVDb250cm9sbGVyUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJuChNDb25maWd1cmVDb250cm9sbGVyEjYuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29uZmlndXJlQ29udHJvbGxlclJlcXVlc3QaHy5zYWx0by5sb25ncnVubmluZy52MS5PcGVyYXRpb24SZgoPUmVzZXRDb250cm9sbGVyEjIuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuUmVzZXRDb250cm9sbGVyUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJ4ChhVcGRhdGVDb250cm9sbGVyRmlybXdhcmUSOy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5VcGRhdGVDb250cm9sbGVyRmlybXdhcmVSZXF1ZXN0Gh8uc2FsdG8ubG9uZ3J1bm5pbmcudjEuT3BlcmF0aW9uEpsBChpHZW5lcmF0ZUF1dGhvcml6YXRpb25Ub2tlbhI9LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVxdWVzdBo+LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkdlbmVyYXRlQXV0aG9yaXphdGlvblRva2VuUmVzcG9uc2USfgobR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpEj4uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2VuZXJhdGVGaXJtd2FyZURvd25sb2FkVXJpUmVxdWVzdBofLnNhbHRvLmxvbmdydW5uaW5nLnYxLk9wZXJhdGlvbhJ+ChVDcmVhdGVDb250cm9sbGVyUmVsYXkSOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5DcmVhdGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0Gisuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQ29udHJvbGxlclJlbGF5Ep4BChtCYXRjaENyZWF0ZUNvbnRyb2xsZXJSZWxheXMSPi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CYXRjaENyZWF0ZUNvbnRyb2xsZXJSZWxheXNSZXF1ZXN0Gj8uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQmF0Y2hDcmVhdGVDb250cm9sbGVyUmVsYXlzUmVzcG9uc2USeAoSR2V0Q29udHJvbGxlclJlbGF5EjUuc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuR2V0Q29udHJvbGxlclJlbGF5UmVxdWVzdBorLnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkNvbnRyb2xsZXJSZWxheRKJAQoUTGlzdENvbnRyb2xsZXJSZWxheXMSNy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlclJlbGF5c1JlcXVlc3QaOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5MaXN0Q29udHJvbGxlclJlbGF5c1Jlc3BvbnNlEn4KFVVwZGF0ZUNvbnRyb2xsZXJSZWxheRI4LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLlVwZGF0ZUNvbnRyb2xsZXJSZWxheVJlcXVlc3QaKy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5Db250cm9sbGVyUmVsYXkSngEKG0JhdGNoVXBkYXRlQ29udHJvbGxlclJlbGF5cxI+LnNhbHRvLm5lYnVsYS5jb250cm9sbGVyLnYxLkJhdGNoVXBkYXRlQ29udHJvbGxlclJlbGF5c1JlcXVlc3QaPy5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CYXRjaFVwZGF0ZUNvbnRyb2xsZXJSZWxheXNSZXNwb25zZRJpChVEZWxldGVDb250cm9sbGVyUmVsYXkSOC5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5EZWxldGVDb250cm9sbGVyUmVsYXlSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ep4BChtCYXRjaERlbGV0ZUNvbnRyb2xsZXJSZWxheXMSPi5zYWx0by5uZWJ1bGEuY29udHJvbGxlci52MS5CYXRjaERlbGV0ZUNvbnRyb2xsZXJSZWxheXNSZXF1ZXN0Gj8uc2FsdG8ubmVidWxhLmNvbnRyb2xsZXIudjEuQmF0Y2hEZWxldGVDb250cm9sbGVyUmVsYXlzUmVzcG9uc2VC8gEKImNvbS5zYWx0b2FwaXMubmVidWxhLmNvbnRyb2xsZXIudjFCD0NvbnRyb2xsZXJQcm90b1ABWkpnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL2NvbnRyb2xsZXIvdjE7Y29udHJvbGxlcqoCHlNhbHRvYXBpcy5OZWJ1bGEuQ29udHJvbGxlci5WMcoCHlNhbHRvYXBpc1xOZWJ1bGFcQ29udHJvbGxlclxWMeICKkdQQk1ldGFkYXRhXFNhbHRvYXBpc1xOZWJ1bGFcQ29udHJvbGxlclxWMWIGcHJvdG8z", [file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_longrunning_v1_operation, file_salto_nebula_type_device_metadata]);
 
 /**
  * The controller object
@@ -155,6 +155,14 @@ export type ControllerRelay = Message<"salto.nebula.controller.v1.ControllerRela
   name: string;
 
   /**
+   * Extension board address. Values range from 0-15, allowing for up to 16 boards in the system.
+   * This field is not applicable for master boards or wall reader extension boards.
+   *
+   * @generated from field: optional int32 dip_switch = 2;
+   */
+  dipSwitch?: number;
+
+  /**
    * Identifies the specific controller relay on the board (1-4). Board type determines
    * which controller relay IDs are actually available for configuration and use.
    *
@@ -175,6 +183,14 @@ export type ControllerRelay = Message<"salto.nebula.controller.v1.ControllerRela
      */
     value: ControllerRelay_DestinationOutput;
     case: "destinationOutput";
+  } | {
+    /**
+     * Strike configuration for this controller relay.
+     *
+     * @generated from field: salto.nebula.controller.v1.ControllerRelay.Strike strike = 5;
+     */
+    value: ControllerRelay_Strike;
+    case: "strike";
   } | { case: undefined; value?: undefined };
 };
 
@@ -217,6 +233,29 @@ export type ControllerRelay_DestinationOutput = Message<"salto.nebula.controller
  */
 export const ControllerRelay_DestinationOutputSchema: GenMessage<ControllerRelay_DestinationOutput> = /*@__PURE__*/
   messageDesc(file_salto_nebula_controller_v1_controller, 1, 0);
+
+/**
+ * Strike contains configuration information that identifies a specific
+ * access point resource.
+ *
+ * @generated from message salto.nebula.controller.v1.ControllerRelay.Strike
+ */
+export type ControllerRelay_Strike = Message<"salto.nebula.controller.v1.ControllerRelay.Strike"> & {
+  /**
+   * Resource name of the access point the controller relay points to.
+   * For example: `installations/surelock-homes-hq/access-points/baker-street-entrance`.
+   *
+   * @generated from field: string access_point = 1;
+   */
+  accessPoint: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.ControllerRelay.Strike.
+ * Use `create(ControllerRelay_StrikeSchema)` to create a new message.
+ */
+export const ControllerRelay_StrikeSchema: GenMessage<ControllerRelay_Strike> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 1, 1);
 
 /**
  * The request message for [CreateController][salto.nebula.controller.v1.ControllerService.CreateController]
@@ -877,6 +916,306 @@ export const CreateControllerRelayRequestSchema: GenMessage<CreateControllerRela
   messageDesc(file_salto_nebula_controller_v1_controller, 29);
 
 /**
+ * The request message for [GetControllerRelay][salto.nebula.controller.v1.ControllerService.GetControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.GetControllerRelayRequest
+ */
+export type GetControllerRelayRequest = Message<"salto.nebula.controller.v1.GetControllerRelayRequest"> & {
+  /**
+   * The name of the requested controller relay resource. For example:
+   * `installations/surelock-homes-hq/controllers/dancing-men/relay/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.GetControllerRelayRequest.
+ * Use `create(GetControllerRelayRequestSchema)` to create a new message.
+ */
+export const GetControllerRelayRequestSchema: GenMessage<GetControllerRelayRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 30);
+
+/**
+ * The request message for [ListControllerRelays][salto.nebula.controller.v1.ControllerService.ListControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.ListControllerRelaysRequest
+ */
+export type ListControllerRelaysRequest = Message<"salto.nebula.controller.v1.ListControllerRelaysRequest"> & {
+  /**
+   * The parent resource name. For example, `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The maximum number of items to return.
+   *
+   * @generated from field: int32 page_size = 2;
+   */
+  pageSize: number;
+
+  /**
+   * The `next_page_token` value returned from a previous `List` request, if
+   * any.
+   *
+   * @generated from field: string page_token = 3;
+   */
+  pageToken: string;
+
+  /**
+   * A filter that chooses which controller relays to return.
+   *
+   * @generated from field: string filter = 4;
+   */
+  filter: string;
+
+  /**
+   * How the results should be sorted.
+   *
+   * @generated from field: string order_by = 5;
+   */
+  orderBy: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.ListControllerRelaysRequest.
+ * Use `create(ListControllerRelaysRequestSchema)` to create a new message.
+ */
+export const ListControllerRelaysRequestSchema: GenMessage<ListControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 31);
+
+/**
+ * The response message for [ListControllerRelays][salto.nebula.controllers.v1.ControllerService.ListControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.ListControllerRelaysResponse
+ */
+export type ListControllerRelaysResponse = Message<"salto.nebula.controller.v1.ListControllerRelaysResponse"> & {
+  /**
+   * The field name should match the noun `relays` in the method name. There
+   * will be a maximum number of items returned based on the `page_size` field
+   * in the request.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[];
+
+  /**
+   * Token to retrieve the next page of results, or empty if there are no more
+   * results in the list.
+   *
+   * @generated from field: string next_page_token = 2;
+   */
+  nextPageToken: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.ListControllerRelaysResponse.
+ * Use `create(ListControllerRelaysResponseSchema)` to create a new message.
+ */
+export const ListControllerRelaysResponseSchema: GenMessage<ListControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 32);
+
+/**
+ * The request message for [UpdateControllerRelay][salto.nebula.controller.v1.ControllerService.UpdateControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.UpdateControllerRelayRequest
+ */
+export type UpdateControllerRelayRequest = Message<"salto.nebula.controller.v1.UpdateControllerRelayRequest"> & {
+  /**
+   * The controller relay resource which replaces the resource on the server.
+   *
+   * @generated from field: salto.nebula.controller.v1.ControllerRelay controller_relay = 1;
+   */
+  controllerRelay?: ControllerRelay;
+
+  /**
+   * The update mask applied to the resource.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMask;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.UpdateControllerRelayRequest.
+ * Use `create(UpdateControllerRelayRequestSchema)` to create a new message.
+ */
+export const UpdateControllerRelayRequestSchema: GenMessage<UpdateControllerRelayRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 33);
+
+/**
+ * The request message for [DeleteControllerRelay][salto.nebula.controller.v1.ControllerService.DeleteControllerRelay]
+ *
+ * @generated from message salto.nebula.controller.v1.DeleteControllerRelayRequest
+ */
+export type DeleteControllerRelayRequest = Message<"salto.nebula.controller.v1.DeleteControllerRelayRequest"> & {
+  /**
+   * The resource name of the controller relay to be deleted. For example:
+   * `installations/surelock-homes-hq/controllers/dancing-men/relays/first-floor`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.DeleteControllerRelayRequest.
+ * Use `create(DeleteControllerRelayRequestSchema)` to create a new message.
+ */
+export const DeleteControllerRelayRequestSchema: GenMessage<DeleteControllerRelayRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 34);
+
+/**
+ * The request message for [`BatchDeleteControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest
+ */
+export type BatchDeleteControllerRelaysRequest = Message<"salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest"> & {
+  /**
+   * Resource name of the controller relays to be deleted.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The request message specifying the resources to delete.
+   * A maximum of 100 controller relays can be deleted in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.DeleteControllerRelayRequest requests = 2;
+   */
+  requests: DeleteControllerRelayRequest[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchDeleteControllerRelaysRequest.
+ * Use `create(BatchDeleteControllerRelaysRequestSchema)` to create a new message.
+ */
+export const BatchDeleteControllerRelaysRequestSchema: GenMessage<BatchDeleteControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 35);
+
+/**
+ * The response message for [`BatchDeleteControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse
+ */
+export type BatchDeleteControllerRelaysResponse = Message<"salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse"> & {
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchDeleteControllerRelaysResponse.
+ * Use `create(BatchDeleteControllerRelaysResponseSchema)` to create a new message.
+ */
+export const BatchDeleteControllerRelaysResponseSchema: GenMessage<BatchDeleteControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 36);
+
+/**
+ * The request message for [`BatchCreateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchCreateControllerRelaysRequest
+ */
+export type BatchCreateControllerRelaysRequest = Message<"salto.nebula.controller.v1.BatchCreateControllerRelaysRequest"> & {
+  /**
+   * Resource name of the parent resource where the controller relays are to be created.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The request message specifying the resources to create.
+   * A maximum of 100 controller relays can be created in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.CreateControllerRelayRequest requests = 2;
+   */
+  requests: CreateControllerRelayRequest[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchCreateControllerRelaysRequest.
+ * Use `create(BatchCreateControllerRelaysRequestSchema)` to create a new message.
+ */
+export const BatchCreateControllerRelaysRequestSchema: GenMessage<BatchCreateControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 37);
+
+/**
+ * The response message for [`BatchCreateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchCreateControllerRelaysResponse
+ */
+export type BatchCreateControllerRelaysResponse = Message<"salto.nebula.controller.v1.BatchCreateControllerRelaysResponse"> & {
+  /**
+   * The controller relay resources created.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchCreateControllerRelaysResponse.
+ * Use `create(BatchCreateControllerRelaysResponseSchema)` to create a new message.
+ */
+export const BatchCreateControllerRelaysResponseSchema: GenMessage<BatchCreateControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 38);
+
+/**
+ * The request message for [`BatchUpdateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest
+ */
+export type BatchUpdateControllerRelaysRequest = Message<"salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest"> & {
+  /**
+   * Resource name of the controller relays to be updated.
+   * For example: `installations/surelock-homes-hq/controllers/dancing-men`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The request message specifying the resources to update.
+   * A maximum of 100 controller relays can be updated in a batch.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.UpdateControllerRelayRequest requests = 2;
+   */
+  requests: UpdateControllerRelayRequest[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchUpdateControllerRelaysRequest.
+ * Use `create(BatchUpdateControllerRelaysRequestSchema)` to create a new message.
+ */
+export const BatchUpdateControllerRelaysRequestSchema: GenMessage<BatchUpdateControllerRelaysRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 39);
+
+/**
+ * The response message for [`BatchUpdateControllerRelays`][salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays]
+ *
+ * @generated from message salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse
+ */
+export type BatchUpdateControllerRelaysResponse = Message<"salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse"> & {
+  /**
+   * The controller relay resources updated.
+   *
+   * @generated from field: repeated salto.nebula.controller.v1.ControllerRelay controller_relays = 1;
+   */
+  controllerRelays: ControllerRelay[];
+};
+
+/**
+ * Describes the message salto.nebula.controller.v1.BatchUpdateControllerRelaysResponse.
+ * Use `create(BatchUpdateControllerRelaysResponseSchema)` to create a new message.
+ */
+export const BatchUpdateControllerRelaysResponseSchema: GenMessage<BatchUpdateControllerRelaysResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_controller_v1_controller, 40);
+
+/**
  * Controllers are mains-wired hardware devices that can be used to control access where
  * a standalone lock cannot be fitted. For example, on car park barriers, turnstiles or
  * sliding doors. They allow the management of multiple accesses from a single device.
@@ -1072,6 +1411,91 @@ export const ControllerService: GenService<{
     methodKind: "unary";
     input: typeof CreateControllerRelayRequestSchema;
     output: typeof ControllerRelaySchema;
+  },
+  /**
+   * Create a batch of controller relays
+   *
+   * Creates a batch of controller relays. This method allows the creation of multiple
+   * controller relays in a single operation.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchCreateControllerRelays
+   */
+  batchCreateControllerRelays: {
+    methodKind: "unary";
+    input: typeof BatchCreateControllerRelaysRequestSchema;
+    output: typeof BatchCreateControllerRelaysResponseSchema;
+  },
+  /**
+   * Get a controller relay
+   *
+   * Gets an existing controller relay.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.GetControllerRelay
+   */
+  getControllerRelay: {
+    methodKind: "unary";
+    input: typeof GetControllerRelayRequestSchema;
+    output: typeof ControllerRelaySchema;
+  },
+  /**
+   * List controller relays
+   *
+   * Returns a list of controller relays that have been previously created.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.ListControllerRelays
+   */
+  listControllerRelays: {
+    methodKind: "unary";
+    input: typeof ListControllerRelaysRequestSchema;
+    output: typeof ListControllerRelaysResponseSchema;
+  },
+  /**
+   * Update a controller relay
+   *
+   * Updates an existing controller relay.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.UpdateControllerRelay
+   */
+  updateControllerRelay: {
+    methodKind: "unary";
+    input: typeof UpdateControllerRelayRequestSchema;
+    output: typeof ControllerRelaySchema;
+  },
+  /**
+   * Update a batch of controller relays
+   *
+   * Updates a batch of controller relays. This method allows updating multiple controller relays in a single operation.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchUpdateControllerRelays
+   */
+  batchUpdateControllerRelays: {
+    methodKind: "unary";
+    input: typeof BatchUpdateControllerRelaysRequestSchema;
+    output: typeof BatchUpdateControllerRelaysResponseSchema;
+  },
+  /**
+   * Delete a controller relay
+   *
+   * Permanently deletes a controller relay. This cannot be undone.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.DeleteControllerRelay
+   */
+  deleteControllerRelay: {
+    methodKind: "unary";
+    input: typeof DeleteControllerRelayRequestSchema;
+    output: typeof EmptySchema;
+  },
+  /**
+   * Delete a batch of controller relays
+   *
+   * Permanently deletes a batch of controller relays. This cannot be undone.
+   *
+   * @generated from rpc salto.nebula.controller.v1.ControllerService.BatchDeleteControllerRelays
+   */
+  batchDeleteControllerRelays: {
+    methodKind: "unary";
+    input: typeof BatchDeleteControllerRelaysRequestSchema;
+    output: typeof BatchDeleteControllerRelaysResponseSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_salto_nebula_controller_v1_controller, 0);
