@@ -49,6 +49,7 @@ VALE_VERSION="3.7.1"
 
 es_experimental_projects = [
     '//experimental/src/salto/nebula/accesspointgroup/v1',
+    '//experimental/src/salto/nebula/destination/v1',
     '//experimental/src/salto/nebula/emergencykey/v1',
     '//experimental/src/salto/nebula/file/v1',
     '//experimental/src/salto/nebula/iam/v1',
