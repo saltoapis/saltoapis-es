@@ -581,6 +581,14 @@ export class PaymentMethod_Card extends Message<PaymentMethod_Card> {
    */
   brand = "";
 
+  /**
+   * The payment authorization resource reference for updating the card.
+   * It must be authorized by the payment provider before it can be used.
+   *
+   * @generated from field: string payment_authorization = 4;
+   */
+  paymentAuthorization = "";
+
   constructor(data?: PartialMessage<PaymentMethod_Card>) {
     super();
     proto3.util.initPartial(data, this);
@@ -592,6 +600,7 @@ export class PaymentMethod_Card extends Message<PaymentMethod_Card> {
     { no: 1, name: "expire_date", kind: "message", T: Date },
     { no: 2, name: "last_four", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "brand", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "payment_authorization", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PaymentMethod_Card {
