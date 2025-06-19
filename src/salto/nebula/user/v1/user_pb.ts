@@ -311,6 +311,15 @@ export class CardKey extends Message<CardKey> {
      */
     value: string;
     case: "uid";
+  } | {
+    /**
+     * Globally unique identifier that is used across all devices manufactured
+     * by SALTO.
+     *
+     * @generated from field: string device_id = 5;
+     */
+    value: string;
+    case: "deviceId";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   /**
@@ -348,6 +357,7 @@ export class CardKey extends Message<CardKey> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "card_id" },
+    { no: 5, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "card_id" },
     { no: 3, name: "state", kind: "enum", T: proto3.getEnumType(CardKey_State) },
     { no: 4, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
