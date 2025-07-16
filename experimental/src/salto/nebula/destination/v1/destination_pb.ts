@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file salto/nebula/destination/v1/destination.proto.
  */
 export const file_salto_nebula_destination_v1_destination: GenFile = /*@__PURE__*/
-  fileDesc("Ci1zYWx0by9uZWJ1bGEvZGVzdGluYXRpb24vdjEvZGVzdGluYXRpb24ucHJvdG8SG3NhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MSIxCgtEZXN0aW5hdGlvbhIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCSKZAQoYQ3JlYXRlRGVzdGluYXRpb25SZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIbCg5kZXN0aW5hdGlvbl9pZBgCIAEoCUgAiAEBEj0KC2Rlc3RpbmF0aW9uGAMgASgLMiguc2FsdG8ubmVidWxhLmRlc3RpbmF0aW9uLnYxLkRlc3RpbmF0aW9uQhEKD19kZXN0aW5hdGlvbl9pZCIlChVHZXREZXN0aW5hdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSKKAQoYVXBkYXRlRGVzdGluYXRpb25SZXF1ZXN0Ej0KC2Rlc3RpbmF0aW9uGAEgASgLMiguc2FsdG8ubmVidWxhLmRlc3RpbmF0aW9uLnYxLkRlc3RpbmF0aW9uEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJyChdMaXN0RGVzdGluYXRpb25zUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJInMKGExpc3REZXN0aW5hdGlvbnNSZXNwb25zZRI+CgxkZXN0aW5hdGlvbnMYASADKAsyKC5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuRGVzdGluYXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIigKGERlbGV0ZURlc3RpbmF0aW9uUmVxdWVzdBIMCgRuYW1lGAEgASgJMtUEChJEZXN0aW5hdGlvblNlcnZpY2USdAoRQ3JlYXRlRGVzdGluYXRpb24SNS5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuQ3JlYXRlRGVzdGluYXRpb25SZXF1ZXN0Giguc2FsdG8ubmVidWxhLmRlc3RpbmF0aW9uLnYxLkRlc3RpbmF0aW9uEm4KDkdldERlc3RpbmF0aW9uEjIuc2FsdG8ubmVidWxhLmRlc3RpbmF0aW9uLnYxLkdldERlc3RpbmF0aW9uUmVxdWVzdBooLnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5EZXN0aW5hdGlvbhJ0ChFVcGRhdGVEZXN0aW5hdGlvbhI1LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5VcGRhdGVEZXN0aW5hdGlvblJlcXVlc3QaKC5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuRGVzdGluYXRpb24SfwoQTGlzdERlc3RpbmF0aW9ucxI0LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5MaXN0RGVzdGluYXRpb25zUmVxdWVzdBo1LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5MaXN0RGVzdGluYXRpb25zUmVzcG9uc2USYgoRRGVsZXRlRGVzdGluYXRpb24SNS5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuRGVsZXRlRGVzdGluYXRpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5QvkBCiNjb20uc2FsdG9hcGlzLm5lYnVsYS5kZXN0aW5hdGlvbi52MUIQRGVzdGluYXRpb25Qcm90b1ABWkxnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL2Rlc3RpbmF0aW9uL3YxO2Rlc3RpbmF0aW9uqgIfU2FsdG9hcGlzLk5lYnVsYS5EZXN0aW5hdGlvbi5WMcoCH1NhbHRvYXBpc1xOZWJ1bGFcRGVzdGluYXRpb25cVjHiAitHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXERlc3RpbmF0aW9uXFYxYgZwcm90bzM", [file_google_protobuf_empty, file_google_protobuf_field_mask]);
+  fileDesc("Ci1zYWx0by9uZWJ1bGEvZGVzdGluYXRpb24vdjEvZGVzdGluYXRpb24ucHJvdG8SG3NhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MSIxCgtEZXN0aW5hdGlvbhIMCgRuYW1lGAEgASgJEhQKDGRpc3BsYXlfbmFtZRgCIAEoCSKZAQoYQ3JlYXRlRGVzdGluYXRpb25SZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIbCg5kZXN0aW5hdGlvbl9pZBgCIAEoCUgAiAEBEj0KC2Rlc3RpbmF0aW9uGAMgASgLMiguc2FsdG8ubmVidWxhLmRlc3RpbmF0aW9uLnYxLkRlc3RpbmF0aW9uQhEKD19kZXN0aW5hdGlvbl9pZCIlChVHZXREZXN0aW5hdGlvblJlcXVlc3QSDAoEbmFtZRgBIAEoCSI8ChtCYXRjaEdldERlc3RpbmF0aW9uc1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEg0KBW5hbWVzGAIgAygJIl4KHEJhdGNoR2V0RGVzdGluYXRpb25zUmVzcG9uc2USPgoMZGVzdGluYXRpb25zGAEgAygLMiguc2FsdG8ubmVidWxhLmRlc3RpbmF0aW9uLnYxLkRlc3RpbmF0aW9uIooBChhVcGRhdGVEZXN0aW5hdGlvblJlcXVlc3QSPQoLZGVzdGluYXRpb24YASABKAsyKC5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuRGVzdGluYXRpb24SLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrInIKF0xpc3REZXN0aW5hdGlvbnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkicwoYTGlzdERlc3RpbmF0aW9uc1Jlc3BvbnNlEj4KDGRlc3RpbmF0aW9ucxgBIAMoCzIoLnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5EZXN0aW5hdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiKAoYRGVsZXRlRGVzdGluYXRpb25SZXF1ZXN0EgwKBG5hbWUYASABKAky4wUKEkRlc3RpbmF0aW9uU2VydmljZRJ0ChFDcmVhdGVEZXN0aW5hdGlvbhI1LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5DcmVhdGVEZXN0aW5hdGlvblJlcXVlc3QaKC5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuRGVzdGluYXRpb24SbgoOR2V0RGVzdGluYXRpb24SMi5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuR2V0RGVzdGluYXRpb25SZXF1ZXN0Giguc2FsdG8ubmVidWxhLmRlc3RpbmF0aW9uLnYxLkRlc3RpbmF0aW9uEosBChRCYXRjaEdldERlc3RpbmF0aW9ucxI4LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5CYXRjaEdldERlc3RpbmF0aW9uc1JlcXVlc3QaOS5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuQmF0Y2hHZXREZXN0aW5hdGlvbnNSZXNwb25zZRJ0ChFVcGRhdGVEZXN0aW5hdGlvbhI1LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5VcGRhdGVEZXN0aW5hdGlvblJlcXVlc3QaKC5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuRGVzdGluYXRpb24SfwoQTGlzdERlc3RpbmF0aW9ucxI0LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5MaXN0RGVzdGluYXRpb25zUmVxdWVzdBo1LnNhbHRvLm5lYnVsYS5kZXN0aW5hdGlvbi52MS5MaXN0RGVzdGluYXRpb25zUmVzcG9uc2USYgoRRGVsZXRlRGVzdGluYXRpb24SNS5zYWx0by5uZWJ1bGEuZGVzdGluYXRpb24udjEuRGVsZXRlRGVzdGluYXRpb25SZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5QvkBCiNjb20uc2FsdG9hcGlzLm5lYnVsYS5kZXN0aW5hdGlvbi52MUIQRGVzdGluYXRpb25Qcm90b1ABWkxnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL2Rlc3RpbmF0aW9uL3YxO2Rlc3RpbmF0aW9uqgIfU2FsdG9hcGlzLk5lYnVsYS5EZXN0aW5hdGlvbi5WMcoCH1NhbHRvYXBpc1xOZWJ1bGFcRGVzdGluYXRpb25cVjHiAitHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXERlc3RpbmF0aW9uXFYxYgZwcm90bzM", [file_google_protobuf_empty, file_google_protobuf_field_mask]);
 
 /**
  * Representation of a destination resource inside the API
@@ -105,6 +105,56 @@ export const GetDestinationRequestSchema: GenMessage<GetDestinationRequest> = /*
   messageDesc(file_salto_nebula_destination_v1_destination, 2);
 
 /**
+ * The request message for [`BatchGetDestinationsRequest`][salto.nebula.destination.v1.DestinationService.BatchGetDestinations]
+ *
+ * @generated from message salto.nebula.destination.v1.BatchGetDestinationsRequest
+ */
+export type BatchGetDestinationsRequest = Message<"salto.nebula.destination.v1.BatchGetDestinationsRequest"> & {
+  /**
+   * Resource name of the parent of the destinations to be retreived.
+   * For example: `installations/surelock-homes-hq`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent: string;
+
+  /**
+   * The names of the destinations requested.
+   *
+   * @generated from field: repeated string names = 2;
+   */
+  names: string[];
+};
+
+/**
+ * Describes the message salto.nebula.destination.v1.BatchGetDestinationsRequest.
+ * Use `create(BatchGetDestinationsRequestSchema)` to create a new message.
+ */
+export const BatchGetDestinationsRequestSchema: GenMessage<BatchGetDestinationsRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_destination_v1_destination, 3);
+
+/**
+ * The response message for [`BatchGetDestinations`][salto.nebula.destination.v1.DestinationService.BatchGetDestinations]
+ *
+ * @generated from message salto.nebula.destination.v1.BatchGetDestinationsResponse
+ */
+export type BatchGetDestinationsResponse = Message<"salto.nebula.destination.v1.BatchGetDestinationsResponse"> & {
+  /**
+   * Destinations requested.
+   *
+   * @generated from field: repeated salto.nebula.destination.v1.Destination destinations = 1;
+   */
+  destinations: Destination[];
+};
+
+/**
+ * Describes the message salto.nebula.destination.v1.BatchGetDestinationsResponse.
+ * Use `create(BatchGetDestinationsResponseSchema)` to create a new message.
+ */
+export const BatchGetDestinationsResponseSchema: GenMessage<BatchGetDestinationsResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_destination_v1_destination, 4);
+
+/**
  * The request message for [`UpdateDestination`][salto.nebula.destination.v1.DestinationService.UpdateDestination]
  *
  * @generated from message salto.nebula.destination.v1.UpdateDestinationRequest
@@ -130,7 +180,7 @@ export type UpdateDestinationRequest = Message<"salto.nebula.destination.v1.Upda
  * Use `create(UpdateDestinationRequestSchema)` to create a new message.
  */
 export const UpdateDestinationRequestSchema: GenMessage<UpdateDestinationRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_destination_v1_destination, 3);
+  messageDesc(file_salto_nebula_destination_v1_destination, 5);
 
 /**
  * The request message for [`ListDestinations`][salto.nebula.destination.v1.DestinationService.ListDestinations]
@@ -180,7 +230,7 @@ export type ListDestinationsRequest = Message<"salto.nebula.destination.v1.ListD
  * Use `create(ListDestinationsRequestSchema)` to create a new message.
  */
 export const ListDestinationsRequestSchema: GenMessage<ListDestinationsRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_destination_v1_destination, 4);
+  messageDesc(file_salto_nebula_destination_v1_destination, 6);
 
 /**
  * The response message for [`ListDestinations`][salto.nebula.destination.v1.DestinationService.ListDestinations]
@@ -211,7 +261,7 @@ export type ListDestinationsResponse = Message<"salto.nebula.destination.v1.List
  * Use `create(ListDestinationsResponseSchema)` to create a new message.
  */
 export const ListDestinationsResponseSchema: GenMessage<ListDestinationsResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_destination_v1_destination, 5);
+  messageDesc(file_salto_nebula_destination_v1_destination, 7);
 
 /**
  * The request message for [`DeleteDestination`][salto.nebula.destination.v1.DestinationService.DeleteDestination]
@@ -233,7 +283,7 @@ export type DeleteDestinationRequest = Message<"salto.nebula.destination.v1.Dele
  * Use `create(DeleteDestinationRequestSchema)` to create a new message.
  */
 export const DeleteDestinationRequestSchema: GenMessage<DeleteDestinationRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_destination_v1_destination, 6);
+  messageDesc(file_salto_nebula_destination_v1_destination, 8);
 
 /**
  * DestinationService is the service responsible for managing destination resources.
@@ -268,6 +318,18 @@ export const DestinationService: GenService<{
     methodKind: "unary";
     input: typeof GetDestinationRequestSchema;
     output: typeof DestinationSchema;
+  },
+  /**
+   * Get a batch of destinations
+   *
+   * Retrieves a batch of existing destinations.
+   *
+   * @generated from rpc salto.nebula.destination.v1.DestinationService.BatchGetDestinations
+   */
+  batchGetDestinations: {
+    methodKind: "unary";
+    input: typeof BatchGetDestinationsRequestSchema;
+    output: typeof BatchGetDestinationsResponseSchema;
   },
   /**
    * Update an existing destination
