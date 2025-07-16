@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { CreateDestinationRequest, DeleteDestinationRequest, Destination, GetDestinationRequest, ListDestinationsRequest, ListDestinationsResponse, UpdateDestinationRequest } from "./destination_pb";
+import { BatchGetDestinationsRequest, BatchGetDestinationsResponse, CreateDestinationRequest, DeleteDestinationRequest, Destination, GetDestinationRequest, ListDestinationsRequest, ListDestinationsResponse, UpdateDestinationRequest } from "./destination_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -42,6 +42,19 @@ export const DestinationService = {
       name: "GetDestination",
       I: GetDestinationRequest,
       O: Destination,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Get a batch of destinations
+     *
+     * Retrieves a batch of existing destinations.
+     *
+     * @generated from rpc salto.nebula.destination.v1.DestinationService.BatchGetDestinations
+     */
+    batchGetDestinations: {
+      name: "BatchGetDestinations",
+      I: BatchGetDestinationsRequest,
+      O: BatchGetDestinationsResponse,
       kind: MethodKind.Unary,
     },
     /**
