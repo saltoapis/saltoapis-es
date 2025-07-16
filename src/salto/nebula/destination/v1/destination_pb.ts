@@ -160,6 +160,97 @@ export class GetDestinationRequest extends Message<GetDestinationRequest> {
 }
 
 /**
+ * The request message for [`BatchGetDestinationsRequest`][salto.nebula.destination.v1.DestinationService.BatchGetDestinations]
+ *
+ * @generated from message salto.nebula.destination.v1.BatchGetDestinationsRequest
+ */
+export class BatchGetDestinationsRequest extends Message<BatchGetDestinationsRequest> {
+  /**
+   * Resource name of the parent of the destinations to be retreived.
+   * For example: `installations/surelock-homes-hq`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The names of the destinations requested.
+   *
+   * @generated from field: repeated string names = 2;
+   */
+  names: string[] = [];
+
+  constructor(data?: PartialMessage<BatchGetDestinationsRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.destination.v1.BatchGetDestinationsRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "names", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchGetDestinationsRequest {
+    return new BatchGetDestinationsRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchGetDestinationsRequest {
+    return new BatchGetDestinationsRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchGetDestinationsRequest {
+    return new BatchGetDestinationsRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchGetDestinationsRequest | PlainMessage<BatchGetDestinationsRequest> | undefined, b: BatchGetDestinationsRequest | PlainMessage<BatchGetDestinationsRequest> | undefined): boolean {
+    return proto3.util.equals(BatchGetDestinationsRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchGetDestinations`][salto.nebula.destination.v1.DestinationService.BatchGetDestinations]
+ *
+ * @generated from message salto.nebula.destination.v1.BatchGetDestinationsResponse
+ */
+export class BatchGetDestinationsResponse extends Message<BatchGetDestinationsResponse> {
+  /**
+   * Destinations requested.
+   *
+   * @generated from field: repeated salto.nebula.destination.v1.Destination destinations = 1;
+   */
+  destinations: Destination[] = [];
+
+  constructor(data?: PartialMessage<BatchGetDestinationsResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.destination.v1.BatchGetDestinationsResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "destinations", kind: "message", T: Destination, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchGetDestinationsResponse {
+    return new BatchGetDestinationsResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchGetDestinationsResponse {
+    return new BatchGetDestinationsResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchGetDestinationsResponse {
+    return new BatchGetDestinationsResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchGetDestinationsResponse | PlainMessage<BatchGetDestinationsResponse> | undefined, b: BatchGetDestinationsResponse | PlainMessage<BatchGetDestinationsResponse> | undefined): boolean {
+    return proto3.util.equals(BatchGetDestinationsResponse, a, b);
+  }
+}
+
+/**
  * The request message for [`UpdateDestination`][salto.nebula.destination.v1.DestinationService.UpdateDestination]
  *
  * @generated from message salto.nebula.destination.v1.UpdateDestinationRequest
