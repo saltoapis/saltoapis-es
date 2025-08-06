@@ -298,29 +298,12 @@ export class CardKey extends Message<CardKey> {
   name = "";
 
   /**
-   * The physical card identifier.
+   * Unique identifier of the physical card. Length dependent of technology.
+   * Max length for ISO14443-3 is 10 bytes.
    *
-   * @generated from oneof salto.nebula.user.v1.CardKey.card_id
+   * @generated from field: string uid = 2;
    */
-  cardId: {
-    /**
-     * Unique identifier of the physical card. Length dependent of technology.
-     * Max length for ISO14443-3 is 10 bytes.
-     *
-     * @generated from field: string uid = 2;
-     */
-    value: string;
-    case: "uid";
-  } | {
-    /**
-     * Globally unique identifier that is used across all devices manufactured
-     * by SALTO.
-     *
-     * @generated from field: string device_id = 5;
-     */
-    value: string;
-    case: "deviceId";
-  } | { case: undefined; value?: undefined } = { case: undefined };
+  uid = "";
 
   /**
    * Indicates whether this card key has been assigned, not assigned or is
@@ -356,8 +339,7 @@ export class CardKey extends Message<CardKey> {
   static readonly typeName = "salto.nebula.user.v1.CardKey";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "card_id" },
-    { no: 5, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "card_id" },
+    { no: 2, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "state", kind: "enum", T: proto3.getEnumType(CardKey_State) },
     { no: 4, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
@@ -1545,20 +1527,12 @@ export class AssignCardKeyRequest extends Message<AssignCardKeyRequest> {
   name = "";
 
   /**
-   * The physical card identifier.
+   * Unique identifier of the physical card. Length dependent of technology.
+   * Max length for ISO14443-3 is 10 bytes.
    *
-   * @generated from oneof salto.nebula.user.v1.AssignCardKeyRequest.card_id
+   * @generated from field: string uid = 2;
    */
-  cardId: {
-    /**
-     * Unique identifier of the physical card. Length dependent of technology.
-     * Max length for ISO14443-3 is 10 bytes.
-     *
-     * @generated from field: string uid = 2;
-     */
-    value: string;
-    case: "uid";
-  } | { case: undefined; value?: undefined } = { case: undefined };
+  uid = "";
 
   constructor(data?: PartialMessage<AssignCardKeyRequest>) {
     super();
@@ -1569,7 +1543,7 @@ export class AssignCardKeyRequest extends Message<AssignCardKeyRequest> {
   static readonly typeName = "salto.nebula.user.v1.AssignCardKeyRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "card_id" },
+    { no: 2, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssignCardKeyRequest {

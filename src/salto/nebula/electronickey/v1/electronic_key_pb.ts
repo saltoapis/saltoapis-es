@@ -63,7 +63,7 @@ export class ElectronicKey extends Message<ElectronicKey> {
   /**
    * Device metadata contains information about a device hardware and firmware.
    *
-   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 8;
+   * @generated from field: salto.nebula.type.DeviceMetadata device_metadata = 6;
    */
   deviceMetadata?: DeviceMetadata;
 
@@ -88,7 +88,7 @@ export class ElectronicKey extends Message<ElectronicKey> {
     { no: 3, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 4, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 5, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
-    { no: 8, name: "device_metadata", kind: "message", T: DeviceMetadata },
+    { no: 6, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 7, name: "low_battery", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 
