@@ -718,6 +718,128 @@ proto3.util.setEnumType(Passcode_State, "salto.nebula.user.v1.Passcode.State", [
 ]);
 
 /**
+ * Representation of an electronic key, belonging to a user
+ *
+ * @generated from message salto.nebula.user.v1.ElectronicKey
+ */
+export class ElectronicKey extends Message<ElectronicKey> {
+  /**
+   * Output only. Resource name of the user's electronic key. It must have the
+   * format of `installations/*\/users/*\/electronic-key`. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  /**
+   * Globally unique identifier that is used across all devices manufactured
+   * by SALTO.
+   *
+   * @generated from field: string device_id = 2;
+   */
+  deviceId = "";
+
+  /**
+   * Indicates whether this electronic key has been assigned, not assigned or is
+   * active and ready for use. This field cannot be modified using a standard
+   * [`UpdateElectronicKey`][salto.nebula.user.v1.UserService.UpdateElectronicKey]
+   * operation. To change the value of this field, you must call
+   * [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey].
+   *
+   * If the value is `NOT_ASSIGNED` it also applies to cases where the
+   * assignation process has been initiated, but not completed.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey.State state = 3;
+   */
+  state = ElectronicKey_State.STATE_UNSPECIFIED;
+
+  /**
+   * Indicates whether this electronic key has pending updates or not.
+   * This field cannot be modified using a standard
+   * [`UpdateElectronicKey`][salto.nebula.user.v1.UserService.UpdateElectronicKey]
+   * operation. To change the value of this field, you must call
+   * [`OutdateElectronicKey`][salto.nebula.user.v1.UserService.OutdateElectronicKey].
+   *
+   * @generated from field: bool outdated = 4;
+   */
+  outdated = false;
+
+  constructor(data?: PartialMessage<ElectronicKey>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.ElectronicKey";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "state", kind: "enum", T: proto3.getEnumType(ElectronicKey_State) },
+    { no: 4, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicKey {
+    return new ElectronicKey().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ElectronicKey {
+    return new ElectronicKey().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ElectronicKey {
+    return new ElectronicKey().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ElectronicKey | PlainMessage<ElectronicKey> | undefined, b: ElectronicKey | PlainMessage<ElectronicKey> | undefined): boolean {
+    return proto3.util.equals(ElectronicKey, a, b);
+  }
+}
+
+/**
+ * State for an electronic key.
+ *
+ * @generated from enum salto.nebula.user.v1.ElectronicKey.State
+ */
+export enum ElectronicKey_State {
+  /**
+   * Sentinel value used to indicate that the state is unknown, omitted,
+   * or is not applicable.
+   *
+   * @generated from enum value: STATE_UNSPECIFIED = 0;
+   */
+  STATE_UNSPECIFIED = 0,
+
+  /**
+   * The electronic key is not assigned to a physical device.
+   *
+   * @generated from enum value: NOT_ASSIGNED = 1;
+   */
+  NOT_ASSIGNED = 1,
+
+  /**
+   * The electronic key is pending activation.
+   *
+   * @generated from enum value: PENDING = 2;
+   */
+  PENDING = 2,
+
+  /**
+   * The electronic key is active and ready to be used.
+   *
+   * @generated from enum value: ACTIVE = 3;
+   */
+  ACTIVE = 3,
+}
+// Retrieve enum metadata with: proto3.getEnumType(ElectronicKey_State)
+proto3.util.setEnumType(ElectronicKey_State, "salto.nebula.user.v1.ElectronicKey.State", [
+  { no: 0, name: "STATE_UNSPECIFIED" },
+  { no: 1, name: "NOT_ASSIGNED" },
+  { no: 2, name: "PENDING" },
+  { no: 3, name: "ACTIVE" },
+]);
+
+/**
  * The request message for [`CreateUser`][salto.nebula.user.v1.UserService.CreateUser]
  *
  * @generated from message salto.nebula.user.v1.CreateUserRequest
@@ -2265,6 +2387,328 @@ export class CancelPasscodeResponse extends Message<CancelPasscodeResponse> {
 
   static equals(a: CancelPasscodeResponse | PlainMessage<CancelPasscodeResponse> | undefined, b: CancelPasscodeResponse | PlainMessage<CancelPasscodeResponse> | undefined): boolean {
     return proto3.util.equals(CancelPasscodeResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`AssignElectronicKey`][salto.nebula.user.v1.UserService.AssignElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.AssignElectronicKeyRequest
+ */
+export class AssignElectronicKeyRequest extends Message<AssignElectronicKeyRequest> {
+  /**
+   * The name of the requested user's electronic key to be assigned. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  /**
+   * Globally unique identifier that is used across all devices manufactured
+   * by SALTO.
+   *
+   * @generated from field: string device_id = 2;
+   */
+  deviceId = "";
+
+  constructor(data?: PartialMessage<AssignElectronicKeyRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.AssignElectronicKeyRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssignElectronicKeyRequest {
+    return new AssignElectronicKeyRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AssignElectronicKeyRequest {
+    return new AssignElectronicKeyRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AssignElectronicKeyRequest {
+    return new AssignElectronicKeyRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AssignElectronicKeyRequest | PlainMessage<AssignElectronicKeyRequest> | undefined, b: AssignElectronicKeyRequest | PlainMessage<AssignElectronicKeyRequest> | undefined): boolean {
+    return proto3.util.equals(AssignElectronicKeyRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`AssignElectronicKey`][salto.nebula.user.v1.UserService.AssignElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.AssignElectronicKeyResponse
+ */
+export class AssignElectronicKeyResponse extends Message<AssignElectronicKeyResponse> {
+  /**
+   * The assigned electronic key.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 1;
+   */
+  electronicKey?: ElectronicKey;
+
+  constructor(data?: PartialMessage<AssignElectronicKeyResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.AssignElectronicKeyResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "electronic_key", kind: "message", T: ElectronicKey },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssignElectronicKeyResponse {
+    return new AssignElectronicKeyResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AssignElectronicKeyResponse {
+    return new AssignElectronicKeyResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AssignElectronicKeyResponse {
+    return new AssignElectronicKeyResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AssignElectronicKeyResponse | PlainMessage<AssignElectronicKeyResponse> | undefined, b: AssignElectronicKeyResponse | PlainMessage<AssignElectronicKeyResponse> | undefined): boolean {
+    return proto3.util.equals(AssignElectronicKeyResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`CancelElectronicKey`][salto.nebula.user.v1.UserService.CancelElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.CancelElectronicKeyRequest
+ */
+export class CancelElectronicKeyRequest extends Message<CancelElectronicKeyRequest> {
+  /**
+   * The name of the requested user's electronic key to be canceled. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<CancelElectronicKeyRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.CancelElectronicKeyRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CancelElectronicKeyRequest {
+    return new CancelElectronicKeyRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CancelElectronicKeyRequest {
+    return new CancelElectronicKeyRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CancelElectronicKeyRequest {
+    return new CancelElectronicKeyRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: CancelElectronicKeyRequest | PlainMessage<CancelElectronicKeyRequest> | undefined, b: CancelElectronicKeyRequest | PlainMessage<CancelElectronicKeyRequest> | undefined): boolean {
+    return proto3.util.equals(CancelElectronicKeyRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`CancelElectronicKey`][salto.nebula.user.v1.UserService.CancelElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.CancelElectronicKeyResponse
+ */
+export class CancelElectronicKeyResponse extends Message<CancelElectronicKeyResponse> {
+  /**
+   * The canceled electronic key.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 1;
+   */
+  electronicKey?: ElectronicKey;
+
+  constructor(data?: PartialMessage<CancelElectronicKeyResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.CancelElectronicKeyResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "electronic_key", kind: "message", T: ElectronicKey },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CancelElectronicKeyResponse {
+    return new CancelElectronicKeyResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): CancelElectronicKeyResponse {
+    return new CancelElectronicKeyResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): CancelElectronicKeyResponse {
+    return new CancelElectronicKeyResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: CancelElectronicKeyResponse | PlainMessage<CancelElectronicKeyResponse> | undefined, b: CancelElectronicKeyResponse | PlainMessage<CancelElectronicKeyResponse> | undefined): boolean {
+    return proto3.util.equals(CancelElectronicKeyResponse, a, b);
+  }
+}
+
+/**
+ * The request message for [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.EncodeElectronicKeyRequest
+ */
+export class EncodeElectronicKeyRequest extends Message<EncodeElectronicKeyRequest> {
+  /**
+   * The name of the requested user's electronic key to be encoded. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  /**
+   * The name of the device to be used as a card encoder.
+   * It could be an **encoder**, an **electronic lock** or a **controller** and
+   * takes the form of a relative resource name:
+   * `installations/surelock-homes-hq/encoders/dancing-men` or
+   * `installations/surelock-homes-hq/controllers/baker-street-hall` or
+   * `installations/surelock-homes-hq/electronic-locks/baker-street-entrance`.
+   *
+   * @generated from oneof salto.nebula.user.v1.EncodeElectronicKeyRequest.device
+   */
+  device: {
+    /**
+     * Device name, when device is an encoder
+     *
+     * @generated from field: string encoder = 2;
+     */
+    value: string;
+    case: "encoder";
+  } | {
+    /**
+     * Device name, when device is an electronic lock
+     *
+     * @generated from field: string electronic_lock = 3;
+     */
+    value: string;
+    case: "electronicLock";
+  } | {
+    /**
+     * Device name, when device is a controller
+     *
+     * @generated from field: string controller = 4;
+     */
+    value: string;
+    case: "controller";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
+  constructor(data?: PartialMessage<EncodeElectronicKeyRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.EncodeElectronicKeyRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "encoder", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "device" },
+    { no: 3, name: "electronic_lock", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "device" },
+    { no: 4, name: "controller", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "device" },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EncodeElectronicKeyRequest {
+    return new EncodeElectronicKeyRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EncodeElectronicKeyRequest {
+    return new EncodeElectronicKeyRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EncodeElectronicKeyRequest {
+    return new EncodeElectronicKeyRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EncodeElectronicKeyRequest | PlainMessage<EncodeElectronicKeyRequest> | undefined, b: EncodeElectronicKeyRequest | PlainMessage<EncodeElectronicKeyRequest> | undefined): boolean {
+    return proto3.util.equals(EncodeElectronicKeyRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.EncodeElectronicKeyResponse
+ */
+export class EncodeElectronicKeyResponse extends Message<EncodeElectronicKeyResponse> {
+  constructor(data?: PartialMessage<EncodeElectronicKeyResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.EncodeElectronicKeyResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EncodeElectronicKeyResponse {
+    return new EncodeElectronicKeyResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EncodeElectronicKeyResponse {
+    return new EncodeElectronicKeyResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EncodeElectronicKeyResponse {
+    return new EncodeElectronicKeyResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EncodeElectronicKeyResponse | PlainMessage<EncodeElectronicKeyResponse> | undefined, b: EncodeElectronicKeyResponse | PlainMessage<EncodeElectronicKeyResponse> | undefined): boolean {
+    return proto3.util.equals(EncodeElectronicKeyResponse, a, b);
+  }
+}
+
+/**
+ * The metadata message for [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.EncodeElectronicKeyMetadata
+ */
+export class EncodeElectronicKeyMetadata extends Message<EncodeElectronicKeyMetadata> {
+  constructor(data?: PartialMessage<EncodeElectronicKeyMetadata>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.EncodeElectronicKeyMetadata";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EncodeElectronicKeyMetadata {
+    return new EncodeElectronicKeyMetadata().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): EncodeElectronicKeyMetadata {
+    return new EncodeElectronicKeyMetadata().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): EncodeElectronicKeyMetadata {
+    return new EncodeElectronicKeyMetadata().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: EncodeElectronicKeyMetadata | PlainMessage<EncodeElectronicKeyMetadata> | undefined, b: EncodeElectronicKeyMetadata | PlainMessage<EncodeElectronicKeyMetadata> | undefined): boolean {
+    return proto3.util.equals(EncodeElectronicKeyMetadata, a, b);
   }
 }
 
