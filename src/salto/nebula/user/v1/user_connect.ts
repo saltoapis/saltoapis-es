@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AppKey, AssignAppKeyRequest, AssignCardKeyRequest, AssignPasscodeRequest, AssignPasscodeResponse, AssignWalletKeyRequest, AssignWalletKeyResponse, BlockUserRequest, BlockUserResponse, CancelAppKeyRequest, CancelCardKeyRequest, CancelPasscodeRequest, CancelPasscodeResponse, CancelWalletKeyRequest, CancelWalletKeyResponse, CardKey, ComputeAppKeyDataRequest, ComputeAppKeyDataResponse, CreateUserAccessRightRequest, CreateUserRequest, DeleteUserAccessRightRequest, DeleteUserRequest, EncodeCardKeyRequest, GetUserAccessRightRequest, GetUserRequest, ListUserAccessRightsRequest, ListUserAccessRightsResponse, ListUsersRequest, ListUsersResponse, UnblockUserRequest, UnblockUserResponse, UpdateUserAccessRightRequest, UpdateUserRequest, User, UserAccessRight } from "./user_pb";
+import { AppKey, AssignAppKeyRequest, AssignCardKeyRequest, AssignElectronicKeyRequest, AssignElectronicKeyResponse, AssignPasscodeRequest, AssignPasscodeResponse, AssignWalletKeyRequest, AssignWalletKeyResponse, BlockUserRequest, BlockUserResponse, CancelAppKeyRequest, CancelCardKeyRequest, CancelElectronicKeyRequest, CancelElectronicKeyResponse, CancelPasscodeRequest, CancelPasscodeResponse, CancelWalletKeyRequest, CancelWalletKeyResponse, CardKey, ComputeAppKeyDataRequest, ComputeAppKeyDataResponse, CreateUserAccessRightRequest, CreateUserRequest, DeleteUserAccessRightRequest, DeleteUserRequest, EncodeCardKeyRequest, EncodeElectronicKeyRequest, GetUserAccessRightRequest, GetUserRequest, ListUserAccessRightsRequest, ListUserAccessRightsResponse, ListUsersRequest, ListUsersResponse, UnblockUserRequest, UnblockUserResponse, UpdateUserAccessRightRequest, UpdateUserRequest, User, UserAccessRight } from "./user_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -310,6 +310,45 @@ export const UserService = {
       name: "CancelPasscode",
       I: CancelPasscodeRequest,
       O: CancelPasscodeResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Assign an electronic key
+     *
+     * Assigns an electronic key to an existing user.
+     *
+     * @generated from rpc salto.nebula.user.v1.UserService.AssignElectronicKey
+     */
+    assignElectronicKey: {
+      name: "AssignElectronicKey",
+      I: AssignElectronicKeyRequest,
+      O: AssignElectronicKeyResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Cancel an electronic key
+     *
+     * Cancels an existing user's electronic key.
+     *
+     * @generated from rpc salto.nebula.user.v1.UserService.CancelElectronicKey
+     */
+    cancelElectronicKey: {
+      name: "CancelElectronicKey",
+      I: CancelElectronicKeyRequest,
+      O: CancelElectronicKeyResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Encode an electronic key
+     *
+     * Encodes an existing user's electronic key.
+     *
+     * @generated from rpc salto.nebula.user.v1.UserService.EncodeElectronicKey
+     */
+    encodeElectronicKey: {
+      name: "EncodeElectronicKey",
+      I: EncodeElectronicKeyRequest,
+      O: Operation,
       kind: MethodKind.Unary,
     },
   }
