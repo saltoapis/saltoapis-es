@@ -102,6 +102,13 @@ export class User extends Message<User> {
   cardKey?: CardKey;
 
   /**
+   * The electronic key resource that belongs to the user.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 16;
+   */
+  electronicKey?: ElectronicKey;
+
+  /**
    * The app key resource that belongs to the user.
    *
    * @generated from field: salto.nebula.user.v1.AppKey app_key = 12;
@@ -151,6 +158,7 @@ export class User extends Message<User> {
     { no: 9, name: "photo", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 10, name: "photo_uri", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 11, name: "card_key", kind: "message", T: CardKey },
+    { no: 16, name: "electronic_key", kind: "message", T: ElectronicKey },
     { no: 12, name: "app_key", kind: "message", T: AppKey },
     { no: 13, name: "wallet_key", kind: "message", T: WalletKey },
     { no: 15, name: "passcode", kind: "message", T: Passcode },
