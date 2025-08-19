@@ -16,7 +16,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file salto/nebula/user/v1/user.proto.
  */
 export const file_salto_nebula_user_v1_user: GenFile = /*@__PURE__*/
-  fileDesc("Ch9zYWx0by9uZWJ1bGEvdXNlci92MS91c2VyLnByb3RvEhRzYWx0by5uZWJ1bGEudXNlci52MSKTBAoEVXNlchIMCgRuYW1lGAEgASgJEhMKBnBhcmVudBgCIAEoCUgAiAEBEhIKCmdpdmVuX25hbWUYAyABKAkSGAoLZmFtaWx5X25hbWUYBCABKAlIAYgBARIUCgxkaXNwbGF5X25hbWUYBSABKAkSEgoFZW1haWwYBiABKAlIAogBARIxCg1hY3RpdmF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtleHBpcmVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoFcGhvdG8YCSABKAlIA4gBARIRCglwaG90b191cmkYCiABKAkSLwoIY2FyZF9rZXkYCyABKAsyHS5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5Ei0KB2FwcF9rZXkYDCABKAsyHC5zYWx0by5uZWJ1bGEudXNlci52MS5BcHBLZXkSMwoKd2FsbGV0X2tleRgNIAEoCzIfLnNhbHRvLm5lYnVsYS51c2VyLnYxLldhbGxldEtleRIwCghwYXNzY29kZRgPIAEoCzIeLnNhbHRvLm5lYnVsYS51c2VyLnYxLlBhc3Njb2RlEg8KB2Jsb2NrZWQYDiABKAhCCQoHX3BhcmVudEIOCgxfZmFtaWx5X25hbWVCCAoGX2VtYWlsQggKBl9waG90byLFAgoPVXNlckFjY2Vzc1JpZ2h0EgwKBG5hbWUYASABKAkSFAoMYWNjZXNzX3JpZ2h0GAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIuCglzY2hlZHVsZXMYBCADKAsyGy5zYWx0by5uZWJ1bGEudHlwZS5TY2hlZHVsZRI4ChNlZmZlY3RpdmVfc2NoZWR1bGVzGAUgAygLMhsuc2FsdG8ubmVidWxhLnR5cGUuU2NoZWR1bGUSNgoNYWN0aXZhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAIgBARI0CgtleHBpcmVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAYgBAUIQCg5fYWN0aXZhdGVfdGltZUIOCgxfZXhwaXJlX3RpbWUitQEKB0NhcmRLZXkSDAoEbmFtZRgBIAEoCRILCgN1aWQYAiABKAkSMgoFc3RhdGUYAyABKA4yIy5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5LlN0YXRlEhAKCG91dGRhdGVkGAQgASgIIkkKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoMTk9UX0FTU0lHTkVEEAESCwoHUEVORElORxACEgoKBkFDVElWRRADIqYBCgZBcHBLZXkSDAoEbmFtZRgBIAEoCRIxCgVzdGF0ZRgCIAEoDjIiLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFwcEtleS5TdGF0ZRIQCghvdXRkYXRlZBgDIAEoCCJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDE5PVF9BU1NJR05FRBABEgsKB1BFTkRJTkcQAhIKCgZBQ1RJVkUQAyKsAQoJV2FsbGV0S2V5EgwKBG5hbWUYASABKAkSNAoFc3RhdGUYAiABKA4yJS5zYWx0by5uZWJ1bGEudXNlci52MS5XYWxsZXRLZXkuU3RhdGUSEAoIb3V0ZGF0ZWQYAyABKAgiSQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxOT1RfQVNTSUdORUQQARILCgdQRU5ESU5HEAISCgoGQUNUSVZFEAMiiwEKCFBhc3Njb2RlEgwKBG5hbWUYASABKAkSMwoFc3RhdGUYAiABKA4yJC5zYWx0by5uZWJ1bGEudXNlci52MS5QYXNzY29kZS5TdGF0ZSI8CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDE5PVF9BU1NJR05FRBABEgoKBkFDVElWRRACIm8KEUNyZWF0ZVVzZXJSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIUCgd1c2VyX2lkGAIgASgJSACIAQESKAoEdXNlchgDIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXJCCgoIX3VzZXJfaWQiHgoOR2V0VXNlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSJrChBMaXN0VXNlcnNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkiawoRTGlzdFVzZXJzUmVzcG9uc2USKQoFdXNlcnMYASADKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFIm4KEVVwZGF0ZVVzZXJSZXF1ZXN0EigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEi8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIhChFEZWxldGVVc2VyUmVxdWVzdBIMCgRuYW1lGAEgASgJIiAKEEJsb2NrVXNlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSITChFCbG9ja1VzZXJSZXNwb25zZSIiChJVbmJsb2NrVXNlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSIVChNVbmJsb2NrVXNlclJlc3BvbnNlInAKHENyZWF0ZVVzZXJBY2Nlc3NSaWdodFJlcXVlc3QSDgoGcGFyZW50GAEgASgJEkAKEXVzZXJfYWNjZXNzX3JpZ2h0GAIgASgLMiUuc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlckFjY2Vzc1JpZ2h0IikKGUdldFVzZXJBY2Nlc3NSaWdodFJlcXVlc3QSDAoEbmFtZRgBIAEoCSJ2ChtMaXN0VXNlckFjY2Vzc1JpZ2h0c1JlcXVlc3QSDgoGcGFyZW50GAEgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCRIQCghvcmRlcl9ieRgFIAEoCSJ6ChxMaXN0VXNlckFjY2Vzc1JpZ2h0c1Jlc3BvbnNlEkEKEnVzZXJfYWNjZXNzX3JpZ2h0cxgBIAMoCzIlLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXJBY2Nlc3NSaWdodBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkikQEKHFVwZGF0ZVVzZXJBY2Nlc3NSaWdodFJlcXVlc3QSQAoRdXNlcl9hY2Nlc3NfcmlnaHQYASABKAsyJS5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyQWNjZXNzUmlnaHQSLwoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrIiwKHERlbGV0ZVVzZXJBY2Nlc3NSaWdodFJlcXVlc3QSDAoEbmFtZRgBIAEoCSIxChRBc3NpZ25DYXJkS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJEgsKA3VpZBgCIAEoCSIkChRDYW5jZWxDYXJkS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJInIKFEVuY29kZUNhcmRLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkSEQoHZW5jb2RlchgCIAEoCUgAEhkKD2VsZWN0cm9uaWNfbG9jaxgDIAEoCUgAEhQKCmNvbnRyb2xsZXIYBCABKAlIAEIICgZkZXZpY2UiFwoVRW5jb2RlQ2FyZEtleVJlc3BvbnNlIhcKFUVuY29kZUNhcmRLZXlNZXRhZGF0YSIjChNBc3NpZ25BcHBLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkiIwoTQ2FuY2VsQXBwS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJIigKGENvbXB1dGVBcHBLZXlEYXRhUmVxdWVzdBIMCgRuYW1lGAEgASgJIikKGUNvbXB1dGVBcHBLZXlEYXRhUmVzcG9uc2USDAoEZGF0YRgBIAEoDCImChZBc3NpZ25XYWxsZXRLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkiYgoXQXNzaWduV2FsbGV0S2V5UmVzcG9uc2USMwoKd2FsbGV0X2tleRgBIAEoCzIfLnNhbHRvLm5lYnVsYS51c2VyLnYxLldhbGxldEtleRISCgphY2Nlc3NfdXJpGAIgASgJIiYKFkNhbmNlbFdhbGxldEtleVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJOChdDYW5jZWxXYWxsZXRLZXlSZXNwb25zZRIzCgp3YWxsZXRfa2V5GAEgASgLMh8uc2FsdG8ubmVidWxhLnVzZXIudjEuV2FsbGV0S2V5IiUKFUFzc2lnblBhc3Njb2RlUmVxdWVzdBIMCgRuYW1lGAEgASgJIlkKFkFzc2lnblBhc3Njb2RlUmVzcG9uc2USMAoIcGFzc2NvZGUYASABKAsyHi5zYWx0by5uZWJ1bGEudXNlci52MS5QYXNzY29kZRINCgV2YWx1ZRgCIAEoCSIlChVDYW5jZWxQYXNzY29kZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJKChZDYW5jZWxQYXNzY29kZVJlc3BvbnNlEjAKCHBhc3Njb2RlGAEgASgLMh4uc2FsdG8ubmVidWxhLnVzZXIudjEuUGFzc2NvZGUyoREKC1VzZXJTZXJ2aWNlElEKCkNyZWF0ZVVzZXISJy5zYWx0by5uZWJ1bGEudXNlci52MS5DcmVhdGVVc2VyUmVxdWVzdBoaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISSwoHR2V0VXNlchIkLnNhbHRvLm5lYnVsYS51c2VyLnYxLkdldFVzZXJSZXF1ZXN0Ghouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchJcCglMaXN0VXNlcnMSJi5zYWx0by5uZWJ1bGEudXNlci52MS5MaXN0VXNlcnNSZXF1ZXN0Gicuc2FsdG8ubmVidWxhLnVzZXIudjEuTGlzdFVzZXJzUmVzcG9uc2USUQoKVXBkYXRlVXNlchInLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVwZGF0ZVVzZXJSZXF1ZXN0Ghouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchJNCgpEZWxldGVVc2VyEicuc2FsdG8ubmVidWxhLnVzZXIudjEuRGVsZXRlVXNlclJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSXAoJQmxvY2tVc2VyEiYuc2FsdG8ubmVidWxhLnVzZXIudjEuQmxvY2tVc2VyUmVxdWVzdBonLnNhbHRvLm5lYnVsYS51c2VyLnYxLkJsb2NrVXNlclJlc3BvbnNlEmIKC1VuYmxvY2tVc2VyEiguc2FsdG8ubmVidWxhLnVzZXIudjEuVW5ibG9ja1VzZXJSZXF1ZXN0Gikuc2FsdG8ubmVidWxhLnVzZXIudjEuVW5ibG9ja1VzZXJSZXNwb25zZRJyChVDcmVhdGVVc2VyQWNjZXNzUmlnaHQSMi5zYWx0by5uZWJ1bGEudXNlci52MS5DcmVhdGVVc2VyQWNjZXNzUmlnaHRSZXF1ZXN0GiUuc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlckFjY2Vzc1JpZ2h0EmwKEkdldFVzZXJBY2Nlc3NSaWdodBIvLnNhbHRvLm5lYnVsYS51c2VyLnYxLkdldFVzZXJBY2Nlc3NSaWdodFJlcXVlc3QaJS5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyQWNjZXNzUmlnaHQSfQoUTGlzdFVzZXJBY2Nlc3NSaWdodHMSMS5zYWx0by5uZWJ1bGEudXNlci52MS5MaXN0VXNlckFjY2Vzc1JpZ2h0c1JlcXVlc3QaMi5zYWx0by5uZWJ1bGEudXNlci52MS5MaXN0VXNlckFjY2Vzc1JpZ2h0c1Jlc3BvbnNlEnIKFVVwZGF0ZVVzZXJBY2Nlc3NSaWdodBIyLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVwZGF0ZVVzZXJBY2Nlc3NSaWdodFJlcXVlc3QaJS5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyQWNjZXNzUmlnaHQSYwoVRGVsZXRlVXNlckFjY2Vzc1JpZ2h0EjIuc2FsdG8ubmVidWxhLnVzZXIudjEuRGVsZXRlVXNlckFjY2Vzc1JpZ2h0UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJaCg1Bc3NpZ25DYXJkS2V5Eiouc2FsdG8ubmVidWxhLnVzZXIudjEuQXNzaWduQ2FyZEtleVJlcXVlc3QaHS5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5EloKDUNhbmNlbENhcmRLZXkSKi5zYWx0by5uZWJ1bGEudXNlci52MS5DYW5jZWxDYXJkS2V5UmVxdWVzdBodLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhcmRLZXkSXAoNRW5jb2RlQ2FyZEtleRIqLnNhbHRvLm5lYnVsYS51c2VyLnYxLkVuY29kZUNhcmRLZXlSZXF1ZXN0Gh8uc2FsdG8ubG9uZ3J1bm5pbmcudjEuT3BlcmF0aW9uElcKDEFzc2lnbkFwcEtleRIpLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFzc2lnbkFwcEtleVJlcXVlc3QaHC5zYWx0by5uZWJ1bGEudXNlci52MS5BcHBLZXkSVwoMQ2FuY2VsQXBwS2V5Eikuc2FsdG8ubmVidWxhLnVzZXIudjEuQ2FuY2VsQXBwS2V5UmVxdWVzdBocLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFwcEtleRJ0ChFDb21wdXRlQXBwS2V5RGF0YRIuLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNvbXB1dGVBcHBLZXlEYXRhUmVxdWVzdBovLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNvbXB1dGVBcHBLZXlEYXRhUmVzcG9uc2USbgoPQXNzaWduV2FsbGV0S2V5Eiwuc2FsdG8ubmVidWxhLnVzZXIudjEuQXNzaWduV2FsbGV0S2V5UmVxdWVzdBotLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFzc2lnbldhbGxldEtleVJlc3BvbnNlEm4KD0NhbmNlbFdhbGxldEtleRIsLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhbmNlbFdhbGxldEtleVJlcXVlc3QaLS5zYWx0by5uZWJ1bGEudXNlci52MS5DYW5jZWxXYWxsZXRLZXlSZXNwb25zZRJrCg5Bc3NpZ25QYXNzY29kZRIrLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFzc2lnblBhc3Njb2RlUmVxdWVzdBosLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFzc2lnblBhc3Njb2RlUmVzcG9uc2USawoOQ2FuY2VsUGFzc2NvZGUSKy5zYWx0by5uZWJ1bGEudXNlci52MS5DYW5jZWxQYXNzY29kZVJlcXVlc3QaLC5zYWx0by5uZWJ1bGEudXNlci52MS5DYW5jZWxQYXNzY29kZVJlc3BvbnNlQsgBChxjb20uc2FsdG9hcGlzLm5lYnVsYS51c2VyLnYxQglVc2VyUHJvdG9QAVo+Z2l0aHViLmNvbS9zYWx0b2FwaXMtaW50ZXJuYWwvc2FsdG9hcGlzLWdvL25lYnVsYS91c2VyL3YxO3VzZXKqAhhTYWx0b2FwaXMuTmVidWxhLlVzZXIuVjHKAhhTYWx0b2FwaXNcTmVidWxhXFVzZXJcVjHiAiRHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXFVzZXJcVjFiBnByb3RvMw", [file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_longrunning_v1_operation, file_salto_nebula_type_schedule]);
+  fileDesc("Ch9zYWx0by9uZWJ1bGEvdXNlci92MS91c2VyLnByb3RvEhRzYWx0by5uZWJ1bGEudXNlci52MSKTBAoEVXNlchIMCgRuYW1lGAEgASgJEhMKBnBhcmVudBgCIAEoCUgAiAEBEhIKCmdpdmVuX25hbWUYAyABKAkSGAoLZmFtaWx5X25hbWUYBCABKAlIAYgBARIUCgxkaXNwbGF5X25hbWUYBSABKAkSEgoFZW1haWwYBiABKAlIAogBARIxCg1hY3RpdmF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgtleHBpcmVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASEgoFcGhvdG8YCSABKAlIA4gBARIRCglwaG90b191cmkYCiABKAkSLwoIY2FyZF9rZXkYCyABKAsyHS5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5Ei0KB2FwcF9rZXkYDCABKAsyHC5zYWx0by5uZWJ1bGEudXNlci52MS5BcHBLZXkSMwoKd2FsbGV0X2tleRgNIAEoCzIfLnNhbHRvLm5lYnVsYS51c2VyLnYxLldhbGxldEtleRIwCghwYXNzY29kZRgPIAEoCzIeLnNhbHRvLm5lYnVsYS51c2VyLnYxLlBhc3Njb2RlEg8KB2Jsb2NrZWQYDiABKAhCCQoHX3BhcmVudEIOCgxfZmFtaWx5X25hbWVCCAoGX2VtYWlsQggKBl9waG90byLFAgoPVXNlckFjY2Vzc1JpZ2h0EgwKBG5hbWUYASABKAkSFAoMYWNjZXNzX3JpZ2h0GAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIuCglzY2hlZHVsZXMYBCADKAsyGy5zYWx0by5uZWJ1bGEudHlwZS5TY2hlZHVsZRI4ChNlZmZlY3RpdmVfc2NoZWR1bGVzGAUgAygLMhsuc2FsdG8ubmVidWxhLnR5cGUuU2NoZWR1bGUSNgoNYWN0aXZhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAIgBARI0CgtleHBpcmVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAYgBAUIQCg5fYWN0aXZhdGVfdGltZUIOCgxfZXhwaXJlX3RpbWUitQEKB0NhcmRLZXkSDAoEbmFtZRgBIAEoCRILCgN1aWQYAiABKAkSMgoFc3RhdGUYAyABKA4yIy5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5LlN0YXRlEhAKCG91dGRhdGVkGAQgASgIIkkKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASEAoMTk9UX0FTU0lHTkVEEAESCwoHUEVORElORxACEgoKBkFDVElWRRADIqYBCgZBcHBLZXkSDAoEbmFtZRgBIAEoCRIxCgVzdGF0ZRgCIAEoDjIiLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFwcEtleS5TdGF0ZRIQCghvdXRkYXRlZBgDIAEoCCJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDE5PVF9BU1NJR05FRBABEgsKB1BFTkRJTkcQAhIKCgZBQ1RJVkUQAyKsAQoJV2FsbGV0S2V5EgwKBG5hbWUYASABKAkSNAoFc3RhdGUYAiABKA4yJS5zYWx0by5uZWJ1bGEudXNlci52MS5XYWxsZXRLZXkuU3RhdGUSEAoIb3V0ZGF0ZWQYAyABKAgiSQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIQCgxOT1RfQVNTSUdORUQQARILCgdQRU5ESU5HEAISCgoGQUNUSVZFEAMiiwEKCFBhc3Njb2RlEgwKBG5hbWUYASABKAkSMwoFc3RhdGUYAiABKA4yJC5zYWx0by5uZWJ1bGEudXNlci52MS5QYXNzY29kZS5TdGF0ZSI8CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDE5PVF9BU1NJR05FRBABEgoKBkFDVElWRRACIscBCg1FbGVjdHJvbmljS2V5EgwKBG5hbWUYASABKAkSEQoJZGV2aWNlX2lkGAIgASgJEjgKBXN0YXRlGAMgASgOMikuc2FsdG8ubmVidWxhLnVzZXIudjEuRWxlY3Ryb25pY0tleS5TdGF0ZRIQCghvdXRkYXRlZBgEIAEoCCJJCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDE5PVF9BU1NJR05FRBABEgsKB1BFTkRJTkcQAhIKCgZBQ1RJVkUQAyJvChFDcmVhdGVVc2VyUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSFAoHdXNlcl9pZBgCIAEoCUgAiAEBEigKBHVzZXIYAyABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyQgoKCF91c2VyX2lkIh4KDkdldFVzZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiawoQTGlzdFVzZXJzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJImsKEUxpc3RVc2Vyc1Jlc3BvbnNlEikKBXVzZXJzGAEgAygLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6ZRgDIAEoBSJuChFVcGRhdGVVc2VyUmVxdWVzdBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchIvCgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siIQoRRGVsZXRlVXNlclJlcXVlc3QSDAoEbmFtZRgBIAEoCSIgChBCbG9ja1VzZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiEwoRQmxvY2tVc2VyUmVzcG9uc2UiIgoSVW5ibG9ja1VzZXJSZXF1ZXN0EgwKBG5hbWUYASABKAkiFQoTVW5ibG9ja1VzZXJSZXNwb25zZSJwChxDcmVhdGVVc2VyQWNjZXNzUmlnaHRSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRJAChF1c2VyX2FjY2Vzc19yaWdodBgCIAEoCzIlLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXJBY2Nlc3NSaWdodCIpChlHZXRVc2VyQWNjZXNzUmlnaHRSZXF1ZXN0EgwKBG5hbWUYASABKAkidgobTGlzdFVzZXJBY2Nlc3NSaWdodHNSZXF1ZXN0Eg4KBnBhcmVudBgBIAEoCRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkiegocTGlzdFVzZXJBY2Nlc3NSaWdodHNSZXNwb25zZRJBChJ1c2VyX2FjY2Vzc19yaWdodHMYASADKAsyJS5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyQWNjZXNzUmlnaHQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpEBChxVcGRhdGVVc2VyQWNjZXNzUmlnaHRSZXF1ZXN0EkAKEXVzZXJfYWNjZXNzX3JpZ2h0GAEgASgLMiUuc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlckFjY2Vzc1JpZ2h0Ei8KC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayIsChxEZWxldGVVc2VyQWNjZXNzUmlnaHRSZXF1ZXN0EgwKBG5hbWUYASABKAkiMQoUQXNzaWduQ2FyZEtleVJlcXVlc3QSDAoEbmFtZRgBIAEoCRILCgN1aWQYAiABKAkiJAoUQ2FuY2VsQ2FyZEtleVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJyChRFbmNvZGVDYXJkS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJEhEKB2VuY29kZXIYAiABKAlIABIZCg9lbGVjdHJvbmljX2xvY2sYAyABKAlIABIUCgpjb250cm9sbGVyGAQgASgJSABCCAoGZGV2aWNlIhcKFUVuY29kZUNhcmRLZXlSZXNwb25zZSIXChVFbmNvZGVDYXJkS2V5TWV0YWRhdGEiIwoTQXNzaWduQXBwS2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJIiMKE0NhbmNlbEFwcEtleVJlcXVlc3QSDAoEbmFtZRgBIAEoCSIoChhDb21wdXRlQXBwS2V5RGF0YVJlcXVlc3QSDAoEbmFtZRgBIAEoCSIpChlDb21wdXRlQXBwS2V5RGF0YVJlc3BvbnNlEgwKBGRhdGEYASABKAwiJgoWQXNzaWduV2FsbGV0S2V5UmVxdWVzdBIMCgRuYW1lGAEgASgJImIKF0Fzc2lnbldhbGxldEtleVJlc3BvbnNlEjMKCndhbGxldF9rZXkYASABKAsyHy5zYWx0by5uZWJ1bGEudXNlci52MS5XYWxsZXRLZXkSEgoKYWNjZXNzX3VyaRgCIAEoCSImChZDYW5jZWxXYWxsZXRLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkiTgoXQ2FuY2VsV2FsbGV0S2V5UmVzcG9uc2USMwoKd2FsbGV0X2tleRgBIAEoCzIfLnNhbHRvLm5lYnVsYS51c2VyLnYxLldhbGxldEtleSIlChVBc3NpZ25QYXNzY29kZVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJZChZBc3NpZ25QYXNzY29kZVJlc3BvbnNlEjAKCHBhc3Njb2RlGAEgASgLMh4uc2FsdG8ubmVidWxhLnVzZXIudjEuUGFzc2NvZGUSDQoFdmFsdWUYAiABKAkiJQoVQ2FuY2VsUGFzc2NvZGVSZXF1ZXN0EgwKBG5hbWUYASABKAkiSgoWQ2FuY2VsUGFzc2NvZGVSZXNwb25zZRIwCghwYXNzY29kZRgBIAEoCzIeLnNhbHRvLm5lYnVsYS51c2VyLnYxLlBhc3Njb2RlIj0KGkFzc2lnbkVsZWN0cm9uaWNLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkSEQoJZGV2aWNlX2lkGAIgASgJIloKG0Fzc2lnbkVsZWN0cm9uaWNLZXlSZXNwb25zZRI7Cg5lbGVjdHJvbmljX2tleRgBIAEoCzIjLnNhbHRvLm5lYnVsYS51c2VyLnYxLkVsZWN0cm9uaWNLZXkiKgoaQ2FuY2VsRWxlY3Ryb25pY0tleVJlcXVlc3QSDAoEbmFtZRgBIAEoCSJaChtDYW5jZWxFbGVjdHJvbmljS2V5UmVzcG9uc2USOwoOZWxlY3Ryb25pY19rZXkYASABKAsyIy5zYWx0by5uZWJ1bGEudXNlci52MS5FbGVjdHJvbmljS2V5IngKGkVuY29kZUVsZWN0cm9uaWNLZXlSZXF1ZXN0EgwKBG5hbWUYASABKAkSEQoHZW5jb2RlchgCIAEoCUgAEhkKD2VsZWN0cm9uaWNfbG9jaxgDIAEoCUgAEhQKCmNvbnRyb2xsZXIYBCABKAlIAEIICgZkZXZpY2UiHQobRW5jb2RlRWxlY3Ryb25pY0tleVJlc3BvbnNlIh0KG0VuY29kZUVsZWN0cm9uaWNLZXlNZXRhZGF0YTKDFAoLVXNlclNlcnZpY2USUQoKQ3JlYXRlVXNlchInLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNyZWF0ZVVzZXJSZXF1ZXN0Ghouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchJLCgdHZXRVc2VyEiQuc2FsdG8ubmVidWxhLnVzZXIudjEuR2V0VXNlclJlcXVlc3QaGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyElwKCUxpc3RVc2VycxImLnNhbHRvLm5lYnVsYS51c2VyLnYxLkxpc3RVc2Vyc1JlcXVlc3QaJy5zYWx0by5uZWJ1bGEudXNlci52MS5MaXN0VXNlcnNSZXNwb25zZRJRCgpVcGRhdGVVc2VyEicuc2FsdG8ubmVidWxhLnVzZXIudjEuVXBkYXRlVXNlclJlcXVlc3QaGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEk0KCkRlbGV0ZVVzZXISJy5zYWx0by5uZWJ1bGEudXNlci52MS5EZWxldGVVc2VyUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJcCglCbG9ja1VzZXISJi5zYWx0by5uZWJ1bGEudXNlci52MS5CbG9ja1VzZXJSZXF1ZXN0Gicuc2FsdG8ubmVidWxhLnVzZXIudjEuQmxvY2tVc2VyUmVzcG9uc2USYgoLVW5ibG9ja1VzZXISKC5zYWx0by5uZWJ1bGEudXNlci52MS5VbmJsb2NrVXNlclJlcXVlc3QaKS5zYWx0by5uZWJ1bGEudXNlci52MS5VbmJsb2NrVXNlclJlc3BvbnNlEnIKFUNyZWF0ZVVzZXJBY2Nlc3NSaWdodBIyLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNyZWF0ZVVzZXJBY2Nlc3NSaWdodFJlcXVlc3QaJS5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyQWNjZXNzUmlnaHQSbAoSR2V0VXNlckFjY2Vzc1JpZ2h0Ei8uc2FsdG8ubmVidWxhLnVzZXIudjEuR2V0VXNlckFjY2Vzc1JpZ2h0UmVxdWVzdBolLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXJBY2Nlc3NSaWdodBJ9ChRMaXN0VXNlckFjY2Vzc1JpZ2h0cxIxLnNhbHRvLm5lYnVsYS51c2VyLnYxLkxpc3RVc2VyQWNjZXNzUmlnaHRzUmVxdWVzdBoyLnNhbHRvLm5lYnVsYS51c2VyLnYxLkxpc3RVc2VyQWNjZXNzUmlnaHRzUmVzcG9uc2UScgoVVXBkYXRlVXNlckFjY2Vzc1JpZ2h0EjIuc2FsdG8ubmVidWxhLnVzZXIudjEuVXBkYXRlVXNlckFjY2Vzc1JpZ2h0UmVxdWVzdBolLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXJBY2Nlc3NSaWdodBJjChVEZWxldGVVc2VyQWNjZXNzUmlnaHQSMi5zYWx0by5uZWJ1bGEudXNlci52MS5EZWxldGVVc2VyQWNjZXNzUmlnaHRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5EloKDUFzc2lnbkNhcmRLZXkSKi5zYWx0by5uZWJ1bGEudXNlci52MS5Bc3NpZ25DYXJkS2V5UmVxdWVzdBodLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhcmRLZXkSWgoNQ2FuY2VsQ2FyZEtleRIqLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhbmNlbENhcmRLZXlSZXF1ZXN0Gh0uc2FsdG8ubmVidWxhLnVzZXIudjEuQ2FyZEtleRJcCg1FbmNvZGVDYXJkS2V5Eiouc2FsdG8ubmVidWxhLnVzZXIudjEuRW5jb2RlQ2FyZEtleVJlcXVlc3QaHy5zYWx0by5sb25ncnVubmluZy52MS5PcGVyYXRpb24SVwoMQXNzaWduQXBwS2V5Eikuc2FsdG8ubmVidWxhLnVzZXIudjEuQXNzaWduQXBwS2V5UmVxdWVzdBocLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFwcEtleRJXCgxDYW5jZWxBcHBLZXkSKS5zYWx0by5uZWJ1bGEudXNlci52MS5DYW5jZWxBcHBLZXlSZXF1ZXN0Ghwuc2FsdG8ubmVidWxhLnVzZXIudjEuQXBwS2V5EnQKEUNvbXB1dGVBcHBLZXlEYXRhEi4uc2FsdG8ubmVidWxhLnVzZXIudjEuQ29tcHV0ZUFwcEtleURhdGFSZXF1ZXN0Gi8uc2FsdG8ubmVidWxhLnVzZXIudjEuQ29tcHV0ZUFwcEtleURhdGFSZXNwb25zZRJuCg9Bc3NpZ25XYWxsZXRLZXkSLC5zYWx0by5uZWJ1bGEudXNlci52MS5Bc3NpZ25XYWxsZXRLZXlSZXF1ZXN0Gi0uc2FsdG8ubmVidWxhLnVzZXIudjEuQXNzaWduV2FsbGV0S2V5UmVzcG9uc2USbgoPQ2FuY2VsV2FsbGV0S2V5Eiwuc2FsdG8ubmVidWxhLnVzZXIudjEuQ2FuY2VsV2FsbGV0S2V5UmVxdWVzdBotLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhbmNlbFdhbGxldEtleVJlc3BvbnNlEmsKDkFzc2lnblBhc3Njb2RlEisuc2FsdG8ubmVidWxhLnVzZXIudjEuQXNzaWduUGFzc2NvZGVSZXF1ZXN0Giwuc2FsdG8ubmVidWxhLnVzZXIudjEuQXNzaWduUGFzc2NvZGVSZXNwb25zZRJrCg5DYW5jZWxQYXNzY29kZRIrLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhbmNlbFBhc3Njb2RlUmVxdWVzdBosLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhbmNlbFBhc3Njb2RlUmVzcG9uc2USegoTQXNzaWduRWxlY3Ryb25pY0tleRIwLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFzc2lnbkVsZWN0cm9uaWNLZXlSZXF1ZXN0GjEuc2FsdG8ubmVidWxhLnVzZXIudjEuQXNzaWduRWxlY3Ryb25pY0tleVJlc3BvbnNlEnoKE0NhbmNlbEVsZWN0cm9uaWNLZXkSMC5zYWx0by5uZWJ1bGEudXNlci52MS5DYW5jZWxFbGVjdHJvbmljS2V5UmVxdWVzdBoxLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhbmNlbEVsZWN0cm9uaWNLZXlSZXNwb25zZRJoChNFbmNvZGVFbGVjdHJvbmljS2V5EjAuc2FsdG8ubmVidWxhLnVzZXIudjEuRW5jb2RlRWxlY3Ryb25pY0tleVJlcXVlc3QaHy5zYWx0by5sb25ncnVubmluZy52MS5PcGVyYXRpb25CyAEKHGNvbS5zYWx0b2FwaXMubmVidWxhLnVzZXIudjFCCVVzZXJQcm90b1ABWj5naXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL3VzZXIvdjE7dXNlcqoCGFNhbHRvYXBpcy5OZWJ1bGEuVXNlci5WMcoCGFNhbHRvYXBpc1xOZWJ1bGFcVXNlclxWMeICJEdQQk1ldGFkYXRhXFNhbHRvYXBpc1xOZWJ1bGFcVXNlclxWMWIGcHJvdG8z", [file_google_protobuf_empty, file_google_protobuf_field_mask, file_google_protobuf_timestamp, file_salto_longrunning_v1_operation, file_salto_nebula_type_schedule]);
 
 /**
  * The user object
@@ -578,6 +578,104 @@ export const Passcode_StateSchema: GenEnum<Passcode_State> = /*@__PURE__*/
   enumDesc(file_salto_nebula_user_v1_user, 5, 0);
 
 /**
+ * Representation of an electronic key, belonging to a user
+ *
+ * @generated from message salto.nebula.user.v1.ElectronicKey
+ */
+export type ElectronicKey = Message<"salto.nebula.user.v1.ElectronicKey"> & {
+  /**
+   * Output only. Resource name of the user's electronic key. It must have the
+   * format of `installations/*\/users/*\/electronic-key`. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * Globally unique identifier that is used across all devices manufactured
+   * by SALTO.
+   *
+   * @generated from field: string device_id = 2;
+   */
+  deviceId: string;
+
+  /**
+   * Indicates whether this electronic key has been assigned, not assigned or is
+   * active and ready for use. This field cannot be modified using a standard
+   * [`UpdateElectronicKey`][salto.nebula.user.v1.UserService.UpdateElectronicKey]
+   * operation. To change the value of this field, you must call
+   * [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey].
+   *
+   * If the value is `NOT_ASSIGNED` it also applies to cases where the
+   * assignation process has been initiated, but not completed.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey.State state = 3;
+   */
+  state: ElectronicKey_State;
+
+  /**
+   * Indicates whether this electronic key has pending updates or not.
+   * This field cannot be modified using a standard
+   * [`UpdateElectronicKey`][salto.nebula.user.v1.UserService.UpdateElectronicKey]
+   * operation. To change the value of this field, you must call
+   * [`OutdateElectronicKey`][salto.nebula.user.v1.UserService.OutdateElectronicKey].
+   *
+   * @generated from field: bool outdated = 4;
+   */
+  outdated: boolean;
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.ElectronicKey.
+ * Use `create(ElectronicKeySchema)` to create a new message.
+ */
+export const ElectronicKeySchema: GenMessage<ElectronicKey> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 6);
+
+/**
+ * State for an electronic key.
+ *
+ * @generated from enum salto.nebula.user.v1.ElectronicKey.State
+ */
+export enum ElectronicKey_State {
+  /**
+   * Sentinel value used to indicate that the state is unknown, omitted,
+   * or is not applicable.
+   *
+   * @generated from enum value: STATE_UNSPECIFIED = 0;
+   */
+  STATE_UNSPECIFIED = 0,
+
+  /**
+   * The electronic key is not assigned to a physical device.
+   *
+   * @generated from enum value: NOT_ASSIGNED = 1;
+   */
+  NOT_ASSIGNED = 1,
+
+  /**
+   * The electronic key is pending activation.
+   *
+   * @generated from enum value: PENDING = 2;
+   */
+  PENDING = 2,
+
+  /**
+   * The electronic key is active and ready to be used.
+   *
+   * @generated from enum value: ACTIVE = 3;
+   */
+  ACTIVE = 3,
+}
+
+/**
+ * Describes the enum salto.nebula.user.v1.ElectronicKey.State.
+ */
+export const ElectronicKey_StateSchema: GenEnum<ElectronicKey_State> = /*@__PURE__*/
+  enumDesc(file_salto_nebula_user_v1_user, 6, 0);
+
+/**
  * The request message for [`CreateUser`][salto.nebula.user.v1.UserService.CreateUser]
  *
  * @generated from message salto.nebula.user.v1.CreateUserRequest
@@ -613,7 +711,7 @@ export type CreateUserRequest = Message<"salto.nebula.user.v1.CreateUserRequest"
  * Use `create(CreateUserRequestSchema)` to create a new message.
  */
 export const CreateUserRequestSchema: GenMessage<CreateUserRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 6);
+  messageDesc(file_salto_nebula_user_v1_user, 7);
 
 /**
  * The request message for [`GetUser`][salto.nebula.user.v1.UserService.GetUser]
@@ -635,7 +733,7 @@ export type GetUserRequest = Message<"salto.nebula.user.v1.GetUserRequest"> & {
  * Use `create(GetUserRequestSchema)` to create a new message.
  */
 export const GetUserRequestSchema: GenMessage<GetUserRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 7);
+  messageDesc(file_salto_nebula_user_v1_user, 8);
 
 /**
  * The request message for [`ListUsers`][salto.nebula.user.v1.UserService.ListUsers]
@@ -685,7 +783,7 @@ export type ListUsersRequest = Message<"salto.nebula.user.v1.ListUsersRequest"> 
  * Use `create(ListUsersRequestSchema)` to create a new message.
  */
 export const ListUsersRequestSchema: GenMessage<ListUsersRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 8);
+  messageDesc(file_salto_nebula_user_v1_user, 9);
 
 /**
  * The response message for [`ListUsers`][salto.nebula.user.v1.UserService.ListUsers]
@@ -725,7 +823,7 @@ export type ListUsersResponse = Message<"salto.nebula.user.v1.ListUsersResponse"
  * Use `create(ListUsersResponseSchema)` to create a new message.
  */
 export const ListUsersResponseSchema: GenMessage<ListUsersResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 9);
+  messageDesc(file_salto_nebula_user_v1_user, 10);
 
 /**
  * The response message for [`UpdateUser`][salto.nebula.user.v1.UserService.UpdateUser]
@@ -753,7 +851,7 @@ export type UpdateUserRequest = Message<"salto.nebula.user.v1.UpdateUserRequest"
  * Use `create(UpdateUserRequestSchema)` to create a new message.
  */
 export const UpdateUserRequestSchema: GenMessage<UpdateUserRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 10);
+  messageDesc(file_salto_nebula_user_v1_user, 11);
 
 /**
  * The request message for [`DeleteUser`][salto.nebula.user.v1.UserService.DeleteUser]
@@ -775,7 +873,7 @@ export type DeleteUserRequest = Message<"salto.nebula.user.v1.DeleteUserRequest"
  * Use `create(DeleteUserRequestSchema)` to create a new message.
  */
 export const DeleteUserRequestSchema: GenMessage<DeleteUserRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 11);
+  messageDesc(file_salto_nebula_user_v1_user, 12);
 
 /**
  * The request message for [`BlockUser`][salto.nebula.user.v1.UserService.BlockUser]
@@ -797,7 +895,7 @@ export type BlockUserRequest = Message<"salto.nebula.user.v1.BlockUserRequest"> 
  * Use `create(BlockUserRequestSchema)` to create a new message.
  */
 export const BlockUserRequestSchema: GenMessage<BlockUserRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 12);
+  messageDesc(file_salto_nebula_user_v1_user, 13);
 
 /**
  * The request message for [`BlockUser`][salto.nebula.user.v1.UserService.BlockUser]
@@ -812,7 +910,7 @@ export type BlockUserResponse = Message<"salto.nebula.user.v1.BlockUserResponse"
  * Use `create(BlockUserResponseSchema)` to create a new message.
  */
 export const BlockUserResponseSchema: GenMessage<BlockUserResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 13);
+  messageDesc(file_salto_nebula_user_v1_user, 14);
 
 /**
  * The request message for [`UnblockUser`][salto.nebula.user.v1.UserService.UnblockUser]
@@ -834,7 +932,7 @@ export type UnblockUserRequest = Message<"salto.nebula.user.v1.UnblockUserReques
  * Use `create(UnblockUserRequestSchema)` to create a new message.
  */
 export const UnblockUserRequestSchema: GenMessage<UnblockUserRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 14);
+  messageDesc(file_salto_nebula_user_v1_user, 15);
 
 /**
  * The request message for [`UnblockUser`][salto.nebula.user.v1.UserService.UnblockUser]
@@ -849,7 +947,7 @@ export type UnblockUserResponse = Message<"salto.nebula.user.v1.UnblockUserRespo
  * Use `create(UnblockUserResponseSchema)` to create a new message.
  */
 export const UnblockUserResponseSchema: GenMessage<UnblockUserResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 15);
+  messageDesc(file_salto_nebula_user_v1_user, 16);
 
 /**
  * The request message for [`CreateUserAccessRight`][salto.nebula.user.v1.UserService.CreateUserAccessRight]
@@ -880,7 +978,7 @@ export type CreateUserAccessRightRequest = Message<"salto.nebula.user.v1.CreateU
  * Use `create(CreateUserAccessRightRequestSchema)` to create a new message.
  */
 export const CreateUserAccessRightRequestSchema: GenMessage<CreateUserAccessRightRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 16);
+  messageDesc(file_salto_nebula_user_v1_user, 17);
 
 /**
  * The request message for [`GetUserAccessRight`][salto.nebula.user.v1.UserService.GetUserAcessRight]
@@ -903,7 +1001,7 @@ export type GetUserAccessRightRequest = Message<"salto.nebula.user.v1.GetUserAcc
  * Use `create(GetUserAccessRightRequestSchema)` to create a new message.
  */
 export const GetUserAccessRightRequestSchema: GenMessage<GetUserAccessRightRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 17);
+  messageDesc(file_salto_nebula_user_v1_user, 18);
 
 /**
  * The request message for [`ListUserAccessRights`][salto.nebula.user.v1.UserService.ListUserAccessRights]
@@ -955,7 +1053,7 @@ export type ListUserAccessRightsRequest = Message<"salto.nebula.user.v1.ListUser
  * Use `create(ListUserAccessRightsRequestSchema)` to create a new message.
  */
 export const ListUserAccessRightsRequestSchema: GenMessage<ListUserAccessRightsRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 18);
+  messageDesc(file_salto_nebula_user_v1_user, 19);
 
 /**
  * The response message for [`ListUserAccessRights`][salto.nebula.user.v1.UserService.ListUserAccessRights]
@@ -986,7 +1084,7 @@ export type ListUserAccessRightsResponse = Message<"salto.nebula.user.v1.ListUse
  * Use `create(ListUserAccessRightsResponseSchema)` to create a new message.
  */
 export const ListUserAccessRightsResponseSchema: GenMessage<ListUserAccessRightsResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 19);
+  messageDesc(file_salto_nebula_user_v1_user, 20);
 
 /**
  * The request message for [`UpdateUserAccessRight`][salto.nebula.user.v1.UserService.UpdateUserAccessRight]
@@ -1015,7 +1113,7 @@ export type UpdateUserAccessRightRequest = Message<"salto.nebula.user.v1.UpdateU
  * Use `create(UpdateUserAccessRightRequestSchema)` to create a new message.
  */
 export const UpdateUserAccessRightRequestSchema: GenMessage<UpdateUserAccessRightRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 20);
+  messageDesc(file_salto_nebula_user_v1_user, 21);
 
 /**
  * The request message for [`DeleteUserAccessRight`][salto.nebula.user.v1.UserService.DeleteUserAccessRight]
@@ -1038,7 +1136,7 @@ export type DeleteUserAccessRightRequest = Message<"salto.nebula.user.v1.DeleteU
  * Use `create(DeleteUserAccessRightRequestSchema)` to create a new message.
  */
 export const DeleteUserAccessRightRequestSchema: GenMessage<DeleteUserAccessRightRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 21);
+  messageDesc(file_salto_nebula_user_v1_user, 22);
 
 /**
  * The request message for [`AssignCardkey`][salto.nebula.user.v1.UserService.AssignCardkey]
@@ -1068,7 +1166,7 @@ export type AssignCardKeyRequest = Message<"salto.nebula.user.v1.AssignCardKeyRe
  * Use `create(AssignCardKeyRequestSchema)` to create a new message.
  */
 export const AssignCardKeyRequestSchema: GenMessage<AssignCardKeyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 22);
+  messageDesc(file_salto_nebula_user_v1_user, 23);
 
 /**
  * The request message for [`CancelCardKey`][salto.nebula.user.v1.UserService.CancelCardKey]
@@ -1090,7 +1188,7 @@ export type CancelCardKeyRequest = Message<"salto.nebula.user.v1.CancelCardKeyRe
  * Use `create(CancelCardKeyRequestSchema)` to create a new message.
  */
 export const CancelCardKeyRequestSchema: GenMessage<CancelCardKeyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 23);
+  messageDesc(file_salto_nebula_user_v1_user, 24);
 
 /**
  * The request message for [`EncodeCardKey`][salto.nebula.user.v1.UserService.EncodeCardKey]
@@ -1147,7 +1245,7 @@ export type EncodeCardKeyRequest = Message<"salto.nebula.user.v1.EncodeCardKeyRe
  * Use `create(EncodeCardKeyRequestSchema)` to create a new message.
  */
 export const EncodeCardKeyRequestSchema: GenMessage<EncodeCardKeyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 24);
+  messageDesc(file_salto_nebula_user_v1_user, 25);
 
 /**
  * The response message for [`EncodeCardKey`][salto.nebula.user.v1.UserService.EncodeCardKey]
@@ -1162,7 +1260,7 @@ export type EncodeCardKeyResponse = Message<"salto.nebula.user.v1.EncodeCardKeyR
  * Use `create(EncodeCardKeyResponseSchema)` to create a new message.
  */
 export const EncodeCardKeyResponseSchema: GenMessage<EncodeCardKeyResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 25);
+  messageDesc(file_salto_nebula_user_v1_user, 26);
 
 /**
  * The metadata message for [`EncodeCardKey`][salto.nebula.user.v1.UserService.EncodeCardKey]
@@ -1177,7 +1275,7 @@ export type EncodeCardKeyMetadata = Message<"salto.nebula.user.v1.EncodeCardKeyM
  * Use `create(EncodeCardKeyMetadataSchema)` to create a new message.
  */
 export const EncodeCardKeyMetadataSchema: GenMessage<EncodeCardKeyMetadata> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 26);
+  messageDesc(file_salto_nebula_user_v1_user, 27);
 
 /**
  * The request message for [`AssignDigitalkey`][salto.nebula.user.v1.UserService.AssignDigitalkey]
@@ -1199,7 +1297,7 @@ export type AssignAppKeyRequest = Message<"salto.nebula.user.v1.AssignAppKeyRequ
  * Use `create(AssignAppKeyRequestSchema)` to create a new message.
  */
 export const AssignAppKeyRequestSchema: GenMessage<AssignAppKeyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 27);
+  messageDesc(file_salto_nebula_user_v1_user, 28);
 
 /**
  * The request message for [`CancelAppKey`][salto.nebula.user.v1.UserService.CancelAppKey]
@@ -1221,7 +1319,7 @@ export type CancelAppKeyRequest = Message<"salto.nebula.user.v1.CancelAppKeyRequ
  * Use `create(CancelAppKeyRequestSchema)` to create a new message.
  */
 export const CancelAppKeyRequestSchema: GenMessage<CancelAppKeyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 28);
+  messageDesc(file_salto_nebula_user_v1_user, 29);
 
 /**
  * The request message for [`ComputeAppKeyData`][salto.nebula.user.v1.UserService.ComputeAppKeyData]
@@ -1243,7 +1341,7 @@ export type ComputeAppKeyDataRequest = Message<"salto.nebula.user.v1.ComputeAppK
  * Use `create(ComputeAppKeyDataRequestSchema)` to create a new message.
  */
 export const ComputeAppKeyDataRequestSchema: GenMessage<ComputeAppKeyDataRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 29);
+  messageDesc(file_salto_nebula_user_v1_user, 30);
 
 /**
  * The response message for [`ComputeAppKeyData`][salto.nebula.user.v1.UserService.ComputeAppKeyData]
@@ -1264,7 +1362,7 @@ export type ComputeAppKeyDataResponse = Message<"salto.nebula.user.v1.ComputeApp
  * Use `create(ComputeAppKeyDataResponseSchema)` to create a new message.
  */
 export const ComputeAppKeyDataResponseSchema: GenMessage<ComputeAppKeyDataResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 30);
+  messageDesc(file_salto_nebula_user_v1_user, 31);
 
 /**
  * The request message for [`AssignWalletKey`][salto.nebula.user.v1.UserService.AssignWalletKey]
@@ -1286,7 +1384,7 @@ export type AssignWalletKeyRequest = Message<"salto.nebula.user.v1.AssignWalletK
  * Use `create(AssignWalletKeyRequestSchema)` to create a new message.
  */
 export const AssignWalletKeyRequestSchema: GenMessage<AssignWalletKeyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 31);
+  messageDesc(file_salto_nebula_user_v1_user, 32);
 
 /**
  * The response message for [`AssignWalletKey`][salto.nebula.user.v1.UserService.AssignWalletKey]
@@ -1316,7 +1414,7 @@ export type AssignWalletKeyResponse = Message<"salto.nebula.user.v1.AssignWallet
  * Use `create(AssignWalletKeyResponseSchema)` to create a new message.
  */
 export const AssignWalletKeyResponseSchema: GenMessage<AssignWalletKeyResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 32);
+  messageDesc(file_salto_nebula_user_v1_user, 33);
 
 /**
  * The request message for [`CancelWalletKey`][salto.nebula.user.v1.UserService.CancelWalletKey]
@@ -1338,7 +1436,7 @@ export type CancelWalletKeyRequest = Message<"salto.nebula.user.v1.CancelWalletK
  * Use `create(CancelWalletKeyRequestSchema)` to create a new message.
  */
 export const CancelWalletKeyRequestSchema: GenMessage<CancelWalletKeyRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 33);
+  messageDesc(file_salto_nebula_user_v1_user, 34);
 
 /**
  * The response message for [`CancelWalletKey`][salto.nebula.user.v1.UserService.CancelWalletKey]
@@ -1359,7 +1457,7 @@ export type CancelWalletKeyResponse = Message<"salto.nebula.user.v1.CancelWallet
  * Use `create(CancelWalletKeyResponseSchema)` to create a new message.
  */
 export const CancelWalletKeyResponseSchema: GenMessage<CancelWalletKeyResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 34);
+  messageDesc(file_salto_nebula_user_v1_user, 35);
 
 /**
  * The request message for [`AssignPasscode`][salto.nebula.user.v1.UserService.AssignPasscode]
@@ -1381,7 +1479,7 @@ export type AssignPasscodeRequest = Message<"salto.nebula.user.v1.AssignPasscode
  * Use `create(AssignPasscodeRequestSchema)` to create a new message.
  */
 export const AssignPasscodeRequestSchema: GenMessage<AssignPasscodeRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 35);
+  messageDesc(file_salto_nebula_user_v1_user, 36);
 
 /**
  * The response message for [`AssignPasscode`][salto.nebula.user.v1.UserService.AssignPasscode]
@@ -1409,7 +1507,7 @@ export type AssignPasscodeResponse = Message<"salto.nebula.user.v1.AssignPasscod
  * Use `create(AssignPasscodeResponseSchema)` to create a new message.
  */
 export const AssignPasscodeResponseSchema: GenMessage<AssignPasscodeResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 36);
+  messageDesc(file_salto_nebula_user_v1_user, 37);
 
 /**
  * The request message for [`CancelPasscode`][salto.nebula.user.v1.UserService.CancelPasscode]
@@ -1431,7 +1529,7 @@ export type CancelPasscodeRequest = Message<"salto.nebula.user.v1.CancelPasscode
  * Use `create(CancelPasscodeRequestSchema)` to create a new message.
  */
 export const CancelPasscodeRequestSchema: GenMessage<CancelPasscodeRequest> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 37);
+  messageDesc(file_salto_nebula_user_v1_user, 38);
 
 /**
  * The response message for [`CancelPasscode`][salto.nebula.user.v1.UserService.CancelPasscode]
@@ -1452,7 +1550,189 @@ export type CancelPasscodeResponse = Message<"salto.nebula.user.v1.CancelPasscod
  * Use `create(CancelPasscodeResponseSchema)` to create a new message.
  */
 export const CancelPasscodeResponseSchema: GenMessage<CancelPasscodeResponse> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_user_v1_user, 38);
+  messageDesc(file_salto_nebula_user_v1_user, 39);
+
+/**
+ * The request message for [`AssignElectronicKey`][salto.nebula.user.v1.UserService.AssignElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.AssignElectronicKeyRequest
+ */
+export type AssignElectronicKeyRequest = Message<"salto.nebula.user.v1.AssignElectronicKeyRequest"> & {
+  /**
+   * The name of the requested user's electronic key to be assigned. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * Globally unique identifier that is used across all devices manufactured
+   * by SALTO.
+   *
+   * @generated from field: string device_id = 2;
+   */
+  deviceId: string;
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.AssignElectronicKeyRequest.
+ * Use `create(AssignElectronicKeyRequestSchema)` to create a new message.
+ */
+export const AssignElectronicKeyRequestSchema: GenMessage<AssignElectronicKeyRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 40);
+
+/**
+ * The response message for [`AssignElectronicKey`][salto.nebula.user.v1.UserService.AssignElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.AssignElectronicKeyResponse
+ */
+export type AssignElectronicKeyResponse = Message<"salto.nebula.user.v1.AssignElectronicKeyResponse"> & {
+  /**
+   * The assigned electronic key.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 1;
+   */
+  electronicKey?: ElectronicKey;
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.AssignElectronicKeyResponse.
+ * Use `create(AssignElectronicKeyResponseSchema)` to create a new message.
+ */
+export const AssignElectronicKeyResponseSchema: GenMessage<AssignElectronicKeyResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 41);
+
+/**
+ * The request message for [`CancelElectronicKey`][salto.nebula.user.v1.UserService.CancelElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.CancelElectronicKeyRequest
+ */
+export type CancelElectronicKeyRequest = Message<"salto.nebula.user.v1.CancelElectronicKeyRequest"> & {
+  /**
+   * The name of the requested user's electronic key to be canceled. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.CancelElectronicKeyRequest.
+ * Use `create(CancelElectronicKeyRequestSchema)` to create a new message.
+ */
+export const CancelElectronicKeyRequestSchema: GenMessage<CancelElectronicKeyRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 42);
+
+/**
+ * The response message for [`CancelElectronicKey`][salto.nebula.user.v1.UserService.CancelElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.CancelElectronicKeyResponse
+ */
+export type CancelElectronicKeyResponse = Message<"salto.nebula.user.v1.CancelElectronicKeyResponse"> & {
+  /**
+   * The canceled electronic key.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 1;
+   */
+  electronicKey?: ElectronicKey;
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.CancelElectronicKeyResponse.
+ * Use `create(CancelElectronicKeyResponseSchema)` to create a new message.
+ */
+export const CancelElectronicKeyResponseSchema: GenMessage<CancelElectronicKeyResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 43);
+
+/**
+ * The request message for [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.EncodeElectronicKeyRequest
+ */
+export type EncodeElectronicKeyRequest = Message<"salto.nebula.user.v1.EncodeElectronicKeyRequest"> & {
+  /**
+   * The name of the requested user's electronic key to be encoded. For example:
+   * `installations/surelock-homes-hq/users/john-watson/electronic-key`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name: string;
+
+  /**
+   * The name of the device to be used as a card encoder.
+   * It could be an **encoder**, an **electronic lock** or a **controller** and
+   * takes the form of a relative resource name:
+   * `installations/surelock-homes-hq/encoders/dancing-men` or
+   * `installations/surelock-homes-hq/controllers/baker-street-hall` or
+   * `installations/surelock-homes-hq/electronic-locks/baker-street-entrance`.
+   *
+   * @generated from oneof salto.nebula.user.v1.EncodeElectronicKeyRequest.device
+   */
+  device: {
+    /**
+     * Device name, when device is an encoder
+     *
+     * @generated from field: string encoder = 2;
+     */
+    value: string;
+    case: "encoder";
+  } | {
+    /**
+     * Device name, when device is an electronic lock
+     *
+     * @generated from field: string electronic_lock = 3;
+     */
+    value: string;
+    case: "electronicLock";
+  } | {
+    /**
+     * Device name, when device is a controller
+     *
+     * @generated from field: string controller = 4;
+     */
+    value: string;
+    case: "controller";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.EncodeElectronicKeyRequest.
+ * Use `create(EncodeElectronicKeyRequestSchema)` to create a new message.
+ */
+export const EncodeElectronicKeyRequestSchema: GenMessage<EncodeElectronicKeyRequest> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 44);
+
+/**
+ * The response message for [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.EncodeElectronicKeyResponse
+ */
+export type EncodeElectronicKeyResponse = Message<"salto.nebula.user.v1.EncodeElectronicKeyResponse"> & {
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.EncodeElectronicKeyResponse.
+ * Use `create(EncodeElectronicKeyResponseSchema)` to create a new message.
+ */
+export const EncodeElectronicKeyResponseSchema: GenMessage<EncodeElectronicKeyResponse> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 45);
+
+/**
+ * The metadata message for [`EncodeElectronicKey`][salto.nebula.user.v1.UserService.EncodeElectronicKey]
+ *
+ * @generated from message salto.nebula.user.v1.EncodeElectronicKeyMetadata
+ */
+export type EncodeElectronicKeyMetadata = Message<"salto.nebula.user.v1.EncodeElectronicKeyMetadata"> & {
+};
+
+/**
+ * Describes the message salto.nebula.user.v1.EncodeElectronicKeyMetadata.
+ * Use `create(EncodeElectronicKeyMetadataSchema)` to create a new message.
+ */
+export const EncodeElectronicKeyMetadataSchema: GenMessage<EncodeElectronicKeyMetadata> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_user_v1_user, 46);
 
 /**
  * A user can refer to both a holder of keys and a user with permissions to
@@ -1734,6 +2014,42 @@ export const UserService: GenService<{
     methodKind: "unary";
     input: typeof CancelPasscodeRequestSchema;
     output: typeof CancelPasscodeResponseSchema;
+  },
+  /**
+   * Assign an electronic key
+   *
+   * Assigns an electronic key to an existing user.
+   *
+   * @generated from rpc salto.nebula.user.v1.UserService.AssignElectronicKey
+   */
+  assignElectronicKey: {
+    methodKind: "unary";
+    input: typeof AssignElectronicKeyRequestSchema;
+    output: typeof AssignElectronicKeyResponseSchema;
+  },
+  /**
+   * Cancel an electronic key
+   *
+   * Cancels an existing user's electronic key.
+   *
+   * @generated from rpc salto.nebula.user.v1.UserService.CancelElectronicKey
+   */
+  cancelElectronicKey: {
+    methodKind: "unary";
+    input: typeof CancelElectronicKeyRequestSchema;
+    output: typeof CancelElectronicKeyResponseSchema;
+  },
+  /**
+   * Encode an electronic key
+   *
+   * Encodes an existing user's electronic key.
+   *
+   * @generated from rpc salto.nebula.user.v1.UserService.EncodeElectronicKey
+   */
+  encodeElectronicKey: {
+    methodKind: "unary";
+    input: typeof EncodeElectronicKeyRequestSchema;
+    output: typeof OperationSchema;
   },
 }> = /*@__PURE__*/
   serviceDesc(file_salto_nebula_user_v1_user, 0);
