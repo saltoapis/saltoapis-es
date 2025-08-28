@@ -75,6 +75,13 @@ export class ElectronicKey extends Message<ElectronicKey> {
    */
   lowBattery = false;
 
+  /**
+   * User associated with this electronic key.
+   *
+   * @generated from field: optional string user = 8;
+   */
+  user?: string;
+
   constructor(data?: PartialMessage<ElectronicKey>) {
     super();
     proto3.util.initPartial(data, this);
@@ -90,6 +97,7 @@ export class ElectronicKey extends Message<ElectronicKey> {
     { no: 5, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 6, name: "device_metadata", kind: "message", T: DeviceMetadata },
     { no: 7, name: "low_battery", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 8, name: "user", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicKey {
