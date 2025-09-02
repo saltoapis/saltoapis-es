@@ -250,6 +250,11 @@ export const UserService = {
      *
      * Compute an existing user's app key data. Data contains encoded access
      * rights of the user.
+     *
+     * Note: There might be a delay for the key data to be updated after a user
+     * is created or their access rights are modified. It is recommended to wait
+     * for a moment (at least 60 seconds, for example) before calling this method to
+     * ensure the returned data is up-to-date.
      * (-- api-linter: core::0136::http-name-variable=disabled --)
      *
      * @generated from rpc salto.nebula.user.v1.UserService.ComputeAppKeyData
