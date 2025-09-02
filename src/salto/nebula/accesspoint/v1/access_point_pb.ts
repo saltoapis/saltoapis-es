@@ -90,6 +90,42 @@ export class AccessPoint extends Message<AccessPoint> {
    */
   leftOpen = false;
 
+  /**
+   * Specifies the underlying source from which this access point derives its
+   * operational capabilities and specific instance definition.
+   * For example:
+   * - `installations/surelock-homes-hq/electronic-locks/dancing-men`.
+   * - `installations/surelock-homes-hq/controllers/conan-doyle`.
+   * - `installations/surelock-homes-hq/intercom-adaptors/elementary`.
+   *
+   * @generated from oneof salto.nebula.accesspoint.v1.AccessPoint.source
+   */
+  source: {
+    /**
+     * Source name, when source is an electronic lock.
+     *
+     * @generated from field: string electronic_lock = 9;
+     */
+    value: string;
+    case: "electronicLock";
+  } | {
+    /**
+     * Source name, when source is a controller.
+     *
+     * @generated from field: string controller = 10;
+     */
+    value: string;
+    case: "controller";
+  } | {
+    /**
+     * Source name, when source is an intercom adaptor.
+     *
+     * @generated from field: string intercom_adaptor = 11;
+     */
+    value: string;
+    case: "intercomAdaptor";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
   constructor(data?: PartialMessage<AccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -106,6 +142,9 @@ export class AccessPoint extends Message<AccessPoint> {
     { no: 6, name: "card_key_updater", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
     { no: 7, name: "unlock_duration", kind: "message", T: Duration, opt: true },
     { no: 8, name: "left_open", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 9, name: "electronic_lock", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
+    { no: 10, name: "controller", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
+    { no: 11, name: "intercom_adaptor", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPoint {
