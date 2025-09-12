@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AppKey, AssignAppKeyRequest, AssignCardKeyRequest, AssignElectronicKeyRequest, AssignElectronicKeyResponse, AssignPasscodeRequest, AssignPasscodeResponse, AssignWalletKeyRequest, AssignWalletKeyResponse, BlockUserRequest, BlockUserResponse, CancelAppKeyRequest, CancelCardKeyRequest, CancelElectronicKeyRequest, CancelElectronicKeyResponse, CancelPasscodeRequest, CancelPasscodeResponse, CancelWalletKeyRequest, CancelWalletKeyResponse, CardKey, ComputeAppKeyDataRequest, ComputeAppKeyDataResponse, CreateUserAccessRightRequest, CreateUserRequest, DeleteUserAccessRightRequest, DeleteUserRequest, EncodeCardKeyRequest, EncodeElectronicKeyRequest, GetUserAccessRightRequest, GetUserRequest, ListUserAccessRightsRequest, ListUserAccessRightsResponse, ListUsersRequest, ListUsersResponse, UnblockUserRequest, UnblockUserResponse, UpdateUserAccessRightRequest, UpdateUserRequest, User, UserAccessRight } from "./user_pb";
+import { AppKey, AssignAppKeyRequest, AssignCardKeyRequest, AssignElectronicKeyRequest, AssignElectronicKeyResponse, AssignPasscodeRequest, AssignPasscodeResponse, AssignWalletKeyRequest, AssignWalletKeyResponse, BatchGetUsersRequest, BatchGetUsersResponse, BlockUserRequest, BlockUserResponse, CancelAppKeyRequest, CancelCardKeyRequest, CancelElectronicKeyRequest, CancelElectronicKeyResponse, CancelPasscodeRequest, CancelPasscodeResponse, CancelWalletKeyRequest, CancelWalletKeyResponse, CardKey, ComputeAppKeyDataRequest, ComputeAppKeyDataResponse, CreateUserAccessRightRequest, CreateUserRequest, DeleteUserAccessRightRequest, DeleteUserRequest, EncodeCardKeyRequest, EncodeElectronicKeyRequest, GetUserAccessRightRequest, GetUserRequest, ListUserAccessRightsRequest, ListUserAccessRightsResponse, ListUsersRequest, ListUsersResponse, UnblockUserRequest, UnblockUserResponse, UpdateUserAccessRightRequest, UpdateUserRequest, User, UserAccessRight } from "./user_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -42,6 +42,19 @@ export const UserService = {
       name: "GetUser",
       I: GetUserRequest,
       O: User,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Get a batch of users
+     *
+     * Retrieves a batch of existing users.
+     *
+     * @generated from rpc salto.nebula.user.v1.UserService.BatchGetUsers
+     */
+    batchGetUsers: {
+      name: "BatchGetUsers",
+      I: BatchGetUsersRequest,
+      O: BatchGetUsersResponse,
       kind: MethodKind.Unary,
     },
     /**
