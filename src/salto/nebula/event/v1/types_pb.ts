@@ -6,7 +6,7 @@
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
 import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
-import { AppKey, CardKey, Passcode, User, WalletKey } from "@saltoapis/nebula-user-v1";
+import { AppKey, CardKey, ElectronicKey, Passcode, User, WalletKey } from "@saltoapis/nebula-user-v1";
 import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
@@ -1801,6 +1801,104 @@ export class EmergencyKeyDeleted extends Message<EmergencyKeyDeleted> {
 
   static equals(a: EmergencyKeyDeleted | PlainMessage<EmergencyKeyDeleted> | undefined, b: EmergencyKeyDeleted | PlainMessage<EmergencyKeyDeleted> | undefined): boolean {
     return proto3.util.equals(EmergencyKeyDeleted, a, b);
+  }
+}
+
+/**
+ * Event representing the assignment of a user's electronic key.
+ *
+ * @generated from message salto.nebula.event.v1.ElectronicKeyAssigned
+ */
+export class ElectronicKeyAssigned extends Message<ElectronicKeyAssigned> {
+  /**
+   * Electronic key's user.
+   *
+   * @generated from field: salto.nebula.user.v1.User user = 1;
+   */
+  user?: User;
+
+  /**
+   * Electronic key assigned.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 2;
+   */
+  electronicKey?: ElectronicKey;
+
+  constructor(data?: PartialMessage<ElectronicKeyAssigned>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.ElectronicKeyAssigned";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "user", kind: "message", T: User },
+    { no: 2, name: "electronic_key", kind: "message", T: ElectronicKey },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicKeyAssigned {
+    return new ElectronicKeyAssigned().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ElectronicKeyAssigned {
+    return new ElectronicKeyAssigned().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ElectronicKeyAssigned {
+    return new ElectronicKeyAssigned().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ElectronicKeyAssigned | PlainMessage<ElectronicKeyAssigned> | undefined, b: ElectronicKeyAssigned | PlainMessage<ElectronicKeyAssigned> | undefined): boolean {
+    return proto3.util.equals(ElectronicKeyAssigned, a, b);
+  }
+}
+
+/**
+ * Event representing the cancelation of a user's electronic key.
+ *
+ * @generated from message salto.nebula.event.v1.ElectronicKeyCanceled
+ */
+export class ElectronicKeyCanceled extends Message<ElectronicKeyCanceled> {
+  /**
+   * Electronic key's user.
+   *
+   * @generated from field: salto.nebula.user.v1.User user = 1;
+   */
+  user?: User;
+
+  /**
+   * Electronic key canceled.
+   *
+   * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 2;
+   */
+  electronicKey?: ElectronicKey;
+
+  constructor(data?: PartialMessage<ElectronicKeyCanceled>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.ElectronicKeyCanceled";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "user", kind: "message", T: User },
+    { no: 2, name: "electronic_key", kind: "message", T: ElectronicKey },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicKeyCanceled {
+    return new ElectronicKeyCanceled().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ElectronicKeyCanceled {
+    return new ElectronicKeyCanceled().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ElectronicKeyCanceled {
+    return new ElectronicKeyCanceled().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: ElectronicKeyCanceled | PlainMessage<ElectronicKeyCanceled> | undefined, b: ElectronicKeyCanceled | PlainMessage<ElectronicKeyCanceled> | undefined): boolean {
+    return proto3.util.equals(ElectronicKeyCanceled, a, b);
   }
 }
 
