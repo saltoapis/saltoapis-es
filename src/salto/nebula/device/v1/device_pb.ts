@@ -116,6 +116,15 @@ export class Device extends Message<Device> {
    */
   lastEventTime?: Timestamp;
 
+  /**
+   * Indicates whether this device has been initialized or not. To change
+   * the value of this field, you must call the device-type-specific
+   * initialization operation (for example, InitializeElectronicLock).
+   *
+   * @generated from field: bool initialized = 12;
+   */
+  initialized = false;
+
   constructor(data?: PartialMessage<Device>) {
     super();
     proto3.util.initPartial(data, this);
@@ -135,6 +144,7 @@ export class Device extends Message<Device> {
     { no: 9, name: "connected", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
     { no: 10, name: "low_battery", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
     { no: 11, name: "last_event_time", kind: "message", T: Timestamp },
+    { no: 12, name: "initialized", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Device {
