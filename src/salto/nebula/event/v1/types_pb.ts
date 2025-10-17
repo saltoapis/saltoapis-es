@@ -5,11 +5,54 @@
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3 } from "@bufbuild/protobuf";
-import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { AppKey, CardKey, ElectronicKey, Passcode, User, WalletKey } from "@saltoapis/nebula-user-v1";
+import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
+
+/**
+ * Represents the principal entity that initiated or performed an action
+ * associated with an event. This could be a user, a service account, or
+ * potentially other types of entities in the future.
+ *
+ * @generated from message salto.nebula.event.v1.Principal
+ */
+export class Principal extends Message<Principal> {
+  /**
+   * A user represents a human actor within the system.
+   *
+   * @generated from field: salto.nebula.user.v1.User user = 1;
+   */
+  user?: User;
+
+  constructor(data?: PartialMessage<Principal>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.Principal";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "user", kind: "message", T: User },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Principal {
+    return new Principal().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Principal {
+    return new Principal().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Principal {
+    return new Principal().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: Principal | PlainMessage<Principal> | undefined, b: Principal | PlainMessage<Principal> | undefined): boolean {
+    return proto3.util.equals(Principal, a, b);
+  }
+}
 
 /**
  * Event representing the creation of an access point.
@@ -24,6 +67,13 @@ export class AccessPointCreated extends Message<AccessPointCreated> {
    */
   accessPoint?: AccessPoint;
 
+  /**
+   * The actor who created the access point.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AccessPointCreated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -33,6 +83,7 @@ export class AccessPointCreated extends Message<AccessPointCreated> {
   static readonly typeName = "salto.nebula.event.v1.AccessPointCreated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointCreated {
@@ -65,6 +116,13 @@ export class AccessPointUpdated extends Message<AccessPointUpdated> {
    */
   accessPoint?: AccessPoint;
 
+  /**
+   * The actor who updated the access point.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AccessPointUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -74,6 +132,7 @@ export class AccessPointUpdated extends Message<AccessPointUpdated> {
   static readonly typeName = "salto.nebula.event.v1.AccessPointUpdated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointUpdated {
@@ -106,6 +165,13 @@ export class AccessPointDeleted extends Message<AccessPointDeleted> {
    */
   accessPoint?: AccessPoint;
 
+  /**
+   * The actor who deleted the access point.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AccessPointDeleted>) {
     super();
     proto3.util.initPartial(data, this);
@@ -115,6 +181,7 @@ export class AccessPointDeleted extends Message<AccessPointDeleted> {
   static readonly typeName = "salto.nebula.event.v1.AccessPointDeleted";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointDeleted {
