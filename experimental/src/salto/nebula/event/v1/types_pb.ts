@@ -20,7 +20,30 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file salto/nebula/event/v1/types.proto.
  */
 export const file_salto_nebula_event_v1_types: GenFile = /*@__PURE__*/
-  fileDesc("CiFzYWx0by9uZWJ1bGEvZXZlbnQvdjEvdHlwZXMucHJvdG8SFXNhbHRvLm5lYnVsYS5ldmVudC52MSJUChJBY2Nlc3NQb2ludENyZWF0ZWQSPgoMYWNjZXNzX3BvaW50GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50IlQKEkFjY2Vzc1BvaW50VXBkYXRlZBI+CgxhY2Nlc3NfcG9pbnQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQiVAoSQWNjZXNzUG9pbnREZWxldGVkEj4KDGFjY2Vzc19wb2ludBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludCKhAwoTQWNjZXNzUG9pbnRVbmxvY2tlZBI+CgxhY2Nlc3NfcG9pbnQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQSKAoEdXNlchgCIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISQwoNZW1lcmdlbmN5X2tleRgDIAEoCzIqLnNhbHRvLm5lYnVsYS5lbWVyZ2VuY3lrZXkudjEuRW1lcmdlbmN5S2V5SAASMQoIY2FyZF9rZXkYBCABKAsyHS5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5SAASLwoHYXBwX2tleRgFIAEoCzIcLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFwcEtleUgAEjUKCndhbGxldF9rZXkYBiABKAsyHy5zYWx0by5uZWJ1bGEudXNlci52MS5XYWxsZXRLZXlIABIyCghwYXNzY29kZRgHIAEoCzIeLnNhbHRvLm5lYnVsYS51c2VyLnYxLlBhc3Njb2RlSABCDAoKY3JlZGVudGlhbCKfAwoRQWNjZXNzUG9pbnRMb2NrZWQSPgoMYWNjZXNzX3BvaW50GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50EigKBHVzZXIYAiABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEkMKDWVtZXJnZW5jeV9rZXkYAyABKAsyKi5zYWx0by5uZWJ1bGEuZW1lcmdlbmN5a2V5LnYxLkVtZXJnZW5jeUtleUgAEjEKCGNhcmRfa2V5GAQgASgLMh0uc2FsdG8ubmVidWxhLnVzZXIudjEuQ2FyZEtleUgAEi8KB2FwcF9rZXkYBSABKAsyHC5zYWx0by5uZWJ1bGEudXNlci52MS5BcHBLZXlIABI1Cgp3YWxsZXRfa2V5GAYgASgLMh8uc2FsdG8ubmVidWxhLnVzZXIudjEuV2FsbGV0S2V5SAASMgoIcGFzc2NvZGUYByABKAsyHi5zYWx0by5uZWJ1bGEudXNlci52MS5QYXNzY29kZUgAQgwKCmNyZWRlbnRpYWwiVwoVQWNjZXNzUG9pbnRGb3JjZWRPcGVuEj4KDGFjY2Vzc19wb2ludBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludCJTChFBY2Nlc3NQb2ludENsb3NlZBI+CgxhY2Nlc3NfcG9pbnQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQi7gEKDEFjY2Vzc0RlbmllZBI+CgxhY2Nlc3NfcG9pbnQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQSKAoEdXNlchgCIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISOgoGcmVhc29uGAMgASgOMiouc2FsdG8ubmVidWxhLmV2ZW50LnYxLkFjY2Vzc0RlbmllZC5SZWFzb24iOAoGUmVhc29uEhYKElJFQVNPTl9VTlNQRUNJRklFRBAAEhYKEkNSRURFTlRJQUxfRVhQSVJFRBABIlUKE0FjY2Vzc1BvaW50TGVmdE9wZW4SPgoMYWNjZXNzX3BvaW50GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50IlQKEkFjY2Vzc1JpZ2h0Q3JlYXRlZBI+CgxhY2Nlc3NfcmlnaHQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcmlnaHQudjEuQWNjZXNzUmlnaHQiVAoSQWNjZXNzUmlnaHRVcGRhdGVkEj4KDGFjY2Vzc19yaWdodBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3NyaWdodC52MS5BY2Nlc3NSaWdodCJUChJBY2Nlc3NSaWdodERlbGV0ZWQSPgoMYWNjZXNzX3JpZ2h0GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0Ip8BCh1BY2Nlc3NSaWdodEFjY2Vzc1BvaW50Q3JlYXRlZBI+CgxhY2Nlc3NfcmlnaHQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcmlnaHQudjEuQWNjZXNzUmlnaHQSPgoMYWNjZXNzX3BvaW50GAIgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50IqYBCiNBY2Nlc3NSaWdodEFjY2Vzc1BvaW50c0JhdGNoQ3JlYXRlZBI+CgxhY2Nlc3NfcmlnaHQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcmlnaHQudjEuQWNjZXNzUmlnaHQSPwoNYWNjZXNzX3BvaW50cxgCIAMoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludCKfAQodQWNjZXNzUmlnaHRBY2Nlc3NQb2ludERlbGV0ZWQSPgoMYWNjZXNzX3JpZ2h0GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0Ej4KDGFjY2Vzc19wb2ludBgCIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludCKmAQojQWNjZXNzUmlnaHRBY2Nlc3NQb2ludHNCYXRjaERlbGV0ZWQSPgoMYWNjZXNzX3JpZ2h0GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0Ej8KDWFjY2Vzc19wb2ludHMYAiADKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQiNwoLVXNlckNyZWF0ZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXIiNwoLVXNlclVwZGF0ZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXIiNwoLVXNlckJsb2NrZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXIiOQoNVXNlclVuYmxvY2tlZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlciI3CgtVc2VyRGVsZXRlZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlciKCAQoWVXNlckFjY2Vzc1JpZ2h0Q3JlYXRlZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchI+CgxhY2Nlc3NfcmlnaHQYAiABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcmlnaHQudjEuQWNjZXNzUmlnaHQiggEKFlVzZXJBY2Nlc3NSaWdodFVwZGF0ZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISPgoMYWNjZXNzX3JpZ2h0GAIgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0IoIBChZVc2VyQWNjZXNzUmlnaHREZWxldGVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEj4KDGFjY2Vzc19yaWdodBgCIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3NyaWdodC52MS5BY2Nlc3NSaWdodCJsCg9DYXJkS2V5QXNzaWduZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISLwoIY2FyZF9rZXkYAiABKAsyHS5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5ImwKD0NhcmRLZXlDYW5jZWxlZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchIvCghjYXJkX2tleRgCIAEoCzIdLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhcmRLZXkiaQoOQXBwS2V5QXNzaWduZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISLQoHYXBwX2tleRgCIAEoCzIcLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFwcEtleSJpCg5BcHBLZXlDYW5jZWxlZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchItCgdhcHBfa2V5GAIgASgLMhwuc2FsdG8ubmVidWxhLnVzZXIudjEuQXBwS2V5InIKEVdhbGxldEtleUFzc2lnbmVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEjMKCndhbGxldF9rZXkYAiABKAsyHy5zYWx0by5uZWJ1bGEudXNlci52MS5XYWxsZXRLZXkicgoRV2FsbGV0S2V5Q2FuY2VsZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISMwoKd2FsbGV0X2tleRgCIAEoCzIfLnNhbHRvLm5lYnVsYS51c2VyLnYxLldhbGxldEtleSI3CgtVbml0TW92ZWRJbhIoCgR1bml0GAEgASgLMhouc2FsdG8ubmVidWxhLnVuaXQudjEuVW5pdCI4CgxVbml0TW92ZWRPdXQSKAoEdW5pdBgBIAEoCzIaLnNhbHRvLm5lYnVsYS51bml0LnYxLlVuaXQiNwoLVW5pdENyZWF0ZWQSKAoEdW5pdBgBIAEoCzIaLnNhbHRvLm5lYnVsYS51bml0LnYxLlVuaXQiNwoLVW5pdFVwZGF0ZWQSKAoEdW5pdBgBIAEoCzIaLnNhbHRvLm5lYnVsYS51bml0LnYxLlVuaXQiNwoLVW5pdERlbGV0ZWQSKAoEdW5pdBgBIAEoCzIaLnNhbHRvLm5lYnVsYS51bml0LnYxLlVuaXQiWAoTRW1lcmdlbmN5S2V5Q3JlYXRlZBJBCg1lbWVyZ2VuY3lfa2V5GAEgASgLMiouc2FsdG8ubmVidWxhLmVtZXJnZW5jeWtleS52MS5FbWVyZ2VuY3lLZXkiWAoTRW1lcmdlbmN5S2V5VXBkYXRlZBJBCg1lbWVyZ2VuY3lfa2V5GAEgASgLMiouc2FsdG8ubmVidWxhLmVtZXJnZW5jeWtleS52MS5FbWVyZ2VuY3lLZXkiWAoTRW1lcmdlbmN5S2V5RGVsZXRlZBJBCg1lbWVyZ2VuY3lfa2V5GAEgASgLMiouc2FsdG8ubmVidWxhLmVtZXJnZW5jeWtleS52MS5FbWVyZ2VuY3lLZXkifgoVRWxlY3Ryb25pY0tleUFzc2lnbmVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEjsKDmVsZWN0cm9uaWNfa2V5GAIgASgLMiMuc2FsdG8ubmVidWxhLnVzZXIudjEuRWxlY3Ryb25pY0tleSJ+ChVFbGVjdHJvbmljS2V5Q2FuY2VsZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISOwoOZWxlY3Ryb25pY19rZXkYAiABKAsyIy5zYWx0by5uZWJ1bGEudXNlci52MS5FbGVjdHJvbmljS2V5Qs8BCh1jb20uc2FsdG9hcGlzLm5lYnVsYS5ldmVudC52MUIKVHlwZXNQcm90b1ABWkBnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL2V2ZW50L3YxO2V2ZW50qgIZU2FsdG9hcGlzLk5lYnVsYS5FdmVudC5WMcoCGVNhbHRvYXBpc1xOZWJ1bGFcRXZlbnRcVjHiAiVHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXEV2ZW50XFYxYgZwcm90bzM", [file_salto_nebula_accesspoint_v1_access_point, file_salto_nebula_accessright_v1_access_right, file_salto_nebula_emergencykey_v1_emergency_key, file_salto_nebula_unit_v1_unit, file_salto_nebula_user_v1_user]);
+  fileDesc("CiFzYWx0by9uZWJ1bGEvZXZlbnQvdjEvdHlwZXMucHJvdG8SFXNhbHRvLm5lYnVsYS5ldmVudC52MSI1CglQcmluY2lwYWwSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXIihQEKEkFjY2Vzc1BvaW50Q3JlYXRlZBI+CgxhY2Nlc3NfcG9pbnQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQSLwoFYWN0b3IYAiABKAsyIC5zYWx0by5uZWJ1bGEuZXZlbnQudjEuUHJpbmNpcGFsIoUBChJBY2Nlc3NQb2ludFVwZGF0ZWQSPgoMYWNjZXNzX3BvaW50GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50Ei8KBWFjdG9yGAIgASgLMiAuc2FsdG8ubmVidWxhLmV2ZW50LnYxLlByaW5jaXBhbCKFAQoSQWNjZXNzUG9pbnREZWxldGVkEj4KDGFjY2Vzc19wb2ludBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludBIvCgVhY3RvchgCIAEoCzIgLnNhbHRvLm5lYnVsYS5ldmVudC52MS5QcmluY2lwYWwioQMKE0FjY2Vzc1BvaW50VW5sb2NrZWQSPgoMYWNjZXNzX3BvaW50GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50EigKBHVzZXIYAiABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEkMKDWVtZXJnZW5jeV9rZXkYAyABKAsyKi5zYWx0by5uZWJ1bGEuZW1lcmdlbmN5a2V5LnYxLkVtZXJnZW5jeUtleUgAEjEKCGNhcmRfa2V5GAQgASgLMh0uc2FsdG8ubmVidWxhLnVzZXIudjEuQ2FyZEtleUgAEi8KB2FwcF9rZXkYBSABKAsyHC5zYWx0by5uZWJ1bGEudXNlci52MS5BcHBLZXlIABI1Cgp3YWxsZXRfa2V5GAYgASgLMh8uc2FsdG8ubmVidWxhLnVzZXIudjEuV2FsbGV0S2V5SAASMgoIcGFzc2NvZGUYByABKAsyHi5zYWx0by5uZWJ1bGEudXNlci52MS5QYXNzY29kZUgAQgwKCmNyZWRlbnRpYWwinwMKEUFjY2Vzc1BvaW50TG9ja2VkEj4KDGFjY2Vzc19wb2ludBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludBIoCgR1c2VyGAIgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchJDCg1lbWVyZ2VuY3lfa2V5GAMgASgLMiouc2FsdG8ubmVidWxhLmVtZXJnZW5jeWtleS52MS5FbWVyZ2VuY3lLZXlIABIxCghjYXJkX2tleRgEIAEoCzIdLnNhbHRvLm5lYnVsYS51c2VyLnYxLkNhcmRLZXlIABIvCgdhcHBfa2V5GAUgASgLMhwuc2FsdG8ubmVidWxhLnVzZXIudjEuQXBwS2V5SAASNQoKd2FsbGV0X2tleRgGIAEoCzIfLnNhbHRvLm5lYnVsYS51c2VyLnYxLldhbGxldEtleUgAEjIKCHBhc3Njb2RlGAcgASgLMh4uc2FsdG8ubmVidWxhLnVzZXIudjEuUGFzc2NvZGVIAEIMCgpjcmVkZW50aWFsIlcKFUFjY2Vzc1BvaW50Rm9yY2VkT3BlbhI+CgxhY2Nlc3NfcG9pbnQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQiUwoRQWNjZXNzUG9pbnRDbG9zZWQSPgoMYWNjZXNzX3BvaW50GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50Iu4BCgxBY2Nlc3NEZW5pZWQSPgoMYWNjZXNzX3BvaW50GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50EigKBHVzZXIYAiABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEjoKBnJlYXNvbhgDIAEoDjIqLnNhbHRvLm5lYnVsYS5ldmVudC52MS5BY2Nlc3NEZW5pZWQuUmVhc29uIjgKBlJlYXNvbhIWChJSRUFTT05fVU5TUEVDSUZJRUQQABIWChJDUkVERU5USUFMX0VYUElSRUQQASJVChNBY2Nlc3NQb2ludExlZnRPcGVuEj4KDGFjY2Vzc19wb2ludBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludCJUChJBY2Nlc3NSaWdodENyZWF0ZWQSPgoMYWNjZXNzX3JpZ2h0GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0IlQKEkFjY2Vzc1JpZ2h0VXBkYXRlZBI+CgxhY2Nlc3NfcmlnaHQYASABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcmlnaHQudjEuQWNjZXNzUmlnaHQiVAoSQWNjZXNzUmlnaHREZWxldGVkEj4KDGFjY2Vzc19yaWdodBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3NyaWdodC52MS5BY2Nlc3NSaWdodCKfAQodQWNjZXNzUmlnaHRBY2Nlc3NQb2ludENyZWF0ZWQSPgoMYWNjZXNzX3JpZ2h0GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0Ej4KDGFjY2Vzc19wb2ludBgCIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3Nwb2ludC52MS5BY2Nlc3NQb2ludCKmAQojQWNjZXNzUmlnaHRBY2Nlc3NQb2ludHNCYXRjaENyZWF0ZWQSPgoMYWNjZXNzX3JpZ2h0GAEgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0Ej8KDWFjY2Vzc19wb2ludHMYAiADKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQinwEKHUFjY2Vzc1JpZ2h0QWNjZXNzUG9pbnREZWxldGVkEj4KDGFjY2Vzc19yaWdodBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3NyaWdodC52MS5BY2Nlc3NSaWdodBI+CgxhY2Nlc3NfcG9pbnQYAiABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcG9pbnQudjEuQWNjZXNzUG9pbnQipgEKI0FjY2Vzc1JpZ2h0QWNjZXNzUG9pbnRzQmF0Y2hEZWxldGVkEj4KDGFjY2Vzc19yaWdodBgBIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3NyaWdodC52MS5BY2Nlc3NSaWdodBI/Cg1hY2Nlc3NfcG9pbnRzGAIgAygLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3BvaW50LnYxLkFjY2Vzc1BvaW50IjcKC1VzZXJDcmVhdGVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyIjcKC1VzZXJVcGRhdGVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyIjcKC1VzZXJCbG9ja2VkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyIjkKDVVzZXJVbmJsb2NrZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXIiNwoLVXNlckRlbGV0ZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXIiggEKFlVzZXJBY2Nlc3NSaWdodENyZWF0ZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISPgoMYWNjZXNzX3JpZ2h0GAIgASgLMiguc2FsdG8ubmVidWxhLmFjY2Vzc3JpZ2h0LnYxLkFjY2Vzc1JpZ2h0IoIBChZVc2VyQWNjZXNzUmlnaHRVcGRhdGVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEj4KDGFjY2Vzc19yaWdodBgCIAEoCzIoLnNhbHRvLm5lYnVsYS5hY2Nlc3NyaWdodC52MS5BY2Nlc3NSaWdodCKCAQoWVXNlckFjY2Vzc1JpZ2h0RGVsZXRlZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchI+CgxhY2Nlc3NfcmlnaHQYAiABKAsyKC5zYWx0by5uZWJ1bGEuYWNjZXNzcmlnaHQudjEuQWNjZXNzUmlnaHQibAoPQ2FyZEtleUFzc2lnbmVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEi8KCGNhcmRfa2V5GAIgASgLMh0uc2FsdG8ubmVidWxhLnVzZXIudjEuQ2FyZEtleSJsCg9DYXJkS2V5Q2FuY2VsZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISLwoIY2FyZF9rZXkYAiABKAsyHS5zYWx0by5uZWJ1bGEudXNlci52MS5DYXJkS2V5ImkKDkFwcEtleUFzc2lnbmVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEi0KB2FwcF9rZXkYAiABKAsyHC5zYWx0by5uZWJ1bGEudXNlci52MS5BcHBLZXkiaQoOQXBwS2V5Q2FuY2VsZWQSKAoEdXNlchgBIAEoCzIaLnNhbHRvLm5lYnVsYS51c2VyLnYxLlVzZXISLQoHYXBwX2tleRgCIAEoCzIcLnNhbHRvLm5lYnVsYS51c2VyLnYxLkFwcEtleSJyChFXYWxsZXRLZXlBc3NpZ25lZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchIzCgp3YWxsZXRfa2V5GAIgASgLMh8uc2FsdG8ubmVidWxhLnVzZXIudjEuV2FsbGV0S2V5InIKEVdhbGxldEtleUNhbmNlbGVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEjMKCndhbGxldF9rZXkYAiABKAsyHy5zYWx0by5uZWJ1bGEudXNlci52MS5XYWxsZXRLZXkiNwoLVW5pdE1vdmVkSW4SKAoEdW5pdBgBIAEoCzIaLnNhbHRvLm5lYnVsYS51bml0LnYxLlVuaXQiOAoMVW5pdE1vdmVkT3V0EigKBHVuaXQYASABKAsyGi5zYWx0by5uZWJ1bGEudW5pdC52MS5Vbml0IjcKC1VuaXRDcmVhdGVkEigKBHVuaXQYASABKAsyGi5zYWx0by5uZWJ1bGEudW5pdC52MS5Vbml0IjcKC1VuaXRVcGRhdGVkEigKBHVuaXQYASABKAsyGi5zYWx0by5uZWJ1bGEudW5pdC52MS5Vbml0IjcKC1VuaXREZWxldGVkEigKBHVuaXQYASABKAsyGi5zYWx0by5uZWJ1bGEudW5pdC52MS5Vbml0IlgKE0VtZXJnZW5jeUtleUNyZWF0ZWQSQQoNZW1lcmdlbmN5X2tleRgBIAEoCzIqLnNhbHRvLm5lYnVsYS5lbWVyZ2VuY3lrZXkudjEuRW1lcmdlbmN5S2V5IlgKE0VtZXJnZW5jeUtleVVwZGF0ZWQSQQoNZW1lcmdlbmN5X2tleRgBIAEoCzIqLnNhbHRvLm5lYnVsYS5lbWVyZ2VuY3lrZXkudjEuRW1lcmdlbmN5S2V5IlgKE0VtZXJnZW5jeUtleURlbGV0ZWQSQQoNZW1lcmdlbmN5X2tleRgBIAEoCzIqLnNhbHRvLm5lYnVsYS5lbWVyZ2VuY3lrZXkudjEuRW1lcmdlbmN5S2V5In4KFUVsZWN0cm9uaWNLZXlBc3NpZ25lZBIoCgR1c2VyGAEgASgLMhouc2FsdG8ubmVidWxhLnVzZXIudjEuVXNlchI7Cg5lbGVjdHJvbmljX2tleRgCIAEoCzIjLnNhbHRvLm5lYnVsYS51c2VyLnYxLkVsZWN0cm9uaWNLZXkifgoVRWxlY3Ryb25pY0tleUNhbmNlbGVkEigKBHVzZXIYASABKAsyGi5zYWx0by5uZWJ1bGEudXNlci52MS5Vc2VyEjsKDmVsZWN0cm9uaWNfa2V5GAIgASgLMiMuc2FsdG8ubmVidWxhLnVzZXIudjEuRWxlY3Ryb25pY0tleULPAQodY29tLnNhbHRvYXBpcy5uZWJ1bGEuZXZlbnQudjFCClR5cGVzUHJvdG9QAVpAZ2l0aHViLmNvbS9zYWx0b2FwaXMtaW50ZXJuYWwvc2FsdG9hcGlzLWdvL25lYnVsYS9ldmVudC92MTtldmVudKoCGVNhbHRvYXBpcy5OZWJ1bGEuRXZlbnQuVjHKAhlTYWx0b2FwaXNcTmVidWxhXEV2ZW50XFYx4gIlR1BCTWV0YWRhdGFcU2FsdG9hcGlzXE5lYnVsYVxFdmVudFxWMWIGcHJvdG8z", [file_salto_nebula_accesspoint_v1_access_point, file_salto_nebula_accessright_v1_access_right, file_salto_nebula_emergencykey_v1_emergency_key, file_salto_nebula_unit_v1_unit, file_salto_nebula_user_v1_user]);
+
+/**
+ * Represents the principal entity that initiated or performed an action
+ * associated with an event. This could be a user, a service account, or
+ * potentially other types of entities in the future.
+ *
+ * @generated from message salto.nebula.event.v1.Principal
+ */
+export type Principal = Message<"salto.nebula.event.v1.Principal"> & {
+  /**
+   * A user represents a human actor within the system.
+   *
+   * @generated from field: salto.nebula.user.v1.User user = 1;
+   */
+  user?: User;
+};
+
+/**
+ * Describes the message salto.nebula.event.v1.Principal.
+ * Use `create(PrincipalSchema)` to create a new message.
+ */
+export const PrincipalSchema: GenMessage<Principal> = /*@__PURE__*/
+  messageDesc(file_salto_nebula_event_v1_types, 0);
 
 /**
  * Event representing the creation of an access point.
@@ -34,6 +57,13 @@ export type AccessPointCreated = Message<"salto.nebula.event.v1.AccessPointCreat
    * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
    */
   accessPoint?: AccessPoint;
+
+  /**
+   * The actor who created the access point.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
 };
 
 /**
@@ -41,7 +71,7 @@ export type AccessPointCreated = Message<"salto.nebula.event.v1.AccessPointCreat
  * Use `create(AccessPointCreatedSchema)` to create a new message.
  */
 export const AccessPointCreatedSchema: GenMessage<AccessPointCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 0);
+  messageDesc(file_salto_nebula_event_v1_types, 1);
 
 /**
  * Event representing the update of an access point.
@@ -55,6 +85,13 @@ export type AccessPointUpdated = Message<"salto.nebula.event.v1.AccessPointUpdat
    * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
    */
   accessPoint?: AccessPoint;
+
+  /**
+   * The actor who updated the access point.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
 };
 
 /**
@@ -62,7 +99,7 @@ export type AccessPointUpdated = Message<"salto.nebula.event.v1.AccessPointUpdat
  * Use `create(AccessPointUpdatedSchema)` to create a new message.
  */
 export const AccessPointUpdatedSchema: GenMessage<AccessPointUpdated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 1);
+  messageDesc(file_salto_nebula_event_v1_types, 2);
 
 /**
  * Event representing the deletion of an access point.
@@ -76,6 +113,13 @@ export type AccessPointDeleted = Message<"salto.nebula.event.v1.AccessPointDelet
    * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
    */
   accessPoint?: AccessPoint;
+
+  /**
+   * The actor who deleted the access point.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
 };
 
 /**
@@ -83,7 +127,7 @@ export type AccessPointDeleted = Message<"salto.nebula.event.v1.AccessPointDelet
  * Use `create(AccessPointDeletedSchema)` to create a new message.
  */
 export const AccessPointDeletedSchema: GenMessage<AccessPointDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 2);
+  messageDesc(file_salto_nebula_event_v1_types, 3);
 
 /**
  * Event representing the unlocking of an access point.
@@ -158,7 +202,7 @@ export type AccessPointUnlocked = Message<"salto.nebula.event.v1.AccessPointUnlo
  * Use `create(AccessPointUnlockedSchema)` to create a new message.
  */
 export const AccessPointUnlockedSchema: GenMessage<AccessPointUnlocked> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 3);
+  messageDesc(file_salto_nebula_event_v1_types, 4);
 
 /**
  * Event representing the locking of an access point.
@@ -233,7 +277,7 @@ export type AccessPointLocked = Message<"salto.nebula.event.v1.AccessPointLocked
  * Use `create(AccessPointLockedSchema)` to create a new message.
  */
 export const AccessPointLockedSchema: GenMessage<AccessPointLocked> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 4);
+  messageDesc(file_salto_nebula_event_v1_types, 5);
 
 /**
  * Event representing a forced open of an access point.
@@ -254,7 +298,7 @@ export type AccessPointForcedOpen = Message<"salto.nebula.event.v1.AccessPointFo
  * Use `create(AccessPointForcedOpenSchema)` to create a new message.
  */
 export const AccessPointForcedOpenSchema: GenMessage<AccessPointForcedOpen> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 5);
+  messageDesc(file_salto_nebula_event_v1_types, 6);
 
 /**
  * Event representing the closing of an access point.
@@ -278,7 +322,7 @@ export type AccessPointClosed = Message<"salto.nebula.event.v1.AccessPointClosed
  * Use `create(AccessPointClosedSchema)` to create a new message.
  */
 export const AccessPointClosedSchema: GenMessage<AccessPointClosed> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 6);
+  messageDesc(file_salto_nebula_event_v1_types, 7);
 
 /**
  * Event representing a denied access to a user by an access point.
@@ -313,7 +357,7 @@ export type AccessDenied = Message<"salto.nebula.event.v1.AccessDenied"> & {
  * Use `create(AccessDeniedSchema)` to create a new message.
  */
 export const AccessDeniedSchema: GenMessage<AccessDenied> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 7);
+  messageDesc(file_salto_nebula_event_v1_types, 8);
 
 /**
  * The reason for the access denial.
@@ -340,7 +384,7 @@ export enum AccessDenied_Reason {
  * Describes the enum salto.nebula.event.v1.AccessDenied.Reason.
  */
 export const AccessDenied_ReasonSchema: GenEnum<AccessDenied_Reason> = /*@__PURE__*/
-  enumDesc(file_salto_nebula_event_v1_types, 7, 0);
+  enumDesc(file_salto_nebula_event_v1_types, 8, 0);
 
 /**
  * Event representing the detection of an access point that's been left open.
@@ -361,7 +405,7 @@ export type AccessPointLeftOpen = Message<"salto.nebula.event.v1.AccessPointLeft
  * Use `create(AccessPointLeftOpenSchema)` to create a new message.
  */
 export const AccessPointLeftOpenSchema: GenMessage<AccessPointLeftOpen> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 8);
+  messageDesc(file_salto_nebula_event_v1_types, 9);
 
 /**
  * Event representing the creation of an access right.
@@ -382,7 +426,7 @@ export type AccessRightCreated = Message<"salto.nebula.event.v1.AccessRightCreat
  * Use `create(AccessRightCreatedSchema)` to create a new message.
  */
 export const AccessRightCreatedSchema: GenMessage<AccessRightCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 9);
+  messageDesc(file_salto_nebula_event_v1_types, 10);
 
 /**
  * Event representing the update of an access right.
@@ -403,7 +447,7 @@ export type AccessRightUpdated = Message<"salto.nebula.event.v1.AccessRightUpdat
  * Use `create(AccessRightUpdatedSchema)` to create a new message.
  */
 export const AccessRightUpdatedSchema: GenMessage<AccessRightUpdated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 10);
+  messageDesc(file_salto_nebula_event_v1_types, 11);
 
 /**
  * Event representing the deletion of an access right.
@@ -424,7 +468,7 @@ export type AccessRightDeleted = Message<"salto.nebula.event.v1.AccessRightDelet
  * Use `create(AccessRightDeletedSchema)` to create a new message.
  */
 export const AccessRightDeletedSchema: GenMessage<AccessRightDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 11);
+  messageDesc(file_salto_nebula_event_v1_types, 12);
 
 /**
  * Event representing the creation of an access right's access point association.
@@ -452,7 +496,7 @@ export type AccessRightAccessPointCreated = Message<"salto.nebula.event.v1.Acces
  * Use `create(AccessRightAccessPointCreatedSchema)` to create a new message.
  */
 export const AccessRightAccessPointCreatedSchema: GenMessage<AccessRightAccessPointCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 12);
+  messageDesc(file_salto_nebula_event_v1_types, 13);
 
 /**
  * Event representing the creation of multiple access right's access points association.
@@ -480,7 +524,7 @@ export type AccessRightAccessPointsBatchCreated = Message<"salto.nebula.event.v1
  * Use `create(AccessRightAccessPointsBatchCreatedSchema)` to create a new message.
  */
 export const AccessRightAccessPointsBatchCreatedSchema: GenMessage<AccessRightAccessPointsBatchCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 13);
+  messageDesc(file_salto_nebula_event_v1_types, 14);
 
 /**
  * Event representing the deletion of an access right's access point association.
@@ -508,7 +552,7 @@ export type AccessRightAccessPointDeleted = Message<"salto.nebula.event.v1.Acces
  * Use `create(AccessRightAccessPointDeletedSchema)` to create a new message.
  */
 export const AccessRightAccessPointDeletedSchema: GenMessage<AccessRightAccessPointDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 14);
+  messageDesc(file_salto_nebula_event_v1_types, 15);
 
 /**
  * Event representing the deletion of multiple access right's access point association.
@@ -536,7 +580,7 @@ export type AccessRightAccessPointsBatchDeleted = Message<"salto.nebula.event.v1
  * Use `create(AccessRightAccessPointsBatchDeletedSchema)` to create a new message.
  */
 export const AccessRightAccessPointsBatchDeletedSchema: GenMessage<AccessRightAccessPointsBatchDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 15);
+  messageDesc(file_salto_nebula_event_v1_types, 16);
 
 /**
  * Event representing the creation of a user.
@@ -557,7 +601,7 @@ export type UserCreated = Message<"salto.nebula.event.v1.UserCreated"> & {
  * Use `create(UserCreatedSchema)` to create a new message.
  */
 export const UserCreatedSchema: GenMessage<UserCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 16);
+  messageDesc(file_salto_nebula_event_v1_types, 17);
 
 /**
  * Event representing the update of a user.
@@ -578,7 +622,7 @@ export type UserUpdated = Message<"salto.nebula.event.v1.UserUpdated"> & {
  * Use `create(UserUpdatedSchema)` to create a new message.
  */
 export const UserUpdatedSchema: GenMessage<UserUpdated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 17);
+  messageDesc(file_salto_nebula_event_v1_types, 18);
 
 /**
  * Event representing the block of a user.
@@ -599,7 +643,7 @@ export type UserBlocked = Message<"salto.nebula.event.v1.UserBlocked"> & {
  * Use `create(UserBlockedSchema)` to create a new message.
  */
 export const UserBlockedSchema: GenMessage<UserBlocked> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 18);
+  messageDesc(file_salto_nebula_event_v1_types, 19);
 
 /**
  * Event representing the unblock of a user.
@@ -620,7 +664,7 @@ export type UserUnblocked = Message<"salto.nebula.event.v1.UserUnblocked"> & {
  * Use `create(UserUnblockedSchema)` to create a new message.
  */
 export const UserUnblockedSchema: GenMessage<UserUnblocked> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 19);
+  messageDesc(file_salto_nebula_event_v1_types, 20);
 
 /**
  * Event representing the deletion of a user.
@@ -641,7 +685,7 @@ export type UserDeleted = Message<"salto.nebula.event.v1.UserDeleted"> & {
  * Use `create(UserDeletedSchema)` to create a new message.
  */
 export const UserDeletedSchema: GenMessage<UserDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 20);
+  messageDesc(file_salto_nebula_event_v1_types, 21);
 
 /**
  * Event representing the creation of a user's access right association.
@@ -669,7 +713,7 @@ export type UserAccessRightCreated = Message<"salto.nebula.event.v1.UserAccessRi
  * Use `create(UserAccessRightCreatedSchema)` to create a new message.
  */
 export const UserAccessRightCreatedSchema: GenMessage<UserAccessRightCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 21);
+  messageDesc(file_salto_nebula_event_v1_types, 22);
 
 /**
  * Event representing the update of a user's access right association.
@@ -697,7 +741,7 @@ export type UserAccessRightUpdated = Message<"salto.nebula.event.v1.UserAccessRi
  * Use `create(UserAccessRightUpdatedSchema)` to create a new message.
  */
 export const UserAccessRightUpdatedSchema: GenMessage<UserAccessRightUpdated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 22);
+  messageDesc(file_salto_nebula_event_v1_types, 23);
 
 /**
  * Event representing the deletion of a user's access right association.
@@ -725,7 +769,7 @@ export type UserAccessRightDeleted = Message<"salto.nebula.event.v1.UserAccessRi
  * Use `create(UserAccessRightDeletedSchema)` to create a new message.
  */
 export const UserAccessRightDeletedSchema: GenMessage<UserAccessRightDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 23);
+  messageDesc(file_salto_nebula_event_v1_types, 24);
 
 /**
  * Event representing the assignment of a user's card key.
@@ -753,7 +797,7 @@ export type CardKeyAssigned = Message<"salto.nebula.event.v1.CardKeyAssigned"> &
  * Use `create(CardKeyAssignedSchema)` to create a new message.
  */
 export const CardKeyAssignedSchema: GenMessage<CardKeyAssigned> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 24);
+  messageDesc(file_salto_nebula_event_v1_types, 25);
 
 /**
  * Event representing the cancelation of a user's card key.
@@ -781,7 +825,7 @@ export type CardKeyCanceled = Message<"salto.nebula.event.v1.CardKeyCanceled"> &
  * Use `create(CardKeyCanceledSchema)` to create a new message.
  */
 export const CardKeyCanceledSchema: GenMessage<CardKeyCanceled> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 25);
+  messageDesc(file_salto_nebula_event_v1_types, 26);
 
 /**
  * Event representing the assignment of a user's app key.
@@ -809,7 +853,7 @@ export type AppKeyAssigned = Message<"salto.nebula.event.v1.AppKeyAssigned"> & {
  * Use `create(AppKeyAssignedSchema)` to create a new message.
  */
 export const AppKeyAssignedSchema: GenMessage<AppKeyAssigned> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 26);
+  messageDesc(file_salto_nebula_event_v1_types, 27);
 
 /**
  * Event representing the cancelation of a user's app key.
@@ -837,7 +881,7 @@ export type AppKeyCanceled = Message<"salto.nebula.event.v1.AppKeyCanceled"> & {
  * Use `create(AppKeyCanceledSchema)` to create a new message.
  */
 export const AppKeyCanceledSchema: GenMessage<AppKeyCanceled> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 27);
+  messageDesc(file_salto_nebula_event_v1_types, 28);
 
 /**
  * Event representing the assignment of a user's wallet key.
@@ -865,7 +909,7 @@ export type WalletKeyAssigned = Message<"salto.nebula.event.v1.WalletKeyAssigned
  * Use `create(WalletKeyAssignedSchema)` to create a new message.
  */
 export const WalletKeyAssignedSchema: GenMessage<WalletKeyAssigned> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 28);
+  messageDesc(file_salto_nebula_event_v1_types, 29);
 
 /**
  * Event representing the cancelation of a user's wallet key.
@@ -893,7 +937,7 @@ export type WalletKeyCanceled = Message<"salto.nebula.event.v1.WalletKeyCanceled
  * Use `create(WalletKeyCanceledSchema)` to create a new message.
  */
 export const WalletKeyCanceledSchema: GenMessage<WalletKeyCanceled> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 29);
+  messageDesc(file_salto_nebula_event_v1_types, 30);
 
 /**
  * Event representing the move in of a unit.
@@ -914,7 +958,7 @@ export type UnitMovedIn = Message<"salto.nebula.event.v1.UnitMovedIn"> & {
  * Use `create(UnitMovedInSchema)` to create a new message.
  */
 export const UnitMovedInSchema: GenMessage<UnitMovedIn> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 30);
+  messageDesc(file_salto_nebula_event_v1_types, 31);
 
 /**
  * Event representing the move out of a unit.
@@ -935,7 +979,7 @@ export type UnitMovedOut = Message<"salto.nebula.event.v1.UnitMovedOut"> & {
  * Use `create(UnitMovedOutSchema)` to create a new message.
  */
 export const UnitMovedOutSchema: GenMessage<UnitMovedOut> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 31);
+  messageDesc(file_salto_nebula_event_v1_types, 32);
 
 /**
  * Event representing the creation of a unit.
@@ -956,7 +1000,7 @@ export type UnitCreated = Message<"salto.nebula.event.v1.UnitCreated"> & {
  * Use `create(UnitCreatedSchema)` to create a new message.
  */
 export const UnitCreatedSchema: GenMessage<UnitCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 32);
+  messageDesc(file_salto_nebula_event_v1_types, 33);
 
 /**
  * Event representing the update of a unit.
@@ -977,7 +1021,7 @@ export type UnitUpdated = Message<"salto.nebula.event.v1.UnitUpdated"> & {
  * Use `create(UnitUpdatedSchema)` to create a new message.
  */
 export const UnitUpdatedSchema: GenMessage<UnitUpdated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 33);
+  messageDesc(file_salto_nebula_event_v1_types, 34);
 
 /**
  * Event representing the deletion of a unit.
@@ -998,7 +1042,7 @@ export type UnitDeleted = Message<"salto.nebula.event.v1.UnitDeleted"> & {
  * Use `create(UnitDeletedSchema)` to create a new message.
  */
 export const UnitDeletedSchema: GenMessage<UnitDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 34);
+  messageDesc(file_salto_nebula_event_v1_types, 35);
 
 /**
  * Event representing the creation of an emergency key.
@@ -1019,7 +1063,7 @@ export type EmergencyKeyCreated = Message<"salto.nebula.event.v1.EmergencyKeyCre
  * Use `create(EmergencyKeyCreatedSchema)` to create a new message.
  */
 export const EmergencyKeyCreatedSchema: GenMessage<EmergencyKeyCreated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 35);
+  messageDesc(file_salto_nebula_event_v1_types, 36);
 
 /**
  * Event representing the update of an emergency key.
@@ -1040,7 +1084,7 @@ export type EmergencyKeyUpdated = Message<"salto.nebula.event.v1.EmergencyKeyUpd
  * Use `create(EmergencyKeyUpdatedSchema)` to create a new message.
  */
 export const EmergencyKeyUpdatedSchema: GenMessage<EmergencyKeyUpdated> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 36);
+  messageDesc(file_salto_nebula_event_v1_types, 37);
 
 /**
  * Event representing the deletion of an emergency key.
@@ -1061,7 +1105,7 @@ export type EmergencyKeyDeleted = Message<"salto.nebula.event.v1.EmergencyKeyDel
  * Use `create(EmergencyKeyDeletedSchema)` to create a new message.
  */
 export const EmergencyKeyDeletedSchema: GenMessage<EmergencyKeyDeleted> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 37);
+  messageDesc(file_salto_nebula_event_v1_types, 38);
 
 /**
  * Event representing the assignment of a user's electronic key.
@@ -1089,7 +1133,7 @@ export type ElectronicKeyAssigned = Message<"salto.nebula.event.v1.ElectronicKey
  * Use `create(ElectronicKeyAssignedSchema)` to create a new message.
  */
 export const ElectronicKeyAssignedSchema: GenMessage<ElectronicKeyAssigned> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 38);
+  messageDesc(file_salto_nebula_event_v1_types, 39);
 
 /**
  * Event representing the cancelation of a user's electronic key.
@@ -1117,5 +1161,5 @@ export type ElectronicKeyCanceled = Message<"salto.nebula.event.v1.ElectronicKey
  * Use `create(ElectronicKeyCanceledSchema)` to create a new message.
  */
 export const ElectronicKeyCanceledSchema: GenMessage<ElectronicKeyCanceled> = /*@__PURE__*/
-  messageDesc(file_salto_nebula_event_v1_types, 39);
+  messageDesc(file_salto_nebula_event_v1_types, 40);
 
