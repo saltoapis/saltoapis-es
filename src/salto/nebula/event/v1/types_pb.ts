@@ -441,6 +441,13 @@ export class AccessDenied extends Message<AccessDenied> {
    */
   user?: User;
 
+  /**
+   * The reason for the access denial.
+   *
+   * @generated from field: salto.nebula.event.v1.AccessDenied.Reason reason = 3;
+   */
+  reason = AccessDenied_Reason.UNSPECIFIED;
+
   constructor(data?: PartialMessage<AccessDenied>) {
     super();
     proto3.util.initPartial(data, this);
@@ -451,6 +458,7 @@ export class AccessDenied extends Message<AccessDenied> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
+    { no: 3, name: "reason", kind: "enum", T: proto3.getEnumType(AccessDenied_Reason) },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessDenied {
@@ -469,6 +477,24 @@ export class AccessDenied extends Message<AccessDenied> {
     return proto3.util.equals(AccessDenied, a, b);
   }
 }
+
+/**
+ * The reason for the access denial.
+ *
+ * @generated from enum salto.nebula.event.v1.AccessDenied.Reason
+ */
+export enum AccessDenied_Reason {
+  /**
+   * The reason is not specified.
+   *
+   * @generated from enum value: REASON_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+}
+// Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
+proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
+  { no: 0, name: "REASON_UNSPECIFIED" },
+]);
 
 /**
  * Event representing the detection of an access point that's been left open.
