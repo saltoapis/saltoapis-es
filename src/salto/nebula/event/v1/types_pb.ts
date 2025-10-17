@@ -446,7 +446,7 @@ export class AccessDenied extends Message<AccessDenied> {
    *
    * @generated from field: salto.nebula.event.v1.AccessDenied.Reason reason = 3;
    */
-  reason = AccessDenied_Reason.UNSPECIFIED;
+  reason = AccessDenied_Reason.REASON_UNSPECIFIED;
 
   constructor(data?: PartialMessage<AccessDenied>) {
     super();
@@ -489,11 +489,19 @@ export enum AccessDenied_Reason {
    *
    * @generated from enum value: REASON_UNSPECIFIED = 0;
    */
-  UNSPECIFIED = 0,
+  REASON_UNSPECIFIED = 0,
+
+  /**
+   * The presented credential has expired.
+   *
+   * @generated from enum value: CREDENTIAL_EXPIRED = 1;
+   */
+  CREDENTIAL_EXPIRED = 1,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
 proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
   { no: 0, name: "REASON_UNSPECIFIED" },
+  { no: 1, name: "CREDENTIAL_EXPIRED" },
 ]);
 
 /**
