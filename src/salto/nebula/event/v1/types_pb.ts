@@ -4,7 +4,7 @@
 // @ts-nocheck
 
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
-import { Message, proto3 } from "@bufbuild/protobuf";
+import { Message, proto3, Value } from "@bufbuild/protobuf";
 import { AppKey, CardKey, ElectronicKey, Passcode, User, WalletKey } from "@saltoapis/nebula-user-v1";
 import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
@@ -51,6 +51,97 @@ export class Principal extends Message<Principal> {
 
   static equals(a: Principal | PlainMessage<Principal> | undefined, b: Principal | PlainMessage<Principal> | undefined): boolean {
     return proto3.util.equals(Principal, a, b);
+  }
+}
+
+/**
+ * A reusable container that holds the previous values of any fields that were
+ * changed during an update operation. This message is designed to be generic
+ * and can be included in any resource update event (for example,
+ * `AccessPointUpdated`, `UserUpdated`, …) to provide a clear and explicit
+ * diff of what was modified.
+ *
+ * @generated from message salto.nebula.event.v1.PreviousValues
+ */
+export class PreviousValues extends Message<PreviousValues> {
+  /**
+   * A map where the key is the field name of the changed attribute (for
+   * example, "display_name") and the value is the field's value before the
+   * update was applied. Only fields that were actually changed will be present
+   * in this map.
+   *
+   * @generated from field: repeated salto.nebula.event.v1.PreviousValues.ValuesEntry values = 1;
+   */
+  values: PreviousValues_ValuesEntry[] = [];
+
+  constructor(data?: PartialMessage<PreviousValues>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.PreviousValues";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "values", kind: "message", T: PreviousValues_ValuesEntry, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PreviousValues {
+    return new PreviousValues().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PreviousValues {
+    return new PreviousValues().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PreviousValues {
+    return new PreviousValues().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: PreviousValues | PlainMessage<PreviousValues> | undefined, b: PreviousValues | PlainMessage<PreviousValues> | undefined): boolean {
+    return proto3.util.equals(PreviousValues, a, b);
+  }
+}
+
+/**
+ * @generated from message salto.nebula.event.v1.PreviousValues.ValuesEntry
+ */
+export class PreviousValues_ValuesEntry extends Message<PreviousValues_ValuesEntry> {
+  /**
+   * @generated from field: string key = 1;
+   */
+  key = "";
+
+  /**
+   * @generated from field: google.protobuf.Value value = 2;
+   */
+  value?: Value;
+
+  constructor(data?: PartialMessage<PreviousValues_ValuesEntry>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.PreviousValues.ValuesEntry";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "key", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "value", kind: "message", T: Value },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PreviousValues_ValuesEntry {
+    return new PreviousValues_ValuesEntry().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PreviousValues_ValuesEntry {
+    return new PreviousValues_ValuesEntry().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PreviousValues_ValuesEntry {
+    return new PreviousValues_ValuesEntry().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: PreviousValues_ValuesEntry | PlainMessage<PreviousValues_ValuesEntry> | undefined, b: PreviousValues_ValuesEntry | PlainMessage<PreviousValues_ValuesEntry> | undefined): boolean {
+    return proto3.util.equals(PreviousValues_ValuesEntry, a, b);
   }
 }
 
