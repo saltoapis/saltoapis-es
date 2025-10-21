@@ -922,6 +922,13 @@ export class AccessRightAccessPointCreated extends Message<AccessRightAccessPoin
    */
   accessPoint?: AccessPoint;
 
+  /**
+   * The actor who created the access right's access point association.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AccessRightAccessPointCreated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -932,6 +939,7 @@ export class AccessRightAccessPointCreated extends Message<AccessRightAccessPoin
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_right", kind: "message", T: AccessRight },
     { no: 2, name: "access_point", kind: "message", T: AccessPoint },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightAccessPointCreated {
@@ -971,6 +979,13 @@ export class AccessRightAccessPointsBatchCreated extends Message<AccessRightAcce
    */
   accessPoints: AccessPoint[] = [];
 
+  /**
+   * The actor who created the multiple access rights access points association.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AccessRightAccessPointsBatchCreated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -981,6 +996,7 @@ export class AccessRightAccessPointsBatchCreated extends Message<AccessRightAcce
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_right", kind: "message", T: AccessRight },
     { no: 2, name: "access_points", kind: "message", T: AccessPoint, repeated: true },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightAccessPointsBatchCreated {
@@ -1020,6 +1036,13 @@ export class AccessRightAccessPointDeleted extends Message<AccessRightAccessPoin
    */
   accessPoint?: AccessPoint;
 
+  /**
+   * The actor who deleted the access right's access point association.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AccessRightAccessPointDeleted>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1030,6 +1053,7 @@ export class AccessRightAccessPointDeleted extends Message<AccessRightAccessPoin
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_right", kind: "message", T: AccessRight },
     { no: 2, name: "access_point", kind: "message", T: AccessPoint },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightAccessPointDeleted {
@@ -1069,6 +1093,13 @@ export class AccessRightAccessPointsBatchDeleted extends Message<AccessRightAcce
    */
   accessPoints: AccessPoint[] = [];
 
+  /**
+   * The actor who deleted the multiple access rights access points association.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AccessRightAccessPointsBatchDeleted>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1079,6 +1110,7 @@ export class AccessRightAccessPointsBatchDeleted extends Message<AccessRightAcce
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_right", kind: "message", T: AccessRight },
     { no: 2, name: "access_points", kind: "message", T: AccessPoint, repeated: true },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightAccessPointsBatchDeleted {
@@ -1111,6 +1143,13 @@ export class UserCreated extends Message<UserCreated> {
    */
   user?: User;
 
+  /**
+   * The actor who created the user.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserCreated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1120,6 +1159,7 @@ export class UserCreated extends Message<UserCreated> {
   static readonly typeName = "salto.nebula.event.v1.UserCreated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserCreated {
@@ -1152,6 +1192,13 @@ export class UserUpdated extends Message<UserUpdated> {
    */
   user?: User;
 
+  /**
+   * The actor who updated the user.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1161,6 +1208,7 @@ export class UserUpdated extends Message<UserUpdated> {
   static readonly typeName = "salto.nebula.event.v1.UserUpdated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserUpdated {
@@ -1193,6 +1241,13 @@ export class UserBlocked extends Message<UserBlocked> {
    */
   user?: User;
 
+  /**
+   * The actor who blocked the user.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserBlocked>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1202,6 +1257,7 @@ export class UserBlocked extends Message<UserBlocked> {
   static readonly typeName = "salto.nebula.event.v1.UserBlocked";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserBlocked {
@@ -1234,6 +1290,13 @@ export class UserUnblocked extends Message<UserUnblocked> {
    */
   user?: User;
 
+  /**
+   * The actor who unblocked the user.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserUnblocked>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1243,6 +1306,7 @@ export class UserUnblocked extends Message<UserUnblocked> {
   static readonly typeName = "salto.nebula.event.v1.UserUnblocked";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserUnblocked {
@@ -1275,6 +1339,13 @@ export class UserDeleted extends Message<UserDeleted> {
    */
   user?: User;
 
+  /**
+   * The actor who deleted the user.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserDeleted>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1284,6 +1355,7 @@ export class UserDeleted extends Message<UserDeleted> {
   static readonly typeName = "salto.nebula.event.v1.UserDeleted";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserDeleted {
@@ -1323,6 +1395,13 @@ export class UserAccessRightCreated extends Message<UserAccessRightCreated> {
    */
   accessRight?: AccessRight;
 
+  /**
+   * The actor who created the user access right association.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserAccessRightCreated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1333,6 +1412,7 @@ export class UserAccessRightCreated extends Message<UserAccessRightCreated> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "access_right", kind: "message", T: AccessRight },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserAccessRightCreated {
@@ -1372,6 +1452,13 @@ export class UserAccessRightUpdated extends Message<UserAccessRightUpdated> {
    */
   accessRight?: AccessRight;
 
+  /**
+   * The actor who updated the user access right association.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserAccessRightUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1382,6 +1469,7 @@ export class UserAccessRightUpdated extends Message<UserAccessRightUpdated> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "access_right", kind: "message", T: AccessRight },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserAccessRightUpdated {
@@ -1421,6 +1509,13 @@ export class UserAccessRightDeleted extends Message<UserAccessRightDeleted> {
    */
   accessRight?: AccessRight;
 
+  /**
+   * The actor who deleted the user access right association.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UserAccessRightDeleted>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1431,6 +1526,7 @@ export class UserAccessRightDeleted extends Message<UserAccessRightDeleted> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "access_right", kind: "message", T: AccessRight },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserAccessRightDeleted {
