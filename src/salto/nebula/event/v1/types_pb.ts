@@ -606,6 +606,53 @@ export class AccessDenied extends Message<AccessDenied> {
    */
   reason = AccessDenied_Reason.REASON_UNSPECIFIED;
 
+  /**
+   * The credential type used to attempt access to the access point.
+   *
+   * @generated from oneof salto.nebula.event.v1.AccessDenied.credential
+   */
+  credential: {
+    /**
+     * The emergency key used to attempt access to the access point.
+     *
+     * @generated from field: salto.nebula.emergencykey.v1.EmergencyKey emergency_key = 4;
+     */
+    value: EmergencyKey;
+    case: "emergencyKey";
+  } | {
+    /**
+     * The card key used to attempt access to the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.CardKey card_key = 5;
+     */
+    value: CardKey;
+    case: "cardKey";
+  } | {
+    /**
+     * The app key used to attempt access to the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.AppKey app_key = 6;
+     */
+    value: AppKey;
+    case: "appKey";
+  } | {
+    /**
+     * The wallet key used to attempt access to the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.WalletKey wallet_key = 7;
+     */
+    value: WalletKey;
+    case: "walletKey";
+  } | {
+    /**
+     * The passcode used to attempt access to the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.Passcode passcode = 8;
+     */
+    value: Passcode;
+    case: "passcode";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
   constructor(data?: PartialMessage<AccessDenied>) {
     super();
     proto3.util.initPartial(data, this);
@@ -617,6 +664,11 @@ export class AccessDenied extends Message<AccessDenied> {
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
     { no: 3, name: "reason", kind: "enum", T: proto3.getEnumType(AccessDenied_Reason) },
+    { no: 4, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
+    { no: 5, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
+    { no: 6, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
+    { no: 7, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
+    { no: 8, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessDenied {
