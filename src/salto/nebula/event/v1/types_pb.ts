@@ -1901,6 +1901,13 @@ export class UnitMovedIn extends Message<UnitMovedIn> {
    */
   unit?: Unit;
 
+  /**
+   * The actor who performed the move in of a unit.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UnitMovedIn>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1910,6 +1917,7 @@ export class UnitMovedIn extends Message<UnitMovedIn> {
   static readonly typeName = "salto.nebula.event.v1.UnitMovedIn";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "unit", kind: "message", T: Unit },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitMovedIn {
@@ -1942,6 +1950,13 @@ export class UnitMovedOut extends Message<UnitMovedOut> {
    */
   unit?: Unit;
 
+  /**
+   * The actor who performed the move out of a unit.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UnitMovedOut>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1951,6 +1966,7 @@ export class UnitMovedOut extends Message<UnitMovedOut> {
   static readonly typeName = "salto.nebula.event.v1.UnitMovedOut";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "unit", kind: "message", T: Unit },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitMovedOut {
@@ -1983,6 +1999,13 @@ export class UnitCreated extends Message<UnitCreated> {
    */
   unit?: Unit;
 
+  /**
+   * The actor who created the unit.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UnitCreated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1992,6 +2015,7 @@ export class UnitCreated extends Message<UnitCreated> {
   static readonly typeName = "salto.nebula.event.v1.UnitCreated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "unit", kind: "message", T: Unit },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitCreated {
@@ -2024,6 +2048,13 @@ export class UnitUpdated extends Message<UnitUpdated> {
    */
   unit?: Unit;
 
+  /**
+   * The actor who updated the unit.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UnitUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2033,6 +2064,7 @@ export class UnitUpdated extends Message<UnitUpdated> {
   static readonly typeName = "salto.nebula.event.v1.UnitUpdated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "unit", kind: "message", T: Unit },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitUpdated {
@@ -2065,6 +2097,13 @@ export class UnitDeleted extends Message<UnitDeleted> {
    */
   unit?: Unit;
 
+  /**
+   * The actor who updated the unit.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<UnitDeleted>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2074,6 +2113,7 @@ export class UnitDeleted extends Message<UnitDeleted> {
   static readonly typeName = "salto.nebula.event.v1.UnitDeleted";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "unit", kind: "message", T: Unit },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitDeleted {
