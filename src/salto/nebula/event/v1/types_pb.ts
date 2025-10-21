@@ -1566,6 +1566,13 @@ export class CardKeyAssigned extends Message<CardKeyAssigned> {
    */
   cardKey?: CardKey;
 
+  /**
+   * The actor who assigned a user's card key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<CardKeyAssigned>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1576,6 +1583,7 @@ export class CardKeyAssigned extends Message<CardKeyAssigned> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "card_key", kind: "message", T: CardKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CardKeyAssigned {
@@ -1615,6 +1623,13 @@ export class CardKeyCanceled extends Message<CardKeyCanceled> {
    */
   cardKey?: CardKey;
 
+  /**
+   * The actor who canceled a user's card key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<CardKeyCanceled>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1625,6 +1640,7 @@ export class CardKeyCanceled extends Message<CardKeyCanceled> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "card_key", kind: "message", T: CardKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CardKeyCanceled {
@@ -1664,6 +1680,13 @@ export class AppKeyAssigned extends Message<AppKeyAssigned> {
    */
   appKey?: AppKey;
 
+  /**
+   * The actor who assigned a user's app key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AppKeyAssigned>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1674,6 +1697,7 @@ export class AppKeyAssigned extends Message<AppKeyAssigned> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "app_key", kind: "message", T: AppKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AppKeyAssigned {
@@ -1713,6 +1737,13 @@ export class AppKeyCanceled extends Message<AppKeyCanceled> {
    */
   appKey?: AppKey;
 
+  /**
+   * The actor who canceled a user's app key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<AppKeyCanceled>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1723,6 +1754,7 @@ export class AppKeyCanceled extends Message<AppKeyCanceled> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "app_key", kind: "message", T: AppKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AppKeyCanceled {
@@ -1762,6 +1794,13 @@ export class WalletKeyAssigned extends Message<WalletKeyAssigned> {
    */
   walletKey?: WalletKey;
 
+  /**
+   * The actor who assigned a user's wallet key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<WalletKeyAssigned>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1772,6 +1811,7 @@ export class WalletKeyAssigned extends Message<WalletKeyAssigned> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "wallet_key", kind: "message", T: WalletKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): WalletKeyAssigned {
@@ -1811,6 +1851,13 @@ export class WalletKeyCanceled extends Message<WalletKeyCanceled> {
    */
   walletKey?: WalletKey;
 
+  /**
+   * The actor who canceled a user's wallet key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<WalletKeyCanceled>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1821,6 +1868,7 @@ export class WalletKeyCanceled extends Message<WalletKeyCanceled> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "wallet_key", kind: "message", T: WalletKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): WalletKeyCanceled {
@@ -2058,6 +2106,13 @@ export class EmergencyKeyCreated extends Message<EmergencyKeyCreated> {
    */
   emergencyKey?: EmergencyKey;
 
+  /**
+   * The actor who created the Emergency Key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<EmergencyKeyCreated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2067,6 +2122,7 @@ export class EmergencyKeyCreated extends Message<EmergencyKeyCreated> {
   static readonly typeName = "salto.nebula.event.v1.EmergencyKeyCreated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "emergency_key", kind: "message", T: EmergencyKey },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmergencyKeyCreated {
@@ -2099,6 +2155,13 @@ export class EmergencyKeyUpdated extends Message<EmergencyKeyUpdated> {
    */
   emergencyKey?: EmergencyKey;
 
+  /**
+   * The actor who updated the Emergency Key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<EmergencyKeyUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2108,6 +2171,7 @@ export class EmergencyKeyUpdated extends Message<EmergencyKeyUpdated> {
   static readonly typeName = "salto.nebula.event.v1.EmergencyKeyUpdated";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "emergency_key", kind: "message", T: EmergencyKey },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmergencyKeyUpdated {
@@ -2140,6 +2204,13 @@ export class EmergencyKeyDeleted extends Message<EmergencyKeyDeleted> {
    */
   emergencyKey?: EmergencyKey;
 
+  /**
+   * The actor who deleted the Emergency Key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<EmergencyKeyDeleted>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2149,6 +2220,7 @@ export class EmergencyKeyDeleted extends Message<EmergencyKeyDeleted> {
   static readonly typeName = "salto.nebula.event.v1.EmergencyKeyDeleted";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "emergency_key", kind: "message", T: EmergencyKey },
+    { no: 2, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmergencyKeyDeleted {
@@ -2188,6 +2260,13 @@ export class ElectronicKeyAssigned extends Message<ElectronicKeyAssigned> {
    */
   electronicKey?: ElectronicKey;
 
+  /**
+   * The actor who assigned a user's electronic key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<ElectronicKeyAssigned>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2198,6 +2277,7 @@ export class ElectronicKeyAssigned extends Message<ElectronicKeyAssigned> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "electronic_key", kind: "message", T: ElectronicKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicKeyAssigned {
@@ -2237,6 +2317,13 @@ export class ElectronicKeyCanceled extends Message<ElectronicKeyCanceled> {
    */
   electronicKey?: ElectronicKey;
 
+  /**
+   * The actor who canceled a user's electronic key.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 3;
+   */
+  actor?: Principal;
+
   constructor(data?: PartialMessage<ElectronicKeyCanceled>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2247,6 +2334,7 @@ export class ElectronicKeyCanceled extends Message<ElectronicKeyCanceled> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "electronic_key", kind: "message", T: ElectronicKey },
+    { no: 3, name: "actor", kind: "message", T: Principal },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicKeyCanceled {
