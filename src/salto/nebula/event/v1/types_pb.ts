@@ -707,11 +707,20 @@ export enum AccessDenied_Reason {
    * @generated from enum value: CREDENTIAL_EXPIRED = 1;
    */
   CREDENTIAL_EXPIRED = 1,
+
+  /**
+   * The provided key is not yet activated.
+   * The key's activation date and time are scheduled for a future moment.
+   *
+   * @generated from enum value: CREDENTIAL_UNACTIVATED = 2;
+   */
+  CREDENTIAL_UNACTIVATED = 2,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
 proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
   { no: 0, name: "REASON_UNSPECIFIED" },
   { no: 1, name: "CREDENTIAL_EXPIRED" },
+  { no: 2, name: "CREDENTIAL_UNACTIVATED" },
 ]);
 
 /**
