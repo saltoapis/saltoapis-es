@@ -214,6 +214,13 @@ export class AccessPointUpdated extends Message<AccessPointUpdated> {
    */
   actor?: Principal;
 
+  /**
+   * The previous values of the access point's fields that were changed.
+   *
+   * @generated from field: salto.nebula.event.v1.PreviousValues previous_values = 3;
+   */
+  previousValues?: PreviousValues;
+
   constructor(data?: PartialMessage<AccessPointUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -224,6 +231,7 @@ export class AccessPointUpdated extends Message<AccessPointUpdated> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "actor", kind: "message", T: Principal },
+    { no: 3, name: "previous_values", kind: "message", T: PreviousValues },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointUpdated {
