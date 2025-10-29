@@ -10,6 +10,7 @@ import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
+import { Controller } from "@saltoapis/nebula-controller-v1";
 
 /**
  * Represents the principal entity that initiated or performed an action
@@ -2408,6 +2409,134 @@ export class ElectronicKeyCanceled extends Message<ElectronicKeyCanceled> {
 
   static equals(a: ElectronicKeyCanceled | PlainMessage<ElectronicKeyCanceled> | undefined, b: ElectronicKeyCanceled | PlainMessage<ElectronicKeyCanceled> | undefined): boolean {
     return proto3.util.equals(ElectronicKeyCanceled, a, b);
+  }
+}
+
+/**
+ * Event representing access being granted to a user.
+ * This event indicates that a user's key was successfully validated and
+ * access permissions were activated.
+ *
+ * This event is typically used in scenarios where the device manages
+ * multiple destinations and cannot determine the user's final action,
+ * or where it represents a general access grant rather than a
+ * specific door unlock.
+ *
+ * This differs from `AccessPointUnlocked` in that:
+ * - It can enable multiple relays/destinations simultaneously (for example:
+ *   elevator buttons for authorized floors).
+ * - It represents the **granting** of access rights rather than the
+ *   **physical unlocking** of a specific access point.
+ *
+ * Common use cases:
+ * - Controllers (elevators, multi-door, garages): enabling floor buttons,
+ *   granting access to multiple doors, or triggering a garage door.
+ * - Access points (future): could be used for specific access point
+ *   scenarios that fit this "grant" model.
+ *
+ * @generated from message salto.nebula.event.v1.AccessGranted
+ */
+export class AccessGranted extends Message<AccessGranted> {
+  /**
+   * The device that granted access.
+   *
+   * @generated from oneof salto.nebula.event.v1.AccessGranted.device
+   */
+  device: {
+    /**
+     * The controller that granted access.
+     *
+     * @generated from field: salto.nebula.controller.v1.Controller controller = 1;
+     */
+    value: Controller;
+    case: "controller";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
+  /**
+   * The user who was granted access, if any.
+   *
+   * @generated from field: salto.nebula.user.v1.User user = 2;
+   */
+  user?: User;
+
+  /**
+   * The credential type used for access.
+   *
+   * @generated from oneof salto.nebula.event.v1.AccessGranted.credential
+   */
+  credential: {
+    /**
+     * The emergency key used.
+     *
+     * @generated from field: salto.nebula.emergencykey.v1.EmergencyKey emergency_key = 3;
+     */
+    value: EmergencyKey;
+    case: "emergencyKey";
+  } | {
+    /**
+     * The card key used.
+     *
+     * @generated from field: salto.nebula.user.v1.CardKey card_key = 4;
+     */
+    value: CardKey;
+    case: "cardKey";
+  } | {
+    /**
+     * The app key used.
+     *
+     * @generated from field: salto.nebula.user.v1.AppKey app_key = 5;
+     */
+    value: AppKey;
+    case: "appKey";
+  } | {
+    /**
+     * The wallet key used.
+     *
+     * @generated from field: salto.nebula.user.v1.WalletKey wallet_key = 6;
+     */
+    value: WalletKey;
+    case: "walletKey";
+  } | {
+    /**
+     * The passcode used.
+     *
+     * @generated from field: salto.nebula.user.v1.Passcode passcode = 7;
+     */
+    value: Passcode;
+    case: "passcode";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
+  constructor(data?: PartialMessage<AccessGranted>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.AccessGranted";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "controller", kind: "message", T: Controller, oneof: "device" },
+    { no: 2, name: "user", kind: "message", T: User },
+    { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
+    { no: 4, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
+    { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
+    { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
+    { no: 7, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessGranted {
+    return new AccessGranted().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AccessGranted {
+    return new AccessGranted().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AccessGranted {
+    return new AccessGranted().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AccessGranted | PlainMessage<AccessGranted> | undefined, b: AccessGranted | PlainMessage<AccessGranted> | undefined): boolean {
+    return proto3.util.equals(AccessGranted, a, b);
   }
 }
 
