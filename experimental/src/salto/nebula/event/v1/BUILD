@@ -8,6 +8,7 @@ load_rules(
     internal_dependencies = [
         '//experimental/src/salto/nebula/accesspoint/v1',
         '//experimental/src/salto/nebula/accessright/v1',
+        '//experimental/src/salto/nebula/controller/v1',
         '//experimental/src/salto/nebula/emergencykey/v1',
         '//experimental/src/salto/nebula/unit/v1',
         '//experimental/src/salto/nebula/user/v1',
