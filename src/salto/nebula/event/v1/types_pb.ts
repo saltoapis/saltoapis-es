@@ -842,6 +842,13 @@ export class AccessRightUpdated extends Message<AccessRightUpdated> {
    */
   actor?: Principal;
 
+  /**
+   * The previous values of the access right's fields that were changed.
+   *
+   * @generated from field: salto.nebula.event.v1.PreviousValues previous_values = 3;
+   */
+  previousValues?: PreviousValues;
+
   constructor(data?: PartialMessage<AccessRightUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -852,6 +859,7 @@ export class AccessRightUpdated extends Message<AccessRightUpdated> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_right", kind: "message", T: AccessRight },
     { no: 2, name: "actor", kind: "message", T: Principal },
+    { no: 3, name: "previous_values", kind: "message", T: PreviousValues },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessRightUpdated {
@@ -1217,6 +1225,13 @@ export class UserUpdated extends Message<UserUpdated> {
    */
   actor?: Principal;
 
+  /**
+   * The previous values of the user's fields that were changed.
+   *
+   * @generated from field: salto.nebula.event.v1.PreviousValues previous_values = 3;
+   */
+  previousValues?: PreviousValues;
+
   constructor(data?: PartialMessage<UserUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1227,6 +1242,7 @@ export class UserUpdated extends Message<UserUpdated> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User },
     { no: 2, name: "actor", kind: "message", T: Principal },
+    { no: 3, name: "previous_values", kind: "message", T: PreviousValues },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserUpdated {
@@ -2073,6 +2089,13 @@ export class UnitUpdated extends Message<UnitUpdated> {
    */
   actor?: Principal;
 
+  /**
+   * The previous values of the unit's fields that were changed.
+   *
+   * @generated from field: salto.nebula.event.v1.PreviousValues previous_values = 3;
+   */
+  previousValues?: PreviousValues;
+
   constructor(data?: PartialMessage<UnitUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2083,6 +2106,7 @@ export class UnitUpdated extends Message<UnitUpdated> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "unit", kind: "message", T: Unit },
     { no: 2, name: "actor", kind: "message", T: Principal },
+    { no: 3, name: "previous_values", kind: "message", T: PreviousValues },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UnitUpdated {
@@ -2220,6 +2244,13 @@ export class EmergencyKeyUpdated extends Message<EmergencyKeyUpdated> {
    */
   actor?: Principal;
 
+  /**
+   * The previous values of the emergency key's fields that were changed.
+   *
+   * @generated from field: salto.nebula.event.v1.PreviousValues previous_values = 3;
+   */
+  previousValues?: PreviousValues;
+
   constructor(data?: PartialMessage<EmergencyKeyUpdated>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2230,6 +2261,7 @@ export class EmergencyKeyUpdated extends Message<EmergencyKeyUpdated> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "emergency_key", kind: "message", T: EmergencyKey },
     { no: 2, name: "actor", kind: "message", T: Principal },
+    { no: 3, name: "previous_values", kind: "message", T: PreviousValues },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): EmergencyKeyUpdated {
