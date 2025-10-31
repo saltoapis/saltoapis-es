@@ -368,6 +368,13 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
     case: "passcode";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
+  /**
+   * Indicates the direction of passage for this unlock event.
+   *
+   * @generated from field: salto.nebula.event.v1.AccessPointUnlocked.Direction direction = 8;
+   */
+  direction = AccessPointUnlocked_Direction.DIRECTION_UNSPECIFIED;
+
   constructor(data?: PartialMessage<AccessPointUnlocked>) {
     super();
     proto3.util.initPartial(data, this);
@@ -383,6 +390,7 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
     { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
     { no: 7, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
+    { no: 8, name: "direction", kind: "enum", T: proto3.getEnumType(AccessPointUnlocked_Direction) },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointUnlocked {
@@ -401,6 +409,40 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
     return proto3.util.equals(AccessPointUnlocked, a, b);
   }
 }
+
+/**
+ * Direction of passage through an access point.
+ *
+ * @generated from enum salto.nebula.event.v1.AccessPointUnlocked.Direction
+ */
+export enum AccessPointUnlocked_Direction {
+  /**
+   * Direction is not specified. Used for remote opening.
+   *
+   * @generated from enum value: DIRECTION_UNSPECIFIED = 0;
+   */
+  DIRECTION_UNSPECIFIED = 0,
+
+  /**
+   * Credential used to gain access from outside to inside.
+   *
+   * @generated from enum value: ENTRY = 1;
+   */
+  ENTRY = 1,
+
+  /**
+   * Credential used to leave from inside to outside.
+   *
+   * @generated from enum value: EXIT = 2;
+   */
+  EXIT = 2,
+}
+// Retrieve enum metadata with: proto3.getEnumType(AccessPointUnlocked_Direction)
+proto3.util.setEnumType(AccessPointUnlocked_Direction, "salto.nebula.event.v1.AccessPointUnlocked.Direction", [
+  { no: 0, name: "DIRECTION_UNSPECIFIED" },
+  { no: 1, name: "ENTRY" },
+  { no: 2, name: "EXIT" },
+]);
 
 /**
  * Event representing the locking of an access point.
