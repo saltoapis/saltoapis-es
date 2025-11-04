@@ -15,17 +15,26 @@ import { Controller } from "@saltoapis/nebula-controller-v1";
 /**
  * Represents the principal entity that initiated or performed an action
  * associated with an event. This could be a user, a service account, or
- * potentially other types of entities in the future.
+ * potentially other types of entities in the future. Implemented as a
+ * `oneof` to support future expansion—new principal types may be added over
+ * time without breaking compatibility. Clients should be prepared to handle
+ * additional actor variants as the API evolves.
  *
  * @generated from message salto.nebula.event.v1.Principal
  */
 export class Principal extends Message<Principal> {
   /**
-   * A user represents a human actor within the system.
-   *
-   * @generated from field: salto.nebula.user.v1.User user = 1;
+   * @generated from oneof salto.nebula.event.v1.Principal.actor
    */
-  user?: User;
+  actor: {
+    /**
+     * A user represents a human actor within the system.
+     *
+     * @generated from field: salto.nebula.user.v1.User user = 1;
+     */
+    value: User;
+    case: "user";
+  } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<Principal>) {
     super();
@@ -35,7 +44,7 @@ export class Principal extends Message<Principal> {
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "salto.nebula.event.v1.Principal";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "user", kind: "message", T: User },
+    { no: 1, name: "user", kind: "message", T: User, oneof: "actor" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Principal {
