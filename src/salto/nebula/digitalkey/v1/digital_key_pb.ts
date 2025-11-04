@@ -6,6 +6,7 @@
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3, Timestamp } from "@bufbuild/protobuf";
 import { Color } from "@saltoapis/type";
+import { AppKeyTechnology } from "@saltoapis/nebula-type";
 
 /**
  * The digital key object
@@ -646,6 +647,13 @@ export class DigitalKeyAccessPoint extends Message<DigitalKeyAccessPoint> {
    */
   deviceId = "";
 
+  /**
+   * Supported technologies used by the app to open an access point.
+   *
+   * @generated from field: repeated salto.nebula.type.AppKeyTechnology supported_technologies = 4;
+   */
+  supportedTechnologies: AppKeyTechnology[] = [];
+
   constructor(data?: PartialMessage<DigitalKeyAccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -657,6 +665,7 @@ export class DigitalKeyAccessPoint extends Message<DigitalKeyAccessPoint> {
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "display_name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 4, name: "supported_technologies", kind: "enum", T: proto3.getEnumType(AppKeyTechnology), repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DigitalKeyAccessPoint {
