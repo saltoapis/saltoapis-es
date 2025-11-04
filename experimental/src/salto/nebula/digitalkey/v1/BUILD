@@ -7,6 +7,7 @@ load_rules(
     lib_name = 'nebula-digitalkey-v1',
     internal_dependencies = [
         '//experimental/src/salto/longrunning/v1',
+        '//experimental/src/salto/nebula/type',
         '//experimental/src/salto/type',
     ],
     extra_info = {
