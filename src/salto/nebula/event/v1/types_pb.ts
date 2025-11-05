@@ -778,12 +778,20 @@ export enum AccessDenied_Reason {
    * @generated from enum value: CREDENTIAL_UNACTIVATED = 2;
    */
   CREDENTIAL_UNACTIVATED = 2,
+
+  /**
+   * The provided credential does not have the required access rights.
+   *
+   * @generated from enum value: CREDENTIAL_LACKS_ACCESS_RIGHTS = 3;
+   */
+  CREDENTIAL_LACKS_ACCESS_RIGHTS = 3,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
 proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
   { no: 0, name: "REASON_UNSPECIFIED" },
   { no: 1, name: "CREDENTIAL_EXPIRED" },
   { no: 2, name: "CREDENTIAL_UNACTIVATED" },
+  { no: 3, name: "CREDENTIAL_LACKS_ACCESS_RIGHTS" },
 ]);
 
 /**
