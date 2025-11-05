@@ -1144,6 +1144,14 @@ export class ReadKeyResponse extends Message<ReadKeyResponse> {
      */
     value: string;
     case: "cardKey";
+  } | {
+    /**
+     * Electronic key reference, belonging to a user.
+     *
+     * @generated from field: string electronic_key = 2;
+     */
+    value: string;
+    case: "electronicKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   /**
@@ -1178,6 +1186,7 @@ export class ReadKeyResponse extends Message<ReadKeyResponse> {
   static readonly typeName = "salto.nebula.encoder.v1.ReadKeyResponse";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "card_key", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "key" },
+    { no: 2, name: "electronic_key", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "key" },
     { no: 3, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "key_id" },
     { no: 4, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "key_id" },
   ]);
