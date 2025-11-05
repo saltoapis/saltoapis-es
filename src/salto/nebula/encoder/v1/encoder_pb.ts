@@ -1146,6 +1146,29 @@ export class ReadKeyResponse extends Message<ReadKeyResponse> {
     case: "cardKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
+  /**
+   * ID of the key that was read.
+   *
+   * @generated from oneof salto.nebula.encoder.v1.ReadKeyResponse.key_id
+   */
+  keyId: {
+    /**
+     * UID of the key that was read.
+     *
+     * @generated from field: string uid = 3;
+     */
+    value: string;
+    case: "uid";
+  } | {
+    /**
+     * Device ID of the key that was read.
+     *
+     * @generated from field: string device_id = 4;
+     */
+    value: string;
+    case: "deviceId";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
   constructor(data?: PartialMessage<ReadKeyResponse>) {
     super();
     proto3.util.initPartial(data, this);
@@ -1155,6 +1178,8 @@ export class ReadKeyResponse extends Message<ReadKeyResponse> {
   static readonly typeName = "salto.nebula.encoder.v1.ReadKeyResponse";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "card_key", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "key" },
+    { no: 3, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "key_id" },
+    { no: 4, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "key_id" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ReadKeyResponse {
