@@ -83,9 +83,9 @@ export class PreviousValues extends Message<PreviousValues> {
    * update was applied. Only fields that were actually changed will be present
    * in this map.
    *
-   * @generated from field: repeated salto.nebula.event.v1.PreviousValues.ValuesEntry values = 1;
+   * @generated from field: map<string, google.protobuf.Value> values = 1;
    */
-  values: PreviousValues_ValuesEntry[] = [];
+  values: { [key: string]: Value } = {};
 
   constructor(data?: PartialMessage<PreviousValues>) {
     super();
@@ -95,7 +95,7 @@ export class PreviousValues extends Message<PreviousValues> {
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "salto.nebula.event.v1.PreviousValues";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "values", kind: "message", T: PreviousValues_ValuesEntry, repeated: true },
+    { no: 1, name: "values", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "message", T: Value} },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PreviousValues {
@@ -112,49 +112,6 @@ export class PreviousValues extends Message<PreviousValues> {
 
   static equals(a: PreviousValues | PlainMessage<PreviousValues> | undefined, b: PreviousValues | PlainMessage<PreviousValues> | undefined): boolean {
     return proto3.util.equals(PreviousValues, a, b);
-  }
-}
-
-/**
- * @generated from message salto.nebula.event.v1.PreviousValues.ValuesEntry
- */
-export class PreviousValues_ValuesEntry extends Message<PreviousValues_ValuesEntry> {
-  /**
-   * @generated from field: string key = 1;
-   */
-  key = "";
-
-  /**
-   * @generated from field: google.protobuf.Value value = 2;
-   */
-  value?: Value;
-
-  constructor(data?: PartialMessage<PreviousValues_ValuesEntry>) {
-    super();
-    proto3.util.initPartial(data, this);
-  }
-
-  static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "salto.nebula.event.v1.PreviousValues.ValuesEntry";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "key", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "value", kind: "message", T: Value },
-  ]);
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PreviousValues_ValuesEntry {
-    return new PreviousValues_ValuesEntry().fromBinary(bytes, options);
-  }
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PreviousValues_ValuesEntry {
-    return new PreviousValues_ValuesEntry().fromJson(jsonValue, options);
-  }
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PreviousValues_ValuesEntry {
-    return new PreviousValues_ValuesEntry().fromJsonString(jsonString, options);
-  }
-
-  static equals(a: PreviousValues_ValuesEntry | PlainMessage<PreviousValues_ValuesEntry> | undefined, b: PreviousValues_ValuesEntry | PlainMessage<PreviousValues_ValuesEntry> | undefined): boolean {
-    return proto3.util.equals(PreviousValues_ValuesEntry, a, b);
   }
 }
 

@@ -278,9 +278,9 @@ export class ErrorInfo extends Message<ErrorInfo> {
    * {"instanceLimitPerRequest": "100"}, if the client exceeds the number of
    * instances that can be created in a single (batch) request.
    *
-   * @generated from field: repeated google.rpc.ErrorInfo.MetadataEntry metadata = 3;
+   * @generated from field: map<string, string> metadata = 3;
    */
-  metadata: ErrorInfo_MetadataEntry[] = [];
+  metadata: { [key: string]: string } = {};
 
   constructor(data?: PartialMessage<ErrorInfo>) {
     super();
@@ -292,7 +292,7 @@ export class ErrorInfo extends Message<ErrorInfo> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "reason", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "domain", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 3, name: "metadata", kind: "message", T: ErrorInfo_MetadataEntry, repeated: true },
+    { no: 3, name: "metadata", kind: "map", K: 9 /* ScalarType.STRING */, V: {kind: "scalar", T: 9 /* ScalarType.STRING */} },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ErrorInfo {
@@ -309,49 +309,6 @@ export class ErrorInfo extends Message<ErrorInfo> {
 
   static equals(a: ErrorInfo | PlainMessage<ErrorInfo> | undefined, b: ErrorInfo | PlainMessage<ErrorInfo> | undefined): boolean {
     return proto3.util.equals(ErrorInfo, a, b);
-  }
-}
-
-/**
- * @generated from message google.rpc.ErrorInfo.MetadataEntry
- */
-export class ErrorInfo_MetadataEntry extends Message<ErrorInfo_MetadataEntry> {
-  /**
-   * @generated from field: string key = 1;
-   */
-  key = "";
-
-  /**
-   * @generated from field: string value = 2;
-   */
-  value = "";
-
-  constructor(data?: PartialMessage<ErrorInfo_MetadataEntry>) {
-    super();
-    proto3.util.initPartial(data, this);
-  }
-
-  static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "google.rpc.ErrorInfo.MetadataEntry";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "key", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-    { no: 2, name: "value", kind: "scalar", T: 9 /* ScalarType.STRING */ },
-  ]);
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ErrorInfo_MetadataEntry {
-    return new ErrorInfo_MetadataEntry().fromBinary(bytes, options);
-  }
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): ErrorInfo_MetadataEntry {
-    return new ErrorInfo_MetadataEntry().fromJson(jsonValue, options);
-  }
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): ErrorInfo_MetadataEntry {
-    return new ErrorInfo_MetadataEntry().fromJsonString(jsonString, options);
-  }
-
-  static equals(a: ErrorInfo_MetadataEntry | PlainMessage<ErrorInfo_MetadataEntry> | undefined, b: ErrorInfo_MetadataEntry | PlainMessage<ErrorInfo_MetadataEntry> | undefined): boolean {
-    return proto3.util.equals(ErrorInfo_MetadataEntry, a, b);
   }
 }
 
