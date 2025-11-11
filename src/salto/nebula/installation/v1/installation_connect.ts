@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AcceptInstallationOwnershipRequest, AcceptInstallationOwnershipResponse, ApplyCouponRequest, ApplyCouponResponse, BillingInfo, CreateInstallationRequest, CreatePaymentAuthorizationRequest, CreatePolicyRequest, DeleteInstallationRequest, DeletePolicyRequest, GetInstallationRequest, GetPolicyRequest, GetSubscriptionRequest, Installation, ListInstallationsRequest, ListInstallationsResponse, ListInvoicesRequest, ListInvoicesResponse, ListPoliciesRequest, ListPoliciesResponse, PaymentAuthorization, PaymentMethod, Policy, Subscription, TestPermissionsRequest, TestPermissionsResponse, TransferInstallationOwnershipRequest, TransferInstallationOwnershipResponse, UnapplyCouponRequest, UnapplyCouponResponse, UndeleteInstallationRequest, UpdateBillingInfoRequest, UpdateCardRequest, UpdateCardResponse, UpdateInstallationRequest, UpdatePaymentMethodRequest, UpdatePolicyRequest } from "./installation_pb";
+import { AcceptInstallationOwnershipRequest, AcceptInstallationOwnershipResponse, ApplyCouponRequest, ApplyCouponResponse, BillingInfo, CreateInstallationRequest, CreatePaymentAuthorizationRequest, CreatePolicyRequest, DeleteInstallationRequest, DeletePolicyRequest, GenerateAuthorizationTokenRequest, GenerateAuthorizationTokenResponse, GetInstallationRequest, GetPolicyRequest, GetSubscriptionRequest, Installation, ListInstallationsRequest, ListInstallationsResponse, ListInvoicesRequest, ListInvoicesResponse, ListPoliciesRequest, ListPoliciesResponse, PaymentAuthorization, PaymentMethod, Policy, Subscription, TestPermissionsRequest, TestPermissionsResponse, TransferInstallationOwnershipRequest, TransferInstallationOwnershipResponse, UnapplyCouponRequest, UnapplyCouponResponse, UndeleteInstallationRequest, UpdateBillingInfoRequest, UpdateCardRequest, UpdateCardResponse, UpdateInstallationRequest, UpdatePaymentMethodRequest, UpdatePolicyRequest } from "./installation_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -314,6 +314,28 @@ export const InstallationService = {
       name: "UnapplyCoupon",
       I: UnapplyCouponRequest,
       O: UnapplyCouponResponse,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Generate authorization token for uninitialized devices
+     *
+     * Generates an authorization token for a client application to use when
+     * connecting to an uninitialized Salto device. The token contains the
+     * necessary security material for the client to validate the device's
+     * identity. This prevents man-in-the-middle (MITM) attacks and ensures the
+     * client is connecting to a genuine Salto device during its initial
+     * initialization.
+     *
+     * This token is distinct from other `GenerateAuthorizationToken` methods, it
+     * is used only for the client to validate the device and does not contain a
+     * client certificate for authenticating the client itself.
+     *
+     * @generated from rpc salto.nebula.installation.v1.InstallationService.GenerateAuthorizationToken
+     */
+    generateAuthorizationToken: {
+      name: "GenerateAuthorizationToken",
+      I: GenerateAuthorizationTokenRequest,
+      O: GenerateAuthorizationTokenResponse,
       kind: MethodKind.Unary,
     },
   }
