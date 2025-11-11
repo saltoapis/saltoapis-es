@@ -2,3 +2,4 @@
 bazel-*
 dist/
 node_modules/
+experimental/node_modules/
