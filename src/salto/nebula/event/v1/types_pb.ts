@@ -742,6 +742,22 @@ export enum AccessDenied_Reason {
    * @generated from enum value: CREDENTIAL_LACKS_ACCESS_RIGHTS = 3;
    */
   CREDENTIAL_LACKS_ACCESS_RIGHTS = 3,
+
+  /**
+   * The provided credential is not permitted on this calendar day.
+   * Example: access attempted on a weekend for a weekday-only schedule
+   *
+   * @generated from enum value: CREDENTIAL_OUTSIDE_CALENDAR_DAY = 4;
+   */
+  CREDENTIAL_OUTSIDE_CALENDAR_DAY = 4,
+
+  /**
+   * The provided credential is not permitted within the allowed time window.
+   * Example: access attempted at 8 PM for a 9 AM-5 PM schedule).
+   *
+   * @generated from enum value: CREDENTIAL_OUTSIDE_TIME_WINDOW = 5;
+   */
+  CREDENTIAL_OUTSIDE_TIME_WINDOW = 5,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
 proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
@@ -749,6 +765,8 @@ proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied
   { no: 1, name: "CREDENTIAL_EXPIRED" },
   { no: 2, name: "CREDENTIAL_UNACTIVATED" },
   { no: 3, name: "CREDENTIAL_LACKS_ACCESS_RIGHTS" },
+  { no: 4, name: "CREDENTIAL_OUTSIDE_CALENDAR_DAY" },
+  { no: 5, name: "CREDENTIAL_OUTSIDE_TIME_WINDOW" },
 ]);
 
 /**
