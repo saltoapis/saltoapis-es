@@ -335,6 +335,14 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
      */
     value: Passcode;
     case: "passcode";
+  } | {
+    /**
+     * The electronic key used to unlock the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 9;
+     */
+    value: ElectronicKey;
+    case: "electronicKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   /**
@@ -359,6 +367,7 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
     { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
     { no: 7, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
+    { no: 9, name: "electronic_key", kind: "message", T: ElectronicKey, oneof: "credential" },
     { no: 8, name: "direction", kind: "enum", T: proto3.getEnumType(AccessPointUnlocked_Direction) },
   ]);
 
@@ -478,6 +487,14 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
      */
     value: Passcode;
     case: "passcode";
+  } | {
+    /**
+     * The electronic key used to lock the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 8;
+     */
+    value: ElectronicKey;
+    case: "electronicKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessPointLocked>) {
@@ -495,6 +512,7 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
     { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
     { no: 7, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
+    { no: 8, name: "electronic_key", kind: "message", T: ElectronicKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointLocked {
@@ -671,6 +689,14 @@ export class AccessDenied extends Message<AccessDenied> {
      */
     value: Passcode;
     case: "passcode";
+  } | {
+    /**
+     * The electronic key used to attempt access to the access point.
+     *
+     * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 9;
+     */
+    value: ElectronicKey;
+    case: "electronicKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessDenied>) {
@@ -689,6 +715,7 @@ export class AccessDenied extends Message<AccessDenied> {
     { no: 6, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
     { no: 7, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
     { no: 8, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
+    { no: 9, name: "electronic_key", kind: "message", T: ElectronicKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessDenied {
@@ -2573,6 +2600,14 @@ export class AccessGranted extends Message<AccessGranted> {
      */
     value: Passcode;
     case: "passcode";
+  } | {
+    /**
+     * The electronic key used.
+     *
+     * @generated from field: salto.nebula.user.v1.ElectronicKey electronic_key = 8;
+     */
+    value: ElectronicKey;
+    case: "electronicKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<AccessGranted>) {
@@ -2590,6 +2625,7 @@ export class AccessGranted extends Message<AccessGranted> {
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
     { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
     { no: 7, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
+    { no: 8, name: "electronic_key", kind: "message", T: ElectronicKey, oneof: "credential" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessGranted {
