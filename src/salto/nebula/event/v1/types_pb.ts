@@ -785,6 +785,16 @@ export enum AccessDenied_Reason {
    * @generated from enum value: CREDENTIAL_OUTSIDE_TIME_WINDOW = 5;
    */
   CREDENTIAL_OUTSIDE_TIME_WINDOW = 5,
+
+  /**
+   * The provided access code is invalid. Access codes are numeric passcodes
+   * entered by users on a device keypad to gain access.
+   * An access code may be considered invalid either if the entered digits
+   * are incorrect or if the code does not meet required formatting rules.
+   *
+   * @generated from enum value: INVALID_ACCESS_CODE = 6;
+   */
+  INVALID_ACCESS_CODE = 6,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
 proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
@@ -794,6 +804,7 @@ proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied
   { no: 3, name: "CREDENTIAL_LACKS_ACCESS_RIGHTS" },
   { no: 4, name: "CREDENTIAL_OUTSIDE_CALENDAR_DAY" },
   { no: 5, name: "CREDENTIAL_OUTSIDE_TIME_WINDOW" },
+  { no: 6, name: "INVALID_ACCESS_CODE" },
 ]);
 
 /**
