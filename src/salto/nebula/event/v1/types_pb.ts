@@ -8,9 +8,9 @@ import { Message, proto3, Value } from "@bufbuild/protobuf";
 import { AppKey, CardKey, ElectronicKey, Passcode, User, WalletKey } from "@saltoapis/nebula-user-v1";
 import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
+import { Controller } from "@saltoapis/nebula-controller-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
-import { Controller } from "@saltoapis/nebula-controller-v1";
 
 /**
  * Represents the principal entity that initiated or performed an action
@@ -624,11 +624,27 @@ export class AccessPointClosed extends Message<AccessPointClosed> {
  */
 export class AccessDenied extends Message<AccessDenied> {
   /**
-   * Access denied by the access point.
+   * The source that denied access.
    *
-   * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
+   * @generated from oneof salto.nebula.event.v1.AccessDenied.source
    */
-  accessPoint?: AccessPoint;
+  source: {
+    /**
+     * Access denied by the access point.
+     *
+     * @generated from field: salto.nebula.accesspoint.v1.AccessPoint access_point = 1;
+     */
+    value: AccessPoint;
+    case: "accessPoint";
+  } | {
+    /**
+     * Access denied by the controller.
+     *
+     * @generated from field: salto.nebula.controller.v1.Controller controller = 10;
+     */
+    value: Controller;
+    case: "controller";
+  } | { case: undefined; value?: undefined } = { case: undefined };
 
   /**
    * The user whose access was rejected.
@@ -707,7 +723,8 @@ export class AccessDenied extends Message<AccessDenied> {
   static readonly runtime: typeof proto3 = proto3;
   static readonly typeName = "salto.nebula.event.v1.AccessDenied";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "access_point", kind: "message", T: AccessPoint },
+    { no: 1, name: "access_point", kind: "message", T: AccessPoint, oneof: "source" },
+    { no: 10, name: "controller", kind: "message", T: Controller, oneof: "source" },
     { no: 2, name: "user", kind: "message", T: User },
     { no: 3, name: "reason", kind: "enum", T: proto3.getEnumType(AccessDenied_Reason) },
     { no: 4, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
