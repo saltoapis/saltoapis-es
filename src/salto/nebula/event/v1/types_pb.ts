@@ -766,7 +766,10 @@ export enum AccessDenied_Reason {
   REASON_UNSPECIFIED = 0,
 
   /**
-   * The presented credential has expired.
+   * The presented credential has expired and is no longer valid.
+   * Example: the user's expiration date has passed.
+   * Example: the user's key has expired. To prevent this,
+   * renew the key before the installation's key-renewal-duration ends.
    *
    * @generated from enum value: CREDENTIAL_EXPIRED = 1;
    */
@@ -775,33 +778,38 @@ export enum AccessDenied_Reason {
   /**
    * The provided key is not yet activated.
    * The key's activation date and time are scheduled for a future moment.
+   * Example: the user's activation date has not yet been reached.
    *
    * @generated from enum value: CREDENTIAL_UNACTIVATED = 2;
    */
   CREDENTIAL_UNACTIVATED = 2,
 
   /**
-   * The provided credential does not have the required access rights.
+   * The provided credential does not have the required permission.
+   * Example: the user does not have permission to access the access point.
    *
-   * @generated from enum value: CREDENTIAL_LACKS_ACCESS_RIGHTS = 3;
+   * @generated from enum value: CREDENTIAL_LACKS_PERMISSION = 3;
    */
-  CREDENTIAL_LACKS_ACCESS_RIGHTS = 3,
+  CREDENTIAL_LACKS_PERMISSION = 3,
 
   /**
-   * The provided credential is not permitted on this calendar day.
-   * Example: access attempted on a weekend for a weekday-only schedule
+   * The provided credential is permitted within the allowed schedule
+   * but the permission is not activated at this time.
+   * Example: access attempted before the activation date of the permission.
+   * Example: access attempted after the expiration date of the permission.
    *
-   * @generated from enum value: CREDENTIAL_OUTSIDE_CALENDAR_DAY = 4;
+   * @generated from enum value: CREDENTIAL_PERMISSION_OUTSIDE_VALIDITY = 4;
    */
-  CREDENTIAL_OUTSIDE_CALENDAR_DAY = 4,
+  CREDENTIAL_PERMISSION_OUTSIDE_VALIDITY = 4,
 
   /**
-   * The provided credential is not permitted within the allowed time window.
+   * The provided credential is not permitted within the allowed schedule.
+   * Example: access attempted on a weekend for a weekday-only schedule.
    * Example: access attempted at 8 PM for a 9 AM-5 PM schedule).
    *
-   * @generated from enum value: CREDENTIAL_OUTSIDE_TIME_WINDOW = 5;
+   * @generated from enum value: CREDENTIAL_PERMISSION_OUTSIDE_SCHEDULE = 5;
    */
-  CREDENTIAL_OUTSIDE_TIME_WINDOW = 5,
+  CREDENTIAL_PERMISSION_OUTSIDE_SCHEDULE = 5,
 
   /**
    * The provided access code is invalid. Access codes are numeric passcodes
@@ -818,9 +826,9 @@ proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied
   { no: 0, name: "REASON_UNSPECIFIED" },
   { no: 1, name: "CREDENTIAL_EXPIRED" },
   { no: 2, name: "CREDENTIAL_UNACTIVATED" },
-  { no: 3, name: "CREDENTIAL_LACKS_ACCESS_RIGHTS" },
-  { no: 4, name: "CREDENTIAL_OUTSIDE_CALENDAR_DAY" },
-  { no: 5, name: "CREDENTIAL_OUTSIDE_TIME_WINDOW" },
+  { no: 3, name: "CREDENTIAL_LACKS_PERMISSION" },
+  { no: 4, name: "CREDENTIAL_PERMISSION_OUTSIDE_VALIDITY" },
+  { no: 5, name: "CREDENTIAL_PERMISSION_OUTSIDE_SCHEDULE" },
   { no: 6, name: "INVALID_ACCESS_CODE" },
 ]);
 
