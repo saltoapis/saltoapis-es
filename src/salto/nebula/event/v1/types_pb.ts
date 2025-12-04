@@ -788,9 +788,9 @@ export enum AccessDenied_Reason {
    * The provided credential does not have the required permission.
    * Example: the user does not have permission to access the access point.
    *
-   * @generated from enum value: CREDENTIAL_LACKS_PERMISSION = 3;
+   * @generated from enum value: CREDENTIAL_PERMISSION_INSUFFICIENT = 3;
    */
-  CREDENTIAL_LACKS_PERMISSION = 3,
+  CREDENTIAL_PERMISSION_INSUFFICIENT = 3,
 
   /**
    * The provided credential is permitted within the allowed schedule
@@ -820,16 +820,25 @@ export enum AccessDenied_Reason {
    * @generated from enum value: INVALID_ACCESS_CODE = 6;
    */
   INVALID_ACCESS_CODE = 6,
+
+  /**
+   * The device at which the credential was presented has insufficient battery level
+   * and cannot process the access request.
+   *
+   * @generated from enum value: DEVICE_BATTERY_INSUFFICIENT = 7;
+   */
+  DEVICE_BATTERY_INSUFFICIENT = 7,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
 proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
   { no: 0, name: "REASON_UNSPECIFIED" },
   { no: 1, name: "CREDENTIAL_EXPIRED" },
   { no: 2, name: "CREDENTIAL_UNACTIVATED" },
-  { no: 3, name: "CREDENTIAL_LACKS_PERMISSION" },
+  { no: 3, name: "CREDENTIAL_PERMISSION_INSUFFICIENT" },
   { no: 4, name: "CREDENTIAL_PERMISSION_OUTSIDE_VALIDITY" },
   { no: 5, name: "CREDENTIAL_PERMISSION_OUTSIDE_SCHEDULE" },
   { no: 6, name: "INVALID_ACCESS_CODE" },
+  { no: 7, name: "DEVICE_BATTERY_INSUFFICIENT" },
 ]);
 
 /**
