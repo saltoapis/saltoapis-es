@@ -68,14 +68,6 @@ export class ElectronicKey extends Message<ElectronicKey> {
   deviceMetadata?: DeviceMetadata;
 
   /**
-   * Indicates whether the battery of this electronic key is low, and needs
-   * replacing, or is normal and doesn't need replacing.
-   *
-   * @generated from field: bool low_battery = 7;
-   */
-  lowBattery = false;
-
-  /**
    * User associated with this electronic key.
    *
    * @generated from field: optional string user = 8;
@@ -96,7 +88,6 @@ export class ElectronicKey extends Message<ElectronicKey> {
     { no: 4, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 5, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 6, name: "device_metadata", kind: "message", T: DeviceMetadata },
-    { no: 7, name: "low_battery", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 8, name: "user", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
