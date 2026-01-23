@@ -12,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file salto/nebula/type/device_metadata.proto.
  */
 export const file_salto_nebula_type_device_metadata: GenFile = /*@__PURE__*/
-  fileDesc("CidzYWx0by9uZWJ1bGEvdHlwZS9kZXZpY2VfbWV0YWRhdGEucHJvdG8SEXNhbHRvLm5lYnVsYS50eXBlIqUCCg5EZXZpY2VNZXRhZGF0YRJGCg5jaXJjdWl0X2JvYXJkcxgBIAMoCzIuLnNhbHRvLm5lYnVsYS50eXBlLkRldmljZU1ldGFkYXRhLkNpcmN1aXRCb2FyZBrKAQoMQ2lyY3VpdEJvYXJkEioKEG1hbnVmYWN0dXJlX2RhdGUYAiABKAsyEC5zYWx0by50eXBlLkRhdGUSFQoNc2VyaWFsX251bWJlchgDIAEoCRJKCglmaXJtd2FyZXMYBCADKAsyNy5zYWx0by5uZWJ1bGEudHlwZS5EZXZpY2VNZXRhZGF0YS5DaXJjdWl0Qm9hcmQuRmlybXdhcmUaKwoIRmlybXdhcmUSDgoGbnVtYmVyGAEgASgJEg8KB3ZlcnNpb24YAiABKAlC3AEKGWNvbS5zYWx0b2FwaXMubmVidWxhLnR5cGVCE0RldmljZU1ldGFkYXRhUHJvdG9QAVpUZ2l0aHViLmNvbS9zYWx0b2FwaXMtaW50ZXJuYWwvc2FsdG9hcGlzLWdvL25lYnVsYS90eXBlL2RldmljZW1ldGFkYXRhO2RldmljZW1ldGFkYXRhqgIVU2FsdG9hcGlzLk5lYnVsYS5UeXBlygIVU2FsdG9hcGlzXE5lYnVsYVxUeXBl4gIhR1BCTWV0YWRhdGFcU2FsdG9hcGlzXE5lYnVsYVxUeXBlYgZwcm90bzM", [file_salto_type_date]);
+  fileDesc("CidzYWx0by9uZWJ1bGEvdHlwZS9kZXZpY2VfbWV0YWRhdGEucHJvdG8SEXNhbHRvLm5lYnVsYS50eXBlIrcCCg5EZXZpY2VNZXRhZGF0YRJGCg5jaXJjdWl0X2JvYXJkcxgBIAMoCzIuLnNhbHRvLm5lYnVsYS50eXBlLkRldmljZU1ldGFkYXRhLkNpcmN1aXRCb2FyZBrcAQoMQ2lyY3VpdEJvYXJkEioKEG1hbnVmYWN0dXJlX2RhdGUYAiABKAsyEC5zYWx0by50eXBlLkRhdGUSFQoNc2VyaWFsX251bWJlchgDIAEoCRJKCglmaXJtd2FyZXMYBCADKAsyNy5zYWx0by5uZWJ1bGEudHlwZS5EZXZpY2VNZXRhZGF0YS5DaXJjdWl0Qm9hcmQuRmlybXdhcmUaPQoIRmlybXdhcmUSDgoGbnVtYmVyGAEgASgJEg8KB3ZlcnNpb24YAiABKAkSEAoIcmV2aXNpb24YAyABKAlC3AEKGWNvbS5zYWx0b2FwaXMubmVidWxhLnR5cGVCE0RldmljZU1ldGFkYXRhUHJvdG9QAVpUZ2l0aHViLmNvbS9zYWx0b2FwaXMtaW50ZXJuYWwvc2FsdG9hcGlzLWdvL25lYnVsYS90eXBlL2RldmljZW1ldGFkYXRhO2RldmljZW1ldGFkYXRhqgIVU2FsdG9hcGlzLk5lYnVsYS5UeXBlygIVU2FsdG9hcGlzXE5lYnVsYVxUeXBl4gIhR1BCTWV0YWRhdGFcU2FsdG9hcGlzXE5lYnVsYVxUeXBlYgZwcm90bzM", [file_salto_type_date]);
 
 /**
  * Metadata contains information about a device. Most metadata is immutable.
@@ -89,6 +89,13 @@ export type DeviceMetadata_CircuitBoard_Firmware = Message<"salto.nebula.type.De
    * @generated from field: string version = 2;
    */
   version: string;
+
+  /**
+   * Firmware revision of a specific firmware number and version.
+   *
+   * @generated from field: string revision = 3;
+   */
+  revision: string;
 };
 
 /**

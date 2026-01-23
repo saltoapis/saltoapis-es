@@ -125,6 +125,13 @@ export class DeviceMetadata_CircuitBoard_Firmware extends Message<DeviceMetadata
    */
   version = "";
 
+  /**
+   * Firmware revision of a specific firmware number and version.
+   *
+   * @generated from field: string revision = 3;
+   */
+  revision = "";
+
   constructor(data?: PartialMessage<DeviceMetadata_CircuitBoard_Firmware>) {
     super();
     proto3.util.initPartial(data, this);
@@ -135,6 +142,7 @@ export class DeviceMetadata_CircuitBoard_Firmware extends Message<DeviceMetadata
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "number", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "version", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 3, name: "revision", kind: "scalar", T: 9 /* ScalarType.STRING */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DeviceMetadata_CircuitBoard_Firmware {
