@@ -7,7 +7,7 @@ for lib in ${libs[@]}; do
     lib_name=$(echo "${lib}" | sed -e "s/^dist\///g" | sed -e "s/\//-/g")
 
     echo "Publishing @saltoapis/${lib_name} package"
-    npm publish --registry https://npm.pkg.github.com/ "${lib}/"
+    npm publish --registry https://npm.pkg.github.com/ "${lib}/" --tag "latest"
     echo "Package published"
     echo ""
 done
