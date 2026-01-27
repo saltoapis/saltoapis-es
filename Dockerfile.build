@@ -1,14 +1,16 @@
-FROM node:19.9.0-bullseye
+FROM node:24.13.0-trixie
 
 # Install bazelisk & dev dependencies
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends moreutils gettext-base jq build-essential ca-certificates apt-transport-https curl cmake gnupg git software-properties-common && \
-    curl -L -o bazelisk https://github.com/bazelbuild/bazelisk/releases/download/v1.17.0/bazelisk-linux-amd64 && \
+    apt-get install -y --no-install-recommends moreutils gettext-base jq build-essential ca-certificates apt-transport-https curl cmake gnupg git && \
+    curl -L -o bazelisk https://github.com/bazelbuild/bazelisk/releases/download/v1.28.1/bazelisk-linux-amd64 && \
     chmod +x bazelisk && \
     cp bazelisk /usr/local/bin && \
     ln -s /usr/local/bin/bazelisk /usr/local/bin/bazel && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
+
+RUN npm install -g typescript@5.9.3 tsdown@0.20.1
 
 # copy current workspace
 COPY . /workspace

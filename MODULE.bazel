@@ -5,4 +5,4 @@ module(
 
 # skylib rules: 
 # Skylib is a library of Starlark functions for manipulating collections, file paths, and various other data types in the domain of Bazel build rules.
-bazel_dep(name = "bazel_skylib", version = "1.4.2")
+bazel_dep(name = "bazel_skylib", version = "1.9.0")
