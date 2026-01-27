@@ -9,7 +9,7 @@
     "url": "https://github.com/saltoapis/saltoapis-es"
   },
   "peerDependencies": {
-    "@bufbuild/protobuf": "^${BUFBUILD_PROTOBUF_VERSION}",
-    "@connectrpc/connect": "^${CONNECTRPC_CONNECT_VERSION}"${PACKAGE_DEPS}
+    "@bufbuild/protobuf": "${BUFBUILD_PROTOBUF_VERSION}",
+    "@connectrpc/connect": "${CONNECTRPC_CONNECT_VERSION}"${PACKAGE_DEPS}
   }
 }

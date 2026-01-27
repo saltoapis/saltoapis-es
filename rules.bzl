@@ -1,5 +1,4 @@
-load("//:es_metadata.bzl", "PROTOC_ES_VERSION", "PROTOC_CONNECT_ES_VERSION")
-load("//scripts:prepare.bzl", "project_name", "generate_project_files")
+load("//scripts:prepare.bzl", "generate_project_files", "generate_project_files_legacy")
 
 def load_rules(lib_name, internal_dependencies, extra_info):
     """A macro that loads common rules for all the packages
@@ -10,19 +9,37 @@ def load_rules(lib_name, internal_dependencies, extra_info):
         extra_info: additional information required by the following rules (Service(s) name(s))
     """
 
-    project_files = generate_project_files(lib_name, internal_dependencies, extra_info)
+    if extra_info['generator'] == 'es':
+        project_files = generate_project_files(lib_name, internal_dependencies, extra_info, "//:package.json")
 
-    native.genrule(
-        name = "build",
-        srcs = project_files,
-        outs = ["build.sh"],
-        # compile ts file, and copy them with the package.json to dist
-        cmd = '''
-            echo "set -e" >> $(OUTS)
-            echo "mkdir -p dist/{lib_name}" >> $(OUTS)
-            echo "(cd \"$$(dirname $(OUTS))\" && npx tsup index.ts --clean --format esm,cjs --dts)" >> $(OUTS)
-            echo "cp -R $$(dirname $(OUTS))/dist/* dist/{lib_name}" >> $(OUTS)
-            echo "cp -R $$(dirname $(OUTS))/package.json dist/{lib_name}" >> $(OUTS)
+        native.genrule(
+            name = "build",
+            srcs = project_files + ["//:tsconfig.json"],
+            outs = ["build.sh"],
+            cmd = '''
+                echo "set -e" >> $(OUTS)
+                echo "mkdir -p dist/{lib_name}" >> $(OUTS)
+                echo "cp $(execpath //:tsconfig.json) \"$$(dirname $(OUTS))\"" >> $(OUTS)
+                echo "(cd \"$$(dirname $(OUTS))\" && npx tsdown index.ts --clean --format esm,cjs --dts)" >> $(OUTS)
+                echo "cp -R $$(dirname $(OUTS))/dist/* dist/{lib_name}" >> $(OUTS)
+                echo "cp -R $$(dirname $(OUTS))/package.json dist/{lib_name}" >> $(OUTS)
             '''.format(lib_name = lib_name),
-        executable = True
-    )
+            executable = True
+        )
+    elif extra_info['generator'] == 'es-legacy':
+        project_files = generate_project_files_legacy(lib_name, internal_dependencies, extra_info, "//legacy:package.json")
+
+        native.genrule(
+            name = "build_legacy",
+            srcs = project_files + ["//legacy:tsconfig.json"],
+            outs = ["build.sh"],
+            cmd = '''
+                echo "set -e" >> $(OUTS)
+                echo "mkdir -p dist/{lib_name}" >> $(OUTS)
+                echo "cp $(execpath //legacy:tsconfig.json) \"$$(dirname $(OUTS))/tsconfig.json\"" >> $(OUTS)
+                echo "(cd \"$$(dirname $(OUTS))\" && npx tsdown index.ts --clean --format esm,cjs --dts)" >> $(OUTS)
+                echo "cp -R $$(dirname $(OUTS))/dist/* dist/{lib_name}" >> $(OUTS)
+                echo "cp -R $$(dirname $(OUTS))/package.json dist/{lib_name}" >> $(OUTS)
+            '''.format(lib_name = lib_name+"-legacy"),
+            executable = True
+        )
