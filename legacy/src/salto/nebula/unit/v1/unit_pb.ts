@@ -51,6 +51,15 @@ export class Unit extends Message<Unit> {
    */
   privacySettings?: Unit_PrivacySettings;
 
+  /**
+   * The resource names of the default access rights to be associated within this unit.
+   * For example: installations/surelock-homes-hq/access-rights/baskerville.
+   * A maximum of 5 access rights can be specified.
+   *
+   * @generated from field: repeated string default_access_rights = 6;
+   */
+  defaultAccessRights: string[] = [];
+
   constructor(data?: PartialMessage<Unit>) {
     super();
     proto3.util.initPartial(data, this);
@@ -64,6 +73,7 @@ export class Unit extends Message<Unit> {
     { no: 3, name: "move_in_time", kind: "message", T: Timestamp },
     { no: 4, name: "move_out_time", kind: "message", T: Timestamp },
     { no: 5, name: "privacy_settings", kind: "message", T: Unit_PrivacySettings },
+    { no: 6, name: "default_access_rights", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Unit {

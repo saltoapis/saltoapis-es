@@ -139,6 +139,20 @@ export class User extends Message<User> {
    */
   blocked = false;
 
+  /**
+   * The resource name of the manager resource that owns this user. A manager
+   * resource is any resource (such as a booking) that creates and governs the
+   * lifecycle of this user.
+   *
+   * Example: "installations/surelock-homes-hq/bookings/watson-family-booking"
+   *
+   * If set, this user is considered "managed" and cannot be modified directly.
+   * It behaves as a side-effect of the manager resource.
+   *
+   * @generated from field: optional string manager = 17;
+   */
+  manager?: string;
+
   constructor(data?: PartialMessage<User>) {
     super();
     proto3.util.initPartial(data, this);
@@ -163,6 +177,7 @@ export class User extends Message<User> {
     { no: 13, name: "wallet_key", kind: "message", T: WalletKey },
     { no: 15, name: "passcode", kind: "message", T: Passcode },
     { no: 14, name: "blocked", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 17, name: "manager", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): User {
@@ -256,6 +271,20 @@ export class UserAccessRight extends Message<UserAccessRight> {
    */
   expireTime?: Timestamp;
 
+  /**
+   * The resource name of the manager resource that owns this user access right. A manager
+   * resource is any resource (such as a booking) that creates and governs the
+   * lifecycle of this user access right.
+   *
+   * Example: "installations/surelock-homes-hq/bookings/watson-family-booking"
+   *
+   * If set, this user access right is considered "managed" and cannot be modified directly.
+   * It behaves as a side-effect of the manager resource.
+   *
+   * @generated from field: optional string manager = 8;
+   */
+  manager?: string;
+
   constructor(data?: PartialMessage<UserAccessRight>) {
     super();
     proto3.util.initPartial(data, this);
@@ -271,6 +300,7 @@ export class UserAccessRight extends Message<UserAccessRight> {
     { no: 5, name: "effective_schedules", kind: "message", T: Schedule, repeated: true },
     { no: 6, name: "activate_time", kind: "message", T: Timestamp, opt: true },
     { no: 7, name: "expire_time", kind: "message", T: Timestamp, opt: true },
+    { no: 8, name: "manager", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UserAccessRight {
