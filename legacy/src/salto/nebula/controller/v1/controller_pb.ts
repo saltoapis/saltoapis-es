@@ -117,6 +117,14 @@ export class Controller extends Message<Controller> {
    */
   lastEventTime?: Timestamp;
 
+  /**
+   * Enables or disables card key updates. This property is only relevant when
+   * the controller functions as a destination enabler.
+   *
+   * @generated from field: optional bool card_key_updater = 12;
+   */
+  cardKeyUpdater?: boolean;
+
   constructor(data?: PartialMessage<Controller>) {
     super();
     proto3.util.initPartial(data, this);
@@ -136,6 +144,7 @@ export class Controller extends Message<Controller> {
     { no: 8, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 9, name: "connected", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
     { no: 10, name: "last_event_time", kind: "message", T: Timestamp },
+    { no: 12, name: "card_key_updater", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Controller {
