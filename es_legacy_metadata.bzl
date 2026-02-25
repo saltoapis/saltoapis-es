@@ -52,6 +52,7 @@ VALE_VERSION="3.7.1"
 
 es_legacy_projects = [
     '//legacy/src/salto/nebula/accesspointgroup/v1',
+    '//legacy/src/salto/nebula/booking/v1',
     '//legacy/src/salto/nebula/destination/v1',
     '//legacy/src/salto/nebula/emergencykey/v1',
     '//legacy/src/salto/nebula/file/v1',
