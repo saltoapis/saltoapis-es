@@ -52,6 +52,7 @@ VALE_VERSION="3.7.1"
 
 es_projects = [
     '//src/salto/nebula/accesspointgroup/v1',
+    '//src/salto/nebula/booking/v1',
     '//src/salto/nebula/destination/v1',
     '//src/salto/nebula/emergencykey/v1',
     '//src/salto/nebula/file/v1',
