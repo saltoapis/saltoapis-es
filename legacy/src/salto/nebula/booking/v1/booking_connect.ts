@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { Booking, BookingUser, CheckInBookingRequest, CheckOutBookingRequest, CreateBookingRequest, CreateBookingUserRequest, DeleteBookingRequest, DeleteBookingUserRequest, GetBookingRequest, GetBookingUserRequest, ListBookingsRequest, ListBookingsResponse, ListBookingUsersRequest, ListBookingUsersResponse, UpdateBookingRequest, UpdateBookingUserRequest } from "./booking_pb";
+import { Booking, BookingUser, CheckInBookingRequest, CheckOutBookingRequest, CreateBookingRequest, CreateBookingUserRequest, DeleteBookingRequest, DeleteBookingUserRequest, GetBookingRequest, GetBookingUserRequest, ListBookingsRequest, ListBookingsResponse, ListBookingUsersRequest, ListBookingUsersResponse, UpdateBookingRequest } from "./booking_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -151,19 +151,6 @@ export const BookingService = {
       name: "ListBookingUsers",
       I: ListBookingUsersRequest,
       O: ListBookingUsersResponse,
-      kind: MethodKind.Unary,
-    },
-    /**
-     * Update a booking user
-     *
-     * Updates an existing booking's user association.
-     *
-     * @generated from rpc salto.nebula.booking.v1.BookingService.UpdateBookingUser
-     */
-    updateBookingUser: {
-      name: "UpdateBookingUser",
-      I: UpdateBookingUserRequest,
-      O: BookingUser,
       kind: MethodKind.Unary,
     },
     /**

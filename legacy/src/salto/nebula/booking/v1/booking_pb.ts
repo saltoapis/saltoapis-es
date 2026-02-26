@@ -849,55 +849,6 @@ export class ListBookingUsersResponse extends Message<ListBookingUsersResponse> 
 }
 
 /**
- * The request message for [`UpdateBookingUser`][salto.nebula.booking.v1.BookingService.UpdateBookingUser]
- *
- * @generated from message salto.nebula.booking.v1.UpdateBookingUserRequest
- */
-export class UpdateBookingUserRequest extends Message<UpdateBookingUserRequest> {
-  /**
-   * The booking's user resource which replaces the resource on the server.
-   *
-   * @generated from field: salto.nebula.booking.v1.BookingUser booking_user = 1;
-   */
-  bookingUser?: BookingUser;
-
-  /**
-   * The update mask applied to the resource.
-   *
-   * @generated from field: google.protobuf.FieldMask update_mask = 2;
-   */
-  updateMask?: FieldMask;
-
-  constructor(data?: PartialMessage<UpdateBookingUserRequest>) {
-    super();
-    proto3.util.initPartial(data, this);
-  }
-
-  static readonly runtime: typeof proto3 = proto3;
-  static readonly typeName = "salto.nebula.booking.v1.UpdateBookingUserRequest";
-  static readonly fields: FieldList = proto3.util.newFieldList(() => [
-    { no: 1, name: "booking_user", kind: "message", T: BookingUser },
-    { no: 2, name: "update_mask", kind: "message", T: FieldMask },
-  ]);
-
-  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateBookingUserRequest {
-    return new UpdateBookingUserRequest().fromBinary(bytes, options);
-  }
-
-  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateBookingUserRequest {
-    return new UpdateBookingUserRequest().fromJson(jsonValue, options);
-  }
-
-  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateBookingUserRequest {
-    return new UpdateBookingUserRequest().fromJsonString(jsonString, options);
-  }
-
-  static equals(a: UpdateBookingUserRequest | PlainMessage<UpdateBookingUserRequest> | undefined, b: UpdateBookingUserRequest | PlainMessage<UpdateBookingUserRequest> | undefined): boolean {
-    return proto3.util.equals(UpdateBookingUserRequest, a, b);
-  }
-}
-
-/**
  * The request message for [`DeleteBookingUser`][salto.nebula.booking.v1.BookingService.DeleteBookingUser]
  *
  * @generated from message salto.nebula.booking.v1.DeleteBookingUserRequest
