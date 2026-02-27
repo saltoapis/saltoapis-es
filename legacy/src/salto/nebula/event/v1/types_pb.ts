@@ -11,6 +11,7 @@ import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 import { Controller } from "@saltoapis/nebula-controller-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
+import { Booking } from "@saltoapis/nebula-booking-v1";
 
 /**
  * Represents the principal entity that initiated or performed an action
@@ -2687,6 +2688,104 @@ export class AccessGranted extends Message<AccessGranted> {
 
   static equals(a: AccessGranted | PlainMessage<AccessGranted> | undefined, b: AccessGranted | PlainMessage<AccessGranted> | undefined): boolean {
     return proto3.util.equals(AccessGranted, a, b);
+  }
+}
+
+/**
+ * Event representing the check-in of a booking.
+ *
+ * @generated from message salto.nebula.event.v1.BookingCheckedIn
+ */
+export class BookingCheckedIn extends Message<BookingCheckedIn> {
+  /**
+   * Booking checked in.
+   *
+   * @generated from field: salto.nebula.booking.v1.Booking booking = 1;
+   */
+  booking?: Booking;
+
+  /**
+   * The actor who performed the check-in of a booking.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
+  constructor(data?: PartialMessage<BookingCheckedIn>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.BookingCheckedIn";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "booking", kind: "message", T: Booking },
+    { no: 2, name: "actor", kind: "message", T: Principal },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BookingCheckedIn {
+    return new BookingCheckedIn().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BookingCheckedIn {
+    return new BookingCheckedIn().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BookingCheckedIn {
+    return new BookingCheckedIn().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BookingCheckedIn | PlainMessage<BookingCheckedIn> | undefined, b: BookingCheckedIn | PlainMessage<BookingCheckedIn> | undefined): boolean {
+    return proto3.util.equals(BookingCheckedIn, a, b);
+  }
+}
+
+/**
+ * Event representing the check-out of a booking.
+ *
+ * @generated from message salto.nebula.event.v1.BookingCheckedOut
+ */
+export class BookingCheckedOut extends Message<BookingCheckedOut> {
+  /**
+   * Booking checked out.
+   *
+   * @generated from field: salto.nebula.booking.v1.Booking booking = 1;
+   */
+  booking?: Booking;
+
+  /**
+   * The actor who performed the check-out of a booking.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 2;
+   */
+  actor?: Principal;
+
+  constructor(data?: PartialMessage<BookingCheckedOut>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.BookingCheckedOut";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "booking", kind: "message", T: Booking },
+    { no: 2, name: "actor", kind: "message", T: Principal },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BookingCheckedOut {
+    return new BookingCheckedOut().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BookingCheckedOut {
+    return new BookingCheckedOut().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BookingCheckedOut {
+    return new BookingCheckedOut().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BookingCheckedOut | PlainMessage<BookingCheckedOut> | undefined, b: BookingCheckedOut | PlainMessage<BookingCheckedOut> | undefined): boolean {
+    return proto3.util.equals(BookingCheckedOut, a, b);
   }
 }
 
