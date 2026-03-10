@@ -60,6 +60,22 @@ export class Unit extends Message<Unit> {
    */
   defaultAccessRights: string[] = [];
 
+  /**
+   * The resource name of the manager resource that currently controls this
+   * unit. A manager resource is any resource (such as a booking) that creates
+   * and governs the lifecycle of this unit.
+   *
+   * Example: "installations/surelock-homes-hq/bookings/watson-family-booking"
+   *
+   * If set, this unit is considered "managed" and cannot be modified directly.
+   * It behaves as a side-effect of the manager resource. For example, a unit
+   * may become managed when a booking is checked in, and unmanaged when the
+   * booking is checked out.
+   *
+   * @generated from field: optional string manager = 7;
+   */
+  manager?: string;
+
   constructor(data?: PartialMessage<Unit>) {
     super();
     proto3.util.initPartial(data, this);
@@ -74,6 +90,7 @@ export class Unit extends Message<Unit> {
     { no: 4, name: "move_out_time", kind: "message", T: Timestamp },
     { no: 5, name: "privacy_settings", kind: "message", T: Unit_PrivacySettings },
     { no: 6, name: "default_access_rights", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
+    { no: 7, name: "manager", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Unit {
