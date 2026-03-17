@@ -829,6 +829,17 @@ export enum AccessDenied_Reason {
    * @generated from enum value: DEVICE_BATTERY_INSUFFICIENT = 7;
    */
   DEVICE_BATTERY_INSUFFICIENT = 7,
+
+  /**
+   * The credential does not have permission to override the Do Not Disturb
+   * mode active on the device.
+   *
+   * Example: a user without the Do Not Disturb override permission attempts
+   * to unlock a device while its Do Not Disturb mode is active.
+   *
+   * @generated from enum value: CREDENTIAL_DO_NOT_DISTURB_OVERRIDE_PERMISSION_NOT_PRESENT = 8;
+   */
+  CREDENTIAL_DO_NOT_DISTURB_OVERRIDE_PERMISSION_NOT_PRESENT = 8,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AccessDenied_Reason)
 proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied.Reason", [
@@ -840,6 +851,7 @@ proto3.util.setEnumType(AccessDenied_Reason, "salto.nebula.event.v1.AccessDenied
   { no: 5, name: "CREDENTIAL_PERMISSION_OUTSIDE_SCHEDULE" },
   { no: 6, name: "INVALID_ACCESS_CODE" },
   { no: 7, name: "DEVICE_BATTERY_INSUFFICIENT" },
+  { no: 8, name: "CREDENTIAL_DO_NOT_DISTURB_OVERRIDE_PERMISSION_NOT_PRESENT" },
 ]);
 
 /**
