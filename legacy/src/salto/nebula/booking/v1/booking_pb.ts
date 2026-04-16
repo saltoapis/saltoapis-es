@@ -680,6 +680,98 @@ export class CreateBookingUserRequest extends Message<CreateBookingUserRequest> 
 }
 
 /**
+ * The request message for [`BatchCreateBookingUsers`][salto.nebula.booking.v1.BookingService.BatchCreateBookingUsers]
+ *
+ * @generated from message salto.nebula.booking.v1.BatchCreateBookingUsersRequest
+ */
+export class BatchCreateBookingUsersRequest extends Message<BatchCreateBookingUsersRequest> {
+  /**
+   * Resource name of the parent resource where the booking users associations are to be created. For example:
+   * `installations/surelock-homes-hq/bookings/my-booking`.
+   *
+   * @generated from field: string parent = 1;
+   */
+  parent = "";
+
+  /**
+   * The request message specifying the resources to create.
+   * A maximum of 10 booking users can be created in a batch.
+   *
+   * @generated from field: repeated salto.nebula.booking.v1.CreateBookingUserRequest requests = 2;
+   */
+  requests: CreateBookingUserRequest[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateBookingUsersRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.booking.v1.BatchCreateBookingUsersRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "parent", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "requests", kind: "message", T: CreateBookingUserRequest, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateBookingUsersRequest {
+    return new BatchCreateBookingUsersRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateBookingUsersRequest {
+    return new BatchCreateBookingUsersRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateBookingUsersRequest {
+    return new BatchCreateBookingUsersRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateBookingUsersRequest | PlainMessage<BatchCreateBookingUsersRequest> | undefined, b: BatchCreateBookingUsersRequest | PlainMessage<BatchCreateBookingUsersRequest> | undefined): boolean {
+    return proto3.util.equals(BatchCreateBookingUsersRequest, a, b);
+  }
+}
+
+/**
+ * The response message for [`BatchCreateBookingUsers`][salto.nebula.booking.v1.BookingService.BatchCreateBookingUsers]
+ *
+ * @generated from message salto.nebula.booking.v1.BatchCreateBookingUsersResponse
+ */
+export class BatchCreateBookingUsersResponse extends Message<BatchCreateBookingUsersResponse> {
+  /**
+   * The booking users associations that were created
+   *
+   * @generated from field: repeated salto.nebula.booking.v1.BookingUser booking_users = 1;
+   */
+  bookingUsers: BookingUser[] = [];
+
+  constructor(data?: PartialMessage<BatchCreateBookingUsersResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.booking.v1.BatchCreateBookingUsersResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "booking_users", kind: "message", T: BookingUser, repeated: true },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): BatchCreateBookingUsersResponse {
+    return new BatchCreateBookingUsersResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): BatchCreateBookingUsersResponse {
+    return new BatchCreateBookingUsersResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): BatchCreateBookingUsersResponse {
+    return new BatchCreateBookingUsersResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: BatchCreateBookingUsersResponse | PlainMessage<BatchCreateBookingUsersResponse> | undefined, b: BatchCreateBookingUsersResponse | PlainMessage<BatchCreateBookingUsersResponse> | undefined): boolean {
+    return proto3.util.equals(BatchCreateBookingUsersResponse, a, b);
+  }
+}
+
+/**
  * The request message for [`GetBookingUser`][salto.nebula.booking.v1.BookingService.GetBookingUser]
  *
  * @generated from message salto.nebula.booking.v1.GetBookingUserRequest
