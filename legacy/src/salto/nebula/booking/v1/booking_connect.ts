@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { Booking, BookingUser, CheckInBookingRequest, CheckOutBookingRequest, CreateBookingRequest, CreateBookingUserRequest, DeleteBookingRequest, DeleteBookingUserRequest, GetBookingRequest, GetBookingUserRequest, ListBookingsRequest, ListBookingsResponse, ListBookingUsersRequest, ListBookingUsersResponse, UpdateBookingRequest } from "./booking_pb";
+import { BatchCreateBookingUsersRequest, BatchCreateBookingUsersResponse, Booking, BookingUser, CheckInBookingRequest, CheckOutBookingRequest, CreateBookingRequest, CreateBookingUserRequest, DeleteBookingRequest, DeleteBookingUserRequest, GetBookingRequest, GetBookingUserRequest, ListBookingsRequest, ListBookingsResponse, ListBookingUsersRequest, ListBookingUsersResponse, UpdateBookingRequest } from "./booking_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 
 /**
@@ -125,6 +125,20 @@ export const BookingService = {
       name: "CreateBookingUser",
       I: CreateBookingUserRequest,
       O: BookingUser,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Create a batch of booking users
+     *
+     * Creates a batch of booking users. This method allows the creation of
+     * multiple booking users in a single operation.
+     *
+     * @generated from rpc salto.nebula.booking.v1.BookingService.BatchCreateBookingUsers
+     */
+    batchCreateBookingUsers: {
+      name: "BatchCreateBookingUsers",
+      I: BatchCreateBookingUsersRequest,
+      O: BatchCreateBookingUsersResponse,
       kind: MethodKind.Unary,
     },
     /**
