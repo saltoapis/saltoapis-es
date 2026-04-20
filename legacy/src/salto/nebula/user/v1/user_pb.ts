@@ -153,6 +153,17 @@ export class User extends Message<User> {
    */
   manager?: string;
 
+  /**
+   * Indicates whether the user has permission to override Do Not Disturb mode
+   * on a device.
+   *
+   * Example: a user with this field set to true can unlock a device while
+   * its Do Not Disturb mode is active.
+   *
+   * @generated from field: bool allow_do_not_disturb_override = 18;
+   */
+  allowDoNotDisturbOverride = false;
+
   constructor(data?: PartialMessage<User>) {
     super();
     proto3.util.initPartial(data, this);
@@ -178,6 +189,7 @@ export class User extends Message<User> {
     { no: 15, name: "passcode", kind: "message", T: Passcode },
     { no: 14, name: "blocked", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 17, name: "manager", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
+    { no: 18, name: "allow_do_not_disturb_override", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): User {
