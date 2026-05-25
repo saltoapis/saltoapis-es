@@ -2015,7 +2015,7 @@ export class EncodeCardKeyMetadata extends Message<EncodeCardKeyMetadata> {
 }
 
 /**
- * The request message for [`AssignDigitalkey`][salto.nebula.user.v1.UserService.AssignDigitalkey]
+ * The request message for [`AssignAppKey`][salto.nebula.user.v1.UserService.AssignAppKey]
  *
  * @generated from message salto.nebula.user.v1.AssignAppKeyRequest
  */
