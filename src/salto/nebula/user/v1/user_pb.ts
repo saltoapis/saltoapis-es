@@ -1374,7 +1374,7 @@ export const EncodeCardKeyMetadataSchema: GenMessage<EncodeCardKeyMetadata> = /*
   messageDesc(file_salto_nebula_user_v1_user, 29);
 
 /**
- * The request message for [`AssignDigitalkey`][salto.nebula.user.v1.UserService.AssignDigitalkey]
+ * The request message for [`AssignAppKey`][salto.nebula.user.v1.UserService.AssignAppKey]
  *
  * @generated from message salto.nebula.user.v1.AssignAppKeyRequest
  */
