@@ -6,7 +6,7 @@ load("//scripts:prepare.bzl", "project_name")
 exports_files(["tsconfig.json", "package.json"])
 
 all_projects = es_projects + [ "//src/salto/auth" ]
-all_legacy_projects = es_legacy_projects + [ "//src/salto/auth" ]
+all_legacy_projects = es_legacy_projects + [ "//legacy/src/salto/auth" ]
 
 genrule(
     name = 'build_all',
@@ -21,7 +21,7 @@ genrule(
 
 genrule(
     name = 'build_all_projects',
-    srcs = ["{}:build".format(project) for project in es_projects],
+    srcs = ["{}:build".format(project) for project in all_projects],
     outs = ['build_all_projects.sh'],
     cmd = '''echo "set -e" >> $@
         echo "npm ci" >> $@
@@ -32,7 +32,7 @@ genrule(
 
 genrule(
     name = 'build_all_legacy',
-    srcs = ["{}:build_legacy".format(project) for project in es_legacy_projects],
+    srcs = ["{}:build_legacy".format(project) for project in all_legacy_projects],
     outs = ['build_all_legacy.sh'],
     cmd = '''echo "set -e" >> $@
         echo "npm ci && cp -r legacy/node_modules/* node_modules/" >> $@
