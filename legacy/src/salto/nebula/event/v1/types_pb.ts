@@ -12,6 +12,7 @@ import { Controller } from "@saltoapis/nebula-controller-v1";
 import { AccessRight } from "@saltoapis/nebula-accessright-v1";
 import { Unit } from "@saltoapis/nebula-unit-v1";
 import { Booking } from "@saltoapis/nebula-booking-v1";
+import { Installation } from "@saltoapis/nebula-installation-v1";
 
 /**
  * Represents the principal entity that initiated or performed an action
@@ -2798,6 +2799,47 @@ export class BookingCheckedOut extends Message<BookingCheckedOut> {
 
   static equals(a: BookingCheckedOut | PlainMessage<BookingCheckedOut> | undefined, b: BookingCheckedOut | PlainMessage<BookingCheckedOut> | undefined): boolean {
     return proto3.util.equals(BookingCheckedOut, a, b);
+  }
+}
+
+/**
+ * Event representing the unblock of an installation.
+ *
+ * @generated from message salto.nebula.event.v1.InstallationUnblocked
+ */
+export class InstallationUnblocked extends Message<InstallationUnblocked> {
+  /**
+   * Installation unblocked.
+   *
+   * @generated from field: salto.nebula.installation.v1.Installation installation = 1;
+   */
+  installation?: Installation;
+
+  constructor(data?: PartialMessage<InstallationUnblocked>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.event.v1.InstallationUnblocked";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "installation", kind: "message", T: Installation },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): InstallationUnblocked {
+    return new InstallationUnblocked().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): InstallationUnblocked {
+    return new InstallationUnblocked().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): InstallationUnblocked {
+    return new InstallationUnblocked().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: InstallationUnblocked | PlainMessage<InstallationUnblocked> | undefined, b: InstallationUnblocked | PlainMessage<InstallationUnblocked> | undefined): boolean {
+    return proto3.util.equals(InstallationUnblocked, a, b);
   }
 }
 
