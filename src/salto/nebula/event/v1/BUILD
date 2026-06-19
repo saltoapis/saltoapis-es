@@ -11,7 +11,6 @@ load_rules(
         '//src/salto/nebula/booking/v1',
         '//src/salto/nebula/controller/v1',
         '//src/salto/nebula/emergencykey/v1',
-        '//src/salto/nebula/installation/v1',
         '//src/salto/nebula/unit/v1',
         '//src/salto/nebula/user/v1',
     ],
