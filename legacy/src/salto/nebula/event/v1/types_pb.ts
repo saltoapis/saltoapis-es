@@ -498,6 +498,13 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
     case: "electronicKey";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
+  /**
+   * Indicates the direction of passage for this lock event.
+   *
+   * @generated from field: salto.nebula.event.v1.AccessPointLocked.Direction direction = 9;
+   */
+  direction = AccessPointLocked_Direction.DIRECTION_UNSPECIFIED;
+
   constructor(data?: PartialMessage<AccessPointLocked>) {
     super();
     proto3.util.initPartial(data, this);
@@ -514,6 +521,7 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
     { no: 6, name: "wallet_key", kind: "message", T: WalletKey, oneof: "credential" },
     { no: 7, name: "passcode", kind: "message", T: Passcode, oneof: "credential" },
     { no: 8, name: "electronic_key", kind: "message", T: ElectronicKey, oneof: "credential" },
+    { no: 9, name: "direction", kind: "enum", T: proto3.getEnumType(AccessPointLocked_Direction) },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPointLocked {
@@ -532,6 +540,40 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
     return proto3.util.equals(AccessPointLocked, a, b);
   }
 }
+
+/**
+ * Direction of passage through an access point.
+ *
+ * @generated from enum salto.nebula.event.v1.AccessPointLocked.Direction
+ */
+export enum AccessPointLocked_Direction {
+  /**
+   * Direction is not specified.
+   *
+   * @generated from enum value: DIRECTION_UNSPECIFIED = 0;
+   */
+  DIRECTION_UNSPECIFIED = 0,
+
+  /**
+   * Credential used when locking from outside to inside.
+   *
+   * @generated from enum value: ENTRY = 1;
+   */
+  ENTRY = 1,
+
+  /**
+   * Credential used when locking from inside to outside.
+   *
+   * @generated from enum value: EXIT = 2;
+   */
+  EXIT = 2,
+}
+// Retrieve enum metadata with: proto3.getEnumType(AccessPointLocked_Direction)
+proto3.util.setEnumType(AccessPointLocked_Direction, "salto.nebula.event.v1.AccessPointLocked.Direction", [
+  { no: 0, name: "DIRECTION_UNSPECIFIED" },
+  { no: 1, name: "ENTRY" },
+  { no: 2, name: "EXIT" },
+]);
 
 /**
  * Event representing a forced open of an access point.
