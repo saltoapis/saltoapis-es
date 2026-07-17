@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { DigitalKey, DigitalKeyAccessPoint, GetDigitalKeyAccessPointRequest, GetDigitalKeyRequest, ListDigitalKeyAccessPointsRequest, ListDigitalKeyAccessPointsResponse, ListDigitalKeysRequest, ListDigitalKeysResponse, SyncDigitalKeyAccessPointsRequest, UnlockDigitalKeyAccessPointRequest } from "./digital_key_pb";
+import { DigitalKey, DigitalKeyAccessPoint, GetDigitalKeyAccessPointRequest, GetDigitalKeyRequest, ListDigitalKeyAccessPointsRequest, ListDigitalKeyAccessPointsResponse, ListDigitalKeysRequest, ListDigitalKeysResponse, LockDigitalKeyAccessPointRequest, SyncDigitalKeyAccessPointsRequest, UnlockDigitalKeyAccessPointRequest } from "./digital_key_pb";
 import { MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -98,6 +98,22 @@ export const DigitalKeyService = {
     unlockDigitalKeyAccessPoint: {
       name: "UnlockDigitalKeyAccessPoint",
       I: UnlockDigitalKeyAccessPointRequest,
+      O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Lock an user access point
+     *
+     * Remotely locks an access point. This can be run against those access
+     * points where their associated devices are online and connected.
+     * The user related to the digital key must have the necessary access rights
+     * and the access point has to include a permitted schedule to perform a remote lock.
+     *
+     * @generated from rpc salto.nebula.digitalkey.v1.DigitalKeyService.LockDigitalKeyAccessPoint
+     */
+    lockDigitalKeyAccessPoint: {
+      name: "LockDigitalKeyAccessPoint",
+      I: LockDigitalKeyAccessPointRequest,
       O: Operation,
       kind: MethodKind.Unary,
     },

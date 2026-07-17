@@ -1063,3 +1063,111 @@ export class UnlockDigitalKeyAccessPointMetadata extends Message<UnlockDigitalKe
   }
 }
 
+/**
+ * The request message for [`LockDigitalKeyAccessPoint`][salto.nebula.digitalkey.v1.DigitalKeyService.LockDigitalKeyAccessPoint]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.LockDigitalKeyAccessPointRequest
+ */
+export class LockDigitalKeyAccessPointRequest extends Message<LockDigitalKeyAccessPointRequest> {
+  /**
+   * The resource name of the access point to be locked. For example:
+   * `digital-keys/baker-street-key/access-points/baker-street-entrance`.
+   *
+   * @generated from field: string name = 1;
+   */
+  name = "";
+
+  constructor(data?: PartialMessage<LockDigitalKeyAccessPointRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.LockDigitalKeyAccessPointRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LockDigitalKeyAccessPointRequest {
+    return new LockDigitalKeyAccessPointRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LockDigitalKeyAccessPointRequest {
+    return new LockDigitalKeyAccessPointRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LockDigitalKeyAccessPointRequest {
+    return new LockDigitalKeyAccessPointRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: LockDigitalKeyAccessPointRequest | PlainMessage<LockDigitalKeyAccessPointRequest> | undefined, b: LockDigitalKeyAccessPointRequest | PlainMessage<LockDigitalKeyAccessPointRequest> | undefined): boolean {
+    return proto3.util.equals(LockDigitalKeyAccessPointRequest, a, b);
+  }
+}
+
+/**
+ * The empty response message for [`LockAccessPoint`][salto.nebula.digitalkey.v1.DigitalKeyService.LockDigitalKeyAccessPoint]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.LockDigitalKeyAccessPointResponse
+ */
+export class LockDigitalKeyAccessPointResponse extends Message<LockDigitalKeyAccessPointResponse> {
+  constructor(data?: PartialMessage<LockDigitalKeyAccessPointResponse>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.LockDigitalKeyAccessPointResponse";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LockDigitalKeyAccessPointResponse {
+    return new LockDigitalKeyAccessPointResponse().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LockDigitalKeyAccessPointResponse {
+    return new LockDigitalKeyAccessPointResponse().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LockDigitalKeyAccessPointResponse {
+    return new LockDigitalKeyAccessPointResponse().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: LockDigitalKeyAccessPointResponse | PlainMessage<LockDigitalKeyAccessPointResponse> | undefined, b: LockDigitalKeyAccessPointResponse | PlainMessage<LockDigitalKeyAccessPointResponse> | undefined): boolean {
+    return proto3.util.equals(LockDigitalKeyAccessPointResponse, a, b);
+  }
+}
+
+/**
+ * The metadata message for [`LockAccessPoint`][salto.nebula.digitalkey.v1.DigitalKeyService.LockDigitalKeyAccessPoint]
+ *
+ * @generated from message salto.nebula.digitalkey.v1.LockDigitalKeyAccessPointMetadata
+ */
+export class LockDigitalKeyAccessPointMetadata extends Message<LockDigitalKeyAccessPointMetadata> {
+  constructor(data?: PartialMessage<LockDigitalKeyAccessPointMetadata>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.digitalkey.v1.LockDigitalKeyAccessPointMetadata";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): LockDigitalKeyAccessPointMetadata {
+    return new LockDigitalKeyAccessPointMetadata().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): LockDigitalKeyAccessPointMetadata {
+    return new LockDigitalKeyAccessPointMetadata().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): LockDigitalKeyAccessPointMetadata {
+    return new LockDigitalKeyAccessPointMetadata().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: LockDigitalKeyAccessPointMetadata | PlainMessage<LockDigitalKeyAccessPointMetadata> | undefined, b: LockDigitalKeyAccessPointMetadata | PlainMessage<LockDigitalKeyAccessPointMetadata> | undefined): boolean {
+    return proto3.util.equals(LockDigitalKeyAccessPointMetadata, a, b);
+  }
+}
+
