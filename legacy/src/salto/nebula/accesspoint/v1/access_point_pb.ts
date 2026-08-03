@@ -6,6 +6,7 @@
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Duration, FieldMask, Message, proto3 } from "@bufbuild/protobuf";
 import { OpeningMode } from "@saltoapis/nebula-type";
+import { AppKeyRemoteOperation } from "@saltoapis/nebula-type";
 
 /**
  * The access point object
@@ -126,6 +127,14 @@ export class AccessPoint extends Message<AccessPoint> {
     case: "intercomAdaptor";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
+  /**
+   * Remote operations (for example: lock, unlock) that end users can perform on this
+   * access point via an app key.
+   *
+   * @generated from field: repeated salto.nebula.type.AppKeyRemoteOperation user_remote_operations = 12;
+   */
+  userRemoteOperations: AppKeyRemoteOperation[] = [];
+
   constructor(data?: PartialMessage<AccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -145,6 +154,7 @@ export class AccessPoint extends Message<AccessPoint> {
     { no: 9, name: "electronic_lock", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
     { no: 10, name: "controller", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
     { no: 11, name: "intercom_adaptor", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
+    { no: 12, name: "user_remote_operations", kind: "enum", T: proto3.getEnumType(AppKeyRemoteOperation), repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPoint {

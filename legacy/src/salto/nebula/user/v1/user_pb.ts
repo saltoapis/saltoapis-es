@@ -6,6 +6,7 @@
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { FieldMask, Message, proto3, Timestamp } from "@bufbuild/protobuf";
 import { Schedule } from "@saltoapis/nebula-type";
+import { AppKeyRemoteOperation } from "@saltoapis/nebula-type";
 
 /**
  * The user object
@@ -489,6 +490,13 @@ export class AppKey extends Message<AppKey> {
    */
   outdated = false;
 
+  /**
+   * Allowed remote operations for the app key.
+   *
+   * @generated from field: repeated salto.nebula.type.AppKeyRemoteOperation remote_operations = 4;
+   */
+  remoteOperations: AppKeyRemoteOperation[] = [];
+
   constructor(data?: PartialMessage<AppKey>) {
     super();
     proto3.util.initPartial(data, this);
@@ -500,6 +508,7 @@ export class AppKey extends Message<AppKey> {
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "state", kind: "enum", T: proto3.getEnumType(AppKey_State) },
     { no: 3, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 4, name: "remote_operations", kind: "enum", T: proto3.getEnumType(AppKeyRemoteOperation), repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AppKey {

@@ -6,27 +6,28 @@
 import { proto3 } from "@bufbuild/protobuf";
 
 /**
- * Specifies the remote operation supported by the app key.
+ * Specifies a remote operation that an app key can perform on an access
+ * point via a mobile phone.
  *
  * @generated from enum salto.nebula.type.AppKeyRemoteOperation
  */
 export enum AppKeyRemoteOperation {
   /**
-   * Unspecified or unknown remote operation.
+   * Unspecified. This value is not allowed and will be rejected by the API.
    *
    * @generated from enum value: APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0;
    */
   APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0,
 
   /**
-   * Locks the access point remotely.
+   * Remotely locks the access point.
    *
    * @generated from enum value: LOCK = 1;
    */
   LOCK = 1,
 
   /**
-   * Unlocks the access point remotely.
+   * Remotely unlocks the access point.
    *
    * @generated from enum value: UNLOCK = 2;
    */
