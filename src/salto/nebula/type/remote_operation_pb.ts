@@ -12,27 +12,28 @@ export const file_salto_nebula_type_remote_operation: GenFile = /*@__PURE__*/
   fileDesc("CihzYWx0by9uZWJ1bGEvdHlwZS9yZW1vdGVfb3BlcmF0aW9uLnByb3RvEhFzYWx0by5uZWJ1bGEudHlwZSpXChVBcHBLZXlSZW1vdGVPcGVyYXRpb24SKAokQVBQX0tFWV9SRU1PVEVfT1BFUkFUSU9OX1VOU1BFQ0lGSUVEEAASCAoETE9DSxABEgoKBlVOTE9DSxACQt8BChljb20uc2FsdG9hcGlzLm5lYnVsYS50eXBlQhRSZW1vdGVPcGVyYXRpb25Qcm90b1ABWlZnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL3R5cGUvcmVtb3Rlb3BlcmF0aW9uO3JlbW90ZW9wZXJhdGlvbqoCFVNhbHRvYXBpcy5OZWJ1bGEuVHlwZcoCFVNhbHRvYXBpc1xOZWJ1bGFcVHlwZeICIUdQQk1ldGFkYXRhXFNhbHRvYXBpc1xOZWJ1bGFcVHlwZWIGcHJvdG8z");
 
 /**
- * Specifies the remote operation supported by the app key.
+ * Specifies a remote operation that an app key can perform on an access
+ * point via a mobile phone.
  *
  * @generated from enum salto.nebula.type.AppKeyRemoteOperation
  */
 export enum AppKeyRemoteOperation {
   /**
-   * Unspecified or unknown remote operation.
+   * Unspecified. This value is not allowed and will be rejected by the API.
    *
    * @generated from enum value: APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0;
    */
   APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0,
 
   /**
-   * Locks the access point remotely.
+   * Remotely locks the access point.
    *
    * @generated from enum value: LOCK = 1;
    */
   LOCK = 1,
 
   /**
-   * Unlocks the access point remotely.
+   * Remotely unlocks the access point.
    *
    * @generated from enum value: UNLOCK = 2;
    */
