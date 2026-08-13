@@ -135,6 +135,16 @@ export class AccessPoint extends Message<AccessPoint> {
    */
   userRemoteOperations: AppKeyRemoteOperation[] = [];
 
+  /**
+   * Time zone where the access point is located. It must follow the IANA Time
+   * Zone Database format. For example, "America/New_York." If not set, it falls
+   * back to the installation's time zone.
+   * This field is only usable on allowlisted installations.
+   *
+   * @generated from field: optional string time_zone = 13;
+   */
+  timeZone?: string;
+
   constructor(data?: PartialMessage<AccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -155,6 +165,7 @@ export class AccessPoint extends Message<AccessPoint> {
     { no: 10, name: "controller", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
     { no: 11, name: "intercom_adaptor", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "source" },
     { no: 12, name: "user_remote_operations", kind: "enum", T: proto3.getEnumType(AppKeyRemoteOperation), repeated: true },
+    { no: 13, name: "time_zone", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AccessPoint {
