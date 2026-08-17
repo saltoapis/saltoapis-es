@@ -91,6 +91,7 @@ export type AccessPoint = Message<"salto.nebula.accesspoint.v1.AccessPoint"> & {
   /**
    * The duration the access point remains unlocked. This field is optional
    * for the server to check for its presence and assign a default value if it's missing.
+   * Allowed values are between 1 s and 30 m when set.
    *
    * @generated from field: optional google.protobuf.Duration unlock_duration = 7;
    */
