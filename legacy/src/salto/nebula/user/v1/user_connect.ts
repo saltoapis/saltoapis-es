@@ -3,7 +3,7 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { AppKey, AssignAppKeyRequest, AssignCardKeyRequest, AssignElectronicKeyRequest, AssignElectronicKeyResponse, AssignPasscodeRequest, AssignPasscodeResponse, AssignWalletKeyRequest, AssignWalletKeyResponse, BatchGetUsersRequest, BatchGetUsersResponse, BlockUserRequest, BlockUserResponse, CancelAppKeyRequest, CancelCardKeyRequest, CancelElectronicKeyRequest, CancelElectronicKeyResponse, CancelPasscodeRequest, CancelPasscodeResponse, CancelWalletKeyRequest, CancelWalletKeyResponse, CardKey, ComputeAppKeyDataRequest, ComputeAppKeyDataResponse, CreateUserAccessRightRequest, CreateUserRequest, DeleteUserAccessRightRequest, DeleteUserRequest, EncodeCardKeyRequest, EncodeElectronicKeyRequest, GetUserAccessRightRequest, GetUserRequest, ListUserAccessRightsRequest, ListUserAccessRightsResponse, ListUsersRequest, ListUsersResponse, UnblockUserRequest, UnblockUserResponse, UpdateUserAccessRightRequest, UpdateUserRequest, User, UserAccessRight } from "./user_pb";
+import { AppKey, AssignAppKeyRequest, AssignCardKeyRequest, AssignElectronicKeyRequest, AssignElectronicKeyResponse, AssignPasscodeRequest, AssignPasscodeResponse, AssignWalletKeyRequest, AssignWalletKeyResponse, BatchGetUsersRequest, BatchGetUsersResponse, BlockUserRequest, BlockUserResponse, CancelAppKeyRequest, CancelCardKeyRequest, CancelElectronicKeyRequest, CancelElectronicKeyResponse, CancelPasscodeRequest, CancelPasscodeResponse, CancelWalletKeyRequest, CancelWalletKeyResponse, CardKey, ComputeAppKeyDataRequest, ComputeAppKeyDataResponse, CreateUserAccessRightRequest, CreateUserRequest, DeleteUserAccessRightRequest, DeleteUserRequest, EncodeCardKeyRequest, EncodeElectronicKeyRequest, GetUserAccessRightRequest, GetUserRequest, ListUserAccessRightsRequest, ListUserAccessRightsResponse, ListUsersRequest, ListUsersResponse, UnblockUserRequest, UnblockUserResponse, UpdateAppKeyRequest, UpdateUserAccessRightRequest, UpdateUserRequest, User, UserAccessRight } from "./user_pb";
 import { Empty, MethodKind } from "@bufbuild/protobuf";
 import { Operation } from "@saltoapis/longrunning-v1";
 
@@ -230,6 +230,19 @@ export const UserService = {
       name: "EncodeCardKey",
       I: EncodeCardKeyRequest,
       O: Operation,
+      kind: MethodKind.Unary,
+    },
+    /**
+     * Update an app key
+     *
+     * Updates an existing user's app key.
+     *
+     * @generated from rpc salto.nebula.user.v1.UserService.UpdateAppKey
+     */
+    updateAppKey: {
+      name: "UpdateAppKey",
+      I: UpdateAppKeyRequest,
+      O: AppKey,
       kind: MethodKind.Unary,
     },
     /**
