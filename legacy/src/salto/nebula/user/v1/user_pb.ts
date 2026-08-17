@@ -2022,6 +2022,55 @@ export class EncodeCardKeyMetadata extends Message<EncodeCardKeyMetadata> {
 }
 
 /**
+ * The request message for [`UpdateAppKey`][salto.nebula.user.v1.UserService.UpdateAppKey]
+ *
+ * @generated from message salto.nebula.user.v1.UpdateAppKeyRequest
+ */
+export class UpdateAppKeyRequest extends Message<UpdateAppKeyRequest> {
+  /**
+   * The user's app key resource which replaces the resource on the server.
+   *
+   * @generated from field: salto.nebula.user.v1.AppKey app_key = 1;
+   */
+  appKey?: AppKey;
+
+  /**
+   * The update mask applied to the resource.
+   *
+   * @generated from field: google.protobuf.FieldMask update_mask = 2;
+   */
+  updateMask?: FieldMask;
+
+  constructor(data?: PartialMessage<UpdateAppKeyRequest>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.UpdateAppKeyRequest";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "app_key", kind: "message", T: AppKey },
+    { no: 2, name: "update_mask", kind: "message", T: FieldMask },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): UpdateAppKeyRequest {
+    return new UpdateAppKeyRequest().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): UpdateAppKeyRequest {
+    return new UpdateAppKeyRequest().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): UpdateAppKeyRequest {
+    return new UpdateAppKeyRequest().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: UpdateAppKeyRequest | PlainMessage<UpdateAppKeyRequest> | undefined, b: UpdateAppKeyRequest | PlainMessage<UpdateAppKeyRequest> | undefined): boolean {
+    return proto3.util.equals(UpdateAppKeyRequest, a, b);
+  }
+}
+
+/**
  * The request message for [`AssignAppKey`][salto.nebula.user.v1.UserService.AssignAppKey]
  *
  * @generated from message salto.nebula.user.v1.AssignAppKeyRequest
