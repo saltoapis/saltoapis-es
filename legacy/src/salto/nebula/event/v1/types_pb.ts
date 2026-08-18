@@ -6,6 +6,7 @@
 import type { BinaryReadOptions, FieldList, JsonReadOptions, JsonValue, PartialMessage, PlainMessage } from "@bufbuild/protobuf";
 import { Message, proto3, Value } from "@bufbuild/protobuf";
 import { AppKey, CardKey, ElectronicKey, Passcode, User, WalletKey } from "@saltoapis/nebula-user-v1";
+import { ServiceAccount } from "@saltoapis/nebula-serviceaccount-v1";
 import { AccessPoint } from "@saltoapis/nebula-accesspoint-v1";
 import { EmergencyKey } from "@saltoapis/nebula-emergencykey-v1";
 import { Controller } from "@saltoapis/nebula-controller-v1";
@@ -38,6 +39,15 @@ export class Principal extends Message<Principal> {
      */
     value: User;
     case: "user";
+  } | {
+    /**
+     * A service account represents a non-human actor within the system,
+     * such as an application, an integration or an automated process.
+     *
+     * @generated from field: salto.nebula.serviceaccount.v1.ServiceAccount service_account = 2;
+     */
+    value: ServiceAccount;
+    case: "serviceAccount";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<Principal>) {
@@ -49,6 +59,7 @@ export class Principal extends Message<Principal> {
   static readonly typeName = "salto.nebula.event.v1.Principal";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "user", kind: "message", T: User, oneof: "type" },
+    { no: 2, name: "service_account", kind: "message", T: ServiceAccount, oneof: "type" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Principal {
