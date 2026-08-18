@@ -57,6 +57,7 @@ es_projects = [
     '//src/salto/nebula/emergencykey/v1',
     '//src/salto/nebula/file/v1',
     '//src/salto/nebula/iam/v1',
+    '//src/salto/nebula/serviceaccount/v1',
     '//src/salto/nebula/unit/v1',
     '//src/salto/type',
     '//src/google/rpc',

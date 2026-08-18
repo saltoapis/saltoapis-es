@@ -57,6 +57,7 @@ es_legacy_projects = [
     '//legacy/src/salto/nebula/emergencykey/v1',
     '//legacy/src/salto/nebula/file/v1',
     '//legacy/src/salto/nebula/iam/v1',
+    '//legacy/src/salto/nebula/serviceaccount/v1',
     '//legacy/src/salto/nebula/unit/v1',
     '//legacy/src/salto/type',
     '//legacy/src/google/rpc',
