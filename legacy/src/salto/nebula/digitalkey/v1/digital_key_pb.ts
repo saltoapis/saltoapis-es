@@ -8,6 +8,7 @@ import { Message, proto3, Timestamp } from "@bufbuild/protobuf";
 import { Color } from "@saltoapis/type";
 import { AppKeyTechnology } from "@saltoapis/nebula-type";
 import { AppKeyRemoteOperation } from "@saltoapis/nebula-type";
+import { AppKeyLocalOperation } from "@saltoapis/nebula-type";
 
 /**
  * The digital key object
@@ -662,6 +663,13 @@ export class DigitalKeyAccessPoint extends Message<DigitalKeyAccessPoint> {
    */
   remoteOperations: AppKeyRemoteOperation[] = [];
 
+  /**
+   * Allowed local operations for the digital key access point.
+   *
+   * @generated from field: repeated salto.nebula.type.AppKeyLocalOperation local_operations = 6;
+   */
+  localOperations: AppKeyLocalOperation[] = [];
+
   constructor(data?: PartialMessage<DigitalKeyAccessPoint>) {
     super();
     proto3.util.initPartial(data, this);
@@ -675,6 +683,7 @@ export class DigitalKeyAccessPoint extends Message<DigitalKeyAccessPoint> {
     { no: 3, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 4, name: "supported_technologies", kind: "enum", T: proto3.getEnumType(AppKeyTechnology), repeated: true },
     { no: 5, name: "remote_operations", kind: "enum", T: proto3.getEnumType(AppKeyRemoteOperation), repeated: true },
+    { no: 6, name: "local_operations", kind: "enum", T: proto3.getEnumType(AppKeyLocalOperation), repeated: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): DigitalKeyAccessPoint {
