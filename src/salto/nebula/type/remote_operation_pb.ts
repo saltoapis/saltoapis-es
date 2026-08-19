@@ -9,7 +9,7 @@ import { enumDesc, fileDesc } from "@bufbuild/protobuf/codegenv2";
  * Describes the file salto/nebula/type/remote_operation.proto.
  */
 export const file_salto_nebula_type_remote_operation: GenFile = /*@__PURE__*/
-  fileDesc("CihzYWx0by9uZWJ1bGEvdHlwZS9yZW1vdGVfb3BlcmF0aW9uLnByb3RvEhFzYWx0by5uZWJ1bGEudHlwZSpXChVBcHBLZXlSZW1vdGVPcGVyYXRpb24SKAokQVBQX0tFWV9SRU1PVEVfT1BFUkFUSU9OX1VOU1BFQ0lGSUVEEAASCAoETE9DSxABEgoKBlVOTE9DSxACQt8BChljb20uc2FsdG9hcGlzLm5lYnVsYS50eXBlQhRSZW1vdGVPcGVyYXRpb25Qcm90b1ABWlZnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL3R5cGUvcmVtb3Rlb3BlcmF0aW9uO3JlbW90ZW9wZXJhdGlvbqoCFVNhbHRvYXBpcy5OZWJ1bGEuVHlwZcoCFVNhbHRvYXBpc1xOZWJ1bGFcVHlwZeICIUdQQk1ldGFkYXRhXFNhbHRvYXBpc1xOZWJ1bGFcVHlwZWIGcHJvdG8z");
+  fileDesc("CihzYWx0by9uZWJ1bGEvdHlwZS9yZW1vdGVfb3BlcmF0aW9uLnByb3RvEhFzYWx0by5uZWJ1bGEudHlwZSqJAQoVQXBwS2V5UmVtb3RlT3BlcmF0aW9uEigKJEFQUF9LRVlfUkVNT1RFX09QRVJBVElPTl9VTlNQRUNJRklFRBAAEiEKHUFQUF9LRVlfUkVNT1RFX09QRVJBVElPTl9MT0NLEAESIwofQVBQX0tFWV9SRU1PVEVfT1BFUkFUSU9OX1VOTE9DSxACQt8BChljb20uc2FsdG9hcGlzLm5lYnVsYS50eXBlQhRSZW1vdGVPcGVyYXRpb25Qcm90b1ABWlZnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL3R5cGUvcmVtb3Rlb3BlcmF0aW9uO3JlbW90ZW9wZXJhdGlvbqoCFVNhbHRvYXBpcy5OZWJ1bGEuVHlwZcoCFVNhbHRvYXBpc1xOZWJ1bGFcVHlwZeICIUdQQk1ldGFkYXRhXFNhbHRvYXBpc1xOZWJ1bGFcVHlwZWIGcHJvdG8z");
 
 /**
  * Specifies a remote operation that an app key can perform on an access
@@ -23,19 +23,19 @@ export enum AppKeyRemoteOperation {
    *
    * @generated from enum value: APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0;
    */
-  APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0,
+  UNSPECIFIED = 0,
 
   /**
    * Remotely locks the access point.
    *
-   * @generated from enum value: LOCK = 1;
+   * @generated from enum value: APP_KEY_REMOTE_OPERATION_LOCK = 1;
    */
   LOCK = 1,
 
   /**
    * Remotely unlocks the access point.
    *
-   * @generated from enum value: UNLOCK = 2;
+   * @generated from enum value: APP_KEY_REMOTE_OPERATION_UNLOCK = 2;
    */
   UNLOCK = 2,
 }
