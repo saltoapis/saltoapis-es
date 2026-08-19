@@ -17,26 +17,26 @@ export enum AppKeyRemoteOperation {
    *
    * @generated from enum value: APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0;
    */
-  APP_KEY_REMOTE_OPERATION_UNSPECIFIED = 0,
+  UNSPECIFIED = 0,
 
   /**
    * Remotely locks the access point.
    *
-   * @generated from enum value: LOCK = 1;
+   * @generated from enum value: APP_KEY_REMOTE_OPERATION_LOCK = 1;
    */
   LOCK = 1,
 
   /**
    * Remotely unlocks the access point.
    *
-   * @generated from enum value: UNLOCK = 2;
+   * @generated from enum value: APP_KEY_REMOTE_OPERATION_UNLOCK = 2;
    */
   UNLOCK = 2,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AppKeyRemoteOperation)
 proto3.util.setEnumType(AppKeyRemoteOperation, "salto.nebula.type.AppKeyRemoteOperation", [
   { no: 0, name: "APP_KEY_REMOTE_OPERATION_UNSPECIFIED" },
-  { no: 1, name: "LOCK" },
-  { no: 2, name: "UNLOCK" },
+  { no: 1, name: "APP_KEY_REMOTE_OPERATION_LOCK" },
+  { no: 2, name: "APP_KEY_REMOTE_OPERATION_UNLOCK" },
 ]);
 
