@@ -381,6 +381,16 @@ export class CardKey extends Message<CardKey> {
    */
   outdated = false;
 
+  /**
+   * Expiration time independent of any time zone or calendar.
+   * The expiration time can be different depending on the status of the device.
+   * For further information, see:
+   * https://support.saltosystems.com/homelok/user-guide/property-manager/getting-started/core-concepts/
+   *
+   * @generated from field: google.protobuf.Timestamp expire_time = 5;
+   */
+  expireTime?: Timestamp;
+
   constructor(data?: PartialMessage<CardKey>) {
     super();
     proto3.util.initPartial(data, this);
@@ -393,6 +403,7 @@ export class CardKey extends Message<CardKey> {
     { no: 2, name: "uid", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "state", kind: "enum", T: proto3.getEnumType(CardKey_State) },
     { no: 4, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 5, name: "expire_time", kind: "message", T: Timestamp },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): CardKey {
@@ -822,6 +833,16 @@ export class ElectronicKey extends Message<ElectronicKey> {
    */
   outdated = false;
 
+  /**
+   * Expiration time independent of any time zone or calendar.
+   * The expiration time can be different depending on the status of the device.
+   * For further information, see:
+   * https://support.saltosystems.com/homelok/user-guide/property-manager/getting-started/core-concepts/
+   *
+   * @generated from field: google.protobuf.Timestamp expire_time = 5;
+   */
+  expireTime?: Timestamp;
+
   constructor(data?: PartialMessage<ElectronicKey>) {
     super();
     proto3.util.initPartial(data, this);
@@ -834,6 +855,7 @@ export class ElectronicKey extends Message<ElectronicKey> {
     { no: 2, name: "device_id", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 3, name: "state", kind: "enum", T: proto3.getEnumType(ElectronicKey_State) },
     { no: 4, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 5, name: "expire_time", kind: "message", T: Timestamp },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): ElectronicKey {
