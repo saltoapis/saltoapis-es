@@ -9,7 +9,7 @@ import { enumDesc, fileDesc } from "@bufbuild/protobuf/codegenv2";
  * Describes the file salto/nebula/type/local_operation.proto.
  */
 export const file_salto_nebula_type_local_operation: GenFile = /*@__PURE__*/
-  fileDesc("CidzYWx0by9uZWJ1bGEvdHlwZS9sb2NhbF9vcGVyYXRpb24ucHJvdG8SEXNhbHRvLm5lYnVsYS50eXBlKoUBChRBcHBLZXlMb2NhbE9wZXJhdGlvbhInCiNBUFBfS0VZX0xPQ0FMX09QRVJBVElPTl9VTlNQRUNJRklFRBAAEiIKHkFQUF9LRVlfTE9DQUxfT1BFUkFUSU9OX1VOTE9DSxABEiAKHEFQUF9LRVlfTE9DQUxfT1BFUkFUSU9OX0xPQ0sQAkLcAQoZY29tLnNhbHRvYXBpcy5uZWJ1bGEudHlwZUITTG9jYWxPcGVyYXRpb25Qcm90b1ABWlRnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL3R5cGUvbG9jYWxvcGVyYXRpb247bG9jYWxvcGVyYXRpb26qAhVTYWx0b2FwaXMuTmVidWxhLlR5cGXKAhVTYWx0b2FwaXNcTmVidWxhXFR5cGXiAiFHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXFR5cGViBnByb3RvMw");
+  fileDesc("CidzYWx0by9uZWJ1bGEvdHlwZS9sb2NhbF9vcGVyYXRpb24ucHJvdG8SEXNhbHRvLm5lYnVsYS50eXBlKqkBChRBcHBLZXlMb2NhbE9wZXJhdGlvbhInCiNBUFBfS0VZX0xPQ0FMX09QRVJBVElPTl9VTlNQRUNJRklFRBAAEiIKHkFQUF9LRVlfTE9DQUxfT1BFUkFUSU9OX1VOTE9DSxABEiAKHEFQUF9LRVlfTE9DQUxfT1BFUkFUSU9OX0xPQ0sQAhIiCh5BUFBfS0VZX0xPQ0FMX09QRVJBVElPTl9PRkZJQ0UQA0LcAQoZY29tLnNhbHRvYXBpcy5uZWJ1bGEudHlwZUITTG9jYWxPcGVyYXRpb25Qcm90b1ABWlRnaXRodWIuY29tL3NhbHRvYXBpcy1pbnRlcm5hbC9zYWx0b2FwaXMtZ28vbmVidWxhL3R5cGUvbG9jYWxvcGVyYXRpb247bG9jYWxvcGVyYXRpb26qAhVTYWx0b2FwaXMuTmVidWxhLlR5cGXKAhVTYWx0b2FwaXNcTmVidWxhXFR5cGXiAiFHUEJNZXRhZGF0YVxTYWx0b2FwaXNcTmVidWxhXFR5cGViBnByb3RvMw");
 
 /**
  * Specifies a local operation that an app key can perform on an access
@@ -38,6 +38,13 @@ export enum AppKeyLocalOperation {
    * @generated from enum value: APP_KEY_LOCAL_OPERATION_LOCK = 2;
    */
   LOCK = 2,
+
+  /**
+   * Locally enables office mode on the access point.
+   *
+   * @generated from enum value: APP_KEY_LOCAL_OPERATION_OFFICE = 3;
+   */
+  OFFICE = 3,
 }
 
 /**

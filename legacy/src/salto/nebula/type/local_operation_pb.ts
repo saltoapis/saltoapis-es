@@ -32,11 +32,19 @@ export enum AppKeyLocalOperation {
    * @generated from enum value: APP_KEY_LOCAL_OPERATION_LOCK = 2;
    */
   LOCK = 2,
+
+  /**
+   * Locally enables office mode on the access point.
+   *
+   * @generated from enum value: APP_KEY_LOCAL_OPERATION_OFFICE = 3;
+   */
+  OFFICE = 3,
 }
 // Retrieve enum metadata with: proto3.getEnumType(AppKeyLocalOperation)
 proto3.util.setEnumType(AppKeyLocalOperation, "salto.nebula.type.AppKeyLocalOperation", [
   { no: 0, name: "APP_KEY_LOCAL_OPERATION_UNSPECIFIED" },
   { no: 1, name: "APP_KEY_LOCAL_OPERATION_UNLOCK" },
   { no: 2, name: "APP_KEY_LOCAL_OPERATION_LOCK" },
+  { no: 3, name: "APP_KEY_LOCAL_OPERATION_OFFICE" },
 ]);
 
