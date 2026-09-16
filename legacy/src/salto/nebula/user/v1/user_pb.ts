@@ -508,6 +508,28 @@ export class AppKey extends Message<AppKey> {
    */
   remoteOperations: AppKeyRemoteOperation[] = [];
 
+  /**
+   * How access to the app key is managed. Determines whether a digital key
+   * is created for this app key or not.
+   *
+   * @generated from field: salto.nebula.user.v1.AppKey.Type type = 5;
+   */
+  type = AppKey_Type.TYPE_UNSPECIFIED;
+
+  /**
+   * The email identity to which the digital key was issued.
+   *
+   * Set iff `type` is `MANAGED`. At the moment, this is always
+   * set for managed app keys, as it is the email used for the digital key
+   * binding.
+   *
+   * This is an assignment-time snapshot and is not subsequently
+   * synchronized with `User.email`.
+   *
+   * @generated from field: optional string email = 6;
+   */
+  email?: string;
+
   constructor(data?: PartialMessage<AppKey>) {
     super();
     proto3.util.initPartial(data, this);
@@ -520,6 +542,8 @@ export class AppKey extends Message<AppKey> {
     { no: 2, name: "state", kind: "enum", T: proto3.getEnumType(AppKey_State) },
     { no: 3, name: "outdated", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 4, name: "remote_operations", kind: "enum", T: proto3.getEnumType(AppKeyRemoteOperation), repeated: true },
+    { no: 5, name: "type", kind: "enum", T: proto3.getEnumType(AppKey_Type) },
+    { no: 6, name: "email", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AppKey {
@@ -580,6 +604,44 @@ proto3.util.setEnumType(AppKey_State, "salto.nebula.user.v1.AppKey.State", [
   { no: 1, name: "NOT_ASSIGNED" },
   { no: 2, name: "PENDING" },
   { no: 3, name: "ACTIVE" },
+]);
+
+/**
+ * How access to the app key is managed.
+ *
+ * @generated from enum salto.nebula.user.v1.AppKey.Type
+ */
+export enum AppKey_Type {
+  /**
+   * Sentinel value used to indicate that the type is unknown, omitted,
+   * or is not applicable.
+   *
+   * @generated from enum value: TYPE_UNSPECIFIED = 0;
+   */
+  TYPE_UNSPECIFIED = 0,
+
+  /**
+   * Access to the credential managed through a digital key.
+   *
+   * @generated from enum value: MANAGED = 1;
+   */
+  MANAGED = 1,
+
+  /**
+   * The caller is responsible for retrieving and distributing the
+   * credential.
+   *
+   * No digital key is created for this app key.
+   *
+   * @generated from enum value: CALLER_MANAGED = 2;
+   */
+  CALLER_MANAGED = 2,
+}
+// Retrieve enum metadata with: proto3.getEnumType(AppKey_Type)
+proto3.util.setEnumType(AppKey_Type, "salto.nebula.user.v1.AppKey.Type", [
+  { no: 0, name: "TYPE_UNSPECIFIED" },
+  { no: 1, name: "MANAGED" },
+  { no: 2, name: "CALLER_MANAGED" },
 ]);
 
 /**
@@ -2106,6 +2168,38 @@ export class AssignAppKeyRequest extends Message<AssignAppKeyRequest> {
    */
   name = "";
 
+  /**
+   * Determines how access to the app key is managed, that is, whether a
+   * digital key is going to be created for it or not.
+   *
+   * If unset, the legacy behavior is used:
+   * - The app key is `MANAGED`.
+   * - `User.email` is used as the digital key identity.
+   * - An invitation is sent.
+   *
+   * This default exists solely for backwards compatibility.
+   *
+   * @generated from oneof salto.nebula.user.v1.AssignAppKeyRequest.management
+   */
+  management: {
+    /**
+     * A digital key is created and managed.
+     *
+     * @generated from field: salto.nebula.user.v1.AssignAppKeyRequest.Managed managed = 2;
+     */
+    value: AssignAppKeyRequest_Managed;
+    case: "managed";
+  } | {
+    /**
+     * The caller retrieves and distributes the credential. No digital key
+     * is created.
+     *
+     * @generated from field: salto.nebula.user.v1.AssignAppKeyRequest.CallerManaged caller_managed = 3;
+     */
+    value: AssignAppKeyRequest_CallerManaged;
+    case: "callerManaged";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
   constructor(data?: PartialMessage<AssignAppKeyRequest>) {
     super();
     proto3.util.initPartial(data, this);
@@ -2115,6 +2209,8 @@ export class AssignAppKeyRequest extends Message<AssignAppKeyRequest> {
   static readonly typeName = "salto.nebula.user.v1.AssignAppKeyRequest";
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+    { no: 2, name: "managed", kind: "message", T: AssignAppKeyRequest_Managed, oneof: "management" },
+    { no: 3, name: "caller_managed", kind: "message", T: AssignAppKeyRequest_CallerManaged, oneof: "management" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssignAppKeyRequest {
@@ -2131,6 +2227,139 @@ export class AssignAppKeyRequest extends Message<AssignAppKeyRequest> {
 
   static equals(a: AssignAppKeyRequest | PlainMessage<AssignAppKeyRequest> | undefined, b: AssignAppKeyRequest | PlainMessage<AssignAppKeyRequest> | undefined): boolean {
     return proto3.util.equals(AssignAppKeyRequest, a, b);
+  }
+}
+
+/**
+ * A digital key is created and managed for the app key.
+ *
+ * @generated from message salto.nebula.user.v1.AssignAppKeyRequest.Managed
+ */
+export class AssignAppKeyRequest_Managed extends Message<AssignAppKeyRequest_Managed> {
+  /**
+   * The identity to which the digital key is issued.
+   *
+   * Only one field can be set. At the moment, only `email` is
+   * supported.
+   *
+   * @generated from oneof salto.nebula.user.v1.AssignAppKeyRequest.Managed.identity
+   */
+  identity: {
+    /**
+     * Use the supplied email address and send an invitation.
+     *
+     * @generated from field: salto.nebula.user.v1.AssignAppKeyRequest.Managed.Email email = 1;
+     */
+    value: AssignAppKeyRequest_Managed_Email;
+    case: "email";
+  } | { case: undefined; value?: undefined } = { case: undefined };
+
+  constructor(data?: PartialMessage<AssignAppKeyRequest_Managed>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.AssignAppKeyRequest.Managed";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "email", kind: "message", T: AssignAppKeyRequest_Managed_Email, oneof: "identity" },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssignAppKeyRequest_Managed {
+    return new AssignAppKeyRequest_Managed().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AssignAppKeyRequest_Managed {
+    return new AssignAppKeyRequest_Managed().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AssignAppKeyRequest_Managed {
+    return new AssignAppKeyRequest_Managed().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AssignAppKeyRequest_Managed | PlainMessage<AssignAppKeyRequest_Managed> | undefined, b: AssignAppKeyRequest_Managed | PlainMessage<AssignAppKeyRequest_Managed> | undefined): boolean {
+    return proto3.util.equals(AssignAppKeyRequest_Managed, a, b);
+  }
+}
+
+/**
+ * The email identity to which the digital key is issued. An
+ * invitation is sent to this address.
+ *
+ * @generated from message salto.nebula.user.v1.AssignAppKeyRequest.Managed.Email
+ */
+export class AssignAppKeyRequest_Managed_Email extends Message<AssignAppKeyRequest_Managed_Email> {
+  /**
+   * The email address to which the digital key is issued.
+   *
+   * This does not modify `User.email`. This is required at the moment,
+   * as it is the email that is going to be used for the digital key
+   * binding.
+   *
+   * @generated from field: string address = 1;
+   */
+  address = "";
+
+  constructor(data?: PartialMessage<AssignAppKeyRequest_Managed_Email>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.AssignAppKeyRequest.Managed.Email";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "address", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssignAppKeyRequest_Managed_Email {
+    return new AssignAppKeyRequest_Managed_Email().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AssignAppKeyRequest_Managed_Email {
+    return new AssignAppKeyRequest_Managed_Email().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AssignAppKeyRequest_Managed_Email {
+    return new AssignAppKeyRequest_Managed_Email().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AssignAppKeyRequest_Managed_Email | PlainMessage<AssignAppKeyRequest_Managed_Email> | undefined, b: AssignAppKeyRequest_Managed_Email | PlainMessage<AssignAppKeyRequest_Managed_Email> | undefined): boolean {
+    return proto3.util.equals(AssignAppKeyRequest_Managed_Email, a, b);
+  }
+}
+
+/**
+ * The caller retrieves and distributes the credential.
+ *
+ * No digital key is created and no invitation is sent.
+ *
+ * @generated from message salto.nebula.user.v1.AssignAppKeyRequest.CallerManaged
+ */
+export class AssignAppKeyRequest_CallerManaged extends Message<AssignAppKeyRequest_CallerManaged> {
+  constructor(data?: PartialMessage<AssignAppKeyRequest_CallerManaged>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.user.v1.AssignAppKeyRequest.CallerManaged";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): AssignAppKeyRequest_CallerManaged {
+    return new AssignAppKeyRequest_CallerManaged().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): AssignAppKeyRequest_CallerManaged {
+    return new AssignAppKeyRequest_CallerManaged().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): AssignAppKeyRequest_CallerManaged {
+    return new AssignAppKeyRequest_CallerManaged().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: AssignAppKeyRequest_CallerManaged | PlainMessage<AssignAppKeyRequest_CallerManaged> | undefined, b: AssignAppKeyRequest_CallerManaged | PlainMessage<AssignAppKeyRequest_CallerManaged> | undefined): boolean {
+    return proto3.util.equals(AssignAppKeyRequest_CallerManaged, a, b);
   }
 }
 
