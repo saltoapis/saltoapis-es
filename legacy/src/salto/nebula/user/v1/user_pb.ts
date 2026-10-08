@@ -169,9 +169,6 @@ export class User extends Message<User> {
    * Indicates whether the user has permission to enable office mode on a
    * device.
    *
-   * When omitted on creation, the server defaults to true to preserve
-   * backward compatibility.
-   *
    * Example: a user with this field set to true can enable office mode on a
    * device, allowing it to remain unlocked without requiring a credential.
    *
