@@ -165,6 +165,20 @@ export class User extends Message<User> {
    */
   allowDoNotDisturbOverride = false;
 
+  /**
+   * Indicates whether the user has permission to enable office mode on a
+   * device.
+   *
+   * When omitted on creation, the server defaults to true to preserve
+   * backward compatibility.
+   *
+   * Example: a user with this field set to true can enable office mode on a
+   * device, allowing it to remain unlocked without requiring a credential.
+   *
+   * @generated from field: optional bool allow_office_activation = 19;
+   */
+  allowOfficeActivation?: boolean;
+
   constructor(data?: PartialMessage<User>) {
     super();
     proto3.util.initPartial(data, this);
@@ -191,6 +205,7 @@ export class User extends Message<User> {
     { no: 14, name: "blocked", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
     { no: 17, name: "manager", kind: "scalar", T: 9 /* ScalarType.STRING */, opt: true },
     { no: 18, name: "allow_do_not_disturb_override", kind: "scalar", T: 8 /* ScalarType.BOOL */ },
+    { no: 19, name: "allow_office_activation", kind: "scalar", T: 8 /* ScalarType.BOOL */, opt: true },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): User {
