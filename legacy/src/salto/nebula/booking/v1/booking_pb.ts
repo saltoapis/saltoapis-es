@@ -71,12 +71,12 @@ export class Booking extends Message<Booking> {
    */
   asset: {
     /**
-     * The unit resource reference assigned to the booking.
+     * The unit asset assigned to the booking.
      *
-     * @generated from field: string unit = 7;
+     * @generated from field: salto.nebula.booking.v1.Booking.UnitAsset unit_asset = 7;
      */
-    value: string;
-    case: "unit";
+    value: Booking_UnitAsset;
+    case: "unitAsset";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   /**
@@ -105,7 +105,7 @@ export class Booking extends Message<Booking> {
     { no: 4, name: "state", kind: "enum", T: proto3.getEnumType(Booking_State) },
     { no: 5, name: "check_in_time", kind: "message", T: Timestamp },
     { no: 6, name: "check_out_time", kind: "message", T: Timestamp },
-    { no: 7, name: "unit", kind: "scalar", T: 9 /* ScalarType.STRING */, oneof: "asset" },
+    { no: 7, name: "unit_asset", kind: "message", T: Booking_UnitAsset, oneof: "asset" },
     { no: 8, name: "access_rights", kind: "scalar", T: 9 /* ScalarType.STRING */, repeated: true },
   ]);
 
@@ -168,6 +168,49 @@ proto3.util.setEnumType(Booking_State, "salto.nebula.booking.v1.Booking.State", 
   { no: 2, name: "CHECKED_IN" },
   { no: 3, name: "CHECKED_OUT" },
 ]);
+
+/**
+ * A unit used as the asset of a booking.
+ * Contains the Unit resource reference together with properties specific to
+ * the relationship between the booking and that unit.
+ *
+ * @generated from message salto.nebula.booking.v1.Booking.UnitAsset
+ */
+export class Booking_UnitAsset extends Message<Booking_UnitAsset> {
+  /**
+   * The unit resource associated with the booking.
+   *
+   * @generated from field: string unit = 1;
+   */
+  unit = "";
+
+  constructor(data?: PartialMessage<Booking_UnitAsset>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.booking.v1.Booking.UnitAsset";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+    { no: 1, name: "unit", kind: "scalar", T: 9 /* ScalarType.STRING */ },
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): Booking_UnitAsset {
+    return new Booking_UnitAsset().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): Booking_UnitAsset {
+    return new Booking_UnitAsset().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): Booking_UnitAsset {
+    return new Booking_UnitAsset().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: Booking_UnitAsset | PlainMessage<Booking_UnitAsset> | undefined, b: Booking_UnitAsset | PlainMessage<Booking_UnitAsset> | undefined): boolean {
+    return proto3.util.equals(Booking_UnitAsset, a, b);
+  }
+}
 
 /**
  * The request message for [CreateBooking][salto.nebula.booking.v1.BookingService.CreateBooking]
