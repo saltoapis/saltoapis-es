@@ -303,6 +303,16 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
   user?: User;
 
   /**
+   * The actor that unlocked the access point through the API, for example a
+   * user or service account sending an unlock request. Unset when the access
+   * point was unlocked on site, in which case `user` and `credential` identify
+   * who unlocked it.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 10;
+   */
+  actor?: Principal;
+
+  /**
    * The credential type used to unlock the access point.
    *
    * @generated from oneof salto.nebula.event.v1.AccessPointUnlocked.credential
@@ -374,6 +384,7 @@ export class AccessPointUnlocked extends Message<AccessPointUnlocked> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
+    { no: 10, name: "actor", kind: "message", T: Principal },
     { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
     { no: 4, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
@@ -455,6 +466,16 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
   user?: User;
 
   /**
+   * The actor that locked the access point through the API, for example a
+   * user or service account sending a lock request. Unset when the access
+   * point was locked on site, in which case `user` and `credential` identify
+   * who locked it.
+   *
+   * @generated from field: salto.nebula.event.v1.Principal actor = 10;
+   */
+  actor?: Principal;
+
+  /**
    * The credential type used to lock the access point.
    *
    * @generated from oneof salto.nebula.event.v1.AccessPointLocked.credential
@@ -526,6 +547,7 @@ export class AccessPointLocked extends Message<AccessPointLocked> {
   static readonly fields: FieldList = proto3.util.newFieldList(() => [
     { no: 1, name: "access_point", kind: "message", T: AccessPoint },
     { no: 2, name: "user", kind: "message", T: User },
+    { no: 10, name: "actor", kind: "message", T: Principal },
     { no: 3, name: "emergency_key", kind: "message", T: EmergencyKey, oneof: "credential" },
     { no: 4, name: "card_key", kind: "message", T: CardKey, oneof: "credential" },
     { no: 5, name: "app_key", kind: "message", T: AppKey, oneof: "credential" },
