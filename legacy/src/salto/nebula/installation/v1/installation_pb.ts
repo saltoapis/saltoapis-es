@@ -522,6 +522,14 @@ export class PaymentMethod extends Message<PaymentMethod> {
      */
     value: PaymentMethod_DirectDebit;
     case: "directDebit";
+  } | {
+    /**
+     * Bank transfer details.
+     *
+     * @generated from field: salto.nebula.installation.v1.PaymentMethod.BankTransfer bank_transfer = 4;
+     */
+    value: PaymentMethod_BankTransfer;
+    case: "bankTransfer";
   } | { case: undefined; value?: undefined } = { case: undefined };
 
   constructor(data?: PartialMessage<PaymentMethod>) {
@@ -535,6 +543,7 @@ export class PaymentMethod extends Message<PaymentMethod> {
     { no: 1, name: "name", kind: "scalar", T: 9 /* ScalarType.STRING */ },
     { no: 2, name: "card", kind: "message", T: PaymentMethod_Card, oneof: "method" },
     { no: 3, name: "direct_debit", kind: "message", T: PaymentMethod_DirectDebit, oneof: "method" },
+    { no: 4, name: "bank_transfer", kind: "message", T: PaymentMethod_BankTransfer, oneof: "method" },
   ]);
 
   static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PaymentMethod {
@@ -724,6 +733,39 @@ export class PaymentMethod_DirectDebit_SEPA extends Message<PaymentMethod_Direct
 
   static equals(a: PaymentMethod_DirectDebit_SEPA | PlainMessage<PaymentMethod_DirectDebit_SEPA> | undefined, b: PaymentMethod_DirectDebit_SEPA | PlainMessage<PaymentMethod_DirectDebit_SEPA> | undefined): boolean {
     return proto3.util.equals(PaymentMethod_DirectDebit_SEPA, a, b);
+  }
+}
+
+/**
+ * Bank transfer object. It has no fields because no payment details are stored.
+ *
+ * @generated from message salto.nebula.installation.v1.PaymentMethod.BankTransfer
+ */
+export class PaymentMethod_BankTransfer extends Message<PaymentMethod_BankTransfer> {
+  constructor(data?: PartialMessage<PaymentMethod_BankTransfer>) {
+    super();
+    proto3.util.initPartial(data, this);
+  }
+
+  static readonly runtime: typeof proto3 = proto3;
+  static readonly typeName = "salto.nebula.installation.v1.PaymentMethod.BankTransfer";
+  static readonly fields: FieldList = proto3.util.newFieldList(() => [
+  ]);
+
+  static fromBinary(bytes: Uint8Array, options?: Partial<BinaryReadOptions>): PaymentMethod_BankTransfer {
+    return new PaymentMethod_BankTransfer().fromBinary(bytes, options);
+  }
+
+  static fromJson(jsonValue: JsonValue, options?: Partial<JsonReadOptions>): PaymentMethod_BankTransfer {
+    return new PaymentMethod_BankTransfer().fromJson(jsonValue, options);
+  }
+
+  static fromJsonString(jsonString: string, options?: Partial<JsonReadOptions>): PaymentMethod_BankTransfer {
+    return new PaymentMethod_BankTransfer().fromJsonString(jsonString, options);
+  }
+
+  static equals(a: PaymentMethod_BankTransfer | PlainMessage<PaymentMethod_BankTransfer> | undefined, b: PaymentMethod_BankTransfer | PlainMessage<PaymentMethod_BankTransfer> | undefined): boolean {
+    return proto3.util.equals(PaymentMethod_BankTransfer, a, b);
   }
 }
 
